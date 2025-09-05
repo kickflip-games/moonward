@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvboky6pqlyk0"]
+[gd_scene load_steps=9 format=3 uid="uid://cvboky6pqlyk0"]
 
-[ext_resource type="Script" path="res://Player/Player.gd" id="1"]
-[ext_resource type="Script" path="res://Player/Sprite.gd" id="2"]
+[ext_resource type="Script" uid="uid://c4vv0byhh07an" path="res://Player/Player.gd" id="1"]
+[ext_resource type="Script" uid="uid://bya3wd8hjk44s" path="res://Player/Sprite.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(32, 24)
@@ -44,9 +44,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1lb64"]
 _data = {
-"Jump": SubResource("3"),
-"Land": SubResource("4")
+&"Jump": SubResource("3"),
+&"Land": SubResource("4")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
+size = Vector2(31.54, 19.03)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 10
@@ -56,10 +59,9 @@ script = ExtResource("1")
 acceleration = 4032.0
 turning_acceleration = 13440.0
 deceleration = 4480.0
-jump_force = 1200.0
-jump_cut = 0.4
-jump_gravity_max = 1000.0
 jump_hang_gravity_mult = 0.05
+jump_force = 1200.0
+jump_gravity_max = 1000.0
 
 [node name="SquareCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
@@ -89,5 +91,16 @@ polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 libraries = {
-"": SubResource("AnimationLibrary_1lb64")
+&"": SubResource("AnimationLibrary_1lb64")
 }
+
+[node name="WallRayRight" type="RayCast2D" parent="."]
+target_position = Vector2(12, 0)
+
+[node name="WallRayLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-12, 0)
+
+[node name="GroundCast" type="ShapeCast2D" parent="."]
+shape = SubResource("RectangleShape2D_q3lat")
+target_position = Vector2(0, 16)
+collision_mask = 2

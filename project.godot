@@ -14,15 +14,20 @@ config/name="MOVEMENT 2"
 run/main_scene="res://World/World.tscn"
 config/features=PackedStringArray("4.5")
 config/icon="res://Art/icon.png"
-config/windows_native_icon="res://icon.ico"
+config/windows_native_icon="res://icon.png"
+
+[autoload]
+
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=3
 window/stretch/mode="viewport"
 window/size/fullscreen=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
 [input]
 
@@ -63,8 +68,11 @@ jump={
 
 [physics]
 
+common/physics_interpolation=true
 common/enable_pause_aware_picking=true
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 2d/snapping/use_gpu_pixel_snap=true
