@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvx5h8u1svhi8"]
+
+[ext_resource type="Texture2D" uid="uid://bdv2k6o0hpd1s" path="res://Art/smoke/smokeWhite1.png" id="1_wwgde"]
+
+[sub_resource type="Curve" id="Curve_gxvhg"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.27983537, 0.23702538), 0.0, 0.0, 0, 0, Vector2(0.9938271, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_4yo13"]
+offsets = PackedFloat32Array(0, 0.39814815, 0.7060185)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.042622983, 1, 1, 1, 0)
+
+[node name="RunFx" type="CPUParticles2D"]
+position = Vector2(0, 15)
+rotation = -1.5707964
+amount = 10
+texture = ExtResource("1_wwgde")
+explosiveness = 1.0
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 12.5
+spread = 61.36
+gravity = Vector2(0, 100)
+initial_velocity_min = 88.47
+initial_velocity_max = 130.13
+angle_min = -316.4
+angle_max = 27.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_gxvhg")
+color_ramp = SubResource("Gradient_4yo13")

@@ -82,6 +82,12 @@ var _last_wall_jump_dir : int = 0
 @export var slide_accel : float = 600.0
 
 var is_sliding := false
+var _input_locked:=true
+
+
+signal died
+signal respawned
+
 
 
 # respawn location
@@ -90,9 +96,19 @@ var _respawn_pos:Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	_respawn_pos = global_position
+	respawn()
 
 # input helper (kept from your version)
 func get_input() -> Dictionary:
+	if _input_locked:
+		return {
+			"x": 0,
+			"y": 0,
+			"just_jump": false,
+			"jump": false,
+			"released_jump": false
+		}
+	
 	return {
 		"x": int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left")),
 		"y": int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")),
@@ -354,4 +370,13 @@ func update_respawn_position(pos:Vector2):
 
 func die():
 	print("DED")
+	died.emit()
+	_input_locked = true
+	await get_tree().create_timer(2.0).timeout
+	respawn()
+	
+func respawn():
 	global_position = _respawn_pos
+	respawned.emit()
+	await get_tree().create_timer(0.5).timeout
+	_input_locked = false

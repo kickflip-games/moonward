@@ -1,13 +1,67 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvboky6pqlyk0"]
+[gd_scene load_steps=30 format=3 uid="uid://cvboky6pqlyk0"]
 
 [ext_resource type="Script" uid="uid://c4vv0byhh07an" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" uid="uid://bya3wd8hjk44s" path="res://Player/Sprite.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://oc0dorwrpdxq" path="res://Player/FX/jumpFx.tscn" id="3_tok1r"]
+[ext_resource type="AudioStream" uid="uid://b17lk053ohwcs" path="res://Player/SFX/jump.ogg" id="3_vlldt"]
+[ext_resource type="AudioStream" uid="uid://lhlqg7kcuywc" path="res://Player/SFX/land.ogg" id="4_s1rgi"]
+[ext_resource type="AudioStream" uid="uid://c21uvxenrl32l" path="res://Player/SFX/footstep.ogg" id="5_j23h2"]
+[ext_resource type="AudioStream" uid="uid://c41v6556egetm" path="res://Player/SFX/wallslide.ogg" id="6_0j2ni"]
+[ext_resource type="AudioStream" uid="uid://d360t8ymp6n0u" path="res://Player/SFX/spawn.ogg" id="7_v0k0e"]
+[ext_resource type="PackedScene" uid="uid://dw8ly417svmtu" path="res://Player/FX/DeathFx.tscn" id="8_p7tob"]
+[ext_resource type="PackedScene" uid="uid://bx4kb2qmvq6q3" path="res://Player/FX/LandFx.tscn" id="10_dm7nj"]
+[ext_resource type="PackedScene" uid="uid://dvx5h8u1svhi8" path="res://Player/FX/RunFx.tscn" id="11_3mea3"]
+[ext_resource type="PackedScene" uid="uid://bw53y4hirkx23" path="res://Player/FX/SpawnFx.tscn" id="12_7v5gs"]
+[ext_resource type="PackedScene" uid="uid://cy66qcw6cd2cu" path="res://Player/FX/WallslideFx.tscn" id="13_8sa4y"]
 
-[sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(32, 24)
+[sub_resource type="Animation" id="Animation_vlldt"]
+resource_name = "Airborne"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-14, -20, -14, 16, 14, 16, 14, -20)]
+}
 
-[sub_resource type="SeparationRayShape2D" id="1"]
-length = 8.0
+[sub_resource type="Animation" id="Animation_tok1r"]
+resource_name = "Death"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-59.000004, 8, -75, 16, 75, 16, 62.999996, 10), PackedVector2Array(-59, 16, -75, 16, 75, 16, 63, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_8g4oa"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.39999998),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-15, -15, -15, 16, 15, 16, 15, -15), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
+}
 
 [sub_resource type="Animation" id="3"]
 resource_name = "Jump"
@@ -16,14 +70,14 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
+tracks/0/path = NodePath("Polygon2D:polygon")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3),
-"transitions": PackedFloat32Array(1.68179, 1, 1),
+"times": PackedFloat32Array(0, 0.10547121, 0.29559693),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(0.8, 1.2), Vector2(1, 1)]
+"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-10, -23, -10, 23, 10, 23, 10, -23), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
 }
 
 [sub_resource type="Animation" id="4"]
@@ -32,24 +86,100 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
+tracks/0/path = NodePath("Polygon2D:polygon")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(0.241484, 1, 1),
+"times": PackedFloat32Array(0, 0.099920094, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.4, 1), Vector2(1, 1)]
+"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-28, -8, -28, 16, 28, 16, 28, -8), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_q3lat"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_6ysni"]
+resource_name = "Run"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.39999998),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-16, -20, -16, 16, 16, 16, 16, -20), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_ddoul"]
+resource_name = "Spawn"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6),
+"transitions": PackedFloat32Array(1.5157177, 1, 1),
+"update": 0,
+"values": [PackedVector2Array(-0.25, 13.88, -16, 16, 16, 16, 1.05, 13.88), PackedVector2Array(-0.25, -16, -16, 16, 16, 16, 1.05, -16), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1lb64"]
 _data = {
+&"Airborne": SubResource("Animation_vlldt"),
+&"FallDeath": SubResource("Animation_tok1r"),
+&"Idle": SubResource("Animation_8g4oa"),
 &"Jump": SubResource("3"),
-&"Land": SubResource("4")
+&"Land": SubResource("4"),
+&"RESET": SubResource("Animation_q3lat"),
+&"Run": SubResource("Animation_6ysni"),
+&"Spawn": SubResource("Animation_ddoul")
 }
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(32, 24)
+
+[sub_resource type="SeparationRayShape2D" id="1"]
+length = 8.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
 size = Vector2(31.54, 19.03)
+
+[sub_resource type="Curve" id="Curve_p7tob"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_dm7nj"]
+offsets = PackedFloat32Array(0, 0.7037037)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0, 0.53800005)
+
+[sub_resource type="Curve" id="Curve_dm7nj"]
+_data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_p7tob"]
+offsets = PackedFloat32Array(0, 0.7037037)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0, 0.28100002)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 10
@@ -63,9 +193,17 @@ jump_hang_gravity_mult = 0.05
 jump_force = 1200.0
 jump_gravity_max = 1000.0
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite")
+libraries = {
+&"": SubResource("AnimationLibrary_1lb64")
+}
+
 [node name="SquareCollisionShape" type="CollisionShape2D" parent="."]
+top_level = true
 position = Vector2(0, -4)
 shape = SubResource("2")
+debug_color = Color(0.7019608, 0, 0.2, 0.41960785)
 
 [node name="RaycastCollider1" type="CollisionShape2D" parent="."]
 position = Vector2(-16, 8)
@@ -81,18 +219,14 @@ shape = SubResource("1")
 
 [node name="Sprite" type="Node2D" parent="."]
 position = Vector2(0, 8)
+scale = Vector2(0.804912, 1.1950881)
 script = ExtResource("2")
 player_path = NodePath("..")
 
 [node name="Polygon2D" type="Polygon2D" parent="Sprite"]
-position = Vector2(0, -8)
-color = Color(0.964706, 0.952941, 0.298039, 1)
+position = Vector2(0, -9)
+color = Color(0.9607843, 0.9490196, 0.29803923, 1)
 polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
-libraries = {
-&"": SubResource("AnimationLibrary_1lb64")
-}
 
 [node name="WallRayRight" type="RayCast2D" parent="."]
 target_position = Vector2(12, 0)
@@ -104,3 +238,69 @@ target_position = Vector2(-12, 0)
 shape = SubResource("RectangleShape2D_q3lat")
 target_position = Vector2(0, 16)
 collision_mask = 2
+
+[node name="Sfx" type="Node2D" parent="."]
+
+[node name="JumpSFX" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource("3_vlldt")
+
+[node name="LandSFX" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource("4_s1rgi")
+
+[node name="FootstepSFX" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource("5_j23h2")
+
+[node name="WallslideSFX" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource("6_0j2ni")
+
+[node name="DeathSFX" type="AudioStreamPlayer2D" parent="Sfx"]
+
+[node name="SpawnSFX" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource("7_v0k0e")
+
+[node name="ParticleFx" type="Node2D" parent="."]
+
+[node name="DeathFx" parent="ParticleFx" instance=ExtResource("8_p7tob")]
+emitting = false
+one_shot = true
+color = Color(1, 1, 0.14733289, 1)
+
+[node name="JumpFx" parent="ParticleFx" instance=ExtResource("3_tok1r")]
+emitting = false
+one_shot = true
+color = Color(1, 1, 0.14733289, 1)
+
+[node name="LandFx" parent="ParticleFx" instance=ExtResource("10_dm7nj")]
+emitting = false
+one_shot = true
+color = Color(1, 1, 0.14733289, 1)
+
+[node name="RunFx" parent="ParticleFx" instance=ExtResource("11_3mea3")]
+emitting = false
+explosiveness = 0.0
+color = Color(1, 1, 0.14733289, 1)
+
+[node name="SpawnFx" parent="ParticleFx" instance=ExtResource("12_7v5gs")]
+emitting = false
+one_shot = true
+color = Color(1, 1, 0.14733289, 1)
+
+[node name="WallslideFx" parent="ParticleFx" instance=ExtResource("13_8sa4y")]
+emitting = false
+explosiveness = 0.0
+randomness = 0.0
+color = Color(1, 1, 0.14733289, 1)
+
+[node name="Trails" type="Node2D" parent="."]
+
+[node name="SomersaultTrail" type="Line2D" parent="Trails"]
+top_level = true
+width_curve = SubResource("Curve_p7tob")
+default_color = Color(1, 1, 0.14901961, 1)
+gradient = SubResource("Gradient_dm7nj")
+
+[node name="SpeedTrail" type="Line2D" parent="Trails"]
+top_level = true
+width_curve = SubResource("Curve_dm7nj")
+default_color = Color(1, 1, 0.14901961, 1)
+gradient = SubResource("Gradient_p7tob")

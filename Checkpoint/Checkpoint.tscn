@@ -1,10 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvt82yup3gjq8"]
+[gd_scene load_steps=9 format=3 uid="uid://cvt82yup3gjq8"]
 
-[ext_resource type="Texture2D" uid="uid://cfp5cklgw2qyq" path="res://Art/flag.png" id="1_6vcqm"]
 [ext_resource type="Script" uid="uid://cry21u35xljba" path="res://Checkpoint/checkpoint.gd" id="1_qj0kh"]
+[ext_resource type="Script" uid="uid://bjwp3fi83n4qp" path="res://addons/primitive_shapes/triangle.gd" id="3_5v6hc"]
+[ext_resource type="Texture2D" uid="uid://csb8oxl5upsoo" path="res://Art/Ui/arrow.png" id="4_5v6hc"]
+[ext_resource type="Script" uid="uid://bp35nydfqhkvr" path="res://addons/primitive_shapes/rectangle.gd" id="4_6drmt"]
+[ext_resource type="AudioStream" uid="uid://dmfyuv85y135x" path="res://Checkpoint/checkpoint.ogg" id="5_6drmt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qj0kh"]
 size = Vector2(35, 42)
+
+[sub_resource type="Curve" id="Curve_6drmt"]
+_limits = [0.0, 1.0, 0.0, 0.9938271]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.28628767, 0.46569133), 0.0, 0.0, 0, 0, Vector2(0.9938271, 0), 1.4, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_f5af3"]
+offsets = PackedFloat32Array(0, 0.36805555, 1)
+colors = PackedColorArray(1, 1, 1, 0.73, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="Checkpoint" type="Area2D"]
 collision_layer = 4
@@ -14,9 +26,50 @@ script = ExtResource("1_qj0kh")
 position = Vector2(7.5, -11)
 shape = SubResource("RectangleShape2D_qj0kh")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(8.100001, -12.100001)
-scale = Vector2(0.081640616, 0.081640616)
-texture = ExtResource("1_6vcqm")
+[node name="Flag" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(5.9999995, -4)
+rotation = 1.5707964
+scale = Vector2(0.25, 0.41)
+script = ExtResource("3_5v6hc")
+color = Color(0.9689713, 0.9999998, 0.96470135, 1)
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Flagpole" type="Node2D" parent="."]
+position = Vector2(-7, -14)
+script = ExtResource("4_6drmt")
+width = 2.96
+height = 46.99
+metadata/_custom_type_script = "uid://bp35nydfqhkvr"
+
+[node name="FlagMarker" type="Marker2D" parent="."]
+position = Vector2(5, -24)
+
+[node name="fx" type="CPUParticles2D" parent="."]
+position = Vector2(-6, -20)
+emitting = false
+amount = 20
+texture = ExtResource("4_5v6hc")
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 200.0
+angular_velocity_min = 561.82
+angular_velocity_max = 561.82
+orbit_velocity_min = -1.0
+orbit_velocity_max = 1.0
+angle_min = -360.0
+angle_max = 360.0
+scale_amount_curve = SubResource("Curve_6drmt")
+color = Color(0, 0.86192864, 0.37760884, 1)
+color_ramp = SubResource("Gradient_f5af3")
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_6drmt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
