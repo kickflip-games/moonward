@@ -162,6 +162,8 @@ func _physics_process(delta: float) -> void:
 
 	# Move
 	move_and_slide()
+	
+	_apply_platform_motion(delta)
 
 	# Expire wall-jump state once timer runs out
 	if is_wall_jumping and _wall_jump_timer <= 0.0:
@@ -461,3 +463,33 @@ func respawn():
 	respawned.emit()
 	await get_tree().create_timer(0.5).timeout
 	_input_locked = false
+
+
+
+var _current_platform: AnimatableBody2D = null
+var _last_platform_position: Vector2 = Vector2.ZERO
+
+func _apply_platform_motion(delta: float) -> void:
+	if is_on_floor():
+		var platform: AnimatableBody2D = _get_floor_platform()
+		if platform and platform.is_in_group("moving_platform"):
+			if platform != _current_platform:
+				# New platform: reset tracking
+				_current_platform = platform
+				_last_platform_position = platform.global_position
+			else:
+				# Compute platform delta since last frame
+				var motion := platform.global_position - _last_platform_position
+				global_position += motion
+				_last_platform_position = platform.global_position
+		else:
+			_current_platform = null
+	else:
+		_current_platform = null
+		
+func _get_floor_platform() -> AnimatableBody2D:
+	for i in range(get_slide_collision_count()):
+		var collision := get_slide_collision(i)
+		if collision and collision.get_normal().y < -0.7:
+			return collision.get_collider()
+	return null
