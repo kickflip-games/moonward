@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cvboky6pqlyk0"]
+[gd_scene load_steps=32 format=3 uid="uid://cvboky6pqlyk0"]
 
 [ext_resource type="Script" uid="uid://c4vv0byhh07an" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" uid="uid://bya3wd8hjk44s" path="res://Player/Sprite.gd" id="2"]
@@ -144,6 +144,38 @@ tracks/0/keys = {
 "values": [PackedVector2Array(-0.25, 13.88, -16, 16, 16, 16, 1.05, 13.88), PackedVector2Array(-0.25, -16, -16, 16, 16, 16, 1.05, -16), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
 }
 
+[sub_resource type="Animation" id="Animation_p7tob"]
+resource_name = "WallJump"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedVector2Array(-14, -20, -14, 16, 14, 16, 14, -20), PackedVector2Array(-14, -20, -14, 16, 14, 16, 14, -20)]
+}
+
+[sub_resource type="Animation" id="Animation_dm7nj"]
+resource_name = "WallSlide"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:polygon")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-14, -20, -14, 16, 14, 16, 14, -20)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1lb64"]
 _data = {
 &"Airborne": SubResource("Animation_vlldt"),
@@ -153,17 +185,19 @@ _data = {
 &"Land": SubResource("4"),
 &"RESET": SubResource("Animation_q3lat"),
 &"Run": SubResource("Animation_6ysni"),
-&"Spawn": SubResource("Animation_ddoul")
+&"Spawn": SubResource("Animation_ddoul"),
+&"WallJump": SubResource("Animation_p7tob"),
+&"WallSlide": SubResource("Animation_dm7nj")
 }
 
 [sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(32, 24)
+size = Vector2(26, 24)
 
 [sub_resource type="SeparationRayShape2D" id="1"]
 length = 8.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
-size = Vector2(31.54, 19.03)
+size = Vector2(22.28, 19.03)
 
 [sub_resource type="Curve" id="Curve_p7tob"]
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -208,14 +242,17 @@ debug_color = Color(0.7019608, 0, 0.2, 0.41960785)
 [node name="RaycastCollider1" type="CollisionShape2D" parent="."]
 position = Vector2(-16, 8)
 shape = SubResource("1")
+disabled = true
 
 [node name="RaycastCollider2" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
 shape = SubResource("1")
+disabled = true
 
 [node name="RaycastCollider3" type="CollisionShape2D" parent="."]
 position = Vector2(16, 8)
 shape = SubResource("1")
+disabled = true
 
 [node name="Sprite" type="Node2D" parent="."]
 position = Vector2(0, 8)
@@ -229,10 +266,12 @@ color = Color(0.9607843, 0.9490196, 0.29803923, 1)
 polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
 
 [node name="WallRayRight" type="RayCast2D" parent="."]
-target_position = Vector2(12, 0)
+target_position = Vector2(23, 0)
+collision_mask = 2
 
 [node name="WallRayLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-12, 0)
+target_position = Vector2(-23, 0)
+collision_mask = 2
 
 [node name="GroundCast" type="ShapeCast2D" parent="."]
 shape = SubResource("RectangleShape2D_q3lat")

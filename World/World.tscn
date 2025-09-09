@@ -69,7 +69,7 @@ position = Vector2(1136, 736)
 move_to = Vector2(0, -80)
 
 [node name="Platform8" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(1784, -766)
+position = Vector2(1600, -707)
 move_to = Vector2(0, -80)
 
 [node name="Platform3" parent="Platforms" instance=ExtResource("5")]
@@ -85,24 +85,29 @@ position = Vector2(267, -140)
 move_to = Vector2(-160, 0)
 
 [node name="Platform5" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(645, -296)
+position = Vector2(590, -296)
 move_to = Vector2(-160, 0)
 
 [node name="Platform6" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(1081, -473)
+position = Vector2(921, -473)
 move_to = Vector2(-160, 0)
 
 [node name="Platform7" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(1549, -608)
+position = Vector2(1262, -608)
 move_to = Vector2(-160, 0)
 
 [node name="CirclePlatform" parent="Platforms" instance=ExtResource("6")]
 position = Vector2(512, 608)
 
-[node name="Checkpoint" parent="." instance=ExtResource("10_s53j1")]
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-637, 760)
 
-[node name="Checkpoint2" parent="." instance=ExtResource("10_s53j1")]
+[node name="Checkpoint1" parent="Checkpoints" instance=ExtResource("10_s53j1")]
+position = Vector2(-630, -73)
+
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-1708, -1097)
 
 [node name="Hud" type="CanvasLayer" parent="."]
@@ -184,6 +189,7 @@ position = Vector2(-960, 676)
 script = ExtResource("15_jacc8")
 follow_mode = 5
 follow_target = NodePath("../Player")
+frame_preview = false
 tween_resource = SubResource("Resource_21v8o")
 follow_damping = true
 dead_zone_width = 0.278

@@ -216,7 +216,7 @@ func _process(delta: float) -> void:
 	
 	# Update sprite direction
 	if player.face_direction != 0:
-		var target_scale = sign(player.face_direction)
+		var target_scale = player.face_direction
 		if scale.x != target_scale:
 			scale.x = target_scale
 	
@@ -255,11 +255,13 @@ func _update_wall_slide_fx() -> void:
 			wall_slide_sfx.play()
 		if wall_slide_particles:
 			wall_slide_particles.emitting = true
-			# Position particles at wall contact point
-			wall_slide_particles.position.x = 16 * sign(player.face_direction)
-			# Adjust particle direction based on wall side
-			var wall_direction = -sign(player.face_direction)
-			wall_slide_particles.direction = Vector2(wall_direction, 0)
+			# Position based on which wall we're on
+			if player.last_on_wall_left_time > 0:
+				wall_slide_particles.position.x = -16  # Left wall
+				wall_slide_particles.direction = Vector2(1, 0)  # Particles go right
+			else:  # Right wall
+				wall_slide_particles.position.x = 16  # Right wall
+				wall_slide_particles.direction = Vector2(-1, 0)  # Particles go left
 	else:
 		if wall_slide_sfx.playing:
 			wall_slide_sfx.stop()
@@ -459,7 +461,7 @@ func _apply_animation_lean():
 	if somersault_speed_degrees == 0.0:
 		match current_animation:
 			RUN_ANIM:
-				var lean_angle = 10.0
+				var lean_angle = -80.0
 				var movement_direction = sign(player.velocity.x)
 				if movement_direction != 0:
 					target_rotation_degrees = lean_angle * movement_direction
@@ -477,7 +479,7 @@ func _apply_animation_lean():
 				target_rotation_degrees = 0.0
 
 func _update_sprite_rotation(delta: float):
-	if current_animation == FALL_DEATH_ANIM or current_animation == SPAWN_ANIM:
+	if current_animation == FALL_DEATH_ANIM or current_animation == SPAWN_ANIM or current_animation == WALL_SLIDE_ANIM:
 		rotation_degrees = 0.0
 		somersault_speed_degrees = 0.0
 		target_rotation_degrees = 0.0

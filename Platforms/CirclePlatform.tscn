@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqindn5hr3fl7"]
 
 [ext_resource type="Texture2D" uid="uid://b8x3rv8tdlcbm" path="res://Art/Circle.png" id="1"]
-[ext_resource type="Script" path="res://Platforms/CirclePlatform.gd" id="2"]
+[ext_resource type="Script" uid="uid://cb42ibi68cg3q" path="res://Platforms/CirclePlatform.gd" id="2"]
 
 [sub_resource type="CircleShape2D" id="1"]
 radius = 128.0
@@ -17,6 +17,11 @@ shape = SubResource("1")
 position = Vector2(0, -64)
 polygon = PackedVector2Array(-24, -88, 24, -88, 24, -56, -24, -56)
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 64)
+rotation = 3.1415927
+polygon = PackedVector2Array(-24, -88, 24, -88, 24, -56, -24, -56)
+
 [node name="Sprite" type="Node2D" parent="."]
 
 [node name="Circle" type="Sprite2D" parent="Sprite"]
@@ -29,5 +34,11 @@ polygon = PackedVector2Array(0, -64, -64, 0, 0, 64, 64, 0)
 
 [node name="Polygon2D2" type="Polygon2D" parent="Sprite"]
 position = Vector2(0, -64)
+color = Color(0.376471, 0.976471, 0.596078, 1)
+polygon = PackedVector2Array(-24, -88, 24, -88, 24, -56, -24, -56)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Sprite"]
+position = Vector2(0, 62)
+rotation = 3.1415927
 color = Color(0.376471, 0.976471, 0.596078, 1)
 polygon = PackedVector2Array(-24, -88, 24, -88, 24, -56, -24, -56)
