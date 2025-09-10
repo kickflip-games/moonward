@@ -11,3 +11,79 @@ func swap_fullscreen_mode():
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		
+# ---- Settings ----
+@export var bus_name: String = "Master"   # Bus that has SpectrumAnalyzer
+@export var bass_from_hz: float = 35.0    # Kick drum lower bound
+@export var bass_to_hz: float = 50.0     # Kick drum upper bound
+@export var threshold: float = 0.11       # Sensitivity
+@export var cooldown_ms: int = 180        # Minimum gap between triggers (ms)
+
+@onready var bg: ColorRect = $Background
+@onready var bgcolor: ColorRect = $Background
+var normal_bg_color: Color =  Color("#1A1749")
+
+# ---- Internal ----
+var spectrum: AudioEffectSpectrumAnalyzerInstance = null
+var last_trigger_time: int = 0
+var prev_bass: float = 0.0
+
+func _ready() -> void:
+	# Save the "default" background color so we can return to it
+	normal_bg_color = bg.color
+	
+	var bus_idx: int = AudioServer.get_bus_index(bus_name)
+	if bus_idx == -1:
+		push_error("Audio bus not found: %s" % bus_name)
+		return
+
+	var effect_count: int = AudioServer.get_bus_effect_count(bus_idx)
+	for i: int in range(effect_count):
+		var inst: AudioEffectInstance = AudioServer.get_bus_effect_instance(bus_idx, i)
+		if inst is AudioEffectSpectrumAnalyzerInstance:
+			spectrum = inst as AudioEffectSpectrumAnalyzerInstance
+			break
+
+	if spectrum == null:
+		push_error("No SpectrumAnalyzer effect found on bus '%s'." % bus_name)
+		return
+		
+
+
+
+
+func _process(delta: float) -> void:
+	if spectrum == null:
+		return
+
+	# Get bass magnitude (Vector2: left/right → combine with length)
+	var v: Vector2 = spectrum.get_magnitude_for_frequency_range(bass_from_hz, bass_to_hz)
+	var bass: float = v.length()
+
+	# Smooth the signal a bit
+	var smooth: float = lerp(prev_bass, bass, 0.25)
+	prev_bass = smooth
+
+	# Detect trigger
+	var now: int = Time.get_ticks_msec()
+	if smooth > threshold and (now - last_trigger_time) > cooldown_ms:
+		_on_kick(smooth)
+		last_trigger_time = now
+
+func _on_kick(strength: float) -> void:
+	# Pulse the bg visually when kick is detected
+	# Pick a flash color (random or fixed)
+	var deviation: float = 0.4
+
+	var r: float = clamp(normal_bg_color.r + randf_range(-deviation, deviation), 0.0, 1.0)
+	var g: float = clamp(normal_bg_color.g + randf_range(-deviation, deviation), 0.0, 1.0)
+	var b: float = clamp(normal_bg_color.b + randf_range(-deviation, deviation), 0.0, 1.0)
+
+	var flash_color: Color = Color(r, g, b)
+	
+	# Instantly set to flash color
+	bg.color = flash_color
+
+	# Tween back to normal color over 0.15 seconds
+	var t: Tween = create_tween()
+	t.tween_property(bg, "color", normal_bg_color, 0.15).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=4 uid="uid://cfg4sor4sotk6"]
+[gd_scene load_steps=21 format=4 uid="uid://cfg4sor4sotk6"]
 
-[ext_resource type="Script" uid="uid://b114cscaow4lf" path="res://World/World.gd" id="1"]
+[ext_resource type="Script" uid="uid://cwoc6eooyuefo" path="res://World/world.gd" id="1_jacc8"]
+[ext_resource type="Script" uid="uid://da78ijeok40v1" path="res://World/background.gd" id="2_jacc8"]
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="3_eue43"]
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://dyq8g35t6hsjf" path="res://Platforms/MovingPlatform.tscn" id="5"]
@@ -41,7 +42,7 @@ sources/0 = SubResource("TileSetAtlasSource_aiwi6")
 script = ExtResource("16_hev0n")
 
 [node name="World" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_jacc8")
 
 [node name="Background" type="ColorRect" parent="."]
 z_index = -5
@@ -50,6 +51,7 @@ offset_top = -3488.0
 offset_right = 144.0
 offset_bottom = 1088.0
 color = Color(0.101961, 0.0901961, 0.286275, 1)
+script = ExtResource("2_jacc8")
 
 [node name="Layer1" type="TileMapLayer" parent="."]
 self_modulate = Color(0.098799996, 0.76, 0.57266, 1)
