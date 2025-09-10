@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cfg4sor4sotk6"]
+[gd_scene load_steps=20 format=4 uid="uid://cfg4sor4sotk6"]
 
 [ext_resource type="Script" uid="uid://b114cscaow4lf" path="res://World/World.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="3_eue43"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dl0hwtov64c14" path="res://Art/Ui/button_rectangle_depth_line.png" id="15_7in0u"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="15_jacc8"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="16_hev0n"]
+[ext_resource type="AudioStream" uid="uid://dv26kytvfrljx" path="res://sfx/music.mp3" id="16_lcvgy"]
 [ext_resource type="Texture2D" uid="uid://c468q1a84ypec" path="res://Art/Ui/button_rectangle_line.png" id="16_vdgnt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aiwi6"]
@@ -67,34 +68,42 @@ position = Vector2(-1890, -1087)
 [node name="Platform" parent="Platforms" instance=ExtResource("5")]
 position = Vector2(1136, 736)
 move_to = Vector2(0, -80)
+speed = 64.0
 
 [node name="Platform8" parent="Platforms" instance=ExtResource("5")]
 position = Vector2(1600, -707)
 move_to = Vector2(0, -80)
+speed = 64.0
 
 [node name="Platform3" parent="Platforms" instance=ExtResource("5")]
 position = Vector2(1490, 1196)
 move_to = Vector2(0, -90)
+speed = 64.0
 
 [node name="Platform2" parent="Platforms" instance=ExtResource("5")]
 position = Vector2(1456, 304)
 move_to = Vector2(-160, 0)
+speed = 64.0
 
 [node name="Platform4" parent="Platforms" instance=ExtResource("5")]
 position = Vector2(267, -140)
 move_to = Vector2(-160, 0)
+speed = 64.0
 
 [node name="Platform5" parent="Platforms" instance=ExtResource("5")]
 position = Vector2(590, -296)
 move_to = Vector2(-160, 0)
+speed = 64.0
 
 [node name="Platform6" parent="Platforms" instance=ExtResource("5")]
 position = Vector2(921, -473)
 move_to = Vector2(-160, 0)
+speed = 64.0
 
 [node name="Platform7" parent="Platforms" instance=ExtResource("5")]
 position = Vector2(1262, -608)
 move_to = Vector2(-160, 0)
+speed = 64.0
 
 [node name="CirclePlatform" parent="Platforms" instance=ExtResource("6")]
 position = Vector2(512, 608)
@@ -199,3 +208,7 @@ draw_limits = true
 limit_left = -2000
 limit_right = 100
 limit_bottom = 1000
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_lcvgy")
+autoplay = true
