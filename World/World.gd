@@ -16,7 +16,7 @@ func swap_fullscreen_mode():
 @export var bus_name: String = "Master"   # Bus that has SpectrumAnalyzer
 @export var bass_from_hz: float = 35.0    # Kick drum lower bound
 @export var bass_to_hz: float = 50.0     # Kick drum upper bound
-@export var threshold: float = 0.11       # Sensitivity
+@export var threshold: float = 0.1       # Sensitivity
 @export var cooldown_ms: int = 180        # Minimum gap between triggers (ms)
 
 @onready var bg: ColorRect = $Background
@@ -73,17 +73,21 @@ func _process(delta: float) -> void:
 func _on_kick(strength: float) -> void:
 	# Pulse the bg visually when kick is detected
 	# Pick a flash color (random or fixed)
-	var deviation: float = 0.4
+	#var deviation: float = 0.4
 
-	var r: float = clamp(normal_bg_color.r + randf_range(-deviation, deviation), 0.0, 1.0)
-	var g: float = clamp(normal_bg_color.g + randf_range(-deviation, deviation), 0.0, 1.0)
-	var b: float = clamp(normal_bg_color.b + randf_range(-deviation, deviation), 0.0, 1.0)
+	#var r: float = clamp(normal_bg_color.r + randf_range(-deviation, deviation), 0.0, 1.0)
+	#var g: float = clamp(normal_bg_color.g + randf_range(-deviation, deviation), 0.0, 1.0)
+	#var b: float = clamp(normal_bg_color.b + randf_range(-deviation, deviation), 0.0, 1.0)
+	
+	var flash_color_val_r: float = normal_bg_color.r + 0.13
+	var flash_color_val_g: float = normal_bg_color.r + 0.13
+	var flash_color_val_b: float = normal_bg_color.r + 0.13
 
-	var flash_color: Color = Color(r, g, b)
+	var flash_color: Color = Color(flash_color_val_r, flash_color_val_g, flash_color_val_b)
 	
 	# Instantly set to flash color
 	bg.color = flash_color
 
 	# Tween back to normal color over 0.15 seconds
 	var t: Tween = create_tween()
-	t.tween_property(bg, "color", normal_bg_color, 0.15).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	t.tween_property(bg, "color", normal_bg_color, 0.25).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
