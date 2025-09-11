@@ -68,42 +68,42 @@ platform_wall_layers = 2
 position = Vector2(-1890, -1087)
 
 [node name="Platform" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(0, 51.77464)
+position = Vector2(1485, 1201)
 move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="Platform8" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(0, 51.77464)
+position = Vector2(1741, -800)
 move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="Platform3" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(0, 90)
+position = Vector2(1137, 714)
 move_to = Vector2(0, -90)
 speed = 64.0
 
 [node name="Platform2" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(-159.3648, 0)
+position = Vector2(1491, -631)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="Platform4" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(-159.3648, 0)
+position = Vector2(1153, -483)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="Platform5" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(-159.3648, 0)
+position = Vector2(789.99994, -311)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="Platform6" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(-159.3648, 0)
+position = Vector2(488.99994, -145)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="Platform7" parent="Platforms" instance=ExtResource("5")]
-position = Vector2(-159.3648, 0)
+position = Vector2(1452, 299)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
