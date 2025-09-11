@@ -2,7 +2,7 @@ name: "build"
 on:
   push:
     branches:
-      - prod  # Runs automatically only on 'prod' branch
+      - main  # Runs automatically only on 'main' branch
   workflow_dispatch:  # Allows manual trigger for the workflow
 
 
@@ -32,7 +32,7 @@ jobs:
           ls
           cd $PROJECT_PATH
           ls
-          godot --headless --verbose --export-release "HTML5" ~/build/web/index.html
+          godot --headless --verbose --export-release "html5" ~/build/web/index.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
