@@ -1,5 +1,5 @@
 extends Control
-@export var force_on: bool = true
+@export var force_on: bool = false
 @onready var left_button: TouchScreenButton = $LeftButton
 @onready var right_button: TouchScreenButton = $RightButton
 @onready var jump_button: TouchScreenButton = $JumpButton

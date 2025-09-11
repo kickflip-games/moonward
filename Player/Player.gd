@@ -67,7 +67,7 @@ var last_on_wall_right_time : float = 0.0
 var last_pressed_jump_time : float = 0.0
 
 # wall jump params - more diagonal now
-@export var wall_jump_force := Vector2(1200, 800)  # More horizontal, less vertical
+@export var wall_jump_force := Vector2(1200, 1000)  # More horizontal, less vertical
 @export var wall_jump_time : float = 0.15
 @export var wall_jump_run_lerp : float = 0.65
 
@@ -160,10 +160,11 @@ func _physics_process(delta: float) -> void:
 	# Gravity & vertical behavior
 	_apply_gravity_and_limits(delta)
 
+	# Platform motion: update and add to velocity before moving
+	_update_platform_motion()
+
 	# Move
 	move_and_slide()
-	
-	_apply_platform_motion(delta)
 
 	# Expire wall-jump state once timer runs out
 	if is_wall_jumping and _wall_jump_timer <= 0.0:
@@ -363,6 +364,7 @@ func _update_slide_state() -> void:
 	if (last_on_wall_time > 0) and not is_jumping and not is_wall_jumping and \
 	   last_on_ground_time <= 0 and pressing_toward_wall:
 		is_sliding = true
+		_last_grounded_y = position.y
 	else:
 		is_sliding = false
 
@@ -468,25 +470,30 @@ func respawn():
 
 var _current_platform: AnimatableBody2D = null
 var _last_platform_position: Vector2 = Vector2.ZERO
+var _platform_velocity: Vector2 = Vector2.ZERO
 
-func _apply_platform_motion(delta: float) -> void:
+func _update_platform_motion() -> void:
 	if is_on_floor():
 		var platform: AnimatableBody2D = _get_floor_platform()
 		if platform and platform.is_in_group("moving_platform"):
 			if platform != _current_platform:
-				# New platform: reset tracking
 				_current_platform = platform
 				_last_platform_position = platform.global_position
+				_platform_velocity = Vector2.ZERO
 			else:
-				# Compute platform delta since last frame
-				var motion := platform.global_position - _last_platform_position
-				global_position += motion
+				_platform_velocity = (platform.global_position - _last_platform_position) / get_physics_process_delta_time()
 				_last_platform_position = platform.global_position
 		else:
 			_current_platform = null
+			_platform_velocity = Vector2.ZERO
 	else:
 		_current_platform = null
-		
+		_platform_velocity = Vector2.ZERO
+
+	# Add platform velocity to player velocity
+	if _platform_velocity != Vector2.ZERO:
+		velocity += _platform_velocity
+
 func _get_floor_platform() -> AnimatableBody2D:
 	for i in range(get_slide_collision_count()):
 		var collision := get_slide_collision(i)
