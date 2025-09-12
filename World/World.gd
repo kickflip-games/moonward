@@ -23,6 +23,12 @@ func swap_fullscreen_mode():
 @onready var bgcolor: ColorRect = $Background
 var normal_bg_color: Color =  Color("#1A1749")
 
+@onready var particles := $CPUParticles2D
+var base_scale = 1.0
+var kick_scale = 3.0
+var tween: Tween
+
+
 # ---- Internal ----
 var spectrum: AudioEffectSpectrumAnalyzerInstance = null
 var last_trigger_time: int = 0
@@ -31,6 +37,13 @@ var prev_bass: float = 0.0
 func _ready() -> void:
 	# Save the "default" background color so we can return to it
 	normal_bg_color = bg.color
+	
+	$Platforms.z_index = 0
+	$CPUParticles2D.z_index = -1
+
+	particles.position = get_viewport_rect().size / 2
+	particles.emitting = true
+	particles.restart()
 	
 	var bus_idx: int = AudioServer.get_bus_index(bus_name)
 	if bus_idx == -1:
@@ -69,6 +82,8 @@ func _process(delta: float) -> void:
 	if smooth > threshold and (now - last_trigger_time) > cooldown_ms:
 		_on_kick(smooth)
 		last_trigger_time = now
+		
+	$CPUParticles2D.position = $Camera2D.global_position
 
 func _on_kick(strength: float) -> void:
 	# Pulse the bg visually when kick is detected
@@ -79,14 +94,24 @@ func _on_kick(strength: float) -> void:
 	#var g: float = clamp(normal_bg_color.g + randf_range(-deviation, deviation), 0.0, 1.0)
 	#var b: float = clamp(normal_bg_color.b + randf_range(-deviation, deviation), 0.0, 1.0)
 	
-	var flash_color_val_r: float = normal_bg_color.r + 0.13
-	var flash_color_val_g: float = normal_bg_color.r + 0.13
-	var flash_color_val_b: float = normal_bg_color.r + 0.13
+	var flash_color_val_r: float = normal_bg_color.r + 0.02
+	var flash_color_val_g: float = normal_bg_color.r + 0.02
+	var flash_color_val_b: float = normal_bg_color.r + 0.02
 
 	var flash_color: Color = Color(flash_color_val_r, flash_color_val_g, flash_color_val_b)
 	
 	# Instantly set to flash color
 	bg.color = flash_color
+	
+	if tween:
+		tween.kill()  # cancel any old tweens
+		
+	tween = create_tween()
+	# Jump up to kick speed fast
+	tween.tween_property(particles, "speed_scale", kick_scale, 0.05)
+	tween.tween_property(particles, "speed_scale", base_scale, 0.3).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	
+
 
 	# Tween back to normal color over 0.15 seconds
 	var t: Tween = create_tween()
