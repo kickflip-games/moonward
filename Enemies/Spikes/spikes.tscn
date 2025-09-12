@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqgqwgwlwgav"]
+
+[ext_resource type="Script" uid="uid://b1huqnrax41fb" path="res://Enemies/hurtzone/hurtzone.gd" id="1_dakr1"]
+[ext_resource type="Script" uid="uid://bjwp3fi83n4qp" path="res://addons/primitive_shapes/triangle.gd" id="1_xcacv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sadch"]
+size = Vector2(145, 31)
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Triangle" type="Node2D" parent="Visuals"]
+position = Vector2(-33, 0)
+script = ExtResource("1_xcacv")
+side = 34.66
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Triangle2" type="Node2D" parent="Visuals"]
+position = Vector2(-11, 0)
+script = ExtResource("1_xcacv")
+side = 34.66
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Triangle3" type="Node2D" parent="Visuals"]
+position = Vector2(-56, 0)
+script = ExtResource("1_xcacv")
+side = 34.66
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Triangle4" type="Node2D" parent="Visuals"]
+position = Vector2(35, 0)
+script = ExtResource("1_xcacv")
+side = 34.66
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Triangle5" type="Node2D" parent="Visuals"]
+position = Vector2(57, 0)
+script = ExtResource("1_xcacv")
+side = 34.66
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Triangle6" type="Node2D" parent="Visuals"]
+position = Vector2(12, 0)
+script = ExtResource("1_xcacv")
+side = 34.66
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Hurtzone" type="Area2D" parent="."]
+collision_layer = 4
+script = ExtResource("1_dakr1")
+metadata/_custom_type_script = "uid://b1huqnrax41fb"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtzone"]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_sadch")
