@@ -234,7 +234,6 @@ libraries = {
 }
 
 [node name="SquareCollisionShape" type="CollisionShape2D" parent="."]
-top_level = true
 position = Vector2(0, -4)
 shape = SubResource("2")
 debug_color = Color(0.7019608, 0, 0.2, 0.41960785)

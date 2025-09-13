@@ -20,7 +20,7 @@ Thumbs.db
 venv
 node_modules
 .sass-cache
-
+.vscode
 
 # Godot 4+ specific ignores
 .godot/

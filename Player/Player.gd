@@ -173,6 +173,7 @@ func _physics_process(delta: float) -> void:
 	# Fall damage check
 	if not is_on_floor():
 		if not _is_airborne:
+			print('just landed')
 			_last_grounded_y = position.y
 			_is_airborne = true
 	else:
@@ -256,10 +257,8 @@ func x_movement(delta: float, lerp_amount := 1.0) -> void:
 	if accel_rate == 0:
 		return
 
-	# Accelerate
-	var speed_dif = target_speed - velocity.x
-	var movement = speed_dif * accel_rate * delta
-	velocity.x += movement
+	# Accelerate (stable approach to prevent oscillations)
+	velocity.x = move_toward(velocity.x, target_speed, accel_rate * delta)
 
 	# Clamp to max speed
 	if abs(velocity.x) > max_speed and sign(velocity.x) == sign(target_speed):
@@ -471,12 +470,15 @@ func respawn():
 var _current_platform: AnimatableBody2D = null
 var _last_platform_position: Vector2 = Vector2.ZERO
 var _platform_velocity: Vector2 = Vector2.ZERO
+var _was_on_floor: bool = false
 
 func _update_platform_motion() -> void:
-	if is_on_floor():
+	var now_on_floor = is_on_floor()
+	if now_on_floor:
 		var platform: AnimatableBody2D = _get_floor_platform()
 		if platform and platform.is_in_group("moving_platform"):
-			if platform != _current_platform:
+			# If just landed or switched platform, reset tracking to avoid teleport
+			if platform != _current_platform or not _was_on_floor:
 				_current_platform = platform
 				_last_platform_position = platform.global_position
 				_platform_velocity = Vector2.ZERO
@@ -493,6 +495,8 @@ func _update_platform_motion() -> void:
 	# Add platform velocity to player velocity
 	if _platform_velocity != Vector2.ZERO:
 		velocity += _platform_velocity
+
+	_was_on_floor = now_on_floor
 
 func _get_floor_platform() -> AnimatableBody2D:
 	for i in range(get_slide_collision_count()):

@@ -155,7 +155,7 @@ move_to = Vector2(0, 500)
 speed = 300.0
 
 [node name="ActualPlatform" parent="Obstacles/Platform9" index="0"]
-position = Vector2(0, -78.71521)
+position = Vector2(0, -62.44159)
 
 [node name="Spikes2" parent="Obstacles/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
 position = Vector2(-2, -18.951904)
