@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1tqixxkohdni"]
+
+[ext_resource type="Script" uid="uid://bnx7nk5s3363s" path="res://Enemies/Projectile/projectile.gd" id="1_q4d7l"]
+[ext_resource type="Script" uid="uid://bjwp3fi83n4qp" path="res://addons/primitive_shapes/triangle.gd" id="2_0lwue"]
+[ext_resource type="PackedScene" uid="uid://c3l3kt4byvpea" path="res://Enemies/hurtzone/Hurtzone.tscn" id="3_m278q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m278q"]
+
+[node name="Projectile" type="CharacterBody2D"]
+script = ExtResource("1_q4d7l")
+
+[node name="Triangle" type="Node2D" parent="."]
+script = ExtResource("2_0lwue")
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Hurtzone" parent="." instance=ExtResource("3_m278q")]
+
+[node name="CollisionShape2D" parent="Hurtzone" index="0"]
+position = Vector2(2, -1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m278q")
+
+[editable path="Hurtzone"]
