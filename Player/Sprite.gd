@@ -299,13 +299,17 @@ func _add_trail_point(trail: Line2D) -> void:
 		trail.remove_point(0)
 
 func _fade_trail(trail: Line2D, delta: float) -> void:
-	if not trail or trail.get_point_count() == 0:
+	if not trail:
 		return
-	
-	# Remove points gradually for fading effect
-	if trail.get_point_count() > 0:
+
+	# Faster fade by removing multiple points
+	var points_to_remove = clampi(int(delta * 30), 1, trail.get_point_count())
+
+	for i in range(points_to_remove):
+		if trail.get_point_count() == 0:
+			break
 		trail.remove_point(0)
-	
+
 	if trail.get_point_count() == 0:
 		trail.visible = false
 
@@ -520,10 +524,11 @@ func _on_player_respawned() -> void:
 	play_animation(SPAWN_ANIM)
 
 func _on_animation_finished(anim_name: String) -> void:
-	match anim_name:
-		LAND_ANIM, SPAWN_ANIM, FALL_DEATH_ANIM:
-			animation_locked = false
+	# Only unlock if the finished animation is the current one
+	if anim_name == current_animation:
+		animation_locked = false
+		lock_timer = 0.0
 
 func _setup_animation_connections() -> void:
-	if animator:
+	if animator and animator.has_signal("animation_finished"):
 		animator.animation_finished.connect(_on_animation_finished)

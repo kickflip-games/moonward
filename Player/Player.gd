@@ -82,6 +82,9 @@ var _last_wall_jump_dir : int = 0
 var is_sliding := false
 var _input_locked:=true
 
+# Ceiling collision bump
+@export var ceiling_bump_velocity_add: float = 100.0
+
 # Debug
 @export var show_debug_state: bool = true
 @onready var debug_label: Label = Label.new()
@@ -91,6 +94,15 @@ signal respawned
 
 # respawn location
 var _respawn_pos:Vector2 = Vector2.ZERO
+
+# Cached input to avoid creating dictionary every frame
+var _cached_input := {
+	"x": 0,
+	"y": 0,
+	"just_jump": false,
+	"jump": false,
+	"released_jump": false
+}
 
 
 func _ready() -> void:
@@ -110,26 +122,13 @@ func _ready() -> void:
 	respawn()
 
 
-func get_input() -> Dictionary:
-	if _input_locked:
-		return {
-			"x": 0,
-			"y": 0,
-			"just_jump": false,
-			"jump": false,
-			"released_jump": false
-		}
-	
-	return {
-		"x": int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left")),
-		"y": int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")),
-		"just_jump": Input.is_action_just_pressed("jump"),
-		"jump": Input.is_action_pressed("jump"),
-		"released_jump": Input.is_action_just_released("jump")
-	}
+
 
 
 func _physics_process(delta: float) -> void:
+	# Update input cache
+	_update_input_cache()
+
 	# Update timers
 	_update_timers(delta)
 
@@ -137,12 +136,12 @@ func _physics_process(delta: float) -> void:
 	_collision_checks()
 
 	# Read input and set direction
-	x_dir = get_input()["x"]
+	x_dir = _cached_input["x"]
 	if x_dir != 0:
 		set_direction(x_dir)
 
 	# Handle jump button buffering
-	if get_input()["just_jump"]:
+	if _cached_input["just_jump"]:
 		last_pressed_jump_time = jump_buffer
 
 	# Decide jumps (ground or wall)
@@ -169,7 +168,7 @@ func _physics_process(delta: float) -> void:
 	# Expire wall-jump state once timer runs out
 	if is_wall_jumping and _wall_jump_timer <= 0.0:
 		is_wall_jumping = false
-		
+
 	# Fall damage check
 	if not is_on_floor():
 		if not _is_airborne:
@@ -183,10 +182,29 @@ func _physics_process(delta: float) -> void:
 				print("Fell to death (height = %s)" % fall_height)
 				die()
 			_is_airborne = false
-	
+
 	# Update debug state
 	if show_debug_state:
 		_update_debug_label()
+
+
+func _update_input_cache() -> void:
+	if _input_locked:
+		_cached_input["x"] = 0
+		_cached_input["y"] = 0
+		_cached_input["just_jump"] = false
+		_cached_input["jump"] = false
+		_cached_input["released_jump"] = false
+	else:
+		_cached_input["x"] = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
+		_cached_input["y"] = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+		_cached_input["just_jump"] = Input.is_action_just_pressed("jump")
+		_cached_input["jump"] = Input.is_action_pressed("jump")
+		_cached_input["released_jump"] = Input.is_action_just_released("jump")
+
+
+func get_input() -> Dictionary:
+	return _cached_input.duplicate()
 
 
 func _update_timers(delta: float) -> void:
@@ -320,17 +338,19 @@ func _perform_jump() -> void:
 
 
 func _perform_wall_jump() -> void:
-	# Figure out direction BEFORE clearing timers
+	# Determine bounce direction: jump away from the wall
+	# If on left wall (last_on_wall_left_time > 0), dir = 1 (jump right)
+	# If on right wall (last_on_wall_left_time == 0), dir = -1 (jump left)
 	var dir = 1 if last_on_wall_left_time > 0 else -1
 	print("jump dir: ", dir)
 
-	# Clear timers
+	# Clear timers to consume the jump and wall detection
 	last_pressed_jump_time = -1.0
 	last_on_ground_time = -1.0
 	last_on_wall_right_time = -1.0
 	last_on_wall_left_time = -1.0
 
-	# Set states
+	# Set states - wall jump is treated as a jump for some physics (apex bonuses)
 	is_wall_jumping = true
 	is_jumping = true   # treat it as a jump
 	_is_jump_cut = false
@@ -340,7 +360,7 @@ func _perform_wall_jump() -> void:
 
 	print("before wall jump: ", velocity)
 
-	# Apply wall jump force directly
+	# Apply wall jump force: horizontal thrust away from wall + upward boost
 	var force = Vector2(wall_jump_force.x * dir, -wall_jump_force.y)
 	velocity.x = force.x
 	velocity.y = force.y
@@ -401,7 +421,7 @@ func _apply_gravity_and_limits(delta: float) -> void:
 
 	# Ceiling bump
 	if is_on_ceiling():
-		velocity.y = jump_hang_treshold + 100.0
+		velocity.y = jump_hang_treshold + ceiling_bump_velocity_add
 
 	# Update jump states
 	if is_jumping and velocity.y > 0:
@@ -467,7 +487,7 @@ func respawn():
 
 
 
-var _current_platform: AnimatableBody2D = null
+var _current_platform: PhysicsBody2D = null
 var _last_platform_position: Vector2 = Vector2.ZERO
 var _platform_velocity: Vector2 = Vector2.ZERO
 var _was_on_floor: bool = false
@@ -475,7 +495,7 @@ var _was_on_floor: bool = false
 func _update_platform_motion() -> void:
 	var now_on_floor = is_on_floor()
 	if now_on_floor:
-		var platform: AnimatableBody2D = _get_floor_platform()
+		var platform: PhysicsBody2D = _get_floor_platform()
 		if platform and platform.is_in_group("moving_platform"):
 			# If just landed or switched platform, reset tracking to avoid teleport
 			if platform != _current_platform or not _was_on_floor:
@@ -498,9 +518,11 @@ func _update_platform_motion() -> void:
 
 	_was_on_floor = now_on_floor
 
-func _get_floor_platform() -> AnimatableBody2D:
+func _get_floor_platform() -> PhysicsBody2D:
 	for i in range(get_slide_collision_count()):
 		var collision := get_slide_collision(i)
 		if collision and collision.get_normal().y < -0.7:
-			return collision.get_collider()
+			var collider = collision.get_collider()
+			if collider and collider is PhysicsBody2D:
+				return collider
 	return null
