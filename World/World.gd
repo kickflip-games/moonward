@@ -19,9 +19,9 @@ func swap_fullscreen_mode():
 @export var threshold: float = 0.1       # Sensitivity
 @export var cooldown_ms: int = 180        # Minimum gap between triggers (ms)
 
-@onready var bg: ColorRect = $Background
-@onready var bgcolor: ColorRect = $Background
-var normal_bg_color: Color =  Color("#1A1749")
+@onready var bg: ColorRect = $Map/Background
+@onready var bgcolor: ColorRect = $Map/Background
+@export var normal_bg_color: Color =  Color("#4bacc3")
 
 @onready var particles := $CPUParticles2D
 var base_scale = 1.0
@@ -38,7 +38,7 @@ func _ready() -> void:
 	# Save the "default" background color so we can return to it
 	normal_bg_color = bg.color
 	
-	$Platforms.z_index = 0
+	$Map/Platforms.z_index = 0
 	$CPUParticles2D.z_index = -1
 
 	particles.position = get_viewport_rect().size / 2
