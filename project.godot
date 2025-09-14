@@ -20,6 +20,7 @@ config/windows_native_icon="res://icon.png"
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 CheckpointManager="*res://Globals/CheckpointManager.gd"
+HeightTracker="*res://Globals/HeightTracker.gd"
 
 [display]
 

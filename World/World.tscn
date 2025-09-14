@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cfg4sor4sotk6"]
+[gd_scene load_steps=26 format=4 uid="uid://cfg4sor4sotk6"]
 
 [ext_resource type="Script" uid="uid://cwoc6eooyuefo" path="res://World/World.gd" id="1_jacc8"]
 [ext_resource type="Script" uid="uid://da78ijeok40v1" path="res://World/background.gd" id="2_jacc8"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="16_hev0n"]
 [ext_resource type="AudioStream" uid="uid://dv26kytvfrljx" path="res://sfx/music.mp3" id="16_lcvgy"]
 [ext_resource type="Texture2D" uid="uid://c468q1a84ypec" path="res://Art/Ui/button_rectangle_line.png" id="16_vdgnt"]
+[ext_resource type="PackedScene" uid="uid://eowupo5004n4" path="res://Ui/height_ui.tscn" id="17_3ql1f"]
 [ext_resource type="Texture2D" uid="uid://bia147kubmm6o" path="res://Art/particle.png" id="18_hev0n"]
 [ext_resource type="PackedScene" uid="uid://bqgqwgwlwgav" path="res://Enemies/Spikes/spikes.tscn" id="19_7in0u"]
 
@@ -162,7 +163,7 @@ move_to = Vector2(0, 500)
 speed = 300.0
 
 [node name="ActualPlatform" parent="Map/Obstacles/Platform9" index="0"]
-position = Vector2(0, 449.74384)
+position = Vector2(0, 283.1452)
 
 [node name="Spikes2" parent="Map/Obstacles/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
 position = Vector2(-2, -18.951904)
@@ -260,6 +261,15 @@ offset_right = 115.80645
 offset_bottom = 61.0
 theme = ExtResource("14_hev0n")
 text = ">"
+
+[node name="HeightUI" parent="Hud" instance=ExtResource("17_3ql1f")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -143.0
+offset_right = 0.0
+offset_bottom = 97.0
+grow_horizontal = 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1

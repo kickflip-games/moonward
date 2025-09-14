@@ -63,6 +63,8 @@ func _ready() -> void:
 		
 
 	CheckpointManager.set_player($Player)
+	HeightTracker.set_player($Player)
+	
 
 
 
