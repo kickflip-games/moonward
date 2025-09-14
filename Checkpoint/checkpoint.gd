@@ -1,17 +1,22 @@
+# Checkpoint.gd
 extends Area2D
+class_name Checkpoint
 
 @onready var _flag: = $Flag
 @onready var _marker:Marker2D = $FlagMarker
 @onready var _sfx:AudioStreamPlayer2D = $sfx
 @onready var _fx:CPUParticles2D = $fx
-
 var activated = false
+
+func _ready():
+	CheckpointManager.register_checkpoint(self)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player and not activated:
 		activated = true
 		print("player entered checkpoint")
 		body.update_respawn_position(global_position)
+		CheckpointManager.checkpoint_activated(self)
 		activate_flag()
 
 func activate_flag():

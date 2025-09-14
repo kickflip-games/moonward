@@ -204,8 +204,8 @@ _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_dm7nj"]
-offsets = PackedFloat32Array(0, 0.7037037)
-colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0, 0.53800005)
+offsets = PackedFloat32Array(0, 0.72282606)
+colors = PackedColorArray(0, 0, 0, 0, 0.9607843, 0.9490196, 1, 1)
 
 [sub_resource type="Curve" id="Curve_dm7nj"]
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -213,7 +213,7 @@ point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_p7tob"]
 offsets = PackedFloat32Array(0, 0.7037037)
-colors = PackedColorArray(0, 0, 0, 0, 1, 1, 0, 0.28100002)
+colors = PackedColorArray(0, 0, 0, 0, 0.6914287, 0.6914287, 0.6914287, 0.28235295)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 10
@@ -226,6 +226,7 @@ deceleration = 4480.0
 jump_hang_gravity_mult = 0.05
 jump_force = 1200.0
 jump_gravity_max = 1000.0
+wall_jump_force = Vector2(1200, 9000)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
@@ -261,7 +262,6 @@ player_path = NodePath("..")
 
 [node name="Polygon2D" type="Polygon2D" parent="Sprite"]
 position = Vector2(0, -9)
-color = Color(0.9607843, 0.9490196, 0.29803923, 1)
 polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
 
 [node name="WallRayRight" type="RayCast2D" parent="."]
@@ -301,44 +301,36 @@ stream = ExtResource("7_v0k0e")
 [node name="DeathFx" parent="ParticleFx" instance=ExtResource("8_p7tob")]
 emitting = false
 one_shot = true
-color = Color(1, 1, 0.14733289, 1)
 
 [node name="JumpFx" parent="ParticleFx" instance=ExtResource("3_tok1r")]
 emitting = false
 one_shot = true
-color = Color(1, 1, 0.14733289, 1)
 
 [node name="LandFx" parent="ParticleFx" instance=ExtResource("10_dm7nj")]
 emitting = false
 one_shot = true
-color = Color(1, 1, 0.14733289, 1)
 
 [node name="RunFx" parent="ParticleFx" instance=ExtResource("11_3mea3")]
 emitting = false
 explosiveness = 0.0
-color = Color(1, 1, 0.14733289, 1)
 
 [node name="SpawnFx" parent="ParticleFx" instance=ExtResource("12_7v5gs")]
 emitting = false
 one_shot = true
-color = Color(1, 1, 0.14733289, 1)
 
 [node name="WallslideFx" parent="ParticleFx" instance=ExtResource("13_8sa4y")]
 emitting = false
 explosiveness = 0.0
 randomness = 0.0
-color = Color(1, 1, 0.14733289, 1)
 
 [node name="Trails" type="Node2D" parent="."]
 
 [node name="SomersaultTrail" type="Line2D" parent="Trails"]
 top_level = true
 width_curve = SubResource("Curve_p7tob")
-default_color = Color(1, 1, 0.14901961, 1)
 gradient = SubResource("Gradient_dm7nj")
 
 [node name="SpeedTrail" type="Line2D" parent="Trails"]
 top_level = true
 width_curve = SubResource("Curve_dm7nj")
-default_color = Color(1, 1, 0.14901961, 1)
 gradient = SubResource("Gradient_p7tob")

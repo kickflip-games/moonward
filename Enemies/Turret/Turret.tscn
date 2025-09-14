@@ -1,17 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://db8nlmg0yb8pq"]
+[gd_scene load_steps=5 format=3 uid="uid://db8nlmg0yb8pq"]
 
 [ext_resource type="Script" uid="uid://bdoso7avvw2rb" path="res://Enemies/Turret/turret.gd" id="1_gmcln"]
 [ext_resource type="Script" uid="uid://bp35nydfqhkvr" path="res://addons/primitive_shapes/rectangle.gd" id="2_2ck2l"]
+[ext_resource type="PackedScene" uid="uid://d1tqixxkohdni" path="res://Enemies/Projectile/Projectile.tscn" id="2_8eeqa"]
 [ext_resource type="Script" uid="uid://cug7hbekyfo6k" path="res://addons/primitive_shapes/circle.gd" id="3_8eeqa"]
 
 [node name="Turret" type="Node2D"]
 script = ExtResource("1_gmcln")
+projectile_scene = ExtResource("2_8eeqa")
 
 [node name="Sprite" type="Node2D" parent="."]
 
 [node name="Rectangle" type="Node2D" parent="Sprite"]
-position = Vector2(0, 33)
-rotation = -6.2831855
+position = Vector2(44, -1)
+rotation = 1.5707964
 script = ExtResource("2_2ck2l")
 width = 40.33
 metadata/_custom_type_script = "uid://bp35nydfqhkvr"

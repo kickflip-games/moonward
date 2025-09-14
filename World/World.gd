@@ -62,6 +62,7 @@ func _ready() -> void:
 		return
 		
 
+	CheckpointManager.set_player($Player)
 
 
 
@@ -115,4 +116,4 @@ func _on_kick(strength: float) -> void:
 
 	# Tween back to normal color over 0.15 seconds
 	var t: Tween = create_tween()
-	t.tween_property(bg, "color", normal_bg_color, 0.25).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	t.tween_property(bg, "color", normal_bg_color, 0.85).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)

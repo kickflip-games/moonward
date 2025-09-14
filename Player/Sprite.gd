@@ -105,13 +105,13 @@ func _setup_fx_systems() -> void:
 	# Setup trails
 	if somersault_trail:
 		somersault_trail.width = 12.0
-		somersault_trail.default_color = Color.YELLOW
+		somersault_trail.default_color = Color.WHITE
 		somersault_trail.default_color.a = 0.6
 		
 	
 	if speed_trail:
 		speed_trail.width = 12.0
-		speed_trail.default_color = Color.YELLOW
+		speed_trail.default_color = Color.WHITE
 		speed_trail.default_color.a = 0.3
 
 func _setup_jump_particles() -> void:
