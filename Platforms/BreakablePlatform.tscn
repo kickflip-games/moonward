@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://6ixfa7yndind"]
+
+[ext_resource type="Script" uid="uid://bl5lpajlhx7cv" path="res://Platforms/breakable_platform.gd" id="1_tqjw7"]
+[ext_resource type="Script" uid="uid://bp35nydfqhkvr" path="res://addons/primitive_shapes/rectangle.gd" id="2_28jox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rni54"]
+size = Vector2(154, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28jox"]
+size = Vector2(152, 54)
+
+[node name="BreakablePlatform" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_tqjw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rni54")
+one_way_collision = true
+
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource("2_28jox")
+width = 156.78
+height = 24.07
+color = Color(0, 0, 0, 0.3137255)
+metadata/_custom_type_script = "uid://bp35nydfqhkvr"
+
+[node name="Sprite2D" type="Node2D" parent="."]
+script = ExtResource("2_28jox")
+width = 151.24
+height = 19.77
+metadata/_custom_type_script = "uid://bp35nydfqhkvr"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(-1, -29)
+shape = SubResource("RectangleShape2D_28jox")
