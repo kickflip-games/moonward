@@ -331,7 +331,7 @@ move_to = Vector2(0, 500)
 speed = 300.0
 
 [node name="ActualPlatform" parent="Map/Spikes/Platform9" index="0"]
-position = Vector2(0, -500)
+position = Vector2(0, -292.09692)
 
 [node name="Spikes2" parent="Map/Spikes/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
 position = Vector2(-2, -18.951904)
@@ -469,6 +469,7 @@ process_callback = 0
 limit_left = -2000
 limit_right = 100
 limit_bottom = 1000
+editor_draw_screen = false
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
@@ -487,7 +488,6 @@ tween_resource = SubResource("Resource_21v8o")
 follow_damping = true
 dead_zone_width = 0.278
 dead_zone_height = 0.227
-show_viewfinder_in_play = true
 draw_limits = true
 limit_left = -2000
 limit_right = 100
