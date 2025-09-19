@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c36t6m506qv13"]
+
+[ext_resource type="Shader" uid="uid://dl5n5btpq2u8p" path="res://whiteglow.gdshader" id="1_3t430"]
+
+[resource]
+shader = ExtResource("1_3t430")
