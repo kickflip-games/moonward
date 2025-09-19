@@ -23,6 +23,9 @@ func swap_fullscreen_mode():
 @onready var bgcolor: ColorRect = $Map/Background
 @export var normal_bg_color: Color =  Color("#4bacc3")
 
+@onready var introplayer = $introplayer
+@onready var loopplayer = $loopplayer
+
 @onready var particles := $CPUParticles2D
 var base_scale = 1.0
 var kick_scale = 3.0
@@ -64,6 +67,11 @@ func _ready() -> void:
 
 	CheckpointManager.set_player($Player)
 	HeightTracker.set_player($Player)
+	
+	introplayer.play()
+	
+	
+	introplayer.connect("finished", Callable(self, "_on_intro_finished"))
 	
 
 
@@ -119,3 +127,8 @@ func _on_kick(strength: float) -> void:
 	# Tween back to normal color over 0.15 seconds
 	var t: Tween = create_tween()
 	t.tween_property(bg, "color", normal_bg_color, 0.85).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	
+	
+func _on_intro_finished():
+	#audio loop
+	loopplayer.play()
