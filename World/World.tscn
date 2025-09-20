@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://dyq8g35t6hsjf" path="res://Platforms/MovingPlatform.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://cqindn5hr3fl7" path="res://Platforms/CirclePlatform.tscn" id="6"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="Script" path="res://World/polygon_2d.gd" id="6_daix3"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_lcvgy"]
 [ext_resource type="PackedScene" uid="uid://db8nlmg0yb8pq" path="res://Enemies/Turret/Turret.tscn" id="8_3ql1f"]
 [ext_resource type="PackedScene" uid="uid://6ixfa7yndind" path="res://Platforms/BreakablePlatform.tscn" id="9_eucu0"]
@@ -123,7 +127,11 @@ speed = 64.0
 <<<<<<< Updated upstream
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(0, 69.85647)
+=======
+position = Vector2(0, 58.19638)
+>>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -139,7 +147,11 @@ speed = 64.0
 <<<<<<< Updated upstream
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform8" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(0, 69.85647)
+=======
+position = Vector2(0, 58.19638)
+>>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform8/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -154,7 +166,11 @@ speed = 64.0
 <<<<<<< Updated upstream
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform3" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(0, -54.764374)
+=======
+position = Vector2(0, 89.45006)
+>>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform3/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -169,7 +185,11 @@ speed = 64.0
 <<<<<<< Updated upstream
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform2" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
+=======
+position = Vector2(160, 0)
+>>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform2/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -184,7 +204,11 @@ speed = 64.0
 <<<<<<< Updated upstream
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform4" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
+=======
+position = Vector2(160, 0)
+>>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform4/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -199,7 +223,11 @@ speed = 64.0
 <<<<<<< Updated upstream
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform5" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
+=======
+position = Vector2(160, 0)
+>>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform5/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -214,7 +242,11 @@ speed = 64.0
 <<<<<<< Updated upstream
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform6" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
+=======
+position = Vector2(160, 0)
+>>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform6/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -229,7 +261,11 @@ speed = 64.0
 <<<<<<< Updated upstream
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform7" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
+=======
+position = Vector2(160, 0)
+>>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform7/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -376,6 +412,7 @@ position = Vector2(796, -5052)
 [node name="Checkpoint" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-637, 760)
 
+<<<<<<< Updated upstream
 [node name="Checkpoint1" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-630, -73)
 
@@ -391,6 +428,149 @@ position = Vector2(-1491, -3689)
 [node name="Checkpoint5" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-962, -4139)
 
+=======
+[node name="Flag" parent="Map/Checkpoints/Checkpoint" index="1"]
+visible = false
+rotation = 0.0
+scale = Vector2(0.2, 0.2)
+color = Color(1, 1, 1, 1)
+
+[node name="FlagMarker" parent="Map/Checkpoints/Checkpoint" index="3"]
+position = Vector2(-7, -16)
+
+[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint"]
+position = Vector2(-7, -20)
+emitting = false
+amount = 100
+texture = ExtResource("10_ox6yj")
+local_coords = true
+direction = Vector2(0, -1)
+spread = 18.87
+gravity = Vector2(0, -70)
+initial_velocity_min = 72.17
+initial_velocity_max = 144.33
+radial_accel_min = -30.0
+radial_accel_max = -30.0
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color = Color(1.6372112, 0.91384244, 0.4483704, 1)
+
+[node name="Checkpoint1" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
+position = Vector2(-630, -73)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint1" index="1"]
+visible = false
+
+[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint1"]
+position = Vector2(-7, -20)
+emitting = false
+amount = 100
+texture = ExtResource("10_ox6yj")
+local_coords = true
+direction = Vector2(0, -1)
+spread = 18.87
+gravity = Vector2(0, -70)
+initial_velocity_min = 72.17
+initial_velocity_max = 144.33
+radial_accel_min = -30.0
+radial_accel_max = -30.0
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color = Color(1.6372112, 0.91384244, 0.4483704, 1)
+
+[node name="Checkpoint2" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
+position = Vector2(-1708, -1097)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint2" index="1"]
+visible = false
+
+[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint2"]
+position = Vector2(-7, -20)
+emitting = false
+amount = 100
+texture = ExtResource("10_ox6yj")
+local_coords = true
+direction = Vector2(0, -1)
+spread = 18.87
+gravity = Vector2(0, -70)
+initial_velocity_min = 72.17
+initial_velocity_max = 144.33
+radial_accel_min = -30.0
+radial_accel_max = -30.0
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color = Color(1.6372112, 0.91384244, 0.4483704, 1)
+
+[node name="Checkpoint3" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
+position = Vector2(-1592, -2283)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint3" index="1"]
+visible = false
+
+[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint3"]
+position = Vector2(-7, -20)
+emitting = false
+amount = 100
+texture = ExtResource("10_ox6yj")
+local_coords = true
+direction = Vector2(0, -1)
+spread = 18.87
+gravity = Vector2(0, -70)
+initial_velocity_min = 72.17
+initial_velocity_max = 144.33
+radial_accel_min = -30.0
+radial_accel_max = -30.0
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color = Color(1.6372112, 0.91384244, 0.4483704, 1)
+
+[node name="Checkpoint4" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
+position = Vector2(-1491, -3689)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint4" index="1"]
+visible = false
+
+[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint4"]
+position = Vector2(-7, -20)
+emitting = false
+amount = 100
+texture = ExtResource("10_ox6yj")
+local_coords = true
+direction = Vector2(0, -1)
+spread = 18.87
+gravity = Vector2(0, -70)
+initial_velocity_min = 72.17
+initial_velocity_max = 144.33
+radial_accel_min = -30.0
+radial_accel_max = -30.0
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color = Color(1.6372112, 0.91384244, 0.4483704, 1)
+
+[node name="Checkpoint5" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
+position = Vector2(-962, -4139)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint5" index="1"]
+visible = false
+
+[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint5"]
+position = Vector2(-7, -20)
+emitting = false
+amount = 100
+texture = ExtResource("10_ox6yj")
+local_coords = true
+direction = Vector2(0, -1)
+spread = 18.87
+gravity = Vector2(0, -70)
+initial_velocity_min = 72.17
+initial_velocity_max = 144.33
+radial_accel_min = -30.0
+radial_accel_max = -30.0
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color = Color(1.6372112, 0.91384244, 0.4483704, 1)
+
+>>>>>>> Stashed changes
 [node name="Spikes" type="Node2D" parent="Map"]
 
 [node name="Platform9" parent="Map/Spikes" instance=ExtResource("5")]
@@ -400,6 +580,7 @@ move_to = Vector2(0, 500)
 speed = 300.0
 
 [node name="ActualPlatform" parent="Map/Spikes/Platform9" index="0"]
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 position = Vector2(0, 457.63123)
@@ -409,6 +590,9 @@ position = Vector2(0, -500)
 =======
 position = Vector2(0, -491.75897)
 >>>>>>> 270dbd499ac854a3c91f7f102d6b5f3e0ac48818
+=======
+position = Vector2(0, 430.97754)
+>>>>>>> Stashed changes
 
 [node name="Spikes2" parent="Map/Spikes/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
 position = Vector2(-2, -18.951904)
