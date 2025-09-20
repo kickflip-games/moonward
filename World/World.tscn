@@ -143,7 +143,7 @@ move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform" index="0"]
-position = Vector2(0, -28.84436)
+position = Vector2(0, 80)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -156,7 +156,7 @@ move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform8" index="0"]
-position = Vector2(0, -28.84436)
+position = Vector2(0, 80)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform8/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -180,7 +180,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform2" index="0"]
-position = Vector2(36.144806, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform2/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -192,7 +192,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform4" index="0"]
-position = Vector2(36.144806, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform4/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -204,7 +204,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform5" index="0"]
-position = Vector2(36.144806, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform5/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -216,7 +216,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform6" index="0"]
-position = Vector2(36.144806, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform6/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -228,7 +228,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform7" index="0"]
-position = Vector2(36.144806, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform7/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -382,6 +382,15 @@ position = Vector2(796, -5052)
 [node name="Checkpoint" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-637, 760)
 
+[node name="Flag" parent="Map/Checkpoints/Checkpoint" index="1"]
+visible = false
+rotation = 0.0
+scale = Vector2(0.2, 0.2)
+color = Color(1, 1, 1, 1)
+
+[node name="FlagMarker" parent="Map/Checkpoints/Checkpoint" index="3"]
+position = Vector2(-7, -16)
+
 [node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint"]
 position = Vector2(-7, -20)
 emitting = false
@@ -399,17 +408,11 @@ scale_amount_min = 0.05
 scale_amount_max = 0.2
 color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint" index="2"]
-visible = false
-rotation = 0.0
-scale = Vector2(0.2, 0.2)
-color = Color(1, 1, 1, 1)
-
-[node name="FlagMarker" parent="Map/Checkpoints/Checkpoint" index="4"]
-position = Vector2(-7, -16)
-
 [node name="Checkpoint1" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-630, -73)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint1" index="1"]
+visible = false
 
 [node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint1"]
 position = Vector2(-7, -20)
@@ -428,11 +431,11 @@ scale_amount_min = 0.05
 scale_amount_max = 0.2
 color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint1" index="2"]
-visible = false
-
 [node name="Checkpoint2" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-1708, -1097)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint2" index="1"]
+visible = false
 
 [node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint2"]
 position = Vector2(-7, -20)
@@ -451,11 +454,11 @@ scale_amount_min = 0.05
 scale_amount_max = 0.2
 color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint2" index="2"]
-visible = false
-
 [node name="Checkpoint3" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-1592, -2283)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint3" index="1"]
+visible = false
 
 [node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint3"]
 position = Vector2(-7, -20)
@@ -474,11 +477,11 @@ scale_amount_min = 0.05
 scale_amount_max = 0.2
 color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint3" index="2"]
-visible = false
-
 [node name="Checkpoint4" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-1491, -3689)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint4" index="1"]
+visible = false
 
 [node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint4"]
 position = Vector2(-7, -20)
@@ -497,11 +500,11 @@ scale_amount_min = 0.05
 scale_amount_max = 0.2
 color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint4" index="2"]
-visible = false
-
 [node name="Checkpoint5" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-962, -4139)
+
+[node name="Flag" parent="Map/Checkpoints/Checkpoint5" index="1"]
+visible = false
 
 [node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint5"]
 position = Vector2(-7, -20)
@@ -520,9 +523,6 @@ scale_amount_min = 0.05
 scale_amount_max = 0.2
 color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint5" index="2"]
-visible = false
-
 [node name="Spikes" type="Node2D" parent="Map"]
 
 [node name="Platform9" parent="Map/Spikes" instance=ExtResource("5")]
@@ -532,7 +532,7 @@ move_to = Vector2(0, 500)
 speed = 300.0
 
 [node name="ActualPlatform" parent="Map/Spikes/Platform9" index="0"]
-position = Vector2(0, 343.34558)
+position = Vector2(0, 411.5929)
 
 [node name="Spikes2" parent="Map/Spikes/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
 position = Vector2(-2, -18.951904)
