@@ -21,7 +21,7 @@ func swap_fullscreen_mode():
 
 @onready var bg: ColorRect = $Map/Background
 @onready var bgcolor: ColorRect = $Map/Background
-@export var normal_bg_color: Color =  Color("#4bacc3")
+@onready var normal_bg_color: Color =  $Map/Background.color
 
 @onready var introplayer = $introplayer
 @onready var loopplayer = $loopplayer
@@ -106,8 +106,8 @@ func _on_kick(strength: float) -> void:
 	#var b: float = clamp(normal_bg_color.b + randf_range(-deviation, deviation), 0.0, 1.0)
 	
 	var flash_color_val_r: float = normal_bg_color.r + 0.02
-	var flash_color_val_g: float = normal_bg_color.r + 0.02
-	var flash_color_val_b: float = normal_bg_color.r + 0.02
+	var flash_color_val_g: float = normal_bg_color.g + 0.02
+	var flash_color_val_b: float = normal_bg_color.b + 0.02
 
 	var flash_color: Color = Color(flash_color_val_r, flash_color_val_g, flash_color_val_b)
 	

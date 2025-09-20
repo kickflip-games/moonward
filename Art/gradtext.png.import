@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8q53y5fkm88k"
-path="res://.godot/imported/FIRE.png-23dd4a234a978d1ed89ef6b0dd762d4c.ctex"
+uid="uid://d1veyyyao2gln"
+path="res://.godot/imported/gradtext.png-714c2be6089a2c88423e29aa5f0b05e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/FIRE.png"
-dest_files=["res://.godot/imported/FIRE.png-23dd4a234a978d1ed89ef6b0dd762d4c.ctex"]
+source_file="res://Art/gradtext.png"
+dest_files=["res://.godot/imported/gradtext.png-714c2be6089a2c88423e29aa5f0b05e5.ctex"]
 
 [params]
 
