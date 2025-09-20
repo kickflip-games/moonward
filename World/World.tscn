@@ -125,48 +125,121 @@ position = Vector2(1485, 1201)
 move_to = Vector2(0, -80)
 speed = 64.0
 
+<<<<<<< Updated upstream
+=======
+[node name="ActualPlatform" parent="Map/Platforms/Platform" index="0"]
+position = Vector2(0, 69.85647)
+
+[node name="Polygon2D" parent="Map/Platforms/Platform/ActualPlatform" index="1"]
+texture = ExtResource("5_2neov")
+script = ExtResource("6_daix3")
+
+>>>>>>> Stashed changes
 [node name="Platform8" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(0.003921569, 0.12941177, 0.23921569, 1)
 position = Vector2(1741, -800)
 move_to = Vector2(0, -80)
 speed = 64.0
 
+<<<<<<< Updated upstream
+=======
+[node name="ActualPlatform" parent="Map/Platforms/Platform8" index="0"]
+position = Vector2(0, 69.85647)
+
+[node name="Polygon2D" parent="Map/Platforms/Platform8/ActualPlatform" index="1"]
+texture = ExtResource("5_2neov")
+
+>>>>>>> Stashed changes
 [node name="Platform3" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(0.003921569, 0.12941177, 0.23921569, 1)
 position = Vector2(1137, 714)
 move_to = Vector2(0, -90)
 speed = 64.0
 
+<<<<<<< Updated upstream
+=======
+[node name="ActualPlatform" parent="Map/Platforms/Platform3" index="0"]
+position = Vector2(0, -54.764374)
+
+[node name="Polygon2D" parent="Map/Platforms/Platform3/ActualPlatform" index="1"]
+texture = ExtResource("5_2neov")
+
+>>>>>>> Stashed changes
 [node name="Platform2" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(0.003921569, 0.12941177, 0.23921569, 1)
 position = Vector2(1491, -631)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
+<<<<<<< Updated upstream
+=======
+[node name="ActualPlatform" parent="Map/Platforms/Platform2" index="0"]
+position = Vector2(159.92285, 0)
+
+[node name="Polygon2D" parent="Map/Platforms/Platform2/ActualPlatform" index="1"]
+texture = ExtResource("5_2neov")
+
+>>>>>>> Stashed changes
 [node name="Platform4" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(0.003921569, 0.12941177, 0.23921569, 1)
 position = Vector2(1153, -483)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
+<<<<<<< Updated upstream
+=======
+[node name="ActualPlatform" parent="Map/Platforms/Platform4" index="0"]
+position = Vector2(159.92285, 0)
+
+[node name="Polygon2D" parent="Map/Platforms/Platform4/ActualPlatform" index="1"]
+texture = ExtResource("5_2neov")
+
+>>>>>>> Stashed changes
 [node name="Platform5" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(0.003921569, 0.12941177, 0.23921569, 1)
 position = Vector2(789.99994, -311)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
+<<<<<<< Updated upstream
+=======
+[node name="ActualPlatform" parent="Map/Platforms/Platform5" index="0"]
+position = Vector2(159.92285, 0)
+
+[node name="Polygon2D" parent="Map/Platforms/Platform5/ActualPlatform" index="1"]
+texture = ExtResource("5_2neov")
+
+>>>>>>> Stashed changes
 [node name="Platform6" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(0.003921569, 0.12941177, 0.23921569, 1)
 position = Vector2(488.99994, -145)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
+<<<<<<< Updated upstream
+=======
+[node name="ActualPlatform" parent="Map/Platforms/Platform6" index="0"]
+position = Vector2(159.92285, 0)
+
+[node name="Polygon2D" parent="Map/Platforms/Platform6/ActualPlatform" index="1"]
+texture = ExtResource("5_2neov")
+
+>>>>>>> Stashed changes
 [node name="Platform7" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(0.003921569, 0.12941177, 0.23921569, 1)
 position = Vector2(1452, 299)
 move_to = Vector2(-160, 0)
 speed = 64.0
 
+<<<<<<< Updated upstream
+=======
+[node name="ActualPlatform" parent="Map/Platforms/Platform7" index="0"]
+position = Vector2(159.92285, 0)
+
+[node name="Polygon2D" parent="Map/Platforms/Platform7/ActualPlatform" index="1"]
+texture = ExtResource("5_2neov")
+
+>>>>>>> Stashed changes
 [node name="CirclePlatform" parent="Map/Platforms" instance=ExtResource("6")]
 modulate = Color(0.003921569, 0.12941177, 0.23921569, 1)
 position = Vector2(512, 608)
@@ -332,7 +405,11 @@ move_to = Vector2(0, 500)
 speed = 300.0
 
 [node name="ActualPlatform" parent="Map/Spikes/Platform9" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(0, 457.63123)
+=======
+position = Vector2(0, -500)
+>>>>>>> Stashed changes
 
 [node name="Spikes2" parent="Map/Spikes/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
 position = Vector2(-2, -18.951904)
