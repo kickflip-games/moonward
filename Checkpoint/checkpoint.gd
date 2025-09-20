@@ -7,7 +7,7 @@ class_name Checkpoint
 @onready var _marker:Marker2D = $FlagMarker
 @onready var _sfx:AudioStreamPlayer2D = $sfx
 @onready var _fx:CPUParticles2D = $fx
-
+@export var _fire_fx:CPUParticles2D = $FIRE
 @export var side: float = 100.0
 
 var activated = false
@@ -26,7 +26,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func activate_flag():
 	
-	$FIRE.emitting = true
+	_fire_fx.emitting = true
 	$Flag.color.a = 1
 
 	
@@ -35,4 +35,4 @@ func activate_flag():
 	var tween = create_tween()
 	
 	#tween.tween_property(_flag, "position", _marker.position, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	tween.tween_property(_flag, "modulate", Color(2.265, 0.773, 0.342), 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	#tween.tween_property(_flag, "modulate", Color(2.265, 0.773, 0.342), 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)

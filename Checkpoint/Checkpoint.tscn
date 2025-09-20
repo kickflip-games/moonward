@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvt82yup3gjq8"]
+[gd_scene load_steps=11 format=3 uid="uid://cvt82yup3gjq8"]
 
 [ext_resource type="Script" uid="uid://cry21u35xljba" path="res://Checkpoint/checkpoint.gd" id="1_qj0kh"]
 [ext_resource type="Script" uid="uid://bjwp3fi83n4qp" path="res://addons/primitive_shapes/triangle.gd" id="3_5v6hc"]
 [ext_resource type="Texture2D" uid="uid://csb8oxl5upsoo" path="res://Art/Ui/arrow.png" id="4_5v6hc"]
 [ext_resource type="Script" uid="uid://bp35nydfqhkvr" path="res://addons/primitive_shapes/rectangle.gd" id="4_6drmt"]
 [ext_resource type="AudioStream" uid="uid://dmfyuv85y135x" path="res://Checkpoint/checkpoint.ogg" id="5_6drmt"]
+[ext_resource type="PackedScene" uid="uid://b0lhp74iqfdkx" path="res://Checkpoint/fire_particles.tscn" id="6_f5af3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qj0kh"]
-size = Vector2(35, 42)
+size = Vector2(87, 114)
 
 [sub_resource type="Curve" id="Curve_6drmt"]
 _limits = [0.0, 1.0, 0.0, 0.9938271]
@@ -18,15 +19,20 @@ point_count = 3
 offsets = PackedFloat32Array(0, 0.36805555, 1)
 colors = PackedColorArray(1, 1, 1, 0.73, 1, 1, 1, 1, 1, 1, 1, 0)
 
+[sub_resource type="Gradient" id="Gradient_h6ys7"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
 [node name="Checkpoint" type="Area2D"]
 collision_layer = 4
 script = ExtResource("1_qj0kh")
+side = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7.5, -11)
+position = Vector2(-8.5, -47)
 shape = SubResource("RectangleShape2D_qj0kh")
 
 [node name="Flag" type="Node2D" parent="."]
+visible = false
 z_index = -1
 position = Vector2(5.9999995, -4)
 rotation = 1.5707964
@@ -71,5 +77,12 @@ color_ramp = SubResource("Gradient_f5af3")
 
 [node name="sfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_6drmt")
+
+[node name="FIRE" parent="." instance=ExtResource("6_f5af3")]
+position = Vector2(-8, -37)
+amount = 20
+lifetime = 0.6
+speed_scale = 0.4
+color_ramp = SubResource("Gradient_h6ys7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

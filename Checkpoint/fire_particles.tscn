@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0lhp74iqfdkx"]
+
+[ext_resource type="Texture2D" uid="uid://b8q53y5fkm88k" path="res://Art/FIRE.png" id="1_ul6rp"]
+
+[node name="FIRE" type="CPUParticles2D"]
+emitting = false
+amount = 100
+texture = ExtResource("1_ul6rp")
+local_coords = true
+direction = Vector2(0, -1)
+spread = 18.87
+gravity = Vector2(0, -70)
+initial_velocity_min = 72.17
+initial_velocity_max = 144.33
+radial_accel_min = -30.0
+radial_accel_max = -30.0
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+color = Color(1.6372112, 0.91384244, 0.4483704, 1)
