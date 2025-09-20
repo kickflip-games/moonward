@@ -67,4 +67,7 @@ text = ">"
 
 [node name="Virtual joystick left" parent="." instance=ExtResource("7_hvoi6")]
 layout_mode = 1
+joystick_mode = 1
 visibility_mode = 1
+action_up = "fake"
+action_down = "fake"
