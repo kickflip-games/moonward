@@ -1,14 +1,17 @@
-[gd_scene load_steps=30 format=4 uid="uid://cfg4sor4sotk6"]
+[gd_scene load_steps=33 format=4 uid="uid://cfg4sor4sotk6"]
 
 [ext_resource type="Script" uid="uid://cg74vksm1s6sy" path="res://World/World.gd" id="1_jacc8"]
 [ext_resource type="Script" uid="uid://da78ijeok40v1" path="res://World/background.gd" id="2_jacc8"]
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="3_eue43"]
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://dyq8g35t6hsjf" path="res://Platforms/MovingPlatform.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://csb02grmlb7qa" path="res://Art/maingrad.tres" id="5_2neov"]
 [ext_resource type="PackedScene" uid="uid://cqindn5hr3fl7" path="res://Platforms/CirclePlatform.tscn" id="6"]
+[ext_resource type="Script" uid="uid://blau5mnrskxps" path="res://World/polygon_2d.gd" id="6_daix3"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_lcvgy"]
 [ext_resource type="PackedScene" uid="uid://db8nlmg0yb8pq" path="res://Enemies/Turret/Turret.tscn" id="8_3ql1f"]
 [ext_resource type="PackedScene" uid="uid://6ixfa7yndind" path="res://Platforms/BreakablePlatform.tscn" id="9_eucu0"]
+[ext_resource type="Texture2D" uid="uid://b8q53y5fkm88k" path="res://Art/FIRE.png" id="10_ox6yj"]
 [ext_resource type="PackedScene" uid="uid://cvt82yup3gjq8" path="res://Checkpoint/Checkpoint.tscn" id="10_s53j1"]
 [ext_resource type="Script" uid="uid://ckqiue2xk70jg" path="res://Ui/mobile_inputs.gd" id="11_ecnql"]
 [ext_resource type="Texture2D" uid="uid://cahnursil6okk" path="res://Art/Ui/button_round_depth_line.png" id="12_lcvgy"]
@@ -140,18 +143,11 @@ move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(0, 69.28864)
-=======
-=======
->>>>>>> Stashed changes
-position = Vector2(0, 66.34979)
+position = Vector2(0, 80)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
 script = ExtResource("6_daix3")
->>>>>>> Stashed changes
 
 [node name="Platform8" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(1, 1, 1, 1)
@@ -160,17 +156,10 @@ move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform8" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(0, 69.28864)
-=======
-=======
->>>>>>> Stashed changes
-position = Vector2(0, 66.34979)
+position = Vector2(0, 80)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform8/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
->>>>>>> Stashed changes
 
 [node name="Platform3" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(1, 1, 1, 1)
@@ -179,17 +168,10 @@ move_to = Vector2(0, -90)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform3" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(0, 89.04457)
-=======
-=======
->>>>>>> Stashed changes
-position = Vector2(0, 58.735077)
+position = Vector2(0, -90)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform3/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
->>>>>>> Stashed changes
 
 [node name="Platform2" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(1, 1, 1, 1)
@@ -198,17 +180,10 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform2" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(120.47162, 0)
-=======
-=======
->>>>>>> Stashed changes
-position = Vector2(-59.266243, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform2/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
->>>>>>> Stashed changes
 
 [node name="Platform4" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(1, 1, 1, 1)
@@ -217,17 +192,10 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform4" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(120.47162, 0)
-=======
-=======
->>>>>>> Stashed changes
-position = Vector2(-59.266243, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform4/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
->>>>>>> Stashed changes
 
 [node name="Platform5" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(1, 1, 1, 1)
@@ -236,17 +204,10 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform5" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(120.47162, 0)
-=======
-=======
->>>>>>> Stashed changes
-position = Vector2(-59.266243, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform5/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
->>>>>>> Stashed changes
 
 [node name="Platform6" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(1, 1, 1, 1)
@@ -255,17 +216,10 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform6" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(120.47162, 0)
-=======
-=======
->>>>>>> Stashed changes
-position = Vector2(-59.266243, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform6/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
->>>>>>> Stashed changes
 
 [node name="Platform7" parent="Map/Platforms" instance=ExtResource("5")]
 modulate = Color(1, 1, 1, 1)
@@ -274,17 +228,10 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform7" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(120.47162, 0)
-=======
-=======
->>>>>>> Stashed changes
-position = Vector2(-59.266243, 0)
+position = Vector2(121.11142, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform7/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
->>>>>>> Stashed changes
 
 [node name="CirclePlatform" parent="Map/Platforms" instance=ExtResource("6")]
 position = Vector2(512, 608)
@@ -448,6 +395,7 @@ position = Vector2(-7, -16)
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
+texture = ExtResource("10_ox6yj")
 local_coords = true
 direction = Vector2(0, -1)
 spread = 18.87
@@ -470,6 +418,7 @@ visible = false
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
+texture = ExtResource("10_ox6yj")
 local_coords = true
 direction = Vector2(0, -1)
 spread = 18.87
@@ -492,6 +441,7 @@ visible = false
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
+texture = ExtResource("10_ox6yj")
 local_coords = true
 direction = Vector2(0, -1)
 spread = 18.87
@@ -514,6 +464,7 @@ visible = false
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
+texture = ExtResource("10_ox6yj")
 local_coords = true
 direction = Vector2(0, -1)
 spread = 18.87
@@ -536,6 +487,7 @@ visible = false
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
+texture = ExtResource("10_ox6yj")
 local_coords = true
 direction = Vector2(0, -1)
 spread = 18.87
@@ -558,6 +510,7 @@ visible = false
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
+texture = ExtResource("10_ox6yj")
 local_coords = true
 direction = Vector2(0, -1)
 spread = 18.87
@@ -579,15 +532,7 @@ move_to = Vector2(0, 500)
 speed = 300.0
 
 [node name="ActualPlatform" parent="Map/Spikes/Platform9" index="0"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-position = Vector2(0, -500)
-=======
-position = Vector2(0, -172.10938)
->>>>>>> Stashed changes
-=======
-position = Vector2(0, -172.10938)
->>>>>>> Stashed changes
+position = Vector2(0, 411.5929)
 
 [node name="Spikes2" parent="Map/Spikes/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
 position = Vector2(-2, -18.951904)
