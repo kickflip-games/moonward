@@ -128,9 +128,13 @@ speed = 64.0
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(0, 69.85647)
 =======
 position = Vector2(0, 58.19638)
+>>>>>>> Stashed changes
+=======
+position = Vector2(0, 69.85647)
 >>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform/ActualPlatform" index="1"]
@@ -148,9 +152,13 @@ speed = 64.0
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform8" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(0, 69.85647)
 =======
 position = Vector2(0, 58.19638)
+>>>>>>> Stashed changes
+=======
+position = Vector2(0, 69.85647)
 >>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform8/ActualPlatform" index="1"]
@@ -167,9 +175,13 @@ speed = 64.0
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform3" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(0, -54.764374)
 =======
 position = Vector2(0, 89.45006)
+>>>>>>> Stashed changes
+=======
+position = Vector2(0, -54.764374)
 >>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform3/ActualPlatform" index="1"]
@@ -186,9 +198,13 @@ speed = 64.0
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform2" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
 =======
 position = Vector2(160, 0)
+>>>>>>> Stashed changes
+=======
+position = Vector2(159.92285, 0)
 >>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform2/ActualPlatform" index="1"]
@@ -205,9 +221,13 @@ speed = 64.0
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform4" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
 =======
 position = Vector2(160, 0)
+>>>>>>> Stashed changes
+=======
+position = Vector2(159.92285, 0)
 >>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform4/ActualPlatform" index="1"]
@@ -224,9 +244,13 @@ speed = 64.0
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform5" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
 =======
 position = Vector2(160, 0)
+>>>>>>> Stashed changes
+=======
+position = Vector2(159.92285, 0)
 >>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform5/ActualPlatform" index="1"]
@@ -243,9 +267,13 @@ speed = 64.0
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform6" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
 =======
 position = Vector2(160, 0)
+>>>>>>> Stashed changes
+=======
+position = Vector2(159.92285, 0)
 >>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform6/ActualPlatform" index="1"]
@@ -262,9 +290,13 @@ speed = 64.0
 =======
 [node name="ActualPlatform" parent="Map/Platforms/Platform7" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(159.92285, 0)
 =======
 position = Vector2(160, 0)
+>>>>>>> Stashed changes
+=======
+position = Vector2(159.92285, 0)
 >>>>>>> Stashed changes
 
 [node name="Polygon2D" parent="Map/Platforms/Platform7/ActualPlatform" index="1"]
@@ -581,6 +613,7 @@ speed = 300.0
 
 [node name="ActualPlatform" parent="Map/Spikes/Platform9" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 position = Vector2(0, 457.63123)
@@ -592,6 +625,9 @@ position = Vector2(0, -491.75897)
 >>>>>>> 270dbd499ac854a3c91f7f102d6b5f3e0ac48818
 =======
 position = Vector2(0, 430.97754)
+>>>>>>> Stashed changes
+=======
+position = Vector2(0, -500)
 >>>>>>> Stashed changes
 
 [node name="Spikes2" parent="Map/Spikes/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
