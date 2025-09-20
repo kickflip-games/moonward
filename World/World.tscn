@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cfg4sor4sotk6"]
+[gd_scene load_steps=34 format=4 uid="uid://cfg4sor4sotk6"]
 
 [ext_resource type="Script" uid="uid://cg74vksm1s6sy" path="res://World/World.gd" id="1_jacc8"]
 [ext_resource type="Script" uid="uid://da78ijeok40v1" path="res://World/background.gd" id="2_jacc8"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_lcvgy"]
 [ext_resource type="PackedScene" uid="uid://db8nlmg0yb8pq" path="res://Enemies/Turret/Turret.tscn" id="8_3ql1f"]
 [ext_resource type="PackedScene" uid="uid://6ixfa7yndind" path="res://Platforms/BreakablePlatform.tscn" id="9_eucu0"]
+[ext_resource type="PackedScene" uid="uid://b0lhp74iqfdkx" path="res://Checkpoint/fire_particles.tscn" id="10_nn5t2"]
 [ext_resource type="Texture2D" uid="uid://b8q53y5fkm88k" path="res://Art/FIRE.png" id="10_ox6yj"]
 [ext_resource type="PackedScene" uid="uid://cvt82yup3gjq8" path="res://Checkpoint/Checkpoint.tscn" id="10_s53j1"]
 [ext_resource type="Script" uid="uid://ckqiue2xk70jg" path="res://Ui/mobile_inputs.gd" id="11_ecnql"]
@@ -143,7 +144,7 @@ move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform" index="0"]
-position = Vector2(0, 75.63755)
+position = Vector2(0, -80)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -156,7 +157,7 @@ move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform8" index="0"]
-position = Vector2(0, 75.63755)
+position = Vector2(0, -80)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform8/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -168,7 +169,8 @@ move_to = Vector2(0, -90)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform3" index="0"]
-position = Vector2(0, 90)
+position = Vector2(0, 3.3238602)
+
 [node name="Polygon2D" parent="Map/Platforms/Platform3/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
 
@@ -179,7 +181,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform2" index="0"]
-position = Vector2(109.241516, 0)
+position = Vector2(-128.60233, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform2/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -191,8 +193,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform4" index="0"]
-position = Vector2(109.241516, 0)
-
+position = Vector2(-128.60233, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform4/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -204,7 +205,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform5" index="0"]
-position = Vector2(109.241516, 0)
+position = Vector2(-128.60233, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform5/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -216,7 +217,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform6" index="0"]
-position = Vector2(109.241516, 0)
+position = Vector2(-128.60233, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform6/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -228,7 +229,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Map/Platforms/Platform7" index="0"]
-position = Vector2(109.241516, 0)
+position = Vector2(-128.60233, 0)
 
 [node name="Polygon2D" parent="Map/Platforms/Platform7/ActualPlatform" index="1"]
 texture = ExtResource("5_2neov")
@@ -236,13 +237,25 @@ texture = ExtResource("5_2neov")
 [node name="CirclePlatform" parent="Map/Platforms" instance=ExtResource("6")]
 position = Vector2(512, 608)
 
+[node name="CollisionPolygon2D" parent="Map/Platforms/CirclePlatform" index="1"]
+position = Vector2(-1.999951, -64)
+scale = Vector2(1.7447916, 1)
+
+[node name="CollisionPolygon2D2" parent="Map/Platforms/CirclePlatform" index="2"]
+position = Vector2(0.93788064, 66.54962)
+scale = Vector2(1.859644, 0.94505125)
+
 [node name="Circle" parent="Map/Platforms/CirclePlatform/Sprite" index="0"]
 modulate = Color(1, 1, 1, 1)
 
 [node name="Polygon2D2" parent="Map/Platforms/CirclePlatform/Sprite" index="2"]
+position = Vector2(-1.9999804, -64)
+scale = Vector2(1.7500005, 1)
 color = Color(1, 1, 1, 1)
 
 [node name="Polygon2D3" parent="Map/Platforms/CirclePlatform/Sprite" index="3"]
+position = Vector2(0.47990417, 62)
+scale = Vector2(1.859855, 1)
 color = Color(1, 1, 1, 1)
 
 [node name="BreakablePlatform2" parent="Map/Platforms" instance=ExtResource("9_eucu0")]
@@ -382,39 +395,13 @@ position = Vector2(796, -5052)
 [node name="Checkpoint" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-637, 760)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint" index="1"]
-visible = false
-rotation = 0.0
-scale = Vector2(0.2, 0.2)
-color = Color(1, 1, 1, 1)
-
-[node name="FlagMarker" parent="Map/Checkpoints/Checkpoint" index="3"]
-position = Vector2(-7, -16)
-
-[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint"]
+[node name="FIRE2" parent="Map/Checkpoints/Checkpoint" instance=ExtResource("10_nn5t2")]
 position = Vector2(-7, -20)
-emitting = false
-amount = 100
-texture = ExtResource("10_ox6yj")
-local_coords = true
-direction = Vector2(0, -1)
-spread = 18.87
-gravity = Vector2(0, -70)
-initial_velocity_min = 72.17
-initial_velocity_max = 144.33
-radial_accel_min = -30.0
-radial_accel_max = -30.0
-scale_amount_min = 0.05
-scale_amount_max = 0.2
-color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 
 [node name="Checkpoint1" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-630, -73)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint1" index="1"]
-visible = false
-
-[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint1"]
+[node name="FIRE2" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint1"]
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
@@ -434,10 +421,7 @@ color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 [node name="Checkpoint2" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-1708, -1097)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint2" index="1"]
-visible = false
-
-[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint2"]
+[node name="FIRE2" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint2"]
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
@@ -457,10 +441,7 @@ color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 [node name="Checkpoint3" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-1592, -2283)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint3" index="1"]
-visible = false
-
-[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint3"]
+[node name="FIRE2" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint3"]
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
@@ -480,10 +461,7 @@ color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 [node name="Checkpoint4" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-1491, -3689)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint4" index="1"]
-visible = false
-
-[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint4"]
+[node name="FIRE2" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint4"]
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
@@ -503,10 +481,7 @@ color = Color(1.6372112, 0.91384244, 0.4483704, 1)
 [node name="Checkpoint5" parent="Map/Checkpoints" instance=ExtResource("10_s53j1")]
 position = Vector2(-962, -4139)
 
-[node name="Flag" parent="Map/Checkpoints/Checkpoint5" index="1"]
-visible = false
-
-[node name="FIRE" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint5"]
+[node name="FIRE2" type="CPUParticles2D" parent="Map/Checkpoints/Checkpoint5"]
 position = Vector2(-7, -20)
 emitting = false
 amount = 100
@@ -532,7 +507,7 @@ move_to = Vector2(0, 500)
 speed = 300.0
 
 [node name="ActualPlatform" parent="Map/Spikes/Platform9" index="0"]
-position = Vector2(0, -500)
+position = Vector2(0, 456.33313)
 
 [node name="Spikes2" parent="Map/Spikes/Platform9/ActualPlatform" index="0" instance=ExtResource("19_7in0u")]
 position = Vector2(-2, -18.951904)
@@ -711,10 +686,4 @@ parameters/looping = true
 [editable path="Map/Platforms/Platform6"]
 [editable path="Map/Platforms/Platform7"]
 [editable path="Map/Platforms/CirclePlatform"]
-[editable path="Map/Checkpoints/Checkpoint"]
-[editable path="Map/Checkpoints/Checkpoint1"]
-[editable path="Map/Checkpoints/Checkpoint2"]
-[editable path="Map/Checkpoints/Checkpoint3"]
-[editable path="Map/Checkpoints/Checkpoint4"]
-[editable path="Map/Checkpoints/Checkpoint5"]
 [editable path="Map/Spikes/Platform9"]
