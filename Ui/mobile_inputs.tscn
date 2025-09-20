@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://jhkwhlttdvxw"]
+
+[ext_resource type="Script" uid="uid://ckqiue2xk70jg" path="res://Ui/mobile_inputs.gd" id="1_pmfal"]
+[ext_resource type="Texture2D" uid="uid://cahnursil6okk" path="res://Art/Ui/button_round_depth_line.png" id="2_hvoi6"]
+[ext_resource type="Texture2D" uid="uid://d1pyvo0n8lau4" path="res://Art/Ui/button_round_line.png" id="3_ssqbc"]
+[ext_resource type="Theme" uid="uid://basuoc5wxbim4" path="res://Ui/MobileButtons.tres" id="4_emdjs"]
+[ext_resource type="Texture2D" uid="uid://dl0hwtov64c14" path="res://Art/Ui/button_rectangle_depth_line.png" id="5_pn5ib"]
+[ext_resource type="Texture2D" uid="uid://c468q1a84ypec" path="res://Art/Ui/button_rectangle_line.png" id="6_w00vs"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="7_hvoi6"]
+
+[node name="MobileInputs" type="Control"]
+modulate = Color(1, 1, 1, 0.27058825)
+self_modulate = Color(1, 1, 1, 0.5803922)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pmfal")
+
+[node name="JumpButton" type="TouchScreenButton" parent="."]
+position = Vector2(894.00006, 393)
+scale = Vector2(3.6225002, 3.6225002)
+texture_normal = ExtResource("2_hvoi6")
+texture_pressed = ExtResource("3_ssqbc")
+
+[node name="Label" type="Label" parent="JumpButton"]
+offset_top = 5.970149
+offset_right = 67.0
+offset_bottom = 41.97015
+theme = ExtResource("4_emdjs")
+theme_override_font_sizes/font_size = 26
+text = "JUMP"
+metadata/_edit_use_anchors_ = true
+
+[node name="LeftButton" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2(36, 508.00003)
+scale = Vector2(0.83, 2.008)
+texture_normal = ExtResource("5_pn5ib")
+texture_pressed = ExtResource("6_w00vs")
+
+[node name="Label" type="Label" parent="LeftButton"]
+offset_left = 75.80645
+offset_top = -2.0
+offset_right = 115.80645
+offset_bottom = 61.0
+theme = ExtResource("4_emdjs")
+text = "<"
+metadata/_edit_use_anchors_ = true
+
+[node name="RightButton" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2(203, 508)
+scale = Vector2(0.83, 2.008)
+texture_normal = ExtResource("5_pn5ib")
+texture_pressed = ExtResource("6_w00vs")
+
+[node name="Label" type="Label" parent="RightButton"]
+offset_left = 75.80645
+offset_top = -2.0
+offset_right = 115.80645
+offset_bottom = 61.0
+theme = ExtResource("4_emdjs")
+text = ">"
+
+[node name="Virtual joystick left" parent="." instance=ExtResource("7_hvoi6")]
+layout_mode = 1
+visibility_mode = 1
