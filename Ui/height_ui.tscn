@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://eowupo5004n4"]
+[gd_scene load_steps=3 format=3 uid="uid://eowupo5004n4"]
 
 [ext_resource type="Script" uid="uid://bgfbnsfe06gfq" path="res://Ui/height_ui.gd" id="1_t2jkq"]
+[ext_resource type="Theme" uid="uid://b3nfvpa3fd3w8" path="res://Ui/InGame.tres" id="2_n2ekb"]
 
 [node name="HeightUI" type="Control"]
 layout_mode = 3
@@ -11,15 +12,30 @@ script = ExtResource("1_t2jkq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 214.0
+offset_bottom = 195.0
 
 [node name="HeightLabel" type="Label" parent="VBoxContainer"]
+top_level = true
 layout_mode = 2
+theme = ExtResource("2_n2ekb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 6
 text = "10
 "
 
 [node name="MaxHeightLabel" type="Label" parent="VBoxContainer"]
+visible = false
+top_level = true
 layout_mode = 2
+theme = ExtResource("2_n2ekb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 6
 text = "100
 "

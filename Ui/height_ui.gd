@@ -17,7 +17,7 @@ func _ready():
 	_on_max_height_changed(0.0)
 
 func _on_height_changed(height: float):
-	height_label.text = "Height: %.1f m" % height
+	height_label.text = "Height: %d m" % int(height)
 
 func _on_max_height_changed(max_height: float):
 	max_height_label.text = "Max: %.1f m" % max_height

@@ -1,18 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://cfg4sor4sotk6"]
+[gd_scene load_steps=12 format=3 uid="uid://cfg4sor4sotk6"]
 
 [ext_resource type="Script" uid="uid://cg74vksm1s6sy" path="res://World/World.gd" id="1_jacc8"]
 [ext_resource type="PackedScene" uid="uid://bhmx1qcv8gytd" path="res://World/Map/map.tscn" id="2_21v8o"]
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cy0jjebk8joq" path="res://World/game_hud.tscn" id="4_4sj48"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_lcvgy"]
-[ext_resource type="Script" uid="uid://ckqiue2xk70jg" path="res://Ui/mobile_inputs.gd" id="11_ecnql"]
-[ext_resource type="Texture2D" uid="uid://cahnursil6okk" path="res://Art/Ui/button_round_depth_line.png" id="12_lcvgy"]
-[ext_resource type="Texture2D" uid="uid://d1pyvo0n8lau4" path="res://Art/Ui/button_round_line.png" id="13_jacc8"]
-[ext_resource type="Theme" uid="uid://basuoc5wxbim4" path="res://Ui/MobileButtons.tres" id="14_hev0n"]
-[ext_resource type="Texture2D" uid="uid://dl0hwtov64c14" path="res://Art/Ui/button_rectangle_depth_line.png" id="15_7in0u"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="15_jacc8"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="16_hev0n"]
-[ext_resource type="Texture2D" uid="uid://c468q1a84ypec" path="res://Art/Ui/button_rectangle_line.png" id="16_vdgnt"]
-[ext_resource type="PackedScene" uid="uid://eowupo5004n4" path="res://Ui/height_ui.tscn" id="17_3ql1f"]
 [ext_resource type="AudioStream" uid="uid://3jmdg88lu2vs" path="res://sfx/intropartOGG.ogg" id="22_c4j8x"]
 [ext_resource type="AudioStream" uid="uid://rdlo0kuiop3y" path="res://sfx/mainpartOGG.ogg" id="23_2neov"]
 
@@ -38,72 +32,7 @@ position = Vector2(-1269, 744)
 platform_wall_layers = 2
 wall_jump_force = Vector2(1200, 1100)
 
-[node name="Hud" type="CanvasLayer" parent="."]
-
-[node name="MobileInputs" type="Control" parent="Hud"]
-visible = false
-modulate = Color(1, 1, 1, 0.27058825)
-self_modulate = Color(1, 1, 1, 0.5803922)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("11_ecnql")
-
-[node name="JumpButton" type="TouchScreenButton" parent="Hud/MobileInputs"]
-position = Vector2(986, 501.00003)
-scale = Vector2(2.06, 2.06)
-texture_normal = ExtResource("12_lcvgy")
-texture_pressed = ExtResource("13_jacc8")
-
-[node name="Label" type="Label" parent="Hud/MobileInputs/JumpButton"]
-offset_top = 5.970149
-offset_right = 67.0
-offset_bottom = 41.97015
-theme = ExtResource("14_hev0n")
-theme_override_font_sizes/font_size = 26
-text = "JUMP"
-metadata/_edit_use_anchors_ = true
-
-[node name="LeftButton" type="TouchScreenButton" parent="Hud/MobileInputs"]
-position = Vector2(36, 508.00003)
-scale = Vector2(0.83, 2.008)
-texture_normal = ExtResource("15_7in0u")
-texture_pressed = ExtResource("16_vdgnt")
-
-[node name="Label" type="Label" parent="Hud/MobileInputs/LeftButton"]
-offset_left = 75.80645
-offset_top = -2.0
-offset_right = 115.80645
-offset_bottom = 61.0
-theme = ExtResource("14_hev0n")
-text = "<"
-metadata/_edit_use_anchors_ = true
-
-[node name="RightButton" type="TouchScreenButton" parent="Hud/MobileInputs"]
-position = Vector2(203, 508)
-scale = Vector2(0.83, 2.008)
-texture_normal = ExtResource("15_7in0u")
-texture_pressed = ExtResource("16_vdgnt")
-
-[node name="Label" type="Label" parent="Hud/MobileInputs/RightButton"]
-offset_left = 75.80645
-offset_top = -2.0
-offset_right = 115.80645
-offset_bottom = 61.0
-theme = ExtResource("14_hev0n")
-text = ">"
-
-[node name="HeightUI" parent="Hud" instance=ExtResource("17_3ql1f")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -143.0
-offset_right = 0.0
-offset_bottom = 97.0
-grow_horizontal = 0
+[node name="GameHud" parent="." instance=ExtResource("4_4sj48")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1

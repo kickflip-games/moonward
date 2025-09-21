@@ -23,9 +23,8 @@ colors = PackedColorArray(1, 1, 1, 0.73, 1, 1, 1, 1, 1, 1, 1, 0)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="Checkpoint" type="Area2D"]
-collision_layer = 4
+collision_layer = 8
 script = ExtResource("1_qj0kh")
-side = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-8.5, -47)

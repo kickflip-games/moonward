@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cvboky6pqlyk0"]
+[gd_scene load_steps=33 format=3 uid="uid://cvboky6pqlyk0"]
 
 [ext_resource type="Script" uid="uid://c4vv0byhh07an" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" uid="uid://bya3wd8hjk44s" path="res://Player/Sprite.gd" id="2"]
@@ -215,9 +215,12 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.7037037)
 colors = PackedColorArray(0, 0, 0, 0, 0.6914287, 0.6914287, 0.6914287, 0.28235295)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7tob"]
+size = Vector2(26, 38)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 10
-collision_mask = 14
+collision_mask = 10
 floor_snap_length = 16.0
 script = ExtResource("1")
 acceleration = 4032.0
@@ -334,3 +337,14 @@ gradient = SubResource("Gradient_dm7nj")
 top_level = true
 width_curve = SubResource("Curve_dm7nj")
 gradient = SubResource("Gradient_p7tob")
+
+[node name="HurtArea" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_p7tob")
+debug_color = Color(0.97874075, 0.1374821, 0.12694907, 0.41960785)
+
+[connection signal="area_entered" from="HurtArea" to="." method="_on_hurt_area_entered"]
+[connection signal="body_entered" from="HurtArea" to="." method="_on_hurt_area_body_entered"]

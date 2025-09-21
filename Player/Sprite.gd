@@ -495,7 +495,7 @@ func _update_sprite_rotation(delta: float):
 		rotation_degrees = lerp_angle(rotation_degrees, target_rotation_degrees, 10.0 * delta)
 
 func play_animation(anim_name: String, lock_duration: float = -1.0) -> void:
-	print("ANIM : ", anim_name, ' [frame: ', Engine.get_frames_drawn(), "] pos: ", player.position)
+	#print("ANIM : ", anim_name, ' [frame: ', Engine.get_frames_drawn(), "] pos: ", player.position)
 	if not animator.has_animation(anim_name):
 		push_warning("Animation '%s' not found!" % anim_name)
 		return

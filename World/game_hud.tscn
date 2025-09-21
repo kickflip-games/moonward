@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy0jjebk8joq"]
+
+[ext_resource type="PackedScene" uid="uid://jhkwhlttdvxw" path="res://Ui/mobile_inputs.tscn" id="2_m4ivv"]
+[ext_resource type="PackedScene" uid="uid://eowupo5004n4" path="res://Ui/height_ui.tscn" id="7_ih7n8"]
+
+[node name="GameHud" type="CanvasLayer"]
+
+[node name="HeightUI" parent="." instance=ExtResource("7_ih7n8")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -143.0
+offset_right = 0.0
+offset_bottom = 97.0
+grow_horizontal = 0
+
+[node name="MobileInputs" parent="." instance=ExtResource("2_m4ivv")]

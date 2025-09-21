@@ -86,7 +86,7 @@ var _input_locked:=true
 @export var ceiling_bump_velocity_add: float = 100.0
 
 # Debug
-@export var show_debug_state: bool = true
+@export var show_debug_state: bool = false
 @onready var debug_label: Label = Label.new()
 
 signal died
@@ -526,3 +526,9 @@ func _get_floor_platform() -> PhysicsBody2D:
 			if collider and collider is PhysicsBody2D:
 				return collider
 	return null
+
+
+
+
+func _on_hurt_area_body_entered(body: Node2D) -> void:
+	die()
