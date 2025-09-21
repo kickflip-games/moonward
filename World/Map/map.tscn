@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bhmx1qcv8gytd"]
+[gd_scene load_steps=17 format=4 uid="uid://bhmx1qcv8gytd"]
 
 [ext_resource type="Script" uid="uid://da78ijeok40v1" path="res://World/Map/background.gd" id="1_w0f5s"]
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="2_n0vda"]
@@ -6,11 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://csb02grmlb7qa" path="res://Art/maingrad.tres" id="4_rw766"]
 [ext_resource type="Script" uid="uid://blau5mnrskxps" path="res://World/polygon_2d.gd" id="5_c1eqr"]
 [ext_resource type="PackedScene" uid="uid://cqindn5hr3fl7" path="res://Platforms/CirclePlatform.tscn" id="6_u77x5"]
-[ext_resource type="PackedScene" uid="uid://6ixfa7yndind" path="res://Platforms/BreakablePlatform.tscn" id="7_det3w"]
+[ext_resource type="PackedScene" uid="uid://6ixfa7yndind" path="res://Platforms/breakable/BreakablePlatform.tscn" id="7_det3w"]
 [ext_resource type="PackedScene" uid="uid://cvt82yup3gjq8" path="res://Checkpoint/Checkpoint.tscn" id="8_6mnp4"]
 [ext_resource type="PackedScene" uid="uid://bqgqwgwlwgav" path="res://Enemies/Spikes/spikes.tscn" id="11_3crf1"]
 [ext_resource type="PackedScene" uid="uid://db8nlmg0yb8pq" path="res://Enemies/Turret/Turret.tscn" id="12_dt31v"]
 [ext_resource type="Texture2D" uid="uid://bia147kubmm6o" path="res://Art/particle.png" id="13_vpnye"]
+[ext_resource type="PackedScene" uid="uid://csqfxw8ussfrj" path="res://Platforms/bouncy/bouncy_platform.tscn" id="13_w0f5s"]
 [ext_resource type="Theme" uid="uid://b3nfvpa3fd3w8" path="res://Ui/InGame.tres" id="14_76vsm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aiwi6"]
@@ -78,9 +79,9 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="Background" type="ColorRect" parent="."]
 z_index = -5
-offset_left = -2054.0
+offset_left = -3001.0
 offset_top = -13861.0
-offset_right = 67.0
+offset_right = 1322.0
 offset_bottom = 1088.0
 color = Color(0.0031698733, 0.019196013, 0.07680116, 1)
 script = ExtResource("1_w0f5s")
@@ -112,7 +113,7 @@ move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Platforms/Platform" index="0"]
-position = Vector2(0, 69.68189)
+position = Vector2(0, 29.422459)
 
 [node name="Polygon2D" parent="Platforms/Platform/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -125,7 +126,7 @@ move_to = Vector2(0, -80)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Platforms/Platform8" index="0"]
-position = Vector2(0, 69.68189)
+position = Vector2(0, 29.422459)
 
 [node name="Polygon2D" parent="Platforms/Platform8/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -137,7 +138,7 @@ move_to = Vector2(0, -90)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Platforms/Platform3" index="0"]
-position = Vector2(0, 75.54443)
+position = Vector2(0, -36.807915)
 
 [node name="Polygon2D" parent="Platforms/Platform3/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -149,7 +150,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Platforms/Platform2" index="0"]
-position = Vector2(160, 0)
+position = Vector2(-86.54576, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform2/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -161,7 +162,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Platforms/Platform4" index="0"]
-position = Vector2(160, 0)
+position = Vector2(-86.54576, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform4/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -173,7 +174,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Platforms/Platform5" index="0"]
-position = Vector2(160, 0)
+position = Vector2(-86.54576, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform5/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -185,7 +186,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Platforms/Platform6" index="0"]
-position = Vector2(160, 0)
+position = Vector2(-86.54576, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform6/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -197,7 +198,7 @@ move_to = Vector2(-160, 0)
 speed = 64.0
 
 [node name="ActualPlatform" parent="Platforms/Platform7" index="0"]
-position = Vector2(160, 0)
+position = Vector2(-86.54576, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform7/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -386,7 +387,7 @@ move_to = Vector2(0, 500)
 speed = 200.0
 
 [node name="ActualPlatform" parent="Spikes/MovingSpikes" index="0"]
-position = Vector2(0, -500)
+position = Vector2(0, 270.4555)
 scale = Vector2(0.58, 0.58)
 
 [node name="Spikes2" parent="Spikes/MovingSpikes/ActualPlatform" index="0" instance=ExtResource("11_3crf1")]
@@ -402,6 +403,7 @@ rotation = -3.1415925
 position = Vector2(-1491, -6722)
 shoot_cooldown = 0.5
 range = 1500.0
+projectile_speed = 600.0
 
 [node name="SnowParticles" type="CPUParticles2D" parent="."]
 position = Vector2(-1011, 199)
@@ -457,6 +459,9 @@ theme = ExtResource("14_76vsm")
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 1
 text = "Checkpoint"
+
+[node name="BouncyPlatform" parent="." instance=ExtResource("13_w0f5s")]
+position = Vector2(-848, 734)
 
 [editable path="Platforms/Platform"]
 [editable path="Platforms/Platform8"]

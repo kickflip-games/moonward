@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://csqfxw8ussfrj"]
+
+[ext_resource type="Script" uid="uid://x6wuyxjcwc2d" path="res://Platforms/bouncy/bouncy_platform.gd" id="1_ruspo"]
+[ext_resource type="Texture2D" uid="uid://dl0hwtov64c14" path="res://Art/Ui/button_rectangle_depth_line.png" id="2_trpss"]
+[ext_resource type="Texture2D" uid="uid://b1aagovikj2ch" path="res://Platforms/bouncy/spring.png" id="3_oh1yh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trpss"]
+size = Vector2(122, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53hgn"]
+size = Vector2(121, 32.5)
+
+[node name="BouncyPlatform" type="StaticBody2D"]
+script = ExtResource("1_ruspo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.49999654, -0.25000048)
+scale = Vector2(0.64062494, 0.5859375)
+texture = ExtResource("2_trpss")
+
+[node name="Stem" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1.4210855e-14, 20.000002)
+scale = Vector2(0.091796875, 0.091796875)
+texture = ExtResource("3_oh1yh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_trpss")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+show_behind_parent = true
+position = Vector2(0, -0.75)
+shape = SubResource("RectangleShape2D_53hgn")

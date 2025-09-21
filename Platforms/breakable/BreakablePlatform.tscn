@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://6ixfa7yndind"]
 
-[ext_resource type="Script" uid="uid://bl5lpajlhx7cv" path="res://Platforms/breakable_platform.gd" id="1_tqjw7"]
+[ext_resource type="Script" uid="uid://bl5lpajlhx7cv" path="res://Platforms/breakable/breakable_platform.gd" id="1_tqjw7"]
 [ext_resource type="Script" uid="uid://bp35nydfqhkvr" path="res://addons/primitive_shapes/rectangle.gd" id="2_28jox"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rni54"]
