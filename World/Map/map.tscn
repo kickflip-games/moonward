@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bhmx1qcv8gytd"]
+[gd_scene load_steps=20 format=4 uid="uid://bhmx1qcv8gytd"]
 
 [ext_resource type="Script" uid="uid://da78ijeok40v1" path="res://World/Map/background.gd" id="1_w0f5s"]
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="2_n0vda"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://bia147kubmm6o" path="res://Art/particle.png" id="13_vpnye"]
 [ext_resource type="PackedScene" uid="uid://csqfxw8ussfrj" path="res://Platforms/bouncy/bouncy_platform.tscn" id="13_w0f5s"]
 [ext_resource type="Theme" uid="uid://b3nfvpa3fd3w8" path="res://Ui/InGame.tres" id="14_76vsm"]
+[ext_resource type="Script" uid="uid://bjwp3fi83n4qp" path="res://addons/primitive_shapes/triangle.gd" id="14_n0vda"]
+[ext_resource type="Script" uid="uid://b1huqnrax41fb" path="res://Enemies/hurtzone/hurtzone.gd" id="14_rw766"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aiwi6"]
 texture = ExtResource("2_n0vda")
@@ -75,6 +77,9 @@ sources/0 = SubResource("TileSetAtlasSource_aiwi6")
 offsets = PackedFloat32Array(0, 0.5, 0.98630136)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1eqr"]
+size = Vector2(115.99985, 103)
+
 [node name="Map" type="Node2D"]
 
 [node name="Background" type="ColorRect" parent="."]
@@ -110,10 +115,10 @@ position = Vector2(-1890, -1087)
 modulate = Color(1, 1, 1, 1)
 position = Vector2(1485, 1201)
 move_to = Vector2(0, -80)
-speed = 64.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Platforms/Platform" index="0"]
-position = Vector2(0, -7.6640625)
+position = Vector2(0, -80)
 
 [node name="Polygon2D" parent="Platforms/Platform/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -123,10 +128,10 @@ script = ExtResource("5_c1eqr")
 modulate = Color(1, 1, 1, 1)
 position = Vector2(1741, -800)
 move_to = Vector2(0, -80)
-speed = 64.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Platforms/Platform8" index="0"]
-position = Vector2(0, -7.6640625)
+position = Vector2(0, -80)
 
 [node name="Polygon2D" parent="Platforms/Platform8/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -135,10 +140,10 @@ texture = ExtResource("4_rw766")
 modulate = Color(1, 1, 1, 1)
 position = Vector2(1137, 714)
 move_to = Vector2(0, -90)
-speed = 64.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Platforms/Platform3" index="0"]
-position = Vector2(0, 90)
+position = Vector2(0, -90)
 
 [node name="Polygon2D" parent="Platforms/Platform3/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -147,10 +152,10 @@ texture = ExtResource("4_rw766")
 modulate = Color(1, 1, 1, 1)
 position = Vector2(1491, -631)
 move_to = Vector2(-160, 0)
-speed = 64.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Platforms/Platform2" index="0"]
-position = Vector2(-122.43332, 0)
+position = Vector2(-160, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform2/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -159,10 +164,10 @@ texture = ExtResource("4_rw766")
 modulate = Color(1, 1, 1, 1)
 position = Vector2(1153, -483)
 move_to = Vector2(-160, 0)
-speed = 64.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Platforms/Platform4" index="0"]
-position = Vector2(-122.43332, 0)
+position = Vector2(-160, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform4/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -171,10 +176,10 @@ texture = ExtResource("4_rw766")
 modulate = Color(1, 1, 1, 1)
 position = Vector2(789.99994, -311)
 move_to = Vector2(-160, 0)
-speed = 64.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Platforms/Platform5" index="0"]
-position = Vector2(-122.43332, 0)
+position = Vector2(-160, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform5/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -183,10 +188,10 @@ texture = ExtResource("4_rw766")
 modulate = Color(1, 1, 1, 1)
 position = Vector2(488.99994, -145)
 move_to = Vector2(-160, 0)
-speed = 64.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Platforms/Platform6" index="0"]
-position = Vector2(-122.43332, 0)
+position = Vector2(-160, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform6/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -195,10 +200,10 @@ texture = ExtResource("4_rw766")
 modulate = Color(1, 1, 1, 1)
 position = Vector2(1452, 299)
 move_to = Vector2(-160, 0)
-speed = 64.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Platforms/Platform7" index="0"]
-position = Vector2(-122.43332, 0)
+position = Vector2(-160, 0)
 
 [node name="Polygon2D" parent="Platforms/Platform7/ActualPlatform" index="1"]
 texture = ExtResource("4_rw766")
@@ -355,6 +360,12 @@ respawn_delay = 6.0
 position = Vector2(796, -5052)
 respawn_delay = 6.0
 
+[node name="BouncyPlatform" parent="Platforms" instance=ExtResource("13_w0f5s")]
+position = Vector2(1771, -5412)
+
+[node name="BouncyPlatform2" parent="Platforms" instance=ExtResource("13_w0f5s")]
+position = Vector2(70, -5959)
+
 [node name="Checkpoints" type="Node2D" parent="."]
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource("8_6mnp4")]
@@ -378,6 +389,9 @@ position = Vector2(-962, -4139)
 [node name="Checkpoint6" parent="Checkpoints" instance=ExtResource("8_6mnp4")]
 position = Vector2(-1198, -6343)
 
+[node name="Checkpoint7" parent="Checkpoints" instance=ExtResource("8_6mnp4")]
+position = Vector2(-1619, -7753)
+
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="MovingSpikes" parent="Spikes" instance=ExtResource("3_76vsm")]
@@ -385,9 +399,10 @@ modulate = Color(1.0927927, 1.1498969, 1.1127793, 1)
 position = Vector2(-1793.8, -3119)
 move_to = Vector2(0, 500)
 speed = 200.0
+pause_in_editor = true
 
 [node name="ActualPlatform" parent="Spikes/MovingSpikes" index="0"]
-position = Vector2(0, 382.60413)
+position = Vector2(0, 500)
 scale = Vector2(0.58, 0.58)
 
 [node name="Spikes2" parent="Spikes/MovingSpikes/ActualPlatform" index="0" instance=ExtResource("11_3crf1")]
@@ -395,6 +410,10 @@ position = Vector2(-2, -18.951904)
 
 [node name="Spikes3" parent="Spikes/MovingSpikes/ActualPlatform" index="1" instance=ExtResource("11_3crf1")]
 position = Vector2(1, 25.496826)
+rotation = -3.1415925
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("11_3crf1")]
+position = Vector2(-1813, -8220)
 rotation = -3.1415925
 
 [node name="Turrets" type="Node2D" parent="."]
@@ -474,11 +493,60 @@ theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 1
 text = "Checkpoint"
 
-[node name="BouncyPlatform" parent="." instance=ExtResource("13_w0f5s")]
-position = Vector2(-119, -6499)
+[node name="Platform9" parent="." instance=ExtResource("3_76vsm")]
+modulate = Color(1, 1, 1, 1)
+position = Vector2(-791, -7847)
+move_to = Vector2(-800, 0)
+pause_in_editor = false
 
-[node name="BouncyPlatform2" parent="." instance=ExtResource("13_w0f5s")]
-position = Vector2(-1820, -7046)
+[node name="ActualPlatform" parent="Platform9" index="0"]
+position = Vector2(-800, 0)
+
+[node name="Hurtzone" type="Area2D" parent="Platform9/ActualPlatform" index="0"]
+scale = Vector2(1.0000001, 1.0000001)
+script = ExtResource("14_rw766")
+metadata/_custom_type_script = "uid://b1huqnrax41fb"
+
+[node name="CollisionShape2D" parent="Platform9/ActualPlatform/Hurtzone" index="0"]
+position = Vector2(2, -4.5)
+shape = SubResource("RectangleShape2D_c1eqr")
+debug_color = Color(0.91892534, 0.2040596, 0.5025192, 0.41960785)
+
+[node name="CollisionPolygon2D" parent="Platform9/ActualPlatform" index="1"]
+scale = Vector2(0.26, 0.26)
+
+[node name="Polygon2D" parent="Platform9/ActualPlatform" index="2"]
+position = Vector2(3, -1)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("4_rw766")
+polygon = PackedVector2Array(-63.851006, -63.325665, 79.88665, -40.20967, 71.359985, 56.213665, -64.504, 31.650341)
+
+[node name="Triangle" type="Node2D" parent="Platform9/ActualPlatform" index="3"]
+position = Vector2(32, -5)
+rotation = 1.5707964
+script = ExtResource("14_n0vda")
+side = 50.57
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Triangle2" type="Node2D" parent="Platform9/ActualPlatform" index="4"]
+position = Vector2(-27, -3)
+rotation = -1.5707964
+script = ExtResource("14_n0vda")
+side = 50.57
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Triangle3" type="Node2D" parent="Platform9/ActualPlatform" index="5"]
+position = Vector2(2, -27)
+script = ExtResource("14_n0vda")
+side = 50.57
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Triangle4" type="Node2D" parent="Platform9/ActualPlatform" index="6"]
+position = Vector2(3, 19)
+rotation = -1.0471976
+script = ExtResource("14_n0vda")
+side = 50.57
+metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
 
 [editable path="Platforms/Platform"]
 [editable path="Platforms/Platform8"]
@@ -490,3 +558,4 @@ position = Vector2(-1820, -7046)
 [editable path="Platforms/Platform7"]
 [editable path="Platforms/CirclePlatform"]
 [editable path="Spikes/MovingSpikes"]
+[editable path="Platform9"]

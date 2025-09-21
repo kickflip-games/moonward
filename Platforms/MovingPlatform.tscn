@@ -6,10 +6,10 @@
 modulate = Color(0.376471, 0.976471, 0.596078, 1)
 script = ExtResource("1")
 move_to = Vector2(0, -64)
-speed = 64
+pause_in_editor = null
 
 [node name="ActualPlatform" type="AnimatableBody2D" parent="."]
-position = Vector2(0, 54.37922)
+position = Vector2(0, -62.803654)
 collision_layer = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ActualPlatform"]
