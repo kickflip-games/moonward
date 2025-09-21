@@ -27,6 +27,9 @@ environment = SubResource("Environment_c4j8x")
 
 [node name="Map" parent="." instance=ExtResource("2_21v8o")]
 
+[node name="BreakablePlatform6" parent="Map/Platforms" index="46"]
+position = Vector2(864, -8081)
+
 [node name="FIRE" parent="Map/Checkpoints/Checkpoint" index="6"]
 amount = 70
 spread = 30.0
@@ -59,8 +62,8 @@ spread = 30.0
 amount = 70
 spread = 30.0
 
-[node name="ActualPlatform" parent="Map/Platform9" index="0"]
-position = Vector2(-504.63477, 0)
+[node name="Checkpoint8" parent="Map/Checkpoints" index="8"]
+position = Vector2(-892, -8295)
 
 [node name="Player" parent="." instance=ExtResource("4")]
 position = Vector2(-1269, 744)
@@ -88,6 +91,7 @@ script = ExtResource("7_lcvgy")
 top_level = true
 position = Vector2(-1269, 676)
 script = ExtResource("15_jacc8")
+priority = 1
 follow_mode = 5
 follow_target = NodePath("../Player")
 frame_preview = false
@@ -127,4 +131,9 @@ parameters/looping = true
 [editable path="Map/Checkpoints/Checkpoint6"]
 [editable path="Map/Checkpoints/Checkpoint7"]
 [editable path="Map/Spikes/MovingSpikes"]
-[editable path="Map/Platform9"]
+[editable path="Map/Spikes/MovingSpikes2"]
+[editable path="Map/Spikes/MovingSpikes3"]
+[editable path="Map/Spikes/MovingSpikes4"]
+[editable path="Map/Spikes/MovingSpikes5"]
+[editable path="Map/Spikes/MovingSpikes6"]
+[editable path="Map/WinZone"]
