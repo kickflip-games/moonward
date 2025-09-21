@@ -34,7 +34,7 @@ environment = SubResource("Environment_c4j8x")
 [node name="Map" parent="." instance=ExtResource("2_21v8o")]
 
 [node name="Player" parent="." instance=ExtResource("4")]
-position = Vector2(-1067, 744)
+position = Vector2(-1269, 744)
 platform_wall_layers = 2
 wall_jump_force = Vector2(1200, 1100)
 
@@ -107,7 +107,7 @@ grow_horizontal = 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(-1067, 676)
+position = Vector2(-1269, 676)
 process_callback = 0
 limit_left = -2000
 limit_right = 100
@@ -122,7 +122,7 @@ script = ExtResource("7_lcvgy")
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(-1067, 676)
+position = Vector2(-1269, 676)
 script = ExtResource("15_jacc8")
 follow_mode = 5
 follow_target = NodePath("../Player")

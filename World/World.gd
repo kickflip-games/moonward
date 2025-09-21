@@ -1,3 +1,5 @@
+# This needs refactoring...
+# 
 extends Node2D
 
 ## Switching between fullscreen and not fullscreen by pressing esc

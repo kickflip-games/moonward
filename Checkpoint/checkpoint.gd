@@ -32,7 +32,7 @@ func activate_flag():
 	
 	_sfx.play()
 	_fx.emitting = true
-	var tween = create_tween()
+	#var tween = create_tween()
 	
 	#tween.tween_property(_flag, "position", _marker.position, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	#tween.tween_property(_flag, "modulate", Color(2.265, 0.773, 0.342), 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)

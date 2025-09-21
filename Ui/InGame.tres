@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b3nfvpa3fd3w8"]
+
+[ext_resource type="FontFile" uid="uid://ddvqg0wwbsuq4" path="res://Ui/fonts/Honey Bear.ttf" id="1_73ken"]
+
+[resource]
+Button/colors/font_color = Color(0.69411767, 1, 1, 1)
+Button/fonts/font = ExtResource("1_73ken")
+Label/colors/font_color = Color(0.69411767, 1, 1, 1)
+Label/fonts/font = ExtResource("1_73ken")
+RichTextLabel/colors/default_color = Color(0.20392157, 0.6, 0.6, 1)
+RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_shadow_color = Color(0.69411767, 1, 1, 1)
+RichTextLabel/constants/outline_size = 24
+RichTextLabel/constants/shadow_offset_x = 0
+RichTextLabel/constants/shadow_outline_size = 50
+RichTextLabel/fonts/bold_font = null
+RichTextLabel/fonts/normal_font = ExtResource("1_73ken")
