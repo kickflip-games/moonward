@@ -26,7 +26,7 @@ func swap_fullscreen_mode():
 @onready var introplayer = $introplayer
 @onready var loopplayer = $loopplayer
 
-@onready var particles := $CPUParticles2D
+@onready var particles := $Map/SnowParticles
 var base_scale = 1.0
 var kick_scale = 3.0
 var tween: Tween
@@ -42,7 +42,7 @@ func _ready() -> void:
 	normal_bg_color = bg.color
 	
 	$Map/Platforms.z_index = 0
-	$CPUParticles2D.z_index = -1
+	$Map/SnowParticles.z_index = -1
 
 	particles.position = get_viewport_rect().size / 2
 	particles.emitting = true
@@ -94,7 +94,7 @@ func _process(delta: float) -> void:
 		_on_kick(smooth)
 		last_trigger_time = now
 		
-	$CPUParticles2D.position = $Camera2D.global_position
+	particles.position = $Camera2D.global_position
 
 func _on_kick(strength: float) -> void:
 	# Pulse the bg visually when kick is detected

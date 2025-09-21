@@ -7,7 +7,7 @@ class_name Checkpoint
 @onready var _marker:Marker2D = $FlagMarker
 @onready var _sfx:AudioStreamPlayer2D = $sfx
 @onready var _fx:CPUParticles2D = $fx
-@export var _fire_fx:CPUParticles2D = $FIRE
+@onready var _fire_fx:CPUParticles2D = $FIRE
 @export var side: float = 100.0
 
 var activated = false
