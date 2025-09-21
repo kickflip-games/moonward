@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://bhmx1qcv8gytd"]
+[gd_scene load_steps=21 format=4 uid="uid://bhmx1qcv8gytd"]
 
 [ext_resource type="Script" uid="uid://da78ijeok40v1" path="res://World/Map/background.gd" id="1_w0f5s"]
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="2_n0vda"]
@@ -15,6 +15,7 @@
 [ext_resource type="Theme" uid="uid://b3nfvpa3fd3w8" path="res://Ui/InGame.tres" id="14_76vsm"]
 [ext_resource type="Script" uid="uid://bjwp3fi83n4qp" path="res://addons/primitive_shapes/triangle.gd" id="14_n0vda"]
 [ext_resource type="Script" uid="uid://b1huqnrax41fb" path="res://Enemies/hurtzone/hurtzone.gd" id="14_rw766"]
+[ext_resource type="Script" uid="uid://bp35nydfqhkvr" path="res://addons/primitive_shapes/rectangle.gd" id="16_rw766"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aiwi6"]
 texture = ExtResource("2_n0vda")
@@ -501,9 +502,11 @@ pause_in_editor = false
 
 [node name="ActualPlatform" parent="Platform9" index="0"]
 position = Vector2(-800, 0)
+collision_layer = 4
 
 [node name="Hurtzone" type="Area2D" parent="Platform9/ActualPlatform" index="0"]
 scale = Vector2(1.0000001, 1.0000001)
+collision_layer = 4
 script = ExtResource("14_rw766")
 metadata/_custom_type_script = "uid://b1huqnrax41fb"
 
@@ -547,6 +550,13 @@ rotation = -1.0471976
 script = ExtResource("14_n0vda")
 side = 50.57
 metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
+
+[node name="Rectangle" type="Node2D" parent="Platform9/ActualPlatform" index="7"]
+position = Vector2(2, 0)
+script = ExtResource("16_rw766")
+width = 34.08
+height = 30.0
+metadata/_custom_type_script = "uid://bp35nydfqhkvr"
 
 [editable path="Platforms/Platform"]
 [editable path="Platforms/Platform8"]
