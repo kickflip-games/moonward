@@ -44,8 +44,6 @@ func _draw() -> void:
 	draw_line(move_to, -move_to, Color.WHITE, line_width)
 	
 	# Draw arrows to show direction
-	_draw_arrow_at_point(move_to, Color.GREEN)
-	_draw_arrow_at_point(-move_to, Color.RED)
 	
 	# Show platform preview positions in editor
 	if Engine.is_editor_hint() and show_platform_preview and _platform:
@@ -55,16 +53,7 @@ func _draw() -> void:
 		draw_rect(Rect2(move_to - platform_size/2, platform_size), Color.GREEN, false, 2.0)
 		draw_rect(Rect2(-move_to - platform_size/2, platform_size), Color.RED, false, 2.0)
 
-func _draw_arrow_at_point(point: Vector2, color: Color) -> void:
-	var arrow_size = 8.0
-	var angle = point.angle_to(-point)
-	
-	var arrow_tip = point
-	var arrow_left = point + Vector2(arrow_size, 0).rotated(angle + 2.6)
-	var arrow_right = point + Vector2(arrow_size, 0).rotated(angle - 2.6)
-	
-	draw_line(arrow_tip, arrow_left, color, 2.0)
-	draw_line(arrow_tip, arrow_right, color, 2.0)
+
 
 func start_tween() -> void:
 	if speed <= 0 or not _platform:

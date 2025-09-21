@@ -303,6 +303,7 @@ stream = ExtResource("7_v0k0e")
 
 [node name="DeathFx" parent="ParticleFx" instance=ExtResource("8_p7tob")]
 emitting = false
+amount = 30
 one_shot = true
 
 [node name="JumpFx" parent="ParticleFx" instance=ExtResource("3_tok1r")]

@@ -44,6 +44,7 @@ var previous_wall_sliding := false
 var current_animation := ""
 var animation_locked := false
 var lock_timer := 0.0
+var is_dead := false
 
 # Rotation and lean system
 var target_rotation_degrees := 0.0
@@ -225,6 +226,10 @@ func _process(delta: float) -> void:
 	_apply_animation_lean()
 	_update_sprite_rotation(delta)
 	_update_fx_systems(delta)
+	
+	# Ensure polygon stays hidden while dead
+	if is_dead and polygon.visible:
+		polygon.hide()
 	
 	# Store previous frame data
 	previous_velocity = player.velocity
@@ -518,10 +523,18 @@ func play_animation(anim_name: String, lock_duration: float = -1.0) -> void:
 		lock_timer = actual_lock_duration
 
 func _on_player_died() -> void:
+	is_dead = true
+	death_particles.emitting = true
 	play_animation(FALL_DEATH_ANIM)
+	await animator.animation_finished
+	polygon.hide()
 
 func _on_player_respawned() -> void:
+	is_dead = false
+	polygon.show()
 	play_animation(SPAWN_ANIM)
+	await animator.animation_finished
+	polygon.show()
 
 func _on_animation_finished(anim_name: String) -> void:
 	# Only unlock if the finished animation is the current one

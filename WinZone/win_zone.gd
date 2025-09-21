@@ -20,12 +20,14 @@ func _ready():
 
 func _on_body_entered(body: Node2D):
 	if body.is_in_group("Player") and not has_won:
+		
 		has_won = true
 		trigger_win(body)
 
 func trigger_win(player: Node2D):
 	print("PLAYER WON!")
 	endgame_cam.priority = 10
+	player._input_locked = true
 	
 	# Emit signal for other systems to listen to
 	player_won.emit()

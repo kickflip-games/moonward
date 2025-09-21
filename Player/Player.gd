@@ -172,7 +172,6 @@ func _physics_process(delta: float) -> void:
 	# Fall damage check
 	if not is_on_floor():
 		if not _is_airborne:
-			print('just landed')
 			_last_grounded_y = position.y
 			_is_airborne = true
 	else:
@@ -474,7 +473,7 @@ func die():
 	print("DED")
 	died.emit()
 	_input_locked = true
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(0.8).timeout
 	respawn()
 	
 
