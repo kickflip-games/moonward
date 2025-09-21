@@ -27,6 +27,34 @@ environment = SubResource("Environment_c4j8x")
 
 [node name="Map" parent="." instance=ExtResource("2_21v8o")]
 
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint1" index="6"]
+amount = 70
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint2" index="6"]
+amount = 70
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint3" index="6"]
+amount = 70
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint4" index="6"]
+amount = 70
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint5" index="6"]
+amount = 70
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint6" index="6"]
+amount = 70
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint7" index="6"]
+amount = 70
+
+[node name="ActualPlatform" parent="Map/Platform9" index="0"]
+position = Vector2(-380.64886, 0)
+
 [node name="Player" parent="." instance=ExtResource("4")]
 position = Vector2(-1269, 744)
 platform_wall_layers = 2
@@ -72,3 +100,24 @@ autoplay = true
 [node name="loopplayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_2neov")
 parameters/looping = true
+
+[editable path="Map"]
+[editable path="Map/Platforms/Platform"]
+[editable path="Map/Platforms/Platform8"]
+[editable path="Map/Platforms/Platform3"]
+[editable path="Map/Platforms/Platform2"]
+[editable path="Map/Platforms/Platform4"]
+[editable path="Map/Platforms/Platform5"]
+[editable path="Map/Platforms/Platform6"]
+[editable path="Map/Platforms/Platform7"]
+[editable path="Map/Platforms/CirclePlatform"]
+[editable path="Map/Checkpoints/Checkpoint"]
+[editable path="Map/Checkpoints/Checkpoint1"]
+[editable path="Map/Checkpoints/Checkpoint2"]
+[editable path="Map/Checkpoints/Checkpoint3"]
+[editable path="Map/Checkpoints/Checkpoint4"]
+[editable path="Map/Checkpoints/Checkpoint5"]
+[editable path="Map/Checkpoints/Checkpoint6"]
+[editable path="Map/Checkpoints/Checkpoint7"]
+[editable path="Map/Spikes/MovingSpikes"]
+[editable path="Map/Platform9"]
