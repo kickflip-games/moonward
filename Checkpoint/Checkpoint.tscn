@@ -71,7 +71,7 @@ orbit_velocity_max = 1.0
 angle_min = -360.0
 angle_max = 360.0
 scale_amount_curve = SubResource("Curve_6drmt")
-color = Color(0, 0.86192864, 0.37760884, 1)
+color = Color(0.85882354, 0.34509805, 0, 1)
 color_ramp = SubResource("Gradient_f5af3")
 
 [node name="sfx" type="AudioStreamPlayer2D" parent="."]
