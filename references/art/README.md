@@ -1,19 +1,22 @@
-# Art concept boards
+# Moonward art concept boards
 
-These are original AI-generated concept images, **not guaranteed production-ready spritesheets** (some poses lack consistent frames or exact tile alignment).
+These generated images are **mood/concept references**. They are not guaranteed to be grid-aligned, cleaned, animation-ready spritesheets or collision-ready Godot atlases.
 
-## Tile and environment
-- [Tower modular blocks, slopes and transitions](tilesets/tower-modular-concepts.png)
-- [Vines, chains, snow, hanging lanterns and vegetation](tilesets/foliage-snow-props.png)
+## Terrain and set dressing
+
+- [Stone, soil, slopes, transition blocks, props](tilesets/tower-modular-concepts.png)
+- [Moss, vines, snow, chains, lanterns, grass](tilesets/foliage-snow-props.png)
 
 ## Character
-- [Hooded wanderer movement poses](characters/wanderer-core-poses.png)
-- [Somersaults, skids, wall jumps and other expressive animations](characters/wanderer-special-poses.png)
 
-## Visual atmosphere
+- [Wanderer core animation concepts](characters/wanderer-core-poses.png)
+- [Wanderer special/flair animation concepts](characters/wanderer-special-poses.png)
+
+## Atmosphere
+
 - [Open courtyard](level-mood/01-open-courtyard.png)
-- [Vertical shaft](level-mood/02-vertical-shaft.png)
+- [Vertical tower shaft](level-mood/02-vertical-shaft.png)
 - [Cloud battlements](level-mood/03-cloud-battlements.png)
-- [Final shrine](level-mood/04-final-shrine.png)
+- [Moon shrine](level-mood/04-final-shrine.png)
 
-Animation ideas: let grass and vines bend when approached, chains and lamps swing gently, and snow drift in the upper tower. Environmental responses should not accidentally affect player collision.
+Environmental animation idea: vines and grass bend as the player passes; chains and hanging lanterns sway on pivots; snow drifts decoratively. Avoid accidental collision hazards.
