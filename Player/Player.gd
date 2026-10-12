@@ -1,533 +1,341 @@
 class_name Player
 extends CharacterBody2D
 
-# ----- Visual / direction ----------
-var face_direction := 1
-var x_dir := 1
-
-# ----- Run / ground movement (tweak in inspector) -----
-@export var max_speed: float = 560
-@export var acceleration: float = 2880
-@export var turning_acceleration : float = 9600
-@export var deceleration: float = 3200
-
-# conserve momentum toggles
+@export_group("Run")
+@export var max_speed: float = 560.0
+@export var acceleration: float = 4032.0
+@export var turning_acceleration: float = 13440.0
+@export var deceleration: float = 4480.0
+@export var accel_in_air: float = 0.65
+@export var deccel_in_air: float = 0.35
+@export var air_turning_acceleration: float = 5600.0
 @export var do_conserve_momentum: bool = true
-@export var accel_in_air: float = 0.6
-@export var deccel_in_air: float = 0.6
 
-# jump hang apex multipliers
-@export var jump_hang_accel_mult: float = 1.5
-@export var jump_hang_maxspeed_mult: float = 1.15
+@export_group("Jump")
+@export var jump_force: float = 1200.0
+@export var jump_coyote: float = 0.12
+@export var jump_buffer: float = 0.12
+## Fraction of upward speed removed on release.
+@export_range(0.0, 1.0) var jump_cut: float = 0.45
+@export var jump_hang_threshold: float = 120.0
+@export var jump_hang_gravity_mult: float = 0.5
+@export var jump_hang_accel_mult: float = 1.2
+@export var jump_hang_maxspeed_mult: float = 1.0
 
-# ----- Gravity -----
-@export var gravity_acceleration : float = 3840
-@export var gravity_max : float = 1020
-
-# Multipliers for different fall states
+@export_group("Gravity")
+@export var gravity_acceleration: float = 3840.0
+@export var gravity_max: float = 1020.0
 @export var fall_gravity_mult: float = 1.2
 @export var jump_cut_gravity_mult: float = 2.0
 @export var fastfall_gravity_mult: float = 3.0
-@export var jump_hang_gravity_mult : float = 0.1
 
-# ----- Jump -----
-@export var jump_force : float = 1400
-@export var jump_cut : float = 0.25
-@export var jump_gravity_max : float = 500
-@export var jump_hang_treshold : float = 2.0
+@export_group("Walls")
+@export var wall_jump_force: Vector2 = Vector2(620, 1100)
+@export var wall_coyote: float = 0.10
+## Guaranteed separation, then a smooth return of steering.
+@export var wall_jump_time: float = 0.12
+@export var wall_jump_steer_time: float = 0.10
+## Short taps still produce a useful wall bounce before variable-height cutting.
+@export var wall_jump_min_hold: float = 0.12
+@export_range(0.0, 1.0) var wall_jump_cut: float = 0.15
+@export var slide_speed: float = 100.0
 
-# timers
-@export var jump_coyote : float = 0.08
-@export var jump_buffer : float = 0.1
-
-var jump_coyote_timer : float = 0.0
-var jump_buffer_timer : float = 0.0
-var is_jumping := false
-var _is_jump_cut := false
-var _is_jump_falling := false
-
-# fall damage
-@export var max_fall_height :float = 500
-var _last_grounded_y : float = 0.0
-var _is_airborne:bool = false
-
-# ----- Wall interaction (tweak in inspector) -----
-@export var wall_check_front_offset := Vector2(12, 0)
-@export var wall_check_back_offset := Vector2(-12, 0)
-@export var wall_check_size := Vector2(8, 24)
-@onready var ground_cast: ShapeCast2D = $GroundCast
-@onready var ray_wall_left: RayCast2D = $WallRayLeft
-@onready var ray_wall_right: RayCast2D = $WallRayRight
-
-# wall timers (coyote-style)
-var last_on_ground_time : float = 0.0
-var last_on_wall_time : float = 0.0
-var last_on_wall_left_time : float = 0.0
-var last_on_wall_right_time : float = 0.0
-var last_pressed_jump_time : float = 0.0
-
-# wall jump params - more diagonal now
-@export var wall_jump_force := Vector2(1200, 1000)  # More horizontal, less vertical
-@export var wall_jump_time : float = 0.15
-@export var wall_jump_run_lerp : float = 0.65
-
-var is_wall_jumping := false
-var _wall_jump_timer : float = 0.0
-var _last_wall_jump_dir : int = 0
-
-# slide params
-@export var slide_speed : float = 80.0
-@export var slide_accel : float = 400.0
-
-var is_sliding := false
-var _input_locked:=true
-
-# Ceiling collision bump
-@export var ceiling_bump_velocity_add: float = 100.0
-
-# Debug
+@export_group("Retry")
+@export var death_delay: float = 0.35
+@export var respawn_grace: float = 0.15
 @export var show_debug_state: bool = false
-@onready var debug_label: Label = Label.new()
 
 signal died
 signal respawned
+signal jumped(from_wall: bool)
 
-# respawn location
-var _respawn_pos:Vector2 = Vector2.ZERO
+var face_direction := 1
+var x_dir := 0
+var is_jumping := false
+var is_wall_jumping := false
+var is_sliding := false
+var _is_jump_cut := false
+var _is_jump_falling := false
+var _input_locked := false
+var is_dead := false
+var last_on_ground_time := 0.0
+var last_pressed_jump_time := 0.0
+var last_on_wall_time := 0.0
+var _wall_contact_side := 0 # -1 left, +1 right
+var _recent_wall_side := 0
+var _wall_jump_timer := 0.0
+var _last_wall_jump_dir := 0
+var _wall_jump_hold_timer := 0.0
+var _wall_jump_cut_pending := false
+var _jump_from_wall := false
+var _death_timer := 0.0
+var _grace_timer := 0.0
+var _refresh_contacts := 0
+var _respawn_pos := Vector2.ZERO
+var _spring_launch := false
+var _cached_input := {"x": 0, "y": 0, "just_jump": false,
+	"jump": false, "released_jump": false}
 
-# Cached input to avoid creating dictionary every frame
-var _cached_input := {
-	"x": 0,
-	"y": 0,
-	"just_jump": false,
-	"jump": false,
-	"released_jump": false
-}
-
+@onready var ray_wall_left: RayCast2D = $WallRayLeft
+@onready var ray_wall_right: RayCast2D = $WallRayRight
+@onready var debug_label: Label = Label.new()
 
 func _ready() -> void:
 	_respawn_pos = global_position
-	# Ensure raycasts are enabled
-	if ray_wall_left:
-		ray_wall_left.enabled = true
-	if ray_wall_right:
-		ray_wall_right.enabled = true
-	
-	# Setup debug label
 	add_child(debug_label)
-	debug_label.position = Vector2(-50, -60)
-	debug_label.add_theme_font_size_override("font_size", 16)
+	debug_label.position = Vector2(-55, -65)
+	debug_label.add_theme_font_size_override("font_size", 14)
 	debug_label.modulate = Color.YELLOW
-	
+	debug_label.visible = show_debug_state
 	respawn()
-
-
-
-
 
 func _physics_process(delta: float) -> void:
-	# Update input cache
+	if is_dead:
+		_death_timer -= delta
+		if _death_timer <= 0.0:
+			respawn()
+		return
+	_grace_timer = maxf(0.0, _grace_timer - delta)
 	_update_input_cache()
-
-	# Update timers
-	_update_timers(delta)
-
-	# Do collision checks
-	_collision_checks()
-
-	# Read input and set direction
-	x_dir = _cached_input["x"]
+	last_on_ground_time = maxf(0.0, last_on_ground_time - delta)
+	last_on_wall_time = maxf(0.0, last_on_wall_time - delta)
+	last_pressed_jump_time = maxf(0.0, last_pressed_jump_time - delta)
+	_wall_jump_timer = maxf(0.0, _wall_jump_timer - delta)
+	_wall_jump_hold_timer = maxf(0.0, _wall_jump_hold_timer - delta)
+	is_wall_jumping = _wall_jump_timer > 0.0
+	x_dir = _cached_input.x
 	if x_dir != 0:
 		set_direction(x_dir)
-
-	# Handle jump button buffering
-	if _cached_input["just_jump"]:
+	_collision_checks()
+	if _cached_input.just_jump:
 		last_pressed_jump_time = jump_buffer
-
-	# Decide jumps (ground or wall)
 	_handle_jumps()
-
-	# Movement (run) - reduce control during wall jump
-	var run_lerp = 1.0
-	if is_wall_jumping and _wall_jump_timer > 0.0:
-		run_lerp = wall_jump_run_lerp
-	x_movement(delta, run_lerp)
-
-	# Wall slide detection
-	_update_slide_state()
-
-	# Gravity & vertical behavior
+	if _cached_input.released_jump and velocity.y < 0.0 and not _spring_launch:
+		if _jump_from_wall and _wall_jump_hold_timer > 0.0:
+			_wall_jump_cut_pending = true
+		else:
+			_cut_jump(wall_jump_cut if _jump_from_wall else jump_cut)
+	if _wall_jump_cut_pending and _wall_jump_hold_timer <= 0.0:
+		_wall_jump_cut_pending = false
+		if velocity.y < 0.0:
+			_cut_jump(wall_jump_cut)
+	x_movement(delta)
+	is_sliding = _wall_contact_side != 0 and not is_on_floor() and velocity.y >= 0.0 \
+		and not is_wall_jumping and x_dir != -_wall_contact_side
 	_apply_gravity_and_limits(delta)
-
-	# Platform motion: update and add to velocity before moving
-	_update_platform_motion()
-
-	# Move
+	# Forget the engine's old platform contact for the first moves after teleport.
+	platform_floor_layers = 0 if _refresh_contacts > 0 else 2
+	platform_wall_layers = 0 if _refresh_contacts > 0 else 2
+	platform_on_leave = PLATFORM_ON_LEAVE_DO_NOTHING if _refresh_contacts > 0 \
+		else PLATFORM_ON_LEAVE_ADD_UPWARD_VELOCITY
 	move_and_slide()
-
-	# Expire wall-jump state once timer runs out
-	if is_wall_jumping and _wall_jump_timer <= 0.0:
-		is_wall_jumping = false
-
-	# Fall damage check
-	if not is_on_floor():
-		if not _is_airborne:
-			_last_grounded_y = position.y
-			_is_airborne = true
-	else:
-		if _is_airborne:
-			var fall_height = position.y - _last_grounded_y
-			if fall_height > max_fall_height:
-				print("Fell to death (height = %s)" % fall_height)
-				die()
-			_is_airborne = false
-
-	# Update debug state
+	_refresh_contacts = maxi(0, _refresh_contacts - 1)
+	if is_on_ceiling():
+		velocity.y = maxf(velocity.y, 0.0)
+		_is_jump_cut = false
+		_spring_launch = false
+	if is_on_floor() and velocity.y >= 0.0:
+		_reset_jump_state()
+		last_on_ground_time = jump_coyote
+		# Inputs buffered immediately before a landing fire on that landing.
+		_handle_jumps()
 	if show_debug_state:
-		_update_debug_label()
-
+		debug_label.text = "wall: %d  coyote: %.2f\n%s" % [_wall_contact_side,
+			last_on_wall_time, "SLIDE" if is_sliding else "JUMP" if is_jumping else "RUN"]
 
 func _update_input_cache() -> void:
-	if _input_locked:
-		_cached_input["x"] = 0
-		_cached_input["y"] = 0
-		_cached_input["just_jump"] = false
-		_cached_input["jump"] = false
-		_cached_input["released_jump"] = false
-	else:
-		_cached_input["x"] = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-		_cached_input["y"] = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
-		_cached_input["just_jump"] = Input.is_action_just_pressed("jump")
-		_cached_input["jump"] = Input.is_action_pressed("jump")
-		_cached_input["released_jump"] = Input.is_action_just_released("jump")
-
+	_cached_input.x = 0 if _input_locked else int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
+	_cached_input.y = 0 if _input_locked else int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	_cached_input.just_jump = not _input_locked and Input.is_action_just_pressed("jump")
+	_cached_input.jump = not _input_locked and Input.is_action_pressed("jump")
+	_cached_input.released_jump = not _input_locked and Input.is_action_just_released("jump")
 
 func get_input() -> Dictionary:
-	return _cached_input.duplicate()
-
-
-func _update_timers(delta: float) -> void:
-	jump_coyote_timer = max(jump_coyote_timer - delta, -1.0)
-	jump_buffer_timer = max(jump_buffer_timer - delta, -1.0)
-	last_on_ground_time = max(last_on_ground_time - delta, -1.0)
-	last_on_wall_time = max(last_on_wall_time - delta, -1.0)
-	last_on_wall_left_time = max(last_on_wall_left_time - delta, -1.0)
-	last_on_wall_right_time = max(last_on_wall_right_time - delta, -1.0)
-	last_pressed_jump_time = max(last_pressed_jump_time - delta, -1.0)
-
-	# Decrement wall-jump timer
-	if _wall_jump_timer > 0.0:
-		_wall_jump_timer = max(_wall_jump_timer - delta, 0.0)
-
+	return _cached_input
 
 func _collision_checks() -> void:
-	# Ground check
-	if ground_cast.is_colliding():
+	if _refresh_contacts == 0 and is_on_floor() and velocity.y >= 0.0:
 		last_on_ground_time = jump_coyote
-		jump_coyote_timer = jump_coyote
-		is_jumping = false
-		_is_jump_falling = false
-		
-	# Wall checks - fixed for both sides
-	# Right wall check
-	if ray_wall_right.is_colliding():
-		last_on_wall_right_time = jump_coyote
-		
-	# Left wall check
-	if ray_wall_left.is_colliding():
-		last_on_wall_left_time = jump_coyote
-		
-	# Update combined wall time
-	last_on_wall_time = max(last_on_wall_left_time, last_on_wall_right_time)
+		_reset_jump_state()
+	ray_wall_left.force_raycast_update()
+	ray_wall_right.force_raycast_update()
+	var left := ray_wall_left.is_colliding() and ray_wall_left.get_collision_normal().x > 0.7
+	var right := ray_wall_right.is_colliding() and ray_wall_right.get_collision_normal().x < -0.7
+	_wall_contact_side = 0
+	if left and right:
+		# Physical slide normal wins in tight shafts; input and recency break ties.
+		if _refresh_contacts == 0 and is_on_wall():
+			_wall_contact_side = -int(signf(get_wall_normal().x))
+		if _wall_contact_side == 0:
+			_wall_contact_side = x_dir if x_dir != 0 else _recent_wall_side if _recent_wall_side != 0 else -face_direction
+	elif left:
+		_wall_contact_side = -1
+	elif right:
+		_wall_contact_side = 1
+	if _wall_contact_side != 0 and not is_on_floor():
+		_recent_wall_side = _wall_contact_side
+		last_on_wall_time = wall_coyote
 
-
-func x_movement(delta: float, lerp_amount := 1.0) -> void:
+func x_movement(delta: float) -> void:
+	var control := 1.0
+	if _wall_jump_timer > wall_jump_steer_time:
+		return
+	if _wall_jump_timer > 0.0:
+		control = 1.0 - _wall_jump_timer / maxf(wall_jump_steer_time, 0.001)
+	var grounded := is_on_floor() and velocity.y >= 0.0 and _refresh_contacts == 0
+	var target := float(x_dir) * max_speed
+	var rate := acceleration if grounded else acceleration * accel_in_air
 	if x_dir == 0:
-		# Decelerate
-		velocity.x = Vector2(velocity.x, 0).move_toward(Vector2(0,0), deceleration * delta).x
+		rate = deceleration if grounded else deceleration * deccel_in_air
+	elif velocity.x * x_dir < 0.0:
+		rate = turning_acceleration if grounded else air_turning_acceleration
+	elif not grounded and do_conserve_momentum and absf(velocity.x) > absf(target):
+		# External launches retain speed until the player brakes or turns.
 		return
+	if is_jumping and not _is_jump_cut and absf(velocity.y) < jump_hang_threshold:
+		rate *= jump_hang_accel_mult
+		target *= jump_hang_maxspeed_mult
+	velocity.x = move_toward(velocity.x, target, rate * control * delta)
 
-	# Target speed
-	var target_speed = x_dir * max_speed
-	# Apply lerp (useful for wall jump control)
-	target_speed = lerp(velocity.x, target_speed, lerp_amount)
-
-	# Determine accel rate
-	var accel_rate : float
-	if last_on_ground_time > 0:
-		accel_rate = acceleration if abs(target_speed) > 0.01 else deceleration
-	else:
-		accel_rate = (acceleration * accel_in_air) if abs(target_speed) > 0.01 else (deceleration * deccel_in_air)
-
-	# Apex bonus
-	if (is_jumping or is_wall_jumping or _is_jump_falling) and abs(velocity.y) < jump_hang_treshold:
-		accel_rate *= jump_hang_accel_mult
-		target_speed *= jump_hang_maxspeed_mult
-
-	# Conserve momentum
-	if do_conserve_momentum and abs(velocity.x) > abs(target_speed) and sign(velocity.x) == sign(target_speed) and abs(target_speed) > 0.01 and last_on_ground_time < 0:
-		accel_rate = 0
-
-	# Turning acceleration
-	var chosen_accel = acceleration if sign(velocity.x) == sign(target_speed) or velocity.x == 0 else turning_acceleration
-
-	if accel_rate == 0:
-		return
-
-	# Accelerate (stable approach to prevent oscillations)
-	velocity.x = move_toward(velocity.x, target_speed, accel_rate * delta)
-
-	# Clamp to max speed
-	if abs(velocity.x) > max_speed and sign(velocity.x) == sign(target_speed):
-		velocity.x = sign(velocity.x) * max_speed
-
-
-func set_direction(hor_direction) -> void:
-	if hor_direction == 0:
-		return
-	# scale = Vector2(hor_direction * face_direction, 1) * scale
-	face_direction = hor_direction
-
+func set_direction(direction: int) -> void:
+	if direction != 0:
+		face_direction = direction
 
 func _handle_jumps() -> void:
-	# Map buffer timers
-	if jump_coyote_timer > 0:
-		last_on_ground_time = max(last_on_ground_time, jump_coyote_timer)
-
-	# Ground jump
-	if last_on_ground_time > 0 and last_pressed_jump_time > 0 and not is_jumping:
+	if last_pressed_jump_time <= 0.0 or _input_locked:
+		return
+	if last_on_ground_time > 0.0 and not is_jumping:
 		_perform_jump()
 		return
+	var side := _wall_contact_side if _wall_contact_side != 0 else _recent_wall_side
+	if last_on_wall_time > 0.0 and side != 0:
+		# A fresh opposite wall can interrupt protection for quick shaft jumps.
+		if not is_wall_jumping or side == _last_wall_jump_dir:
+			_perform_wall_jump(side)
 
-	# Wall jump - with better spam prevention
-	var can_wall_jump = last_pressed_jump_time > 0 and last_on_wall_time > 0 and last_on_ground_time <= 0
-	
-	# Check if trying to jump from a different wall
-	var different_wall = true
-	if is_wall_jumping and _wall_jump_timer > 0:
-		different_wall = (last_on_wall_right_time > 0 and _last_wall_jump_dir == 1) or \
-						(last_on_wall_left_time > 0 and _last_wall_jump_dir == -1)
-	
-	if can_wall_jump and different_wall:
-		_perform_wall_jump()
-		return
+func _cut_jump(amount: float) -> void:
+	_is_jump_cut = true
+	velocity.y *= 1.0 - amount
 
-	# Jump cut
-	if get_input()["released_jump"] and velocity.y < 0:
-		_is_jump_cut = true
-		velocity.y -= (jump_cut * velocity.y)
-
+func _consume_jump() -> void:
+	_wall_jump_hold_timer = 0.0
+	_wall_jump_cut_pending = false
+	_jump_from_wall = false
+	last_pressed_jump_time = 0.0
+	last_on_ground_time = 0.0
+	last_on_wall_time = 0.0
+	_recent_wall_side = 0
+	_is_jump_cut = false
+	_is_jump_falling = false
+	is_sliding = false
+	is_jumping = true
+	_spring_launch = false
 
 func _perform_jump() -> void:
-	# Clear timers
-	last_pressed_jump_time = -1.0
-	last_on_ground_time = -1.0
-	jump_coyote_timer = -1.0
-	
-	# Set states
-	is_jumping = true
-	_is_jump_cut = false
-	_is_jump_falling = false
-
-	# Reset downward velocity
-	if velocity.y > 0:
-		velocity.y = 0
-
+	_consume_jump()
 	velocity.y = -jump_force
+	if not _cached_input.jump:
+		velocity.y *= 1.0 - jump_cut
+		_is_jump_cut = true
+	jumped.emit(false)
 
-
-func _perform_wall_jump() -> void:
-	# Determine bounce direction: jump away from the wall
-	# If on left wall (last_on_wall_left_time > 0), dir = 1 (jump right)
-	# If on right wall (last_on_wall_left_time == 0), dir = -1 (jump left)
-	var dir = 1 if last_on_wall_left_time > 0 else -1
-	print("jump dir: ", dir)
-
-	# Clear timers to consume the jump and wall detection
-	last_pressed_jump_time = -1.0
-	last_on_ground_time = -1.0
-	last_on_wall_right_time = -1.0
-	last_on_wall_left_time = -1.0
-
-	# Set states - wall jump is treated as a jump for some physics (apex bonuses)
+func _perform_wall_jump(side: int = 0) -> void:
+	if side == 0:
+		side = _wall_contact_side if _wall_contact_side != 0 else _recent_wall_side
+	if side == 0:
+		return
+	_consume_jump()
+	_last_wall_jump_dir = -side
 	is_wall_jumping = true
-	is_jumping = true   # treat it as a jump
-	_is_jump_cut = false
-	_is_jump_falling = false
-	_wall_jump_timer = wall_jump_time
-	_last_wall_jump_dir = dir
-
-	print("before wall jump: ", velocity)
-
-	# Apply wall jump force: horizontal thrust away from wall + upward boost
-	var force = Vector2(wall_jump_force.x * dir, -wall_jump_force.y)
-	velocity.x = force.x
-	velocity.y = force.y
-
-	print("executed wall jump: ", velocity)
-
-
-func _update_slide_state() -> void:
-	var move_input_x = get_input()["x"]
-	
-	# Check both walls properly
-	var on_left_wall = last_on_wall_left_time > 0
-	var on_right_wall = last_on_wall_right_time > 0
-	
-	# Pressing toward the wall means:
-	# - Pressing LEFT when on LEFT wall
-	# - Pressing RIGHT when on RIGHT wall
-	var pressing_toward_wall = (on_left_wall and move_input_x < 0) or (on_right_wall and move_input_x > 0)
-	
-	if (last_on_wall_time > 0) and not is_jumping and not is_wall_jumping and \
-	   last_on_ground_time <= 0 and pressing_toward_wall:
-		is_sliding = true
-		_last_grounded_y = position.y
-	else:
-		is_sliding = false
-
+	_wall_jump_timer = wall_jump_time + wall_jump_steer_time
+	velocity = Vector2(wall_jump_force.x * -side, -wall_jump_force.y)
+	_jump_from_wall = true
+	_wall_jump_hold_timer = wall_jump_min_hold
+	_wall_jump_cut_pending = not _cached_input.jump
+	set_direction(-side)
+	jumped.emit(true)
 
 func _apply_gravity_and_limits(delta: float) -> void:
-	var applied_gravity = gravity_acceleration
-
-	# Wall sliding: smooth controlled fall
-	if is_sliding:
-		# Smoothly approach slide speed
-		if velocity.y < slide_speed:
-			velocity.y += slide_accel * delta
-			if velocity.y > slide_speed:
-				velocity.y = slide_speed
-		elif velocity.y > slide_speed:
-			velocity.y = move_toward(velocity.y, slide_speed, slide_accel * 2 * delta)
+	if is_on_floor() and velocity.y >= 0.0:
 		return
-
-	# Jump hang (apex)
-	if (is_jumping or is_wall_jumping or _is_jump_falling) and abs(velocity.y) < jump_hang_treshold:
-		applied_gravity *= jump_hang_gravity_mult
-
-	# Jump cut
-	if _is_jump_cut:
-		applied_gravity *= jump_cut_gravity_mult
-
-	# Fast fall
-	if velocity.y < 0 and get_input()["y"] > 0:
-		applied_gravity *= fastfall_gravity_mult
-		velocity.y = min(velocity.y + applied_gravity * delta, gravity_max)
-	else:
-		velocity.y += applied_gravity * delta
-		if velocity.y > gravity_max:
-			velocity.y = gravity_max
-
-	# Ceiling bump
-	if is_on_ceiling():
-		velocity.y = jump_hang_treshold + ceiling_bump_velocity_add
-
-	# Update jump states
-	if is_jumping and velocity.y > 0:
+	var gravity := gravity_acceleration
+	if _is_jump_cut and velocity.y < 0.0:
+		gravity *= jump_cut_gravity_mult
+	elif is_jumping and absf(velocity.y) < jump_hang_threshold:
+		gravity *= jump_hang_gravity_mult
+	elif velocity.y > 0.0:
+		gravity *= fall_gravity_mult
+	if _cached_input.y > 0:
+		gravity *= fastfall_gravity_mult
+	velocity.y = minf(velocity.y + gravity * delta, gravity_max)
+	if is_sliding:
+		velocity.y = minf(velocity.y, slide_speed)
+	if velocity.y >= 0.0:
 		is_jumping = false
 		_is_jump_falling = true
+		_spring_launch = false
 
+func _reset_jump_state() -> void:
+	_wall_jump_hold_timer = 0.0
+	_wall_jump_cut_pending = false
+	_jump_from_wall = false
+	is_jumping = false
+	is_wall_jumping = false
+	is_sliding = false
+	_is_jump_cut = false
+	_is_jump_falling = false
+	_wall_jump_timer = 0.0
+	_spring_launch = false
 
-func _update_debug_label():
-	var state = "IDLE"
-	
-	if _input_locked:
-		state = "LOCKED"
-	elif is_sliding:
-		state = "WALL SLIDE"
-	elif is_wall_jumping:
-		state = "WALL JUMP"
-	elif is_jumping:
-		state = "JUMPING"
-	elif _is_jump_falling:
-		state = "FALLING"
-	elif last_on_ground_time > 0:
-		if abs(velocity.x) > 10:
-			state = "RUNNING"
-		else:
-			state = "IDLE"
-	else:
-		state = "AIRBORNE"
-	
-	# Add wall side info when on wall
-	if last_on_wall_left_time > 0:
-		state += " (L)"
-	elif last_on_wall_right_time > 0:
-		state += " (R)"
-	
-	debug_label.text = state
-	debug_label.visible = show_debug_state
+func launch(launch_velocity: Vector2) -> void:
+	if is_dead:
+		return
+	_consume_jump()
+	is_wall_jumping = false
+	_wall_jump_timer = 0.0
+	_spring_launch = true
+	velocity = launch_velocity
+	jumped.emit(false)
 
-
-# Function to check if player is in a state where somersault should play
 func should_play_somersault() -> bool:
-	# Don't somersault when sliding or wall jumping
-	return is_jumping and not is_sliding and not is_wall_jumping and abs(velocity.y) > 100
+	return is_jumping and not is_sliding and not is_wall_jumping and absf(velocity.y) > 100.0
 
-
-func update_respawn_position(pos:Vector2):
+func update_respawn_position(pos: Vector2) -> void:
 	_respawn_pos = pos
 
-
-func die():
-	print("DED")
-	died.emit()
+func die() -> void:
+	if is_dead or _grace_timer > 0.0:
+		return
+	is_dead = true
 	_input_locked = true
-	await get_tree().create_timer(0.8).timeout
-	respawn()
-	
+	velocity = Vector2.ZERO
+	_death_timer = death_delay
+	died.emit()
 
-func respawn():
+func respawn() -> void:
 	global_position = _respawn_pos
 	velocity = Vector2.ZERO
-	respawned.emit()
-	await get_tree().create_timer(0.5).timeout
+	_reset_jump_state()
+	last_on_ground_time = 0.0
+	last_on_wall_time = 0.0
+	last_pressed_jump_time = 0.0
+	_wall_contact_side = 0
+	_recent_wall_side = 0
+	_last_wall_jump_dir = 0
+	_death_timer = 0.0
+	_grace_timer = respawn_grace
+	_refresh_contacts = 2
+	is_dead = false
 	_input_locked = false
+	x_dir = 0
+	face_direction = 1
+	for key in _cached_input:
+		_cached_input[key] = false if key in ["just_jump", "jump", "released_jump"] else 0
+	reset_physics_interpolation()
+	respawned.emit()
 
+func _on_hurt_area_body_entered(_body: Node2D) -> void:
+	die()
 
-
-var _current_platform: PhysicsBody2D = null
-var _last_platform_position: Vector2 = Vector2.ZERO
-var _platform_velocity: Vector2 = Vector2.ZERO
-var _was_on_floor: bool = false
-
-func _update_platform_motion() -> void:
-	var now_on_floor = is_on_floor()
-	if now_on_floor:
-		var platform: PhysicsBody2D = _get_floor_platform()
-		if platform and platform.is_in_group("moving_platform"):
-			# If just landed or switched platform, reset tracking to avoid teleport
-			if platform != _current_platform or not _was_on_floor:
-				_current_platform = platform
-				_last_platform_position = platform.global_position
-				_platform_velocity = Vector2.ZERO
-			else:
-				_platform_velocity = (platform.global_position - _last_platform_position) / get_physics_process_delta_time()
-				_last_platform_position = platform.global_position
-		else:
-			_current_platform = null
-			_platform_velocity = Vector2.ZERO
-	else:
-		_current_platform = null
-		_platform_velocity = Vector2.ZERO
-
-	# Add platform velocity to player velocity
-	if _platform_velocity != Vector2.ZERO:
-		velocity += _platform_velocity
-
-	_was_on_floor = now_on_floor
-
-func _get_floor_platform() -> PhysicsBody2D:
-	for i in range(get_slide_collision_count()):
-		var collision := get_slide_collision(i)
-		if collision and collision.get_normal().y < -0.7:
-			var collider = collision.get_collider()
-			if collider and collider is PhysicsBody2D:
-				return collider
-	return null
-
-
-
-
-func _on_hurt_area_body_entered(body: Node2D) -> void:
+func _on_hurt_area_entered(_area: Area2D) -> void:
 	die()

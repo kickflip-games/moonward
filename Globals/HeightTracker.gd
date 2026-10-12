@@ -26,7 +26,7 @@ func set_player(player_node: Node):
 	max_height_changed.emit(max_height)
 
 func _process(_delta):
-	if player:
+	if is_instance_valid(player):
 		update_height()
 
 func update_height():
@@ -42,7 +42,7 @@ func update_height():
 			max_height_changed.emit(max_height)
 
 func reset_height():
-	if player:
+	if is_instance_valid(player):
 		starting_y = player.global_position.y
 	current_height = 0
 	max_height = 0

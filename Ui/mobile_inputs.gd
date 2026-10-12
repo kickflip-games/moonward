@@ -3,7 +3,7 @@ extends Control
 @onready var left_button: TouchScreenButton = $LeftButton
 @onready var right_button: TouchScreenButton = $RightButton
 @onready var jump_button: TouchScreenButton = $JumpButton
-@onready var joystick: VirtualJoystick = $"Virtual joystick left"
+@onready var joystick: MoonwardJoystick = $"Virtual joystick left"
 
 func _ready():
 	if DisplayServer.is_touchscreen_available() or force_on:

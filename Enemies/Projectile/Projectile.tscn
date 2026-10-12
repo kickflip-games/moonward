@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://c8yrf8hv4om1n" path="res://Enemies/Projectile/shatter_particles.tscn" id="2_ny421"]
 [ext_resource type="PackedScene" uid="uid://c3l3kt4byvpea" path="res://Enemies/hurtzone/Hurtzone.tscn" id="3_m278q"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m278q"]
-size = Vector2(18, 6)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_m278q"]
+points = PackedVector2Array(15, 0, -7, -12, -7, 12)
 
 [node name="Projectile" type="CharacterBody2D"]
 collision_layer = 4
@@ -14,6 +14,7 @@ collision_mask = 3
 script = ExtResource("1_q4d7l")
 
 [node name="Triangle" type="Node2D" parent="."]
+modulate = Color(1, 0.36, 0.24, 1)
 rotation = 1.5707964
 script = ExtResource("2_0lwue")
 side = 30.0
@@ -22,12 +23,10 @@ metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
 [node name="Hurtzone" parent="." instance=ExtResource("3_m278q")]
 
 [node name="CollisionShape2D" parent="Hurtzone" index="0"]
-position = Vector2(5, 0)
-rotation = 1.5707964
+disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 0)
-shape = SubResource("RectangleShape2D_m278q")
+shape = SubResource("ConvexPolygonShape2D_m278q")
 
 [node name="ShatterParticles" parent="." instance=ExtResource("2_ny421")]
 position = Vector2(16, 0)

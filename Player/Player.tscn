@@ -216,20 +216,16 @@ offsets = PackedFloat32Array(0, 0.7037037)
 colors = PackedColorArray(0, 0, 0, 0, 0.6914287, 0.6914287, 0.6914287, 0.28235295)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7tob"]
-size = Vector2(26, 38)
+size = Vector2(22, 22)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = -1
 collision_mask = 10
-floor_snap_length = 16.0
+floor_snap_length = 8.0
+platform_floor_layers = 2
+platform_wall_layers = 2
+platform_on_leave = 1
 script = ExtResource("1")
-acceleration = 4032.0
-turning_acceleration = 13440.0
-deceleration = 4480.0
-jump_hang_gravity_mult = 0.05
-jump_force = 1200.0
-jump_gravity_max = 1000.0
-wall_jump_force = Vector2(1200, 9000)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
@@ -268,11 +264,11 @@ position = Vector2(0, -9)
 polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
 
 [node name="WallRayRight" type="RayCast2D" parent="."]
-target_position = Vector2(23, 0)
+target_position = Vector2(15, 0)
 collision_mask = 2
 
 [node name="WallRayLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-23, 0)
+target_position = Vector2(-15, 0)
 collision_mask = 2
 
 [node name="GroundCast" type="ShapeCast2D" parent="."]

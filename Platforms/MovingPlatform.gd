@@ -22,8 +22,8 @@ func _ready() -> void:
 		return
 	
 	# Add to moving platform group automatically
-	if not is_in_group("moving_platform"):
-		add_to_group("moving_platform")
+	if not _platform.is_in_group("moving_platform"):
+		_platform.add_to_group("moving_platform")
 	
 	# Place platform at starting point
 	_platform.position = move_to
@@ -32,7 +32,7 @@ func _ready() -> void:
 	if not (Engine.is_editor_hint() and pause_in_editor):
 		start_tween()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		queue_redraw()
 
@@ -62,9 +62,12 @@ func start_tween() -> void:
 	# Stop existing tween
 	stop_tween()
 	
-	var time := move_to.length() / speed
-	_tween = get_tree().create_tween()
-	_tween.set_trans(Tween.TRANS_QUAD)
+	var time := maxf(move_to.length() / speed, 0.001)
+	# Retain the existing route and cycle time; ease both reversals symmetrically.
+	_tween = create_tween()
+	_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+	_tween.set_trans(Tween.TRANS_SINE)
+	_tween.set_ease(Tween.EASE_IN_OUT)
 	_tween.set_loops()
 	
 	# Forward

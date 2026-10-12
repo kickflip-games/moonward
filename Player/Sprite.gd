@@ -73,9 +73,9 @@ var animation_priorities = {
 var default_lock_durations = {
 	LAND_ANIM: 0.3,
 	JUMP_ANIM: 0.2,
-	WALL_JUMP_ANIM: 0.4,
-	SPAWN_ANIM: 2.0,
-	FALL_DEATH_ANIM: 1.0
+	WALL_JUMP_ANIM: 0.12,
+	SPAWN_ANIM: 0.12,
+	FALL_DEATH_ANIM: 0.35
 }
 
 func _ready() -> void:
@@ -92,6 +92,7 @@ func _ready() -> void:
 	if player.has_signal("respawned"):
 		player.respawned.connect(_on_player_respawned)
 	
+	player.jumped.connect(_on_player_jumped)
 	play_animation(SPAWN_ANIM)
 
 func _setup_fx_systems() -> void:
@@ -261,7 +262,7 @@ func _update_wall_slide_fx() -> void:
 		if wall_slide_particles:
 			wall_slide_particles.emitting = true
 			# Position based on which wall we're on
-			if player.last_on_wall_left_time > 0:
+			if player._wall_contact_side < 0:
 				wall_slide_particles.position.x = -16  # Left wall
 				wall_slide_particles.direction = Vector2(1, 0)  # Particles go right
 			else:  # Right wall
@@ -359,12 +360,8 @@ func _on_state_change(old_anim: String, new_anim: String) -> void:
 
 func _handle_fx_transition(old_anim: String, new_anim: String) -> void:
 	match new_anim:
-		JUMP_ANIM:
-			_play_jump_fx()
 		LAND_ANIM:
 			_play_land_fx()
-		WALL_JUMP_ANIM:
-			_play_wall_jump_fx()
 		FALL_DEATH_ANIM:
 			_play_death_fx()
 		SPAWN_ANIM:
@@ -509,6 +506,8 @@ func play_animation(anim_name: String, lock_duration: float = -1.0) -> void:
 		if animation_priorities[current_animation] > animation_priorities[anim_name]:
 			return
 	
+	if anim_name != SPAWN_ANIM:
+		animator.speed_scale = 1.0
 	current_animation = anim_name
 	animator.play(anim_name)
 	
@@ -522,21 +521,48 @@ func play_animation(anim_name: String, lock_duration: float = -1.0) -> void:
 		animation_locked = true
 		lock_timer = actual_lock_duration
 
+func _on_player_jumped(from_wall: bool) -> void:
+	animation_locked = false
+	play_animation(WALL_JUMP_ANIM if from_wall else JUMP_ANIM)
+	if from_wall:
+		_play_wall_jump_fx()
+	else:
+		_play_jump_fx()
+
 func _on_player_died() -> void:
 	is_dead = true
-	death_particles.emitting = true
+	animation_locked = false
+	animator.stop()
+	animator.speed_scale = 1.0
 	play_animation(FALL_DEATH_ANIM)
-	await animator.animation_finished
+	_play_death_fx()
 	polygon.hide()
+	run_particles.emitting = false
+	wall_slide_particles.emitting = false
+	wall_slide_sfx.stop()
 
 func _on_player_respawned() -> void:
+	# No animation coroutines survive a retry and hide the new player.
 	is_dead = false
+	animation_locked = false
+	lock_timer = 0.0
+	animator.stop()
+	animator.speed_scale = 3.0
 	polygon.show()
+	rotation_degrees = 0.0
+	somersault_speed_degrees = 0.0
+	target_rotation_degrees = 0.0
+	previous_velocity = Vector2.ZERO
+	previous_grounded = false
+	previous_wall_sliding = false
+	somersault_trail.clear_points()
+	speed_trail.clear_points()
 	play_animation(SPAWN_ANIM)
-	await animator.animation_finished
-	polygon.show()
+	_play_spawn_fx()
 
 func _on_animation_finished(anim_name: String) -> void:
+	if anim_name == SPAWN_ANIM:
+		animator.speed_scale = 1.0
 	# Only unlock if the finished animation is the current one
 	if anim_name == current_animation:
 		animation_locked = false

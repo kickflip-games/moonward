@@ -9,6 +9,8 @@ class_name Checkpoint
 @onready var _fx:CPUParticles2D = $fx
 @onready var _fire_fx:CPUParticles2D = $FIRE
 @export var side: float = 100.0
+## -1 uses bottom-to-top height ordering for practice/custom scenes.
+@export var progression_index: int = -1
 
 var activated = false
 
@@ -17,11 +19,12 @@ func _ready():
 	CheckpointManager.register_checkpoint(self)
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is Player and not activated:
+	if body is Player and not body.is_dead:
+		activate_for(body)
+
+func activate_for(body: Player) -> void:
+	if not activated and CheckpointManager.player == body and CheckpointManager.checkpoint_activated(self):
 		activated = true
-		print("player entered checkpoint")
-		body.update_respawn_position(global_position)
-		CheckpointManager.checkpoint_activated(self)
 		activate_flag()
 
 func activate_flag():

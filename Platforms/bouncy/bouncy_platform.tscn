@@ -8,9 +8,11 @@
 size = Vector2(122, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53hgn"]
-size = Vector2(121, 32.5)
+size = Vector2(121, 38)
 
 [node name="BouncyPlatform" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_ruspo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

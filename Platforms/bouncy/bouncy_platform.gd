@@ -23,6 +23,7 @@ signal bounced
 @onready var area: Area2D = $Area2D
 
 var can_bounce: bool = true
+var _bounce_tween: Tween
 var original_platform_pos: Vector2
 var original_stem_pos: Vector2
 var original_platform_scale: Vector2  # Store original scale
@@ -37,33 +38,28 @@ func _ready():
 	original_stem_scale = stem_sprite.scale           # Capture actual starting scale
 
 func _on_body_entered(body):
-	if body.is_in_group("Player") and can_bounce:
+	if body is Player and not body.is_dead and can_bounce:
 		bounce_player(body)
 
 func bounce_player(player):
-	can_bounce = false
+	if not can_bounce or player.is_dead:
+		return
 	
 	# Determine bounce direction
 	var dir = bounce_direction
 	if use_node_up_as_direction:
-		dir = -transform.y
+		dir = -global_transform.y
 	
-	# Calculate bounce velocity
-	var bounce_velocity = dir.normalized() * bounce_force
-	
-	# Preserve existing velocity and add bounce
+	# Only the front face catches an incoming player. Side/below contact is safe.
+	dir = dir.normalized()
+	if (player.global_position - global_position).dot(dir) < 0.0 or player.velocity.dot(dir) > 0.0:
+		return
+	can_bounce = false
+	var launch_velocity = dir * bounce_force
 	if preserve_horizontal_velocity:
-		var new_velocity = Vector2()
-		new_velocity.x = player.velocity.x * velocity_boost_multiplier
-		new_velocity.y = bounce_velocity.y
-		
-		if abs(bounce_direction.x) > 0:
-			new_velocity.x += bounce_velocity.x
-		
-		player.velocity = new_velocity
-	else:
-		player.velocity += bounce_velocity
-	
+		launch_velocity.x += player.velocity.x * velocity_boost_multiplier
+	player.launch(launch_velocity)
+
 	animate_enhanced_bounce()
 	emit_signal("bounced")
 	
@@ -72,7 +68,10 @@ func bounce_player(player):
 	can_bounce = true
 
 func animate_enhanced_bounce():
+	if _bounce_tween:
+		_bounce_tween.kill()
 	var tween = create_tween().set_parallel(true)
+	_bounce_tween = tween
 	
 	# PHASE 1: Tiny anticipation (scale relative to original)
 	var anticipation_scale = Vector2(
