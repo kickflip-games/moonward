@@ -68,3 +68,4 @@ artifacts/gameplay_polish/*.json
 artifacts/art_swap/before/
 artifacts/art_swap/after/
 artifacts/art_swap/web/
+artifacts/autotile_review/output/

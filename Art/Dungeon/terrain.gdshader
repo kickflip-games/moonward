@@ -2,6 +2,7 @@ shader_type canvas_item;
 render_mode unshaded;
 
 uniform sampler2D sheet : source_color, filter_nearest, repeat_disable;
+uniform bool hide_solid = false;
 uniform float stone_repeat_size = 512.0;
 uniform vec4 stone_region = vec4(31.0, 336.0, 103.0, 106.0);
 uniform vec4 moss_region = vec4(145.0, 327.0, 104.0, 115.0);
@@ -34,5 +35,5 @@ void fragment() {
 		surface = mix(surface, vec3(1.0, 0.40, 0.23), 0.40);
 	}
 	// The original atlas is a silhouette mask; tile cells and collision data stay intact.
-	COLOR = vec4(surface, texture(TEXTURE, UV).a * item_color.a);
+	COLOR = vec4(surface, texture(TEXTURE, UV).a * item_color.a * ((hide_solid && !spike) ? 0.0 : 1.0));
 }

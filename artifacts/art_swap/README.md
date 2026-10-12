@@ -1,5 +1,7 @@
 # Dungeon art integration
 
+The terrain portion of this pass has since been replaced by the cavern autotiles; see `../autotile_review/README.md`. The comparisons below record the earlier dungeon integration.
+
 The supplied spritesheet is applied to the existing tower. Stone/moss/ivy terrain, wooden platforms and springboards, warm metal spikes/projectiles, stone turrets, and moon-shrine checkpoints replace the old surface art. The cube, title, moon, music, UI, progression and movement tuning are preserved.
 
 ## Verification

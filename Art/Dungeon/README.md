@@ -6,15 +6,15 @@
 - `Preview.tscn` browses the terrain, structures, props, hazards, water and shrine assets. Run this scene with F6.
 - `catalog.json` records every source rectangle and texture path.
 
-The tower now uses this art:
+The tower uses this art alongside the cavern terrain in `Art/Cavern`:
 
-- Stone, moss and ivy cover its existing terrain silhouettes, repeating every 64 world pixels.
+- Stone, moss and ivy remain reusable materials. The tower terrain now uses the cavern autotiles; the dungeon terrain shader still renders its spike tiles.
 - Wooden planks cover moving, rotating and breakable platforms. Springboards use the planks and the supplied shrine pedestal as their spring base.
 - Spike shapes and projectiles use warm metal, keeping dangerous surfaces distinct from blue stone.
 - Turrets have stone bodies and metal barrels; their charging ring remains visible.
 - Checkpoints use moon shrines and banners, retaining their activation sound, particles and fire.
 
-`World/Map/dungeon_skin.gd` applies `terrain_material.tres` and the shared `surface_material.gd` helper. The shaders sample the supplied sheet through the original geometry and silhouette masks. Solid backing fills transparent parts of source rectangles, keeping collidable surfaces visible. Tile cells, slopes, hazard tips and collision polygons remain authoritative; this pass does not change their dimensions or physics.
+`World/Map/dungeon_skin.gd` applies the shared `surface_material.gd` helper and delegates terrain to the cavern renderer. The shaders sample the supplied sheet through the original geometry and silhouette masks. Solid backing fills transparent parts of source rectangles, keeping collidable surfaces visible. Tile cells, slopes, hazard tips and collision polygons remain authoritative; the art passes do not change their dimensions or physics.
 
 The gallery `TileSet` remains visual-only, with no collision, navigation or terrain-connectivity rules. The cube, title, moon, UI and audio retain their original assets. Character poses are available in the source image but are not connected to the player.
 

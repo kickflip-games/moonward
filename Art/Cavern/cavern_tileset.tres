@@ -1,0 +1,1024 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Shader" path="res://Art/Cavern/terrain_quarters.gdshader" id="1_xg4n1"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-03.png" id="2_mavty"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-35.png" id="3_h4bmt"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-32.png" id="4_d1yj0"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-01.png" id="5_w2jr5"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-02.png" id="6_d6mxx"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-33.png" id="7_bgl71"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-04.png" id="8_t1ol0"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-05.png" id="9_6mhmd"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-07.png" id="10_ypt3t"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-06.png" id="11_bi5tw"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-08.png" id="12_gtte6"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-09.png" id="13_3qcsh"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-10.png" id="14_bl3wd"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-14.png" id="15_asqos"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-29.png" id="16_ou1yg"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-30.png" id="17_s8ixr"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-31.png" id="18_2xjpc"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-25.png" id="19_xt6rv"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-36.png" id="20_tiqso"]
+[ext_resource type="Texture2D" path="res://Art/Cavern/Tiles/Tile-37.png" id="21_c6p6s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6eca5"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_21cog"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("5_w2jr5")
+shader_parameter/top_right = ExtResource("6_d6mxx")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_keak2"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0puw8"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_joc7r"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7js7q"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uqw37"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ktxq"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0bq8y"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("10_ypt3t")
+shader_parameter/top_right = ExtResource("10_ypt3t")
+shader_parameter/bottom_left = ExtResource("10_ypt3t")
+shader_parameter/bottom_right = ExtResource("10_ypt3t")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xx3xp"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("5_w2jr5")
+shader_parameter/top_right = ExtResource("11_bi5tw")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lycgq"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("5_w2jr5")
+shader_parameter/top_right = ExtResource("6_d6mxx")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_otsxy"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("5_w2jr5")
+shader_parameter/top_right = ExtResource("11_bi5tw")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1hn4"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("11_bi5tw")
+shader_parameter/top_right = ExtResource("6_d6mxx")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k0wju"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("11_bi5tw")
+shader_parameter/top_right = ExtResource("11_bi5tw")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_paeec"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("11_bi5tw")
+shader_parameter/top_right = ExtResource("6_d6mxx")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hqxvh"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("11_bi5tw")
+shader_parameter/top_right = ExtResource("11_bi5tw")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jkd4l"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3001"]
+resource_name = "Bare rock"
+texture = ExtResource("2_mavty")
+texture_region_size = Vector2i(24, 24)
+use_texture_padding = false
+0:0/next_alternative_id = 17
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_6eca5")
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_21cog")
+0:0/1/terrain_set = 0
+0:0/1/terrain = 0
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/2 = 2
+0:0/2/material = SubResource("ShaderMaterial_xx3xp")
+0:0/2/terrain_set = 0
+0:0/2/terrain = 0
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/2/terrains_peering_bit/right_side = 0
+0:0/3 = 3
+0:0/3/material = SubResource("ShaderMaterial_lycgq")
+0:0/3/terrain_set = 0
+0:0/3/terrain = 0
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/3/terrains_peering_bit/bottom_side = 0
+0:0/4 = 4
+0:0/4/material = SubResource("ShaderMaterial_otsxy")
+0:0/4/terrain_set = 0
+0:0/4/terrain = 0
+0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/4/terrains_peering_bit/right_side = 0
+0:0/4/terrains_peering_bit/bottom_side = 0
+0:0/5 = 5
+0:0/5/material = SubResource("ShaderMaterial_q1hn4")
+0:0/5/terrain_set = 0
+0:0/5/terrain = 0
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/5/terrains_peering_bit/left_side = 0
+0:0/6 = 6
+0:0/6/material = SubResource("ShaderMaterial_k0wju")
+0:0/6/terrain_set = 0
+0:0/6/terrain = 0
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/6/terrains_peering_bit/right_side = 0
+0:0/6/terrains_peering_bit/left_side = 0
+0:0/7 = 7
+0:0/7/material = SubResource("ShaderMaterial_paeec")
+0:0/7/terrain_set = 0
+0:0/7/terrain = 0
+0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/7/terrains_peering_bit/bottom_side = 0
+0:0/7/terrains_peering_bit/left_side = 0
+0:0/8 = 8
+0:0/8/material = SubResource("ShaderMaterial_hqxvh")
+0:0/8/terrain_set = 0
+0:0/8/terrain = 0
+0:0/8/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/8/terrains_peering_bit/right_side = 0
+0:0/8/terrains_peering_bit/bottom_side = 0
+0:0/8/terrains_peering_bit/left_side = 0
+0:0/9 = 9
+0:0/9/material = SubResource("ShaderMaterial_jkd4l")
+0:0/9/terrain_set = 0
+0:0/9/terrain = 0
+0:0/9/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/9/terrains_peering_bit/top_side = 0
+0:0/10 = 10
+0:0/10/material = SubResource("ShaderMaterial_keak2")
+0:0/10/terrain_set = 0
+0:0/10/terrain = 0
+0:0/10/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/10/terrains_peering_bit/right_side = 0
+0:0/10/terrains_peering_bit/top_side = 0
+0:0/11 = 11
+0:0/11/material = SubResource("ShaderMaterial_0puw8")
+0:0/11/terrain_set = 0
+0:0/11/terrain = 0
+0:0/11/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/11/terrains_peering_bit/bottom_side = 0
+0:0/11/terrains_peering_bit/top_side = 0
+0:0/12 = 12
+0:0/12/material = SubResource("ShaderMaterial_joc7r")
+0:0/12/terrain_set = 0
+0:0/12/terrain = 0
+0:0/12/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/12/terrains_peering_bit/right_side = 0
+0:0/12/terrains_peering_bit/bottom_side = 0
+0:0/12/terrains_peering_bit/top_side = 0
+0:0/13 = 13
+0:0/13/material = SubResource("ShaderMaterial_7js7q")
+0:0/13/terrain_set = 0
+0:0/13/terrain = 0
+0:0/13/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/13/terrains_peering_bit/left_side = 0
+0:0/13/terrains_peering_bit/top_side = 0
+0:0/14 = 14
+0:0/14/material = SubResource("ShaderMaterial_uqw37")
+0:0/14/terrain_set = 0
+0:0/14/terrain = 0
+0:0/14/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/14/terrains_peering_bit/right_side = 0
+0:0/14/terrains_peering_bit/left_side = 0
+0:0/14/terrains_peering_bit/top_side = 0
+0:0/15 = 15
+0:0/15/material = SubResource("ShaderMaterial_4ktxq")
+0:0/15/terrain_set = 0
+0:0/15/terrain = 0
+0:0/15/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/15/terrains_peering_bit/bottom_side = 0
+0:0/15/terrains_peering_bit/left_side = 0
+0:0/15/terrains_peering_bit/top_side = 0
+0:0/16 = 16
+0:0/16/material = SubResource("ShaderMaterial_0bq8y")
+0:0/16/terrain_set = 0
+0:0/16/terrain = 0
+0:0/16/probability = 0.35
+0:0/16/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/16/terrains_peering_bit/right_side = 0
+0:0/16/terrains_peering_bit/bottom_side = 0
+0:0/16/terrains_peering_bit/left_side = 0
+0:0/16/terrains_peering_bit/top_side = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pbsk2"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6uc4g"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("12_gtte6")
+shader_parameter/top_right = ExtResource("13_3qcsh")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xdm4s"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a5f8s"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p827o"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nv6lt"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pwjqs"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tp72a"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_phbbx"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("10_ypt3t")
+shader_parameter/top_right = ExtResource("10_ypt3t")
+shader_parameter/bottom_left = ExtResource("10_ypt3t")
+shader_parameter/bottom_right = ExtResource("10_ypt3t")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k4so2"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("12_gtte6")
+shader_parameter/top_right = ExtResource("14_bl3wd")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5h0as"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("12_gtte6")
+shader_parameter/top_right = ExtResource("13_3qcsh")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4055s"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("12_gtte6")
+shader_parameter/top_right = ExtResource("14_bl3wd")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3htrp"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("14_bl3wd")
+shader_parameter/top_right = ExtResource("13_3qcsh")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_imwi3"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("14_bl3wd")
+shader_parameter/top_right = ExtResource("14_bl3wd")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h3smp"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("14_bl3wd")
+shader_parameter/top_right = ExtResource("13_3qcsh")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_htr4j"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("14_bl3wd")
+shader_parameter/top_right = ExtResource("14_bl3wd")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yxorn"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ux4bk"]
+resource_name = "Green grass"
+texture = ExtResource("2_mavty")
+texture_region_size = Vector2i(24, 24)
+use_texture_padding = false
+0:0/next_alternative_id = 17
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_pbsk2")
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_6uc4g")
+0:0/1/terrain_set = 1
+0:0/1/terrain = 0
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/2 = 2
+0:0/2/material = SubResource("ShaderMaterial_k4so2")
+0:0/2/terrain_set = 1
+0:0/2/terrain = 0
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/2/terrains_peering_bit/right_side = 0
+0:0/3 = 3
+0:0/3/material = SubResource("ShaderMaterial_5h0as")
+0:0/3/terrain_set = 1
+0:0/3/terrain = 0
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/3/terrains_peering_bit/bottom_side = 0
+0:0/4 = 4
+0:0/4/material = SubResource("ShaderMaterial_4055s")
+0:0/4/terrain_set = 1
+0:0/4/terrain = 0
+0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/4/terrains_peering_bit/right_side = 0
+0:0/4/terrains_peering_bit/bottom_side = 0
+0:0/5 = 5
+0:0/5/material = SubResource("ShaderMaterial_3htrp")
+0:0/5/terrain_set = 1
+0:0/5/terrain = 0
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/5/terrains_peering_bit/left_side = 0
+0:0/6 = 6
+0:0/6/material = SubResource("ShaderMaterial_imwi3")
+0:0/6/terrain_set = 1
+0:0/6/terrain = 0
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/6/terrains_peering_bit/right_side = 0
+0:0/6/terrains_peering_bit/left_side = 0
+0:0/7 = 7
+0:0/7/material = SubResource("ShaderMaterial_h3smp")
+0:0/7/terrain_set = 1
+0:0/7/terrain = 0
+0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/7/terrains_peering_bit/bottom_side = 0
+0:0/7/terrains_peering_bit/left_side = 0
+0:0/8 = 8
+0:0/8/material = SubResource("ShaderMaterial_htr4j")
+0:0/8/terrain_set = 1
+0:0/8/terrain = 0
+0:0/8/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/8/terrains_peering_bit/right_side = 0
+0:0/8/terrains_peering_bit/bottom_side = 0
+0:0/8/terrains_peering_bit/left_side = 0
+0:0/9 = 9
+0:0/9/material = SubResource("ShaderMaterial_yxorn")
+0:0/9/terrain_set = 1
+0:0/9/terrain = 0
+0:0/9/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/9/terrains_peering_bit/top_side = 0
+0:0/10 = 10
+0:0/10/material = SubResource("ShaderMaterial_xdm4s")
+0:0/10/terrain_set = 1
+0:0/10/terrain = 0
+0:0/10/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/10/terrains_peering_bit/right_side = 0
+0:0/10/terrains_peering_bit/top_side = 0
+0:0/11 = 11
+0:0/11/material = SubResource("ShaderMaterial_a5f8s")
+0:0/11/terrain_set = 1
+0:0/11/terrain = 0
+0:0/11/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/11/terrains_peering_bit/bottom_side = 0
+0:0/11/terrains_peering_bit/top_side = 0
+0:0/12 = 12
+0:0/12/material = SubResource("ShaderMaterial_p827o")
+0:0/12/terrain_set = 1
+0:0/12/terrain = 0
+0:0/12/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/12/terrains_peering_bit/right_side = 0
+0:0/12/terrains_peering_bit/bottom_side = 0
+0:0/12/terrains_peering_bit/top_side = 0
+0:0/13 = 13
+0:0/13/material = SubResource("ShaderMaterial_nv6lt")
+0:0/13/terrain_set = 1
+0:0/13/terrain = 0
+0:0/13/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/13/terrains_peering_bit/left_side = 0
+0:0/13/terrains_peering_bit/top_side = 0
+0:0/14 = 14
+0:0/14/material = SubResource("ShaderMaterial_pwjqs")
+0:0/14/terrain_set = 1
+0:0/14/terrain = 0
+0:0/14/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/14/terrains_peering_bit/right_side = 0
+0:0/14/terrains_peering_bit/left_side = 0
+0:0/14/terrains_peering_bit/top_side = 0
+0:0/15 = 15
+0:0/15/material = SubResource("ShaderMaterial_tp72a")
+0:0/15/terrain_set = 1
+0:0/15/terrain = 0
+0:0/15/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/15/terrains_peering_bit/bottom_side = 0
+0:0/15/terrains_peering_bit/left_side = 0
+0:0/15/terrains_peering_bit/top_side = 0
+0:0/16 = 16
+0:0/16/material = SubResource("ShaderMaterial_phbbx")
+0:0/16/terrain_set = 1
+0:0/16/terrain = 0
+0:0/16/probability = 0.35
+0:0/16/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/16/terrains_peering_bit/right_side = 0
+0:0/16/terrains_peering_bit/bottom_side = 0
+0:0/16/terrains_peering_bit/left_side = 0
+0:0/16/terrains_peering_bit/top_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k78uk"]
+resource_name = "Manual slope 14"
+texture = ExtResource("15_asqos")
+texture_region_size = Vector2i(24, 24)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, 12, 12, -12, 12, 12)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fqt78"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cpyom"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("16_ou1yg")
+shader_parameter/top_right = ExtResource("17_s8ixr")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sctox"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_slfqu"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hno6h"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dfekc"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qksyl"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("2_mavty")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j0ice"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("2_mavty")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jtf1k"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("10_ypt3t")
+shader_parameter/top_right = ExtResource("10_ypt3t")
+shader_parameter/bottom_left = ExtResource("10_ypt3t")
+shader_parameter/bottom_right = ExtResource("10_ypt3t")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5hlb7"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("16_ou1yg")
+shader_parameter/top_right = ExtResource("18_2xjpc")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lv88n"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("16_ou1yg")
+shader_parameter/top_right = ExtResource("17_s8ixr")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_80jds"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("16_ou1yg")
+shader_parameter/top_right = ExtResource("18_2xjpc")
+shader_parameter/bottom_left = ExtResource("8_t1ol0")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1qk7y"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("18_2xjpc")
+shader_parameter/top_right = ExtResource("17_s8ixr")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k41of"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("18_2xjpc")
+shader_parameter/top_right = ExtResource("18_2xjpc")
+shader_parameter/bottom_left = ExtResource("7_bgl71")
+shader_parameter/bottom_right = ExtResource("7_bgl71")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lfbni"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("18_2xjpc")
+shader_parameter/top_right = ExtResource("17_s8ixr")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("9_6mhmd")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xc76r"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("18_2xjpc")
+shader_parameter/top_right = ExtResource("18_2xjpc")
+shader_parameter/bottom_left = ExtResource("2_mavty")
+shader_parameter/bottom_right = ExtResource("2_mavty")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0k8w6"]
+shader = ExtResource("1_xg4n1")
+shader_parameter/top_left = ExtResource("8_t1ol0")
+shader_parameter/top_right = ExtResource("9_6mhmd")
+shader_parameter/bottom_left = ExtResource("3_h4bmt")
+shader_parameter/bottom_right = ExtResource("4_d1yj0")
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fuumf"]
+resource_name = "Purple grass"
+texture = ExtResource("2_mavty")
+texture_region_size = Vector2i(24, 24)
+use_texture_padding = false
+0:0/next_alternative_id = 17
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_fqt78")
+0:0/0/terrain_set = 2
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_cpyom")
+0:0/1/terrain_set = 2
+0:0/1/terrain = 0
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/2 = 2
+0:0/2/material = SubResource("ShaderMaterial_5hlb7")
+0:0/2/terrain_set = 2
+0:0/2/terrain = 0
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/2/terrains_peering_bit/right_side = 0
+0:0/3 = 3
+0:0/3/material = SubResource("ShaderMaterial_lv88n")
+0:0/3/terrain_set = 2
+0:0/3/terrain = 0
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/3/terrains_peering_bit/bottom_side = 0
+0:0/4 = 4
+0:0/4/material = SubResource("ShaderMaterial_80jds")
+0:0/4/terrain_set = 2
+0:0/4/terrain = 0
+0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/4/terrains_peering_bit/right_side = 0
+0:0/4/terrains_peering_bit/bottom_side = 0
+0:0/5 = 5
+0:0/5/material = SubResource("ShaderMaterial_1qk7y")
+0:0/5/terrain_set = 2
+0:0/5/terrain = 0
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/5/terrains_peering_bit/left_side = 0
+0:0/6 = 6
+0:0/6/material = SubResource("ShaderMaterial_k41of")
+0:0/6/terrain_set = 2
+0:0/6/terrain = 0
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/6/terrains_peering_bit/right_side = 0
+0:0/6/terrains_peering_bit/left_side = 0
+0:0/7 = 7
+0:0/7/material = SubResource("ShaderMaterial_lfbni")
+0:0/7/terrain_set = 2
+0:0/7/terrain = 0
+0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/7/terrains_peering_bit/bottom_side = 0
+0:0/7/terrains_peering_bit/left_side = 0
+0:0/8 = 8
+0:0/8/material = SubResource("ShaderMaterial_xc76r")
+0:0/8/terrain_set = 2
+0:0/8/terrain = 0
+0:0/8/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/8/terrains_peering_bit/right_side = 0
+0:0/8/terrains_peering_bit/bottom_side = 0
+0:0/8/terrains_peering_bit/left_side = 0
+0:0/9 = 9
+0:0/9/material = SubResource("ShaderMaterial_0k8w6")
+0:0/9/terrain_set = 2
+0:0/9/terrain = 0
+0:0/9/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/9/terrains_peering_bit/top_side = 0
+0:0/10 = 10
+0:0/10/material = SubResource("ShaderMaterial_sctox")
+0:0/10/terrain_set = 2
+0:0/10/terrain = 0
+0:0/10/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/10/terrains_peering_bit/right_side = 0
+0:0/10/terrains_peering_bit/top_side = 0
+0:0/11 = 11
+0:0/11/material = SubResource("ShaderMaterial_slfqu")
+0:0/11/terrain_set = 2
+0:0/11/terrain = 0
+0:0/11/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/11/terrains_peering_bit/bottom_side = 0
+0:0/11/terrains_peering_bit/top_side = 0
+0:0/12 = 12
+0:0/12/material = SubResource("ShaderMaterial_hno6h")
+0:0/12/terrain_set = 2
+0:0/12/terrain = 0
+0:0/12/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/12/terrains_peering_bit/right_side = 0
+0:0/12/terrains_peering_bit/bottom_side = 0
+0:0/12/terrains_peering_bit/top_side = 0
+0:0/13 = 13
+0:0/13/material = SubResource("ShaderMaterial_dfekc")
+0:0/13/terrain_set = 2
+0:0/13/terrain = 0
+0:0/13/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/13/terrains_peering_bit/left_side = 0
+0:0/13/terrains_peering_bit/top_side = 0
+0:0/14 = 14
+0:0/14/material = SubResource("ShaderMaterial_qksyl")
+0:0/14/terrain_set = 2
+0:0/14/terrain = 0
+0:0/14/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/14/terrains_peering_bit/right_side = 0
+0:0/14/terrains_peering_bit/left_side = 0
+0:0/14/terrains_peering_bit/top_side = 0
+0:0/15 = 15
+0:0/15/material = SubResource("ShaderMaterial_j0ice")
+0:0/15/terrain_set = 2
+0:0/15/terrain = 0
+0:0/15/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/15/terrains_peering_bit/bottom_side = 0
+0:0/15/terrains_peering_bit/left_side = 0
+0:0/15/terrains_peering_bit/top_side = 0
+0:0/16 = 16
+0:0/16/material = SubResource("ShaderMaterial_jtf1k")
+0:0/16/terrain_set = 2
+0:0/16/terrain = 0
+0:0/16/probability = 0.35
+0:0/16/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+0:0/16/terrains_peering_bit/right_side = 0
+0:0/16/terrains_peering_bit/bottom_side = 0
+0:0/16/terrains_peering_bit/left_side = 0
+0:0/16/terrains_peering_bit/top_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ow1eg"]
+resource_name = "Manual slope 25"
+texture = ExtResource("19_xt6rv")
+texture_region_size = Vector2i(24, 24)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, -12, 12, 12, 12)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28lb5"]
+resource_name = "Manual slope 36"
+texture = ExtResource("20_tiqso")
+texture_region_size = Vector2i(24, 24)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, 12, 12)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5b15h"]
+resource_name = "Manual slope 37"
+texture = ExtResource("21_c6p6s")
+texture_region_size = Vector2i(24, 24)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -12, 12, -12, -12, 12)
+
+[resource]
+tile_size = Vector2i(24, 24)
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 5
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "Bare rock"
+terrain_set_0/terrain_0/color = Color(0.44313726, 0.3882353, 0.5137255, 1)
+terrain_set_1/mode = 2
+terrain_set_1/terrain_0/name = "Green grass"
+terrain_set_1/terrain_0/color = Color(0.52156866, 0.68235296, 0.27058825, 1)
+terrain_set_2/mode = 2
+terrain_set_2/terrain_0/name = "Purple grass"
+terrain_set_2/terrain_0/color = Color(0.52156866, 0.5058824, 0.76862746, 1)
+sources/0 = SubResource("TileSetAtlasSource_i3001")
+sources/1 = SubResource("TileSetAtlasSource_ux4bk")
+sources/2 = SubResource("TileSetAtlasSource_fuumf")
+sources/14 = SubResource("TileSetAtlasSource_k78uk")
+sources/25 = SubResource("TileSetAtlasSource_ow1eg")
+sources/36 = SubResource("TileSetAtlasSource_28lb5")
+sources/37 = SubResource("TileSetAtlasSource_5b15h")
