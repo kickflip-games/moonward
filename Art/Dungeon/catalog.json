@@ -1,0 +1,503 @@
+{
+  "source_size": [
+    1448,
+    1086
+  ],
+  "entries": [
+    {
+      "name": "night_stone_block",
+      "category": "Terrain",
+      "region": [
+        31,
+        56,
+        103,
+        106
+      ],
+      "texture": "res://Art/Dungeon/regions/night_stone_block.tres"
+    },
+    {
+      "name": "night_stone_moss_block",
+      "category": "Terrain",
+      "region": [
+        145,
+        53,
+        108,
+        109
+      ],
+      "texture": "res://Art/Dungeon/regions/night_stone_moss_block.tres"
+    },
+    {
+      "name": "night_stone_ivy_block",
+      "category": "Terrain",
+      "region": [
+        258,
+        49,
+        94,
+        113
+      ],
+      "texture": "res://Art/Dungeon/regions/night_stone_ivy_block.tres"
+    },
+    {
+      "name": "night_stone_slope_left",
+      "category": "Terrain",
+      "region": [
+        362,
+        62,
+        80,
+        100
+      ],
+      "texture": "res://Art/Dungeon/regions/night_stone_slope_left.tres"
+    },
+    {
+      "name": "night_stone_slope_right",
+      "category": "Terrain",
+      "region": [
+        714,
+        60,
+        76,
+        102
+      ],
+      "texture": "res://Art/Dungeon/regions/night_stone_slope_right.tres"
+    },
+    {
+      "name": "earth_block",
+      "category": "Terrain",
+      "region": [
+        31,
+        190,
+        104,
+        107
+      ],
+      "texture": "res://Art/Dungeon/regions/earth_block.tres"
+    },
+    {
+      "name": "earth_moss_block",
+      "category": "Terrain",
+      "region": [
+        145,
+        171,
+        105,
+        126
+      ],
+      "texture": "res://Art/Dungeon/regions/earth_moss_block.tres"
+    },
+    {
+      "name": "earth_ivy_block",
+      "category": "Terrain",
+      "region": [
+        259,
+        186,
+        90,
+        111
+      ],
+      "texture": "res://Art/Dungeon/regions/earth_ivy_block.tres"
+    },
+    {
+      "name": "earth_slope_left",
+      "category": "Terrain",
+      "region": [
+        362,
+        184,
+        78,
+        113
+      ],
+      "texture": "res://Art/Dungeon/regions/earth_slope_left.tres"
+    },
+    {
+      "name": "earth_slope_right",
+      "category": "Terrain",
+      "region": [
+        714,
+        184,
+        76,
+        112
+      ],
+      "texture": "res://Art/Dungeon/regions/earth_slope_right.tres"
+    },
+    {
+      "name": "grey_stone_block",
+      "category": "Terrain",
+      "region": [
+        31,
+        336,
+        103,
+        106
+      ],
+      "texture": "res://Art/Dungeon/regions/grey_stone_block.tres"
+    },
+    {
+      "name": "grey_stone_moss_block",
+      "category": "Terrain",
+      "region": [
+        145,
+        327,
+        104,
+        115
+      ],
+      "texture": "res://Art/Dungeon/regions/grey_stone_moss_block.tres"
+    },
+    {
+      "name": "grey_stone_ivy_block",
+      "category": "Terrain",
+      "region": [
+        259,
+        330,
+        89,
+        112
+      ],
+      "texture": "res://Art/Dungeon/regions/grey_stone_ivy_block.tres"
+    },
+    {
+      "name": "grey_stone_slope_left",
+      "category": "Terrain",
+      "region": [
+        362,
+        341,
+        79,
+        101
+      ],
+      "texture": "res://Art/Dungeon/regions/grey_stone_slope_left.tres"
+    },
+    {
+      "name": "grey_stone_slope_right",
+      "category": "Terrain",
+      "region": [
+        714,
+        341,
+        76,
+        101
+      ],
+      "texture": "res://Art/Dungeon/regions/grey_stone_slope_right.tres"
+    },
+    {
+      "name": "pillar",
+      "category": "Terrain",
+      "region": [
+        568,
+        342,
+        38,
+        100
+      ],
+      "texture": "res://Art/Dungeon/regions/pillar.tres"
+    },
+    {
+      "name": "column_left",
+      "category": "Terrain",
+      "region": [
+        1153,
+        341,
+        44,
+        101
+      ],
+      "texture": "res://Art/Dungeon/regions/column_left.tres"
+    },
+    {
+      "name": "column_right",
+      "category": "Terrain",
+      "region": [
+        1216,
+        341,
+        48,
+        101
+      ],
+      "texture": "res://Art/Dungeon/regions/column_right.tres"
+    },
+    {
+      "name": "mixed_block",
+      "category": "Terrain",
+      "region": [
+        31,
+        470,
+        102,
+        107
+      ],
+      "texture": "res://Art/Dungeon/regions/mixed_block.tres"
+    },
+    {
+      "name": "mixed_moss_block",
+      "category": "Terrain",
+      "region": [
+        146,
+        467,
+        103,
+        110
+      ],
+      "texture": "res://Art/Dungeon/regions/mixed_moss_block.tres"
+    },
+    {
+      "name": "bridge_left",
+      "category": "Structures",
+      "region": [
+        603,
+        478,
+        131,
+        145
+      ],
+      "texture": "res://Art/Dungeon/regions/bridge_left.tres"
+    },
+    {
+      "name": "bridge_middle",
+      "category": "Structures",
+      "region": [
+        743,
+        484,
+        192,
+        133
+      ],
+      "texture": "res://Art/Dungeon/regions/bridge_middle.tres"
+    },
+    {
+      "name": "bridge_right",
+      "category": "Structures",
+      "region": [
+        945,
+        484,
+        57,
+        112
+      ],
+      "texture": "res://Art/Dungeon/regions/bridge_right.tres"
+    },
+    {
+      "name": "ladder",
+      "category": "Structures",
+      "region": [
+        1068,
+        474,
+        49,
+        174
+      ],
+      "texture": "res://Art/Dungeon/regions/ladder.tres"
+    },
+    {
+      "name": "wood_door",
+      "category": "Structures",
+      "region": [
+        1132,
+        475,
+        57,
+        162
+      ],
+      "texture": "res://Art/Dungeon/regions/wood_door.tres"
+    },
+    {
+      "name": "torch",
+      "category": "Props",
+      "region": [
+        32,
+        639,
+        56,
+        107
+      ],
+      "texture": "res://Art/Dungeon/regions/torch.tres"
+    },
+    {
+      "name": "small_torch",
+      "category": "Props",
+      "region": [
+        108,
+        654,
+        50,
+        98
+      ],
+      "texture": "res://Art/Dungeon/regions/small_torch.tres"
+    },
+    {
+      "name": "lantern",
+      "category": "Props",
+      "region": [
+        178,
+        639,
+        37,
+        100
+      ],
+      "texture": "res://Art/Dungeon/regions/lantern.tres"
+    },
+    {
+      "name": "small_lantern",
+      "category": "Props",
+      "region": [
+        236,
+        646,
+        34,
+        105
+      ],
+      "texture": "res://Art/Dungeon/regions/small_lantern.tres"
+    },
+    {
+      "name": "moon_banner",
+      "category": "Props",
+      "region": [
+        286,
+        651,
+        65,
+        120
+      ],
+      "texture": "res://Art/Dungeon/regions/moon_banner.tres"
+    },
+    {
+      "name": "banner",
+      "category": "Props",
+      "region": [
+        364,
+        651,
+        59,
+        106
+      ],
+      "texture": "res://Art/Dungeon/regions/banner.tres"
+    },
+    {
+      "name": "barrel",
+      "category": "Props",
+      "region": [
+        1106,
+        691,
+        49,
+        77
+      ],
+      "texture": "res://Art/Dungeon/regions/barrel.tres"
+    },
+    {
+      "name": "gate",
+      "category": "Props",
+      "region": [
+        1253,
+        655,
+        60,
+        102
+      ],
+      "texture": "res://Art/Dungeon/regions/gate.tres"
+    },
+    {
+      "name": "ivy_planter",
+      "category": "Props",
+      "region": [
+        1332,
+        676,
+        83,
+        83
+      ],
+      "texture": "res://Art/Dungeon/regions/ivy_planter.tres"
+    },
+    {
+      "name": "floor_spikes",
+      "category": "Hazards",
+      "region": [
+        30,
+        813,
+        116,
+        77
+      ],
+      "texture": "res://Art/Dungeon/regions/floor_spikes.tres"
+    },
+    {
+      "name": "wide_floor_spikes",
+      "category": "Hazards",
+      "region": [
+        166,
+        824,
+        143,
+        67
+      ],
+      "texture": "res://Art/Dungeon/regions/wide_floor_spikes.tres"
+    },
+    {
+      "name": "ceiling_spikes",
+      "category": "Hazards",
+      "region": [
+        328,
+        794,
+        99,
+        79
+      ],
+      "texture": "res://Art/Dungeon/regions/ceiling_spikes.tres"
+    },
+    {
+      "name": "chained_ceiling_spikes",
+      "category": "Hazards",
+      "region": [
+        450,
+        794,
+        124,
+        122
+      ],
+      "texture": "res://Art/Dungeon/regions/chained_ceiling_spikes.tres"
+    },
+    {
+      "name": "short_ceiling_spikes",
+      "category": "Hazards",
+      "region": [
+        597,
+        795,
+        98,
+        77
+      ],
+      "texture": "res://Art/Dungeon/regions/short_ceiling_spikes.tres"
+    },
+    {
+      "name": "water_left",
+      "category": "Water and shrines",
+      "region": [
+        714,
+        816,
+        76,
+        81
+      ],
+      "texture": "res://Art/Dungeon/regions/water_left.tres"
+    },
+    {
+      "name": "water_middle",
+      "category": "Water and shrines",
+      "region": [
+        801,
+        816,
+        82,
+        81
+      ],
+      "texture": "res://Art/Dungeon/regions/water_middle.tres"
+    },
+    {
+      "name": "water_bubbles",
+      "category": "Water and shrines",
+      "region": [
+        894,
+        816,
+        79,
+        81
+      ],
+      "texture": "res://Art/Dungeon/regions/water_bubbles.tres"
+    },
+    {
+      "name": "waterfall",
+      "category": "Water and shrines",
+      "region": [
+        995,
+        792,
+        118,
+        115
+      ],
+      "texture": "res://Art/Dungeon/regions/waterfall.tres"
+    },
+    {
+      "name": "moon_shrine",
+      "category": "Water and shrines",
+      "region": [
+        1151,
+        777,
+        119,
+        131
+      ],
+      "texture": "res://Art/Dungeon/regions/moon_shrine.tres"
+    },
+    {
+      "name": "crown_shrine",
+      "category": "Water and shrines",
+      "region": [
+        1293,
+        805,
+        101,
+        103
+      ],
+      "texture": "res://Art/Dungeon/regions/crown_shrine.tres"
+    }
+  ]
+}
