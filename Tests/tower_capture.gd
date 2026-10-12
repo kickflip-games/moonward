@@ -35,6 +35,11 @@ func run() -> void:
 		["09_tower_moving_shaft", Vector2(-1790, -2720), Vector2(-1745, -2700)],
 		["10_tower_moving_hazards", Vector2(-1060, -7820), Vector2(-1500, -7753)],
 		["11_tower_turrets", Vector2(-1120, -7240), Vector2(-1300, -7180)]]
+	if args.has("--art-details"):
+		var platform_origin: Vector2 = world.get_node("Map/Platforms").global_position
+		shots.append_array([
+			["12_tower_platforms", platform_origin + Vector2(700, 380), platform_origin + Vector2(890, 545)],
+			["13_tower_springboard", platform_origin + Vector2(1770, -5480), platform_origin + Vector2(1670, -5450)]])
 	for shot in shots:
 		camera.position = shot[1]
 		player.position = shot[2]

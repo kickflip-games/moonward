@@ -63,3 +63,8 @@ artifacts/gameplay_polish/web/
 artifacts/gameplay_polish/*.mp4
 artifacts/gameplay_polish/*.png
 artifacts/gameplay_polish/*.json
+
+# Local art integration review output
+artifacts/art_swap/before/
+artifacts/art_swap/after/
+artifacts/art_swap/web/

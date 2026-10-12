@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvt82yup3gjq8"]
+[gd_scene load_steps=13 format=3 uid="uid://cvt82yup3gjq8"]
 
 [ext_resource type="Script" uid="uid://cry21u35xljba" path="res://Checkpoint/checkpoint.gd" id="1_qj0kh"]
 [ext_resource type="Script" uid="uid://bjwp3fi83n4qp" path="res://addons/primitive_shapes/triangle.gd" id="3_5v6hc"]
@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://bp35nydfqhkvr" path="res://addons/primitive_shapes/rectangle.gd" id="4_6drmt"]
 [ext_resource type="AudioStream" uid="uid://dmfyuv85y135x" path="res://Checkpoint/checkpoint.ogg" id="5_6drmt"]
 [ext_resource type="PackedScene" uid="uid://b0lhp74iqfdkx" path="res://Checkpoint/fire_particles.tscn" id="6_f5af3"]
+
+[ext_resource type="Texture2D" path="res://Art/Dungeon/regions/moon_shrine.tres" id="7_shrine"]
+
+[ext_resource type="Texture2D" path="res://Art/Dungeon/regions/moon_banner.tres" id="8_banner"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qj0kh"]
 size = Vector2(87, 114)
@@ -41,11 +45,26 @@ color = Color(0.9689713, 0.9999998, 0.96470135, 1)
 metadata/_custom_type_script = "uid://bjwp3fi83n4qp"
 
 [node name="Flagpole" type="Node2D" parent="."]
+visible = false
 position = Vector2(-7, -14)
 script = ExtResource("4_6drmt")
 width = 2.96
 height = 46.99
 metadata/_custom_type_script = "uid://bp35nydfqhkvr"
+
+[node name="Shrine" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-7, -28)
+scale = Vector2(0.48, 0.48)
+modulate = Color(0.65, 0.7, 0.8, 1)
+texture = ExtResource("7_shrine")
+
+[node name="MoonBanner" type="Sprite2D" parent="."]
+z_index = -2
+texture_filter = 1
+position = Vector2(52, -66)
+scale = Vector2(0.50, 0.50)
+texture = ExtResource("8_banner")
 
 [node name="FlagMarker" type="Marker2D" parent="."]
 position = Vector2(5, -24)
