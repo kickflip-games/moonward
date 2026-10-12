@@ -1,14 +1,12 @@
 # Moonward reference library
 
-Design references generated during Moonward discussions (October 2026).
+Visual references generated during Moonward game-development discussions, October 2026. **Not production-ready assets or playable geometry**.
 
-**Import status:** This branch includes the index and room catalog. The original PNG images are packaged separately for import because the GitHub connection cannot send binary image files directly. Do **not** merge this branch until the images are added.
-
-- [Level-design boards: 30 distinct challenge concepts](level-design/README.md)
+- [Level design: 30 challenge rooms](level-design/README.md)
 - [Room catalog](level-design/ROOM_CATALOG.md)
-- [Art, characters and environment concepts](art/README.md)
-- `manifest.json` — included in the downloadable import archive; hashes of all 19 PNGs.
+- [Art concepts, tiles, animation and environment](art/README.md)
+- [Source PNG manifest](manifest.json)
 
-**Use:** First greybox rooms in Godot and validate jump ranges, traps, checkpoints and camera. Then apply art. The sketches are not collision-verified playable maps.
+**Recommended workflow:** greybox challenge rooms first; validate jumps, wall-jumps, traps and checkpoints; then apply art. Keep image references separate from active `Art/` Godot resources.
 
-**Provenance:** AI-generated reference images from the Moonward design discussion. Not redistributed images from third-party itch.io asset packs. Existing experimental Godot spritesheet work remains under [Art/Dungeon](../Art/Dungeon/README.md).
+**Provenance:** AI-generated concepts from the Moonward design conversation, not redistributions of third-party itch.io packs. No external pack licence is asserted. The repository already contains an experimental spritesheet import in [`Art/Dungeon/`](../Art/Dungeon/README.md).

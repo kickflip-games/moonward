@@ -1,0 +1,178 @@
+{
+  "collection": "Moonward generated references (October 2026)",
+  "count": 19,
+  "note": "Original generated PNG bytes preserved",
+  "files": [
+    {
+      "path": "level-design/overview/tower-progression.png",
+      "pixels": [
+        1312,
+        1199
+      ],
+      "bytes": 2265955,
+      "sha256": "b299529281c92e40c1d2b1f603ba8b6fa6451d65a2df5c72a56196bb2df72d37"
+    },
+    {
+      "path": "level-design/greybox/rooms-01-05.png",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "bytes": 1620580,
+      "sha256": "5a291b525f650cd004599f4ee5c28f7b67db8c59fe8e6ed3281d4d88077877ce"
+    },
+    {
+      "path": "level-design/greybox/rooms-06-10.png",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "bytes": 1640100,
+      "sha256": "b370ef2c18864fdbb7763ce20822fa92df535714aab4bf1deea2aacb9b01fc53"
+    },
+    {
+      "path": "level-design/greybox/rooms-11-15.png",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "bytes": 1727099,
+      "sha256": "0f3860de211759ce2a8ff474e1320f26829e6085339f8171b5d3ece08f5543bf"
+    },
+    {
+      "path": "level-design/greybox/rooms-16-20.png",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "bytes": 1629767,
+      "sha256": "9e8fd64dfc2971b75cb28a6d98f36324702658e3ece341c44b7f570595cf7157"
+    },
+    {
+      "path": "level-design/greybox/rooms-21-25.png",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "bytes": 1707759,
+      "sha256": "f8701906df1d4c929ee165718994ec106c833037a6cb2747cb0a78baf2773886"
+    },
+    {
+      "path": "level-design/greybox/rooms-26-30.png",
+      "pixels": [
+        1122,
+        1402
+      ],
+      "bytes": 1704435,
+      "sha256": "cf67bf31b70fe20de11af390b397503da13e1d500c1a46061af955e22b77597a"
+    },
+    {
+      "path": "level-design/greybox/rooms-01-03-detailed.png",
+      "pixels": [
+        1730,
+        2270
+      ],
+      "bytes": 200820,
+      "sha256": "1d8904a7cfa5dd7201d8a689265c920ab2f87f4fc8daa470cd77d610c051cf82"
+    },
+    {
+      "path": "level-design/greybox/examples/01-switchback.png",
+      "pixels": [
+        1688,
+        650
+      ],
+      "bytes": 59534,
+      "sha256": "a24573da60570958ae6474ed9b9cefea5e78705d87bdc0eb572b8de96ad28403"
+    },
+    {
+      "path": "level-design/greybox/examples/02-double-chimney.png",
+      "pixels": [
+        1688,
+        650
+      ],
+      "bytes": 58661,
+      "sha256": "c0f11d50d9cc24ded2cae43c2983a889e88d867ef71d9a70a039d84277325368"
+    },
+    {
+      "path": "level-design/greybox/examples/03-crossing.png",
+      "pixels": [
+        1688,
+        650
+      ],
+      "bytes": 58837,
+      "sha256": "0c7e63d54b9d2b4ba63bd6785387ab7540f3371f553107d4e6d9b3c463dba29e"
+    },
+    {
+      "path": "art/tilesets/tower-modular-concepts.png",
+      "pixels": [
+        1448,
+        1086
+      ],
+      "bytes": 1797555,
+      "sha256": "39c6546016072b5c0cf16496e07ad8f9d27e8845cabadb09c9cc8d8148ee2fc7"
+    },
+    {
+      "path": "art/tilesets/foliage-snow-props.png",
+      "pixels": [
+        1448,
+        1086
+      ],
+      "bytes": 1972073,
+      "sha256": "fc6d016555d8b7f3c10dbbba8417a9b939c0f4b693135b5c5a0a889daf446db8"
+    },
+    {
+      "path": "art/characters/wanderer-core-poses.png",
+      "pixels": [
+        1448,
+        1086
+      ],
+      "bytes": 1515256,
+      "sha256": "19fb14f484235bfb9490d36efeb881f1a772c161da7769e8513ed0ae66c029db"
+    },
+    {
+      "path": "art/characters/wanderer-special-poses.png",
+      "pixels": [
+        1448,
+        1086
+      ],
+      "bytes": 1584107,
+      "sha256": "98425fda31a829f46acfb75cd3aff072044d825659ee5358100ac0c2f993dc62"
+    },
+    {
+      "path": "art/level-mood/01-open-courtyard.png",
+      "pixels": [
+        1448,
+        1086
+      ],
+      "bytes": 2450685,
+      "sha256": "52070f4f8f6324b4b11bd03c4d33c3f8621fa56a7596c7430dbada61fb221ced"
+    },
+    {
+      "path": "art/level-mood/02-vertical-shaft.png",
+      "pixels": [
+        1448,
+        1086
+      ],
+      "bytes": 2560565,
+      "sha256": "685d584434e85e7ca47159b63a4608a0ffae17f8f4de6563da9f8328ccf5cdea"
+    },
+    {
+      "path": "art/level-mood/03-cloud-battlements.png",
+      "pixels": [
+        1448,
+        1086
+      ],
+      "bytes": 2617053,
+      "sha256": "c6ae7233cf87ca80c643b4e8f25539270582dfbe3990a5226616ff2f5fa0dfa3"
+    },
+    {
+      "path": "art/level-mood/04-final-shrine.png",
+      "pixels": [
+        1448,
+        1086
+      ],
+      "bytes": 2605786,
+      "sha256": "6b072718da95b9337383aa0edf4f02eaf901f1f212008797e0e9ec46d7d499cd"
+    }
+  ]
+}
