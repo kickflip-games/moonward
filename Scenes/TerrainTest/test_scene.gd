@@ -38,11 +38,11 @@ func capture(output: String) -> void:
 		await get_tree().physics_frame
 	player.set_physics_process(false)
 	var shots := [
-		["00_previous_borders",Vector2(224,208),1.5,["PreviousWall"]],
-		["01_large_wall",Vector2(224,208),1.5,["LargeMossWall"]],
-		["02_irregular_hole",Vector2(350,596),1.25,["MossEnvironment"]],
-		["03_moss_environment",Vector2(350,596),1.25,["MossEnvironment","MossDecorations"]],
-		["04_snow_environment",Vector2(890,596),1.25,["SnowEnvironment","SnowDecorations"]],
+		["00_previous_borders",Vector2(224,208),2.0,["PreviousWall"]],
+		["01_large_wall",Vector2(224,208),2.0,["LargeMossWall"]],
+		["02_irregular_hole",Vector2(350,596),1.5,["MossEnvironment"]],
+		["03_moss_environment",Vector2(350,596),1.5,["MossEnvironment","MossDecorations"]],
+		["04_snow_environment",Vector2(890,596),1.5,["SnowEnvironment","SnowDecorations"]],
 		["05_slopes",Vector2(984,1060),1.0,["SlopeDemonstration"]],
 		["06_mixed_materials",Vector2(1000,208),1.5,["MixedMaterials"]],
 		["07_player_route",Vector2(350,1760),1.45,["GameplayRoute"]],
