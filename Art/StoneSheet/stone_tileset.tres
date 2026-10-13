@@ -1,0 +1,2775 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Shader" path="res://Art/StoneSheet/atlas_terrain.gdshader" id="1_sm46g"]
+[ext_resource type="Texture2D" path="res://Art/StoneSheet/stone_sheet.png" id="2_kdue7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ynye4"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(202, 203, 70, 70)
+shader_parameter/top_right = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(202, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_smmwd"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(25, 30, 80, 80)
+shader_parameter/top_right = Vector4(367, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(25, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(367, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1wg7m"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(25, 198, 80, 80)
+shader_parameter/top_right = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(25, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(282, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sehn7"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(25, 198, 80, 80)
+shader_parameter/top_right = Vector4(367, 198, 80, 80)
+shader_parameter/bottom_left = Vector4(25, 198, 80, 80)
+shader_parameter/bottom_right = Vector4(367, 198, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0dkrj"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(25, 198, 80, 80)
+shader_parameter/top_right = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(25, 198, 80, 80)
+shader_parameter/bottom_right = Vector4(202, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ro46m"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(202, 203, 70, 70)
+shader_parameter/top_right = Vector4(367, 198, 80, 80)
+shader_parameter/bottom_left = Vector4(282, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(367, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0vf7d"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(202, 203, 70, 70)
+shader_parameter/top_right = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(282, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(282, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pwwe4"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(202, 203, 70, 70)
+shader_parameter/top_right = Vector4(367, 198, 80, 80)
+shader_parameter/bottom_left = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(367, 198, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ypl5f"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(287, 203, 70, 70)
+shader_parameter/top_right = Vector4(287, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(287, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(287, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wwvip"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(25, 30, 80, 80)
+shader_parameter/top_right = Vector4(197, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(25, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(282, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nu1ob"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(25, 30, 80, 80)
+shader_parameter/top_right = Vector4(367, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(25, 198, 80, 80)
+shader_parameter/bottom_right = Vector4(367, 198, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n6bnu"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(25, 30, 80, 80)
+shader_parameter/top_right = Vector4(197, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(25, 198, 80, 80)
+shader_parameter/bottom_right = Vector4(202, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8uk48"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(197, 30, 80, 80)
+shader_parameter/top_right = Vector4(367, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(282, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(367, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q06ff"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(197, 30, 80, 80)
+shader_parameter/top_right = Vector4(197, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(282, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(282, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ido07"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(197, 30, 80, 80)
+shader_parameter/top_right = Vector4(367, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(367, 198, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2a5ai"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(197, 30, 80, 80)
+shader_parameter/top_right = Vector4(197, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(202, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_avown"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(197, 198, 80, 80)
+shader_parameter/top_left = Vector4(25, 198, 80, 80)
+shader_parameter/top_right = Vector4(367, 198, 80, 80)
+shader_parameter/bottom_left = Vector4(25, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(367, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvur8"]
+resource_name = "Moss stone"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/next_alternative_id = 17
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_ynye4")
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_smmwd")
+0:0/1/terrain_set = 0
+0:0/1/terrain = 0
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/2 = 2
+0:0/2/material = SubResource("ShaderMaterial_wwvip")
+0:0/2/terrain_set = 0
+0:0/2/terrain = 0
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/2/terrains_peering_bit/right_side = 0
+0:0/3 = 3
+0:0/3/material = SubResource("ShaderMaterial_nu1ob")
+0:0/3/terrain_set = 0
+0:0/3/terrain = 0
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/3/terrains_peering_bit/bottom_side = 0
+0:0/4 = 4
+0:0/4/material = SubResource("ShaderMaterial_n6bnu")
+0:0/4/terrain_set = 0
+0:0/4/terrain = 0
+0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/4/terrains_peering_bit/right_side = 0
+0:0/4/terrains_peering_bit/bottom_side = 0
+0:0/5 = 5
+0:0/5/material = SubResource("ShaderMaterial_8uk48")
+0:0/5/terrain_set = 0
+0:0/5/terrain = 0
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/5/terrains_peering_bit/left_side = 0
+0:0/6 = 6
+0:0/6/material = SubResource("ShaderMaterial_q06ff")
+0:0/6/terrain_set = 0
+0:0/6/terrain = 0
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/6/terrains_peering_bit/right_side = 0
+0:0/6/terrains_peering_bit/left_side = 0
+0:0/7 = 7
+0:0/7/material = SubResource("ShaderMaterial_ido07")
+0:0/7/terrain_set = 0
+0:0/7/terrain = 0
+0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/7/terrains_peering_bit/bottom_side = 0
+0:0/7/terrains_peering_bit/left_side = 0
+0:0/8 = 8
+0:0/8/material = SubResource("ShaderMaterial_2a5ai")
+0:0/8/terrain_set = 0
+0:0/8/terrain = 0
+0:0/8/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/8/terrains_peering_bit/right_side = 0
+0:0/8/terrains_peering_bit/bottom_side = 0
+0:0/8/terrains_peering_bit/left_side = 0
+0:0/9 = 9
+0:0/9/material = SubResource("ShaderMaterial_avown")
+0:0/9/terrain_set = 0
+0:0/9/terrain = 0
+0:0/9/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/9/terrains_peering_bit/top_side = 0
+0:0/10 = 10
+0:0/10/material = SubResource("ShaderMaterial_1wg7m")
+0:0/10/terrain_set = 0
+0:0/10/terrain = 0
+0:0/10/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/10/terrains_peering_bit/right_side = 0
+0:0/10/terrains_peering_bit/top_side = 0
+0:0/11 = 11
+0:0/11/material = SubResource("ShaderMaterial_sehn7")
+0:0/11/terrain_set = 0
+0:0/11/terrain = 0
+0:0/11/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/11/terrains_peering_bit/bottom_side = 0
+0:0/11/terrains_peering_bit/top_side = 0
+0:0/12 = 12
+0:0/12/material = SubResource("ShaderMaterial_0dkrj")
+0:0/12/terrain_set = 0
+0:0/12/terrain = 0
+0:0/12/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/12/terrains_peering_bit/right_side = 0
+0:0/12/terrains_peering_bit/bottom_side = 0
+0:0/12/terrains_peering_bit/top_side = 0
+0:0/13 = 13
+0:0/13/material = SubResource("ShaderMaterial_ro46m")
+0:0/13/terrain_set = 0
+0:0/13/terrain = 0
+0:0/13/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/13/terrains_peering_bit/left_side = 0
+0:0/13/terrains_peering_bit/top_side = 0
+0:0/14 = 14
+0:0/14/material = SubResource("ShaderMaterial_0vf7d")
+0:0/14/terrain_set = 0
+0:0/14/terrain = 0
+0:0/14/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/14/terrains_peering_bit/right_side = 0
+0:0/14/terrains_peering_bit/left_side = 0
+0:0/14/terrains_peering_bit/top_side = 0
+0:0/15 = 15
+0:0/15/material = SubResource("ShaderMaterial_pwwe4")
+0:0/15/terrain_set = 0
+0:0/15/terrain = 0
+0:0/15/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/15/terrains_peering_bit/bottom_side = 0
+0:0/15/terrains_peering_bit/left_side = 0
+0:0/15/terrains_peering_bit/top_side = 0
+0:0/16 = 16
+0:0/16/material = SubResource("ShaderMaterial_ypl5f")
+0:0/16/terrain_set = 0
+0:0/16/terrain = 0
+0:0/16/probability = 0.25
+0:0/16/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/16/terrains_peering_bit/right_side = 0
+0:0/16/terrains_peering_bit/bottom_side = 0
+0:0/16/terrains_peering_bit/left_side = 0
+0:0/16/terrains_peering_bit/top_side = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fqfbr"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(1137, 119, 70, 70)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u8tg8"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(787, 30, 80, 80)
+shader_parameter/top_right = Vector4(1132, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(1132, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(1047, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_st6h2"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(960, 198, 80, 80)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(1132, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(787, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rfunq"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(960, 198, 80, 80)
+shader_parameter/top_right = Vector4(1216, 198, 80, 80)
+shader_parameter/bottom_left = Vector4(960, 198, 80, 80)
+shader_parameter/bottom_right = Vector4(1216, 198, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_shv8m"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(960, 198, 80, 80)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(960, 198, 80, 80)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cloyp"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(1137, 119, 70, 70)
+shader_parameter/top_right = Vector4(1216, 198, 80, 80)
+shader_parameter/bottom_left = Vector4(787, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(1047, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mxade"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(1137, 119, 70, 70)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(787, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(787, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lea27"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(1137, 119, 70, 70)
+shader_parameter/top_right = Vector4(1216, 198, 80, 80)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1216, 198, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_amc63"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(1137, 119, 70, 70)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bp7yq"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(787, 30, 80, 80)
+shader_parameter/top_right = Vector4(960, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(1132, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(787, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_10o8b"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(787, 30, 80, 80)
+shader_parameter/top_right = Vector4(1132, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(960, 198, 80, 80)
+shader_parameter/bottom_right = Vector4(1216, 198, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_78v56"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(787, 30, 80, 80)
+shader_parameter/top_right = Vector4(960, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(960, 198, 80, 80)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lfkpo"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(960, 30, 80, 80)
+shader_parameter/top_right = Vector4(1132, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(787, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(1047, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jwfnd"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(960, 30, 80, 80)
+shader_parameter/top_right = Vector4(960, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(787, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(787, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1d6v8"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(960, 30, 80, 80)
+shader_parameter/top_right = Vector4(1132, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1216, 198, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wq3ui"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(960, 30, 80, 80)
+shader_parameter/top_right = Vector4(960, 30, 80, 80)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3xuum"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(1132, 114, 80, 80)
+shader_parameter/top_left = Vector4(960, 198, 80, 80)
+shader_parameter/top_right = Vector4(1216, 198, 80, 80)
+shader_parameter/bottom_left = Vector4(1132, 282, 80, 80)
+shader_parameter/bottom_right = Vector4(1047, 282, 80, 80)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = null
+shader_parameter/art_flip_h = null
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_058dm"]
+resource_name = "Ice stone"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/next_alternative_id = 17
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_fqfbr")
+0:0/0/terrain_set = 1
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:0/0/terrains_peering_bit/left_side = 0
+0:0/0/terrains_peering_bit/top_side = 0
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_u8tg8")
+0:0/1/terrain_set = 1
+0:0/1/terrain = 0
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/2 = 2
+0:0/2/material = SubResource("ShaderMaterial_bp7yq")
+0:0/2/terrain_set = 1
+0:0/2/terrain = 0
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/2/terrains_peering_bit/right_side = 0
+0:0/3 = 3
+0:0/3/material = SubResource("ShaderMaterial_10o8b")
+0:0/3/terrain_set = 1
+0:0/3/terrain = 0
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/3/terrains_peering_bit/bottom_side = 0
+0:0/4 = 4
+0:0/4/material = SubResource("ShaderMaterial_78v56")
+0:0/4/terrain_set = 1
+0:0/4/terrain = 0
+0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/4/terrains_peering_bit/right_side = 0
+0:0/4/terrains_peering_bit/bottom_side = 0
+0:0/5 = 5
+0:0/5/material = SubResource("ShaderMaterial_lfkpo")
+0:0/5/terrain_set = 1
+0:0/5/terrain = 0
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/5/terrains_peering_bit/left_side = 0
+0:0/6 = 6
+0:0/6/material = SubResource("ShaderMaterial_jwfnd")
+0:0/6/terrain_set = 1
+0:0/6/terrain = 0
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/6/terrains_peering_bit/right_side = 0
+0:0/6/terrains_peering_bit/left_side = 0
+0:0/7 = 7
+0:0/7/material = SubResource("ShaderMaterial_1d6v8")
+0:0/7/terrain_set = 1
+0:0/7/terrain = 0
+0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/7/terrains_peering_bit/bottom_side = 0
+0:0/7/terrains_peering_bit/left_side = 0
+0:0/8 = 8
+0:0/8/material = SubResource("ShaderMaterial_wq3ui")
+0:0/8/terrain_set = 1
+0:0/8/terrain = 0
+0:0/8/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/8/terrains_peering_bit/right_side = 0
+0:0/8/terrains_peering_bit/bottom_side = 0
+0:0/8/terrains_peering_bit/left_side = 0
+0:0/9 = 9
+0:0/9/material = SubResource("ShaderMaterial_3xuum")
+0:0/9/terrain_set = 1
+0:0/9/terrain = 0
+0:0/9/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/9/terrains_peering_bit/top_side = 0
+0:0/10 = 10
+0:0/10/material = SubResource("ShaderMaterial_st6h2")
+0:0/10/terrain_set = 1
+0:0/10/terrain = 0
+0:0/10/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/10/terrains_peering_bit/right_side = 0
+0:0/10/terrains_peering_bit/top_side = 0
+0:0/11 = 11
+0:0/11/material = SubResource("ShaderMaterial_rfunq")
+0:0/11/terrain_set = 1
+0:0/11/terrain = 0
+0:0/11/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/11/terrains_peering_bit/bottom_side = 0
+0:0/11/terrains_peering_bit/top_side = 0
+0:0/12 = 12
+0:0/12/material = SubResource("ShaderMaterial_shv8m")
+0:0/12/terrain_set = 1
+0:0/12/terrain = 0
+0:0/12/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/12/terrains_peering_bit/right_side = 0
+0:0/12/terrains_peering_bit/bottom_side = 0
+0:0/12/terrains_peering_bit/top_side = 0
+0:0/13 = 13
+0:0/13/material = SubResource("ShaderMaterial_cloyp")
+0:0/13/terrain_set = 1
+0:0/13/terrain = 0
+0:0/13/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/13/terrains_peering_bit/left_side = 0
+0:0/13/terrains_peering_bit/top_side = 0
+0:0/14 = 14
+0:0/14/material = SubResource("ShaderMaterial_mxade")
+0:0/14/terrain_set = 1
+0:0/14/terrain = 0
+0:0/14/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/14/terrains_peering_bit/right_side = 0
+0:0/14/terrains_peering_bit/left_side = 0
+0:0/14/terrains_peering_bit/top_side = 0
+0:0/15 = 15
+0:0/15/material = SubResource("ShaderMaterial_lea27")
+0:0/15/terrain_set = 1
+0:0/15/terrain = 0
+0:0/15/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/15/terrains_peering_bit/bottom_side = 0
+0:0/15/terrains_peering_bit/left_side = 0
+0:0/15/terrains_peering_bit/top_side = 0
+0:0/16 = 16
+0:0/16/material = SubResource("ShaderMaterial_amc63")
+0:0/16/terrain_set = 1
+0:0/16/terrain = 0
+0:0/16/probability = 0.25
+0:0/16/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/16/terrains_peering_bit/right_side = 0
+0:0/16/terrains_peering_bit/bottom_side = 0
+0:0/16/terrains_peering_bit/left_side = 0
+0:0/16/terrains_peering_bit/top_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppfu4"]
+resource_name = "moss_centre"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_centre"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abg6r"]
+resource_name = "moss_detail"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_detail"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6b4d"]
+resource_name = "moss_top_left"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_top_left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sll2q"]
+resource_name = "moss_top"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_top"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2mqp"]
+resource_name = "moss_top_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_top_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ap6a"]
+resource_name = "moss_left"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oj0rk"]
+resource_name = "moss_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6n0d"]
+resource_name = "moss_bottom_left"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_bottom_left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nmdwc"]
+resource_name = "moss_bottom"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_bottom"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1da1d"]
+resource_name = "moss_bottom_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "moss_bottom_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uqh5f"]
+resource_name = "moss_slope_up_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 40, 40, -40, 40, 40)
+0:0/0/custom_data_0 = "moss_slope_up_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6rhdi"]
+resource_name = "moss_slope_down_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, -40, 40, 40, 40)
+0:0/0/custom_data_0 = "moss_slope_down_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ksvj0"]
+resource_name = "moss_ceiling_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40)
+0:0/0/custom_data_0 = "moss_ceiling_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gxxe5"]
+resource_name = "moss_ceiling_left"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, -40, 40)
+0:0/0/custom_data_0 = "moss_ceiling_left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dc70p"]
+resource_name = "ice_centre"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_centre"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t6kxf"]
+resource_name = "ice_detail"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_detail"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ry6v"]
+resource_name = "ice_top_left"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_top_left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bcr2w"]
+resource_name = "ice_top"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_top"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_olnfx"]
+resource_name = "ice_top_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_top_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r22su"]
+resource_name = "ice_left"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8t7oc"]
+resource_name = "ice_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uklwh"]
+resource_name = "ice_bottom_left"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_bottom_left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7jvx"]
+resource_name = "ice_bottom"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_bottom"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6grg1"]
+resource_name = "ice_bottom_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40, -40, 40)
+0:0/0/custom_data_0 = "ice_bottom_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bhj2n"]
+resource_name = "ice_slope_up_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1290, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 40, 40, -40, 40, 40)
+0:0/0/custom_data_0 = "ice_slope_up_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ik73"]
+resource_name = "ice_slope_down_right"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, -40, 40, 40, 40)
+0:0/0/custom_data_0 = "ice_slope_down_right"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fr8l0"]
+resource_name = "ice_ceiling_left"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1290, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, -40, 40)
+0:0/0/custom_data_0 = "ice_ceiling_left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fu7e5"]
+resource_name = "wood_moss"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "wood_moss"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdpg8"]
+resource_name = "wood_ice"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "wood_ice"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2537"]
+resource_name = "lantern_moss"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "lantern_moss"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvkkw"]
+resource_name = "lantern_ice"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "lantern_ice"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uuj3l"]
+resource_name = "moon_banner_moss"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 536)
+texture_region_size = Vector2i(80, 160)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "moon_banner_moss"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fu77w"]
+resource_name = "moon_banner_ice"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 536)
+texture_region_size = Vector2i(80, 160)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "moon_banner_ice"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgi22"]
+resource_name = "window_moss"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 704)
+texture_region_size = Vector2i(80, 114)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "window_moss"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd77k"]
+resource_name = "moon_window_ice"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 704)
+texture_region_size = Vector2i(80, 114)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "moon_window_ice"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0uy6e"]
+resource_name = "pillar_moss"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 704)
+texture_region_size = Vector2i(80, 156)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "pillar_moss"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4m8hn"]
+resource_name = "pillar_ice"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 704)
+texture_region_size = Vector2i(80, 156)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "pillar_ice"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2t45k"]
+resource_name = "shrine_moss"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 750)
+texture_region_size = Vector2i(165, 112)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "shrine_moss"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y88np"]
+resource_name = "shrine_ice"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1290, 750)
+texture_region_size = Vector2i(144, 112)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "shrine_ice"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4fw3"]
+resource_name = "spikes_moss"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "spikes_moss"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g3fl7"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(535, 30, 80, 80)
+shader_parameter/top_left = Vector4(535, 30, 80, 80)
+shader_parameter/top_right = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(202, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = true
+shader_parameter/art_flip_h = false
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b780w"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(535, 30, 80, 80)
+shader_parameter/top_left = Vector4(1290, 30, 80, 80)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = true
+shader_parameter/art_flip_h = false
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwfxq"]
+resource_name = "Manual slope 14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_g3fl7")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 40, 40, -40, 40, 40)
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_b780w")
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 40, 40, -40, 40, 40)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4h0c"]
+resource_name = "spikes_ice"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "spikes_ice"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmgxr"]
+resource_name = "raw_00_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_00_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_exlic"]
+resource_name = "raw_00_03"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_00_03"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jwvwa"]
+resource_name = "raw_00_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_00_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ucpi"]
+resource_name = "raw_00_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_00_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x4c4b"]
+resource_name = "raw_00_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_00_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnvrf"]
+resource_name = "raw_00_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_00_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nvjht"]
+resource_name = "raw_00_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 30)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_00_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lxqy4"]
+resource_name = "raw_01_00"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_00"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3sc4f"]
+resource_name = "raw_01_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4pvj"]
+resource_name = "raw_01_02"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_02"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6wk54"]
+resource_name = "raw_01_03"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_03"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6um4n"]
+resource_name = "raw_01_04"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_04"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kplts"]
+resource_name = "raw_01_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ptwsm"]
+resource_name = "raw_01_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1m5f6"]
+resource_name = "raw_01_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48qka"]
+resource_name = "raw_01_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rtts6"]
+resource_name = "raw_01_09"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_09"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wu4l5"]
+resource_name = "raw_01_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df1br"]
+resource_name = "raw_01_11"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_11"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0v3l"]
+resource_name = "raw_01_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq5pn"]
+resource_name = "raw_01_14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 114)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_14"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wd7h7"]
+resource_name = "raw_01_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 114)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_01_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qh385"]
+resource_name = "raw_02_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_02_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbck1"]
+resource_name = "raw_02_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_02_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgo62"]
+resource_name = "raw_02_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_02_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_reoqw"]
+resource_name = "raw_02_09"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_02_09"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5ses"]
+resource_name = "raw_02_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_02_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n76nm"]
+resource_name = "raw_02_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_02_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ratth"]
+resource_name = "raw_02_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 198)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_02_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xia6w"]
+resource_name = "raw_03_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m07kj"]
+resource_name = "raw_03_02"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_02"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7wx3"]
+resource_name = "raw_03_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gor01"]
+resource_name = "raw_03_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ud2bk"]
+resource_name = "raw_03_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48tan"]
+resource_name = "raw_03_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smeyd"]
+resource_name = "raw_03_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wyggw"]
+resource_name = "raw_03_11"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_11"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vt3xc"]
+resource_name = "raw_03_14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 282)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_14"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6asp"]
+resource_name = "raw_03_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 282)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_03_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8hw3"]
+resource_name = "raw_04_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lb2u8"]
+resource_name = "raw_04_02"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_02"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wh5rd"]
+resource_name = "raw_04_03"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_03"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqkns"]
+resource_name = "raw_04_04"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_04"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74kug"]
+resource_name = "raw_04_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgksb"]
+resource_name = "raw_04_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nwvf3"]
+resource_name = "raw_04_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i48mo"]
+resource_name = "raw_04_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n85c2"]
+resource_name = "raw_04_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2kh2"]
+resource_name = "raw_04_11"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_11"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m8454"]
+resource_name = "raw_04_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vesnq"]
+resource_name = "raw_04_13"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_13"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_akdbx"]
+resource_name = "raw_04_14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 370)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_14"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ga5s7"]
+resource_name = "raw_04_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 370)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_04_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m66l8"]
+resource_name = "raw_05_00"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_00"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xpqtk"]
+resource_name = "raw_05_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2gpm7"]
+resource_name = "raw_05_02"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_02"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74r2u"]
+resource_name = "raw_05_03"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_03"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kwrd2"]
+resource_name = "raw_05_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qq8hr"]
+resource_name = "raw_05_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihmwj"]
+resource_name = "raw_05_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7bfe"]
+resource_name = "raw_05_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kbysb"]
+resource_name = "raw_05_09"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_09"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f8nt7"]
+resource_name = "raw_05_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tc4m4"]
+resource_name = "raw_05_11"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_11"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75hr2"]
+resource_name = "raw_05_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cnnoo"]
+resource_name = "raw_05_14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 452)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_14"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhvct"]
+resource_name = "raw_05_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 452)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_05_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fg7cv"]
+resource_name = "raw_06_00"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_00"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3btb2"]
+resource_name = "raw_06_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqt5o"]
+resource_name = "raw_06_03"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_03"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6x1f2"]
+resource_name = "raw_06_04"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_04"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_btduh"]
+resource_name = "raw_06_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgtw5"]
+resource_name = "raw_06_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75xml"]
+resource_name = "raw_06_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uqyw0"]
+resource_name = "raw_06_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktu03"]
+resource_name = "raw_06_09"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_09"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hk83k"]
+resource_name = "raw_06_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fprkh"]
+resource_name = "raw_06_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tqvl6"]
+resource_name = "raw_06_13"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_13"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aq1ks"]
+resource_name = "raw_06_14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 536)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_14"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cc1l"]
+resource_name = "raw_06_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 536)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_06_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yus3p"]
+resource_name = "raw_07_00"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_00"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bemun"]
+resource_name = "raw_07_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxebu"]
+resource_name = "raw_07_03"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_03"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_do00b"]
+resource_name = "raw_07_04"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_04"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ax1ti"]
+resource_name = "raw_07_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5aveg"]
+resource_name = "raw_07_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukaqj"]
+resource_name = "raw_07_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52bpe"]
+resource_name = "raw_07_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pp0rv"]
+resource_name = "raw_07_09"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_09"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oq8x5"]
+resource_name = "raw_07_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tf7fn"]
+resource_name = "raw_07_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fx243"]
+resource_name = "raw_07_13"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_13"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jx4kr"]
+resource_name = "raw_07_14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 620)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_14"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_721w5"]
+resource_name = "raw_07_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 620)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_07_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3hs5"]
+resource_name = "raw_08_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 704)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_08_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtaat"]
+resource_name = "raw_08_02"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 704)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_08_02"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cpkp2"]
+resource_name = "raw_08_04"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 704)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_08_04"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8wrx"]
+resource_name = "raw_08_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 704)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_08_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_deew4"]
+resource_name = "raw_08_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 704)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_08_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0h4g8"]
+resource_name = "raw_08_09"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 704)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_08_09"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r78nx"]
+resource_name = "raw_08_11"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 704)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_08_11"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lelv8"]
+resource_name = "raw_08_13"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 704)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_08_13"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_odmwa"]
+resource_name = "raw_09_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 788)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_09_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d53m0"]
+resource_name = "raw_09_02"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 788)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_09_02"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cy4nh"]
+resource_name = "raw_09_04"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 788)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_09_04"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jl6e"]
+resource_name = "raw_09_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 788)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_09_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m8gw1"]
+resource_name = "raw_09_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 788)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_09_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhnee"]
+resource_name = "raw_09_09"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 788)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_09_09"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ifggs"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(451, 30, 80, 80)
+shader_parameter/top_left = Vector4(451, 30, 80, 80)
+shader_parameter/top_right = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(202, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = true
+shader_parameter/art_flip_h = false
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lyqan"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(451, 30, 80, 80)
+shader_parameter/top_left = Vector4(1216, 30, 80, 80)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = true
+shader_parameter/art_flip_h = false
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mxp22"]
+resource_name = "Manual slope 25"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 30)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_ifggs")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, -40, 40, 40, 40)
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_lyqan")
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, -40, 40, 40, 40)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u72g1"]
+resource_name = "raw_09_11"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 788)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_09_11"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgms5"]
+resource_name = "raw_09_13"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 788)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_09_13"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tphb"]
+resource_name = "raw_10_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ebdl"]
+resource_name = "raw_10_02"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_02"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4yolp"]
+resource_name = "raw_10_03"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_03"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mp6qp"]
+resource_name = "raw_10_04"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_04"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfyj2"]
+resource_name = "raw_10_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n53qy"]
+resource_name = "raw_10_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihhrr"]
+resource_name = "raw_10_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0fw7r"]
+resource_name = "raw_10_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25qk6"]
+resource_name = "raw_10_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oi2bt"]
+resource_name = "raw_10_11"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_11"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgju2"]
+resource_name = "raw_10_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rwve3"]
+resource_name = "raw_10_13"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_13"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7l2nd"]
+resource_name = "raw_10_14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 872)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_14"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvwva"]
+resource_name = "raw_10_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 872)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_10_16"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5e3y"]
+resource_name = "raw_11_00"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(25, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_00"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_on72l"]
+resource_name = "raw_11_01"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(111, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_01"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bt02j"]
+resource_name = "raw_11_02"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(197, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_02"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0njye"]
+resource_name = "raw_11_03"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(282, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_03"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xl50t"]
+resource_name = "raw_11_04"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(367, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_04"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fu8sk"]
+resource_name = "raw_11_05"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(451, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_05"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qqvhj"]
+resource_name = "raw_11_06"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_06"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmbl3"]
+resource_name = "raw_11_07"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_07"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8jwo"]
+resource_name = "raw_11_08"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(705, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_08"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pek6m"]
+resource_name = "raw_11_09"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(787, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_09"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ipa0"]
+resource_name = "raw_11_10"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(873, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_10"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_afns4"]
+resource_name = "raw_11_11"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(960, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_11"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n0ksp"]
+resource_name = "raw_11_12"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1047, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_12"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85uj4"]
+resource_name = "raw_11_13"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1132, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_13"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nch8i"]
+resource_name = "raw_11_14"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1216, 952)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_14"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ieytg"]
+resource_name = "raw_11_16"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(1376, 952)
+texture_region_size = Vector2i(72, 80)
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/custom_data_0 = "raw_11_16"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_so1u6"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(620, 198, 80, 80)
+shader_parameter/top_left = Vector4(620, 198, 80, 80)
+shader_parameter/top_right = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(202, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = true
+shader_parameter/art_flip_h = false
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_383vr"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(620, 198, 80, 80)
+shader_parameter/top_left = Vector4(1290, 198, 80, 80)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = true
+shader_parameter/art_flip_h = true
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5muib"]
+resource_name = "Manual slope 36"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(620, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_so1u6")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40)
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_383vr")
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, 40, 40)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xsgnd"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(535, 198, 80, 80)
+shader_parameter/top_left = Vector4(535, 198, 80, 80)
+shader_parameter/top_right = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_left = Vector4(202, 203, 70, 70)
+shader_parameter/bottom_right = Vector4(202, 203, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = true
+shader_parameter/art_flip_h = false
+shader_parameter/backing_color = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ufyhv"]
+shader = ExtResource("1_sm46g")
+shader_parameter/sheet = ExtResource("2_kdue7")
+shader_parameter/base_region = Vector4(535, 198, 80, 80)
+shader_parameter/top_left = Vector4(1290, 198, 80, 80)
+shader_parameter/top_right = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_left = Vector4(1137, 119, 70, 70)
+shader_parameter/bottom_right = Vector4(1137, 119, 70, 70)
+shader_parameter/outline_region = null
+shader_parameter/preserve_outline = null
+shader_parameter/direct_texture = true
+shader_parameter/art_flip_h = false
+shader_parameter/backing_color = null
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tr11y"]
+resource_name = "Manual slope 37"
+texture = ExtResource("2_kdue7")
+margins = Vector2i(535, 198)
+texture_region_size = Vector2i(80, 80)
+use_texture_padding = false
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/material = SubResource("ShaderMaterial_xsgnd")
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, -40, 40)
+0:0/1 = 1
+0:0/1/material = SubResource("ShaderMaterial_ufyhv")
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -40, 40, -40, -40, 40)
+
+[resource]
+tile_size = Vector2i(80, 80)
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 5
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "Moss stone"
+terrain_set_0/terrain_0/color = Color(0.3882353, 0.5764706, 0.36862746, 1)
+terrain_set_1/mode = 2
+terrain_set_1/terrain_0/name = "Ice stone"
+terrain_set_1/terrain_0/color = Color(0.59607846, 0.8509804, 1, 1)
+custom_data_layer_0/name = "asset_name"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("TileSetAtlasSource_gvur8")
+sources/1 = SubResource("TileSetAtlasSource_058dm")
+sources/14 = SubResource("TileSetAtlasSource_dwfxq")
+sources/25 = SubResource("TileSetAtlasSource_mxp22")
+sources/36 = SubResource("TileSetAtlasSource_5muib")
+sources/37 = SubResource("TileSetAtlasSource_tr11y")
+sources/100 = SubResource("TileSetAtlasSource_ppfu4")
+sources/101 = SubResource("TileSetAtlasSource_abg6r")
+sources/102 = SubResource("TileSetAtlasSource_y6b4d")
+sources/103 = SubResource("TileSetAtlasSource_sll2q")
+sources/104 = SubResource("TileSetAtlasSource_t2mqp")
+sources/105 = SubResource("TileSetAtlasSource_5ap6a")
+sources/106 = SubResource("TileSetAtlasSource_oj0rk")
+sources/107 = SubResource("TileSetAtlasSource_p6n0d")
+sources/108 = SubResource("TileSetAtlasSource_nmdwc")
+sources/109 = SubResource("TileSetAtlasSource_1da1d")
+sources/110 = SubResource("TileSetAtlasSource_uqh5f")
+sources/111 = SubResource("TileSetAtlasSource_6rhdi")
+sources/112 = SubResource("TileSetAtlasSource_ksvj0")
+sources/113 = SubResource("TileSetAtlasSource_gxxe5")
+sources/114 = SubResource("TileSetAtlasSource_dc70p")
+sources/115 = SubResource("TileSetAtlasSource_t6kxf")
+sources/116 = SubResource("TileSetAtlasSource_1ry6v")
+sources/117 = SubResource("TileSetAtlasSource_bcr2w")
+sources/118 = SubResource("TileSetAtlasSource_olnfx")
+sources/119 = SubResource("TileSetAtlasSource_r22su")
+sources/120 = SubResource("TileSetAtlasSource_8t7oc")
+sources/121 = SubResource("TileSetAtlasSource_uklwh")
+sources/122 = SubResource("TileSetAtlasSource_m7jvx")
+sources/123 = SubResource("TileSetAtlasSource_6grg1")
+sources/124 = SubResource("TileSetAtlasSource_bhj2n")
+sources/125 = SubResource("TileSetAtlasSource_4ik73")
+sources/126 = SubResource("TileSetAtlasSource_fr8l0")
+sources/127 = SubResource("TileSetAtlasSource_fu7e5")
+sources/128 = SubResource("TileSetAtlasSource_xdpg8")
+sources/129 = SubResource("TileSetAtlasSource_m2537")
+sources/130 = SubResource("TileSetAtlasSource_gvkkw")
+sources/131 = SubResource("TileSetAtlasSource_uuj3l")
+sources/132 = SubResource("TileSetAtlasSource_fu77w")
+sources/133 = SubResource("TileSetAtlasSource_pgi22")
+sources/134 = SubResource("TileSetAtlasSource_nd77k")
+sources/135 = SubResource("TileSetAtlasSource_0uy6e")
+sources/136 = SubResource("TileSetAtlasSource_4m8hn")
+sources/137 = SubResource("TileSetAtlasSource_2t45k")
+sources/138 = SubResource("TileSetAtlasSource_y88np")
+sources/139 = SubResource("TileSetAtlasSource_f4fw3")
+sources/140 = SubResource("TileSetAtlasSource_k4h0c")
+sources/141 = SubResource("TileSetAtlasSource_jmgxr")
+sources/142 = SubResource("TileSetAtlasSource_exlic")
+sources/143 = SubResource("TileSetAtlasSource_jwvwa")
+sources/144 = SubResource("TileSetAtlasSource_5ucpi")
+sources/145 = SubResource("TileSetAtlasSource_x4c4b")
+sources/146 = SubResource("TileSetAtlasSource_qnvrf")
+sources/147 = SubResource("TileSetAtlasSource_nvjht")
+sources/148 = SubResource("TileSetAtlasSource_lxqy4")
+sources/149 = SubResource("TileSetAtlasSource_3sc4f")
+sources/150 = SubResource("TileSetAtlasSource_p4pvj")
+sources/151 = SubResource("TileSetAtlasSource_6wk54")
+sources/152 = SubResource("TileSetAtlasSource_6um4n")
+sources/153 = SubResource("TileSetAtlasSource_kplts")
+sources/154 = SubResource("TileSetAtlasSource_ptwsm")
+sources/155 = SubResource("TileSetAtlasSource_1m5f6")
+sources/156 = SubResource("TileSetAtlasSource_48qka")
+sources/157 = SubResource("TileSetAtlasSource_rtts6")
+sources/158 = SubResource("TileSetAtlasSource_wu4l5")
+sources/159 = SubResource("TileSetAtlasSource_df1br")
+sources/160 = SubResource("TileSetAtlasSource_b0v3l")
+sources/161 = SubResource("TileSetAtlasSource_kq5pn")
+sources/162 = SubResource("TileSetAtlasSource_wd7h7")
+sources/163 = SubResource("TileSetAtlasSource_qh385")
+sources/164 = SubResource("TileSetAtlasSource_tbck1")
+sources/165 = SubResource("TileSetAtlasSource_rgo62")
+sources/166 = SubResource("TileSetAtlasSource_reoqw")
+sources/167 = SubResource("TileSetAtlasSource_j5ses")
+sources/168 = SubResource("TileSetAtlasSource_n76nm")
+sources/169 = SubResource("TileSetAtlasSource_ratth")
+sources/170 = SubResource("TileSetAtlasSource_xia6w")
+sources/171 = SubResource("TileSetAtlasSource_m07kj")
+sources/172 = SubResource("TileSetAtlasSource_o7wx3")
+sources/173 = SubResource("TileSetAtlasSource_gor01")
+sources/174 = SubResource("TileSetAtlasSource_ud2bk")
+sources/175 = SubResource("TileSetAtlasSource_48tan")
+sources/176 = SubResource("TileSetAtlasSource_smeyd")
+sources/177 = SubResource("TileSetAtlasSource_wyggw")
+sources/178 = SubResource("TileSetAtlasSource_vt3xc")
+sources/179 = SubResource("TileSetAtlasSource_x6asp")
+sources/180 = SubResource("TileSetAtlasSource_u8hw3")
+sources/181 = SubResource("TileSetAtlasSource_lb2u8")
+sources/182 = SubResource("TileSetAtlasSource_wh5rd")
+sources/183 = SubResource("TileSetAtlasSource_jqkns")
+sources/184 = SubResource("TileSetAtlasSource_74kug")
+sources/185 = SubResource("TileSetAtlasSource_qgksb")
+sources/186 = SubResource("TileSetAtlasSource_nwvf3")
+sources/187 = SubResource("TileSetAtlasSource_i48mo")
+sources/188 = SubResource("TileSetAtlasSource_n85c2")
+sources/189 = SubResource("TileSetAtlasSource_i2kh2")
+sources/190 = SubResource("TileSetAtlasSource_m8454")
+sources/191 = SubResource("TileSetAtlasSource_vesnq")
+sources/192 = SubResource("TileSetAtlasSource_akdbx")
+sources/193 = SubResource("TileSetAtlasSource_ga5s7")
+sources/194 = SubResource("TileSetAtlasSource_m66l8")
+sources/195 = SubResource("TileSetAtlasSource_xpqtk")
+sources/196 = SubResource("TileSetAtlasSource_2gpm7")
+sources/197 = SubResource("TileSetAtlasSource_74r2u")
+sources/198 = SubResource("TileSetAtlasSource_kwrd2")
+sources/199 = SubResource("TileSetAtlasSource_qq8hr")
+sources/200 = SubResource("TileSetAtlasSource_ihmwj")
+sources/201 = SubResource("TileSetAtlasSource_m7bfe")
+sources/202 = SubResource("TileSetAtlasSource_kbysb")
+sources/203 = SubResource("TileSetAtlasSource_f8nt7")
+sources/204 = SubResource("TileSetAtlasSource_tc4m4")
+sources/205 = SubResource("TileSetAtlasSource_75hr2")
+sources/206 = SubResource("TileSetAtlasSource_cnnoo")
+sources/207 = SubResource("TileSetAtlasSource_uhvct")
+sources/208 = SubResource("TileSetAtlasSource_fg7cv")
+sources/209 = SubResource("TileSetAtlasSource_3btb2")
+sources/210 = SubResource("TileSetAtlasSource_oqt5o")
+sources/211 = SubResource("TileSetAtlasSource_6x1f2")
+sources/212 = SubResource("TileSetAtlasSource_btduh")
+sources/213 = SubResource("TileSetAtlasSource_tgtw5")
+sources/214 = SubResource("TileSetAtlasSource_75xml")
+sources/215 = SubResource("TileSetAtlasSource_uqyw0")
+sources/216 = SubResource("TileSetAtlasSource_ktu03")
+sources/217 = SubResource("TileSetAtlasSource_hk83k")
+sources/218 = SubResource("TileSetAtlasSource_fprkh")
+sources/219 = SubResource("TileSetAtlasSource_tqvl6")
+sources/220 = SubResource("TileSetAtlasSource_aq1ks")
+sources/221 = SubResource("TileSetAtlasSource_8cc1l")
+sources/222 = SubResource("TileSetAtlasSource_yus3p")
+sources/223 = SubResource("TileSetAtlasSource_bemun")
+sources/224 = SubResource("TileSetAtlasSource_dxebu")
+sources/225 = SubResource("TileSetAtlasSource_do00b")
+sources/226 = SubResource("TileSetAtlasSource_ax1ti")
+sources/227 = SubResource("TileSetAtlasSource_5aveg")
+sources/228 = SubResource("TileSetAtlasSource_ukaqj")
+sources/229 = SubResource("TileSetAtlasSource_52bpe")
+sources/230 = SubResource("TileSetAtlasSource_pp0rv")
+sources/231 = SubResource("TileSetAtlasSource_oq8x5")
+sources/232 = SubResource("TileSetAtlasSource_tf7fn")
+sources/233 = SubResource("TileSetAtlasSource_fx243")
+sources/234 = SubResource("TileSetAtlasSource_jx4kr")
+sources/235 = SubResource("TileSetAtlasSource_721w5")
+sources/236 = SubResource("TileSetAtlasSource_n3hs5")
+sources/237 = SubResource("TileSetAtlasSource_gtaat")
+sources/238 = SubResource("TileSetAtlasSource_cpkp2")
+sources/239 = SubResource("TileSetAtlasSource_i8wrx")
+sources/240 = SubResource("TileSetAtlasSource_deew4")
+sources/241 = SubResource("TileSetAtlasSource_0h4g8")
+sources/242 = SubResource("TileSetAtlasSource_r78nx")
+sources/243 = SubResource("TileSetAtlasSource_lelv8")
+sources/244 = SubResource("TileSetAtlasSource_odmwa")
+sources/245 = SubResource("TileSetAtlasSource_d53m0")
+sources/246 = SubResource("TileSetAtlasSource_cy4nh")
+sources/247 = SubResource("TileSetAtlasSource_4jl6e")
+sources/248 = SubResource("TileSetAtlasSource_m8gw1")
+sources/249 = SubResource("TileSetAtlasSource_nhnee")
+sources/250 = SubResource("TileSetAtlasSource_u72g1")
+sources/251 = SubResource("TileSetAtlasSource_pgms5")
+sources/252 = SubResource("TileSetAtlasSource_5tphb")
+sources/253 = SubResource("TileSetAtlasSource_8ebdl")
+sources/254 = SubResource("TileSetAtlasSource_4yolp")
+sources/255 = SubResource("TileSetAtlasSource_mp6qp")
+sources/256 = SubResource("TileSetAtlasSource_qfyj2")
+sources/257 = SubResource("TileSetAtlasSource_n53qy")
+sources/258 = SubResource("TileSetAtlasSource_ihhrr")
+sources/259 = SubResource("TileSetAtlasSource_0fw7r")
+sources/260 = SubResource("TileSetAtlasSource_25qk6")
+sources/261 = SubResource("TileSetAtlasSource_oi2bt")
+sources/262 = SubResource("TileSetAtlasSource_jgju2")
+sources/263 = SubResource("TileSetAtlasSource_rwve3")
+sources/264 = SubResource("TileSetAtlasSource_7l2nd")
+sources/265 = SubResource("TileSetAtlasSource_dvwva")
+sources/266 = SubResource("TileSetAtlasSource_o5e3y")
+sources/267 = SubResource("TileSetAtlasSource_on72l")
+sources/268 = SubResource("TileSetAtlasSource_bt02j")
+sources/269 = SubResource("TileSetAtlasSource_0njye")
+sources/270 = SubResource("TileSetAtlasSource_xl50t")
+sources/271 = SubResource("TileSetAtlasSource_fu8sk")
+sources/272 = SubResource("TileSetAtlasSource_qqvhj")
+sources/273 = SubResource("TileSetAtlasSource_kmbl3")
+sources/274 = SubResource("TileSetAtlasSource_x8jwo")
+sources/275 = SubResource("TileSetAtlasSource_pek6m")
+sources/276 = SubResource("TileSetAtlasSource_8ipa0")
+sources/277 = SubResource("TileSetAtlasSource_afns4")
+sources/278 = SubResource("TileSetAtlasSource_n0ksp")
+sources/279 = SubResource("TileSetAtlasSource_85uj4")
+sources/280 = SubResource("TileSetAtlasSource_nch8i")
+sources/281 = SubResource("TileSetAtlasSource_ieytg")
+metadata/style_slope_alternatives = true

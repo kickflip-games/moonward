@@ -17,7 +17,7 @@ The reusable terrain has 24-pixel square collisions on layer 2 and mask 5. Disab
 
 `tower_terrain.gd` derives decorative terrain from the tower's existing `GameLayer`. Its 24-pixel tiles are scaled to the existing 32-pixel world grid. Original tile cells, damage tiles, slopes and colliders remain authoritative; the new layer adds no physics or navigation.
 
-`World/Map/dungeon_skin.gd` exposes the terrain style and brightness. Green grass at brightness 1.2 is the default. The old terrain silhouette clips the new art so transparent pixels never hide a collidable surface. Edges next to slopes use the slope's actual solid faces. Editing the original geometry layer or changing style refreshes the preview in the editor.
+`World/Map/dungeon_skin.gd` exposes the terrain style and brightness. Moss stone from ../StoneSheet/ is now the default; these three cavern styles remain selectable. The old terrain silhouette clips the new art so transparent pixels never hide a collidable surface. Edges next to slopes use the slope's actual solid faces. Editing the original geometry layer or changing style refreshes the preview in the editor.
 
 Keep editing the existing tower's geometry on `GameLayer`. The generated `CavernTerrain` display is rebuilt from it; direct edits to that display are temporary. For new levels, the reusable TileSet can be painted directly on a new layer.
 

@@ -18,6 +18,7 @@ run_checked import --editor --import --quit
 run_checked tests --fixed-fps 60 res://Tests/GameplayTests.tscn -- --output "$review_output/tests.json"
 run_checked tower_audit --fixed-fps 60 res://Tests/TowerAudit.tscn
 run_checked cavern --fixed-fps 60 res://Tests/CavernTerrainTests.tscn
+run_checked stone --fixed-fps 60 res://Tests/StoneSheetTests.tscn
 run_checked startup --quit-after 120
-rg 'RESULT:' "$review_output/tests.log" "$review_output/tower_audit.log" "$review_output/cavern.log"
+rg 'RESULT:' "$review_output/tests.log" "$review_output/tower_audit.log" "$review_output/cavern.log" "$review_output/stone.log"
 echo "Import, controller tests, tower checkpoint audit, terrain tests, and main startup passed."

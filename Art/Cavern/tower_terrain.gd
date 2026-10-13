@@ -17,7 +17,7 @@ static func configure_outline(material: ShaderMaterial, atlas: Vector2i) -> void
 	material.set_shader_parameter("outline_region", Vector4(atlas.x / 3.0, atlas.y / 3.0, 1.0 / 3.0, 1.0 / 3.0))
 	material.set_shader_parameter("preserve_outline", true)
 
-static func apply(original: TileMapLayer, style: int = 1, brightness: float = 1.2) -> TileMapLayer:
+static func apply(original: TileMapLayer, style: int = 1, brightness: float = 1.2, tileset: TileSet = TILESET) -> TileMapLayer:
 	var parent := original.get_parent()
 	var previous := parent.get_node_or_null("CavernTerrain")
 	if previous:
@@ -25,7 +25,7 @@ static func apply(original: TileMapLayer, style: int = 1, brightness: float = 1.
 		previous.queue_free()
 	var layer := TileMapLayer.new()
 	layer.name = "CavernTerrain"
-	layer.tile_set = TILESET.duplicate(true)
+	layer.tile_set = tileset.duplicate(true)
 	layer.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	layer.collision_enabled = false
 	layer.navigation_enabled = false
@@ -37,6 +37,8 @@ static func apply(original: TileMapLayer, style: int = 1, brightness: float = 1.
 	parent.add_child(layer)
 	for source_index in layer.tile_set.get_source_count():
 		var source_id := layer.tile_set.get_source_id(source_index)
+		if source_id >= 100:
+			continue
 		var source: TileSetAtlasSource = layer.tile_set.get_source(source_id)
 		for alternative_index in source.get_alternative_tiles_count(Vector2i.ZERO):
 			var alternative := source.get_alternative_tile_id(Vector2i.ZERO, alternative_index)
@@ -44,10 +46,11 @@ static func apply(original: TileMapLayer, style: int = 1, brightness: float = 1.
 			var material: ShaderMaterial = data.material
 			var atlas := Vector2i(1, 1)
 			if source_id >= 3:
-				material = ShaderMaterial.new()
-				material.shader = SHADER
+				if material == null:
+					material = ShaderMaterial.new()
+					material.shader = SHADER
+					data.material = material
 				material.set_shader_parameter("direct_texture", true)
-				data.material = material
 				for candidate in SLOPE_SOURCES:
 					if SLOPE_SOURCES[candidate] == source_id:
 						atlas = candidate
@@ -63,7 +66,7 @@ static func apply(original: TileMapLayer, style: int = 1, brightness: float = 1.
 	for cell in solid_cells:
 		var atlas: Vector2i = occupied[cell]
 		if SLOPE_SOURCES.has(atlas):
-			layer.set_cell(cell, SLOPE_SOURCES[atlas], Vector2i.ZERO)
+			layer.set_cell(cell, SLOPE_SOURCES[atlas], Vector2i.ZERO, style if tileset.get_meta("style_slope_alternatives", false) else 0)
 			continue
 		var connections := 0
 		for side in 4:

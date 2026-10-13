@@ -5,15 +5,16 @@ extends Node2D
 const SURFACE = preload("res://Art/Dungeon/surface_material.gd")
 const TERRAIN_SHADER = preload("res://Art/Dungeon/terrain.gdshader")
 const CAVERN_TERRAIN = preload("res://Art/Cavern/tower_terrain.gd")
+const STONE_TILESET = preload("res://Art/StoneSheet/stone_tileset.tres")
 
 var _terrain_refresh_queued := false
 
-@export_enum("Bare rock", "Green grass", "Purple grass") var terrain_style: int = 1:
+@export_enum("Moss stone", "Ice stone", "Bare rock", "Green grass", "Purple grass") var terrain_style: int = 0:
 	set(value):
-		terrain_style = clampi(value, 0, 2)
+		terrain_style = clampi(value, 0, 4)
 		if is_node_ready():
 			_queue_terrain_refresh()
-@export_range(1.0, 2.0, 0.05) var terrain_brightness: float = 1.2:
+@export_range(1.0, 2.0, 0.05) var terrain_brightness: float = 1.0:
 	set(value):
 		terrain_brightness = value
 		if is_node_ready():
@@ -29,7 +30,7 @@ func _ready() -> void:
 	layer.use_parent_material = false
 	layer.modulate = Color.WHITE
 	layer.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	CAVERN_TERRAIN.apply(layer, terrain_style, terrain_brightness)
+	_apply_terrain()
 	if Engine.is_editor_hint() and not layer.changed.is_connected(_queue_terrain_refresh):
 		layer.changed.connect(_queue_terrain_refresh)
 	for platform in $Platforms.get_children():
@@ -64,4 +65,10 @@ func _queue_terrain_refresh() -> void:
 func _refresh_terrain() -> void:
 	_terrain_refresh_queued = false
 	if is_inside_tree():
-		CAVERN_TERRAIN.apply($GameLayer, terrain_style, terrain_brightness)
+		_apply_terrain()
+
+func _apply_terrain() -> void:
+	if terrain_style < 2:
+		CAVERN_TERRAIN.apply($GameLayer, terrain_style, terrain_brightness, STONE_TILESET)
+	else:
+		CAVERN_TERRAIN.apply($GameLayer, terrain_style - 2, terrain_brightness)

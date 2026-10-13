@@ -1,0 +1,1832 @@
+{
+  "source_size": [
+    1448,
+    1086
+  ],
+  "nominal_tile_size": [
+    80,
+    80
+  ],
+  "entries": [
+    {
+      "name": "moss_centre",
+      "region": [
+        197,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_centre.tres"
+    },
+    {
+      "name": "moss_detail",
+      "region": [
+        282,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_detail.tres"
+    },
+    {
+      "name": "moss_top_left",
+      "region": [
+        25,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_top_left.tres"
+    },
+    {
+      "name": "moss_top",
+      "region": [
+        197,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_top.tres"
+    },
+    {
+      "name": "moss_top_right",
+      "region": [
+        367,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_top_right.tres"
+    },
+    {
+      "name": "moss_left",
+      "region": [
+        25,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_left.tres"
+    },
+    {
+      "name": "moss_right",
+      "region": [
+        367,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_right.tres"
+    },
+    {
+      "name": "moss_bottom_left",
+      "region": [
+        25,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_bottom_left.tres"
+    },
+    {
+      "name": "moss_bottom",
+      "region": [
+        282,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_bottom.tres"
+    },
+    {
+      "name": "moss_bottom_right",
+      "region": [
+        367,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_bottom_right.tres"
+    },
+    {
+      "name": "moss_slope_up_right",
+      "region": [
+        535,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_slope_up_right.tres"
+    },
+    {
+      "name": "moss_slope_down_right",
+      "region": [
+        451,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_slope_down_right.tres"
+    },
+    {
+      "name": "moss_ceiling_right",
+      "region": [
+        620,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_ceiling_right.tres"
+    },
+    {
+      "name": "moss_ceiling_left",
+      "region": [
+        535,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/moss_ceiling_left.tres"
+    },
+    {
+      "name": "ice_centre",
+      "region": [
+        1132,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_centre.tres"
+    },
+    {
+      "name": "ice_detail",
+      "region": [
+        1132,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_detail.tres"
+    },
+    {
+      "name": "ice_top_left",
+      "region": [
+        787,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_top_left.tres"
+    },
+    {
+      "name": "ice_top",
+      "region": [
+        960,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_top.tres"
+    },
+    {
+      "name": "ice_top_right",
+      "region": [
+        1132,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_top_right.tres"
+    },
+    {
+      "name": "ice_left",
+      "region": [
+        960,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_left.tres"
+    },
+    {
+      "name": "ice_right",
+      "region": [
+        1216,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_right.tres"
+    },
+    {
+      "name": "ice_bottom_left",
+      "region": [
+        1132,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_bottom_left.tres"
+    },
+    {
+      "name": "ice_bottom",
+      "region": [
+        787,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_bottom.tres"
+    },
+    {
+      "name": "ice_bottom_right",
+      "region": [
+        1047,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_bottom_right.tres"
+    },
+    {
+      "name": "ice_slope_up_right",
+      "region": [
+        1290,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_slope_up_right.tres"
+    },
+    {
+      "name": "ice_slope_down_right",
+      "region": [
+        1216,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_slope_down_right.tres"
+    },
+    {
+      "name": "ice_ceiling_left",
+      "region": [
+        1290,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/ice_ceiling_left.tres"
+    },
+    {
+      "name": "wood_moss",
+      "region": [
+        25,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/wood_moss.tres"
+    },
+    {
+      "name": "wood_ice",
+      "region": [
+        787,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/wood_ice.tres"
+    },
+    {
+      "name": "lantern_moss",
+      "region": [
+        367,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/lantern_moss.tres"
+    },
+    {
+      "name": "lantern_ice",
+      "region": [
+        1132,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/lantern_ice.tres"
+    },
+    {
+      "name": "moon_banner_moss",
+      "region": [
+        197,
+        536,
+        80,
+        160
+      ],
+      "texture": "res://Art/StoneSheet/regions/moon_banner_moss.tres"
+    },
+    {
+      "name": "moon_banner_ice",
+      "region": [
+        960,
+        536,
+        80,
+        160
+      ],
+      "texture": "res://Art/StoneSheet/regions/moon_banner_ice.tres"
+    },
+    {
+      "name": "window_moss",
+      "region": [
+        25,
+        704,
+        80,
+        114
+      ],
+      "texture": "res://Art/StoneSheet/regions/window_moss.tres"
+    },
+    {
+      "name": "moon_window_ice",
+      "region": [
+        873,
+        704,
+        80,
+        114
+      ],
+      "texture": "res://Art/StoneSheet/regions/moon_window_ice.tres"
+    },
+    {
+      "name": "pillar_moss",
+      "region": [
+        282,
+        704,
+        80,
+        156
+      ],
+      "texture": "res://Art/StoneSheet/regions/pillar_moss.tres"
+    },
+    {
+      "name": "pillar_ice",
+      "region": [
+        1047,
+        704,
+        80,
+        156
+      ],
+      "texture": "res://Art/StoneSheet/regions/pillar_ice.tres"
+    },
+    {
+      "name": "shrine_moss",
+      "region": [
+        620,
+        750,
+        165,
+        112
+      ],
+      "texture": "res://Art/StoneSheet/regions/shrine_moss.tres"
+    },
+    {
+      "name": "shrine_ice",
+      "region": [
+        1290,
+        750,
+        144,
+        112
+      ],
+      "texture": "res://Art/StoneSheet/regions/shrine_ice.tres"
+    },
+    {
+      "name": "spikes_moss",
+      "region": [
+        25,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/spikes_moss.tres"
+    },
+    {
+      "name": "spikes_ice",
+      "region": [
+        787,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/spikes_ice.tres"
+    },
+    {
+      "name": "raw_00_01",
+      "region": [
+        111,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_00_01.tres"
+    },
+    {
+      "name": "raw_00_03",
+      "region": [
+        282,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_00_03.tres"
+    },
+    {
+      "name": "raw_00_07",
+      "region": [
+        620,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_00_07.tres"
+    },
+    {
+      "name": "raw_00_08",
+      "region": [
+        705,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_00_08.tres"
+    },
+    {
+      "name": "raw_00_10",
+      "region": [
+        873,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_00_10.tres"
+    },
+    {
+      "name": "raw_00_12",
+      "region": [
+        1047,
+        30,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_00_12.tres"
+    },
+    {
+      "name": "raw_00_16",
+      "region": [
+        1376,
+        30,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_00_16.tres"
+    },
+    {
+      "name": "raw_01_00",
+      "region": [
+        25,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_00.tres"
+    },
+    {
+      "name": "raw_01_01",
+      "region": [
+        111,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_01.tres"
+    },
+    {
+      "name": "raw_01_02",
+      "region": [
+        197,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_02.tres"
+    },
+    {
+      "name": "raw_01_03",
+      "region": [
+        282,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_03.tres"
+    },
+    {
+      "name": "raw_01_04",
+      "region": [
+        367,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_04.tres"
+    },
+    {
+      "name": "raw_01_05",
+      "region": [
+        451,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_05.tres"
+    },
+    {
+      "name": "raw_01_06",
+      "region": [
+        535,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_06.tres"
+    },
+    {
+      "name": "raw_01_07",
+      "region": [
+        620,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_07.tres"
+    },
+    {
+      "name": "raw_01_08",
+      "region": [
+        705,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_08.tres"
+    },
+    {
+      "name": "raw_01_09",
+      "region": [
+        787,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_09.tres"
+    },
+    {
+      "name": "raw_01_10",
+      "region": [
+        873,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_10.tres"
+    },
+    {
+      "name": "raw_01_11",
+      "region": [
+        960,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_11.tres"
+    },
+    {
+      "name": "raw_01_12",
+      "region": [
+        1047,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_12.tres"
+    },
+    {
+      "name": "raw_01_14",
+      "region": [
+        1216,
+        114,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_14.tres"
+    },
+    {
+      "name": "raw_01_16",
+      "region": [
+        1376,
+        114,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_01_16.tres"
+    },
+    {
+      "name": "raw_02_01",
+      "region": [
+        111,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_02_01.tres"
+    },
+    {
+      "name": "raw_02_05",
+      "region": [
+        451,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_02_05.tres"
+    },
+    {
+      "name": "raw_02_08",
+      "region": [
+        705,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_02_08.tres"
+    },
+    {
+      "name": "raw_02_09",
+      "region": [
+        787,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_02_09.tres"
+    },
+    {
+      "name": "raw_02_10",
+      "region": [
+        873,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_02_10.tres"
+    },
+    {
+      "name": "raw_02_12",
+      "region": [
+        1047,
+        198,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_02_12.tres"
+    },
+    {
+      "name": "raw_02_16",
+      "region": [
+        1376,
+        198,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_02_16.tres"
+    },
+    {
+      "name": "raw_03_01",
+      "region": [
+        111,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_01.tres"
+    },
+    {
+      "name": "raw_03_02",
+      "region": [
+        197,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_02.tres"
+    },
+    {
+      "name": "raw_03_05",
+      "region": [
+        451,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_05.tres"
+    },
+    {
+      "name": "raw_03_06",
+      "region": [
+        535,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_06.tres"
+    },
+    {
+      "name": "raw_03_07",
+      "region": [
+        620,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_07.tres"
+    },
+    {
+      "name": "raw_03_08",
+      "region": [
+        705,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_08.tres"
+    },
+    {
+      "name": "raw_03_10",
+      "region": [
+        873,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_10.tres"
+    },
+    {
+      "name": "raw_03_11",
+      "region": [
+        960,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_11.tres"
+    },
+    {
+      "name": "raw_03_14",
+      "region": [
+        1216,
+        282,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_14.tres"
+    },
+    {
+      "name": "raw_03_16",
+      "region": [
+        1376,
+        282,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_03_16.tres"
+    },
+    {
+      "name": "raw_04_01",
+      "region": [
+        111,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_01.tres"
+    },
+    {
+      "name": "raw_04_02",
+      "region": [
+        197,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_02.tres"
+    },
+    {
+      "name": "raw_04_03",
+      "region": [
+        282,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_03.tres"
+    },
+    {
+      "name": "raw_04_04",
+      "region": [
+        367,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_04.tres"
+    },
+    {
+      "name": "raw_04_05",
+      "region": [
+        451,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_05.tres"
+    },
+    {
+      "name": "raw_04_06",
+      "region": [
+        535,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_06.tres"
+    },
+    {
+      "name": "raw_04_07",
+      "region": [
+        620,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_07.tres"
+    },
+    {
+      "name": "raw_04_08",
+      "region": [
+        705,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_08.tres"
+    },
+    {
+      "name": "raw_04_10",
+      "region": [
+        873,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_10.tres"
+    },
+    {
+      "name": "raw_04_11",
+      "region": [
+        960,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_11.tres"
+    },
+    {
+      "name": "raw_04_12",
+      "region": [
+        1047,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_12.tres"
+    },
+    {
+      "name": "raw_04_13",
+      "region": [
+        1132,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_13.tres"
+    },
+    {
+      "name": "raw_04_14",
+      "region": [
+        1216,
+        370,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_14.tres"
+    },
+    {
+      "name": "raw_04_16",
+      "region": [
+        1376,
+        370,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_04_16.tres"
+    },
+    {
+      "name": "raw_05_00",
+      "region": [
+        25,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_00.tres"
+    },
+    {
+      "name": "raw_05_01",
+      "region": [
+        111,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_01.tres"
+    },
+    {
+      "name": "raw_05_02",
+      "region": [
+        197,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_02.tres"
+    },
+    {
+      "name": "raw_05_03",
+      "region": [
+        282,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_03.tres"
+    },
+    {
+      "name": "raw_05_05",
+      "region": [
+        451,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_05.tres"
+    },
+    {
+      "name": "raw_05_06",
+      "region": [
+        535,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_06.tres"
+    },
+    {
+      "name": "raw_05_07",
+      "region": [
+        620,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_07.tres"
+    },
+    {
+      "name": "raw_05_08",
+      "region": [
+        705,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_08.tres"
+    },
+    {
+      "name": "raw_05_09",
+      "region": [
+        787,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_09.tres"
+    },
+    {
+      "name": "raw_05_10",
+      "region": [
+        873,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_10.tres"
+    },
+    {
+      "name": "raw_05_11",
+      "region": [
+        960,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_11.tres"
+    },
+    {
+      "name": "raw_05_12",
+      "region": [
+        1047,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_12.tres"
+    },
+    {
+      "name": "raw_05_14",
+      "region": [
+        1216,
+        452,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_14.tres"
+    },
+    {
+      "name": "raw_05_16",
+      "region": [
+        1376,
+        452,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_05_16.tres"
+    },
+    {
+      "name": "raw_06_00",
+      "region": [
+        25,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_00.tres"
+    },
+    {
+      "name": "raw_06_01",
+      "region": [
+        111,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_01.tres"
+    },
+    {
+      "name": "raw_06_03",
+      "region": [
+        282,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_03.tres"
+    },
+    {
+      "name": "raw_06_04",
+      "region": [
+        367,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_04.tres"
+    },
+    {
+      "name": "raw_06_05",
+      "region": [
+        451,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_05.tres"
+    },
+    {
+      "name": "raw_06_06",
+      "region": [
+        535,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_06.tres"
+    },
+    {
+      "name": "raw_06_07",
+      "region": [
+        620,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_07.tres"
+    },
+    {
+      "name": "raw_06_08",
+      "region": [
+        705,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_08.tres"
+    },
+    {
+      "name": "raw_06_09",
+      "region": [
+        787,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_09.tres"
+    },
+    {
+      "name": "raw_06_10",
+      "region": [
+        873,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_10.tres"
+    },
+    {
+      "name": "raw_06_12",
+      "region": [
+        1047,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_12.tres"
+    },
+    {
+      "name": "raw_06_13",
+      "region": [
+        1132,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_13.tres"
+    },
+    {
+      "name": "raw_06_14",
+      "region": [
+        1216,
+        536,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_14.tres"
+    },
+    {
+      "name": "raw_06_16",
+      "region": [
+        1376,
+        536,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_06_16.tres"
+    },
+    {
+      "name": "raw_07_00",
+      "region": [
+        25,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_00.tres"
+    },
+    {
+      "name": "raw_07_01",
+      "region": [
+        111,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_01.tres"
+    },
+    {
+      "name": "raw_07_03",
+      "region": [
+        282,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_03.tres"
+    },
+    {
+      "name": "raw_07_04",
+      "region": [
+        367,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_04.tres"
+    },
+    {
+      "name": "raw_07_05",
+      "region": [
+        451,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_05.tres"
+    },
+    {
+      "name": "raw_07_06",
+      "region": [
+        535,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_06.tres"
+    },
+    {
+      "name": "raw_07_07",
+      "region": [
+        620,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_07.tres"
+    },
+    {
+      "name": "raw_07_08",
+      "region": [
+        705,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_08.tres"
+    },
+    {
+      "name": "raw_07_09",
+      "region": [
+        787,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_09.tres"
+    },
+    {
+      "name": "raw_07_10",
+      "region": [
+        873,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_10.tres"
+    },
+    {
+      "name": "raw_07_12",
+      "region": [
+        1047,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_12.tres"
+    },
+    {
+      "name": "raw_07_13",
+      "region": [
+        1132,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_13.tres"
+    },
+    {
+      "name": "raw_07_14",
+      "region": [
+        1216,
+        620,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_14.tres"
+    },
+    {
+      "name": "raw_07_16",
+      "region": [
+        1376,
+        620,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_07_16.tres"
+    },
+    {
+      "name": "raw_08_01",
+      "region": [
+        111,
+        704,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_08_01.tres"
+    },
+    {
+      "name": "raw_08_02",
+      "region": [
+        197,
+        704,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_08_02.tres"
+    },
+    {
+      "name": "raw_08_04",
+      "region": [
+        367,
+        704,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_08_04.tres"
+    },
+    {
+      "name": "raw_08_05",
+      "region": [
+        451,
+        704,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_08_05.tres"
+    },
+    {
+      "name": "raw_08_06",
+      "region": [
+        535,
+        704,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_08_06.tres"
+    },
+    {
+      "name": "raw_08_09",
+      "region": [
+        787,
+        704,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_08_09.tres"
+    },
+    {
+      "name": "raw_08_11",
+      "region": [
+        960,
+        704,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_08_11.tres"
+    },
+    {
+      "name": "raw_08_13",
+      "region": [
+        1132,
+        704,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_08_13.tres"
+    },
+    {
+      "name": "raw_09_01",
+      "region": [
+        111,
+        788,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_09_01.tres"
+    },
+    {
+      "name": "raw_09_02",
+      "region": [
+        197,
+        788,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_09_02.tres"
+    },
+    {
+      "name": "raw_09_04",
+      "region": [
+        367,
+        788,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_09_04.tres"
+    },
+    {
+      "name": "raw_09_05",
+      "region": [
+        451,
+        788,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_09_05.tres"
+    },
+    {
+      "name": "raw_09_06",
+      "region": [
+        535,
+        788,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_09_06.tres"
+    },
+    {
+      "name": "raw_09_09",
+      "region": [
+        787,
+        788,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_09_09.tres"
+    },
+    {
+      "name": "raw_09_11",
+      "region": [
+        960,
+        788,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_09_11.tres"
+    },
+    {
+      "name": "raw_09_13",
+      "region": [
+        1132,
+        788,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_09_13.tres"
+    },
+    {
+      "name": "raw_10_01",
+      "region": [
+        111,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_01.tres"
+    },
+    {
+      "name": "raw_10_02",
+      "region": [
+        197,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_02.tres"
+    },
+    {
+      "name": "raw_10_03",
+      "region": [
+        282,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_03.tres"
+    },
+    {
+      "name": "raw_10_04",
+      "region": [
+        367,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_04.tres"
+    },
+    {
+      "name": "raw_10_05",
+      "region": [
+        451,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_05.tres"
+    },
+    {
+      "name": "raw_10_06",
+      "region": [
+        535,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_06.tres"
+    },
+    {
+      "name": "raw_10_07",
+      "region": [
+        620,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_07.tres"
+    },
+    {
+      "name": "raw_10_08",
+      "region": [
+        705,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_08.tres"
+    },
+    {
+      "name": "raw_10_10",
+      "region": [
+        873,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_10.tres"
+    },
+    {
+      "name": "raw_10_11",
+      "region": [
+        960,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_11.tres"
+    },
+    {
+      "name": "raw_10_12",
+      "region": [
+        1047,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_12.tres"
+    },
+    {
+      "name": "raw_10_13",
+      "region": [
+        1132,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_13.tres"
+    },
+    {
+      "name": "raw_10_14",
+      "region": [
+        1216,
+        872,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_14.tres"
+    },
+    {
+      "name": "raw_10_16",
+      "region": [
+        1376,
+        872,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_10_16.tres"
+    },
+    {
+      "name": "raw_11_00",
+      "region": [
+        25,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_00.tres"
+    },
+    {
+      "name": "raw_11_01",
+      "region": [
+        111,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_01.tres"
+    },
+    {
+      "name": "raw_11_02",
+      "region": [
+        197,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_02.tres"
+    },
+    {
+      "name": "raw_11_03",
+      "region": [
+        282,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_03.tres"
+    },
+    {
+      "name": "raw_11_04",
+      "region": [
+        367,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_04.tres"
+    },
+    {
+      "name": "raw_11_05",
+      "region": [
+        451,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_05.tres"
+    },
+    {
+      "name": "raw_11_06",
+      "region": [
+        535,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_06.tres"
+    },
+    {
+      "name": "raw_11_07",
+      "region": [
+        620,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_07.tres"
+    },
+    {
+      "name": "raw_11_08",
+      "region": [
+        705,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_08.tres"
+    },
+    {
+      "name": "raw_11_09",
+      "region": [
+        787,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_09.tres"
+    },
+    {
+      "name": "raw_11_10",
+      "region": [
+        873,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_10.tres"
+    },
+    {
+      "name": "raw_11_11",
+      "region": [
+        960,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_11.tres"
+    },
+    {
+      "name": "raw_11_12",
+      "region": [
+        1047,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_12.tres"
+    },
+    {
+      "name": "raw_11_13",
+      "region": [
+        1132,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_13.tres"
+    },
+    {
+      "name": "raw_11_14",
+      "region": [
+        1216,
+        952,
+        80,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_14.tres"
+    },
+    {
+      "name": "raw_11_16",
+      "region": [
+        1376,
+        952,
+        72,
+        80
+      ],
+      "texture": "res://Art/StoneSheet/regions/raw_11_16.tres"
+    }
+  ]
+}
