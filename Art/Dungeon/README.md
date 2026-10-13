@@ -1,5 +1,7 @@
 # Dungeon spritesheet
 
+The newer Gothic Moss / Snow **connected terrain system** is in [Terrain/README.md](Terrain/README.md). It uses the matching source in Art/StoneSheet and provides native corner/side painting, collision slopes, and separate decorations. This older Dungeon image and its resources remain compatible; the new system has not been applied to the main tower.
+
 - `dungeon_spritesheet.png` is the user-supplied 1448 × 1086 transparent PNG, preserved unchanged.
 - `regions/*.tres` contains 45 gallery assets and three platform detail `AtlasTexture` resources. Drag one onto a `Sprite2D` texture property.
 - `dungeon_tileset.tres` is a visual `TileSet` for a `TileMapLayer`. It uses explicit regions because the sheet is not a regular grid. Use nearest texture filtering on the layer; its nominal tile size is 128 pixels.

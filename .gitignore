@@ -70,3 +70,6 @@ artifacts/art_swap/after/
 artifacts/art_swap/web/
 artifacts/autotile_review/output/
 artifacts/stone_sheet/output/
+
+# Gothic terrain logs, builds and raw development captures
+artifacts/gothic_terrain/output/
