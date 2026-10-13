@@ -1,0 +1,68 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Texture2D" path="res://Art/Dungeon/Terrain/terrain_overlays.png" id="1_4ua8x"]
+
+[sub_resource type="TileSetAtlasSource" id="DecorAtlas"]
+resource_name = "Gothic props and surface overhangs — no collision"
+texture = ExtResource("1_4ua8x")
+texture_region_size = Vector2i(72, 72)
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/custom_data_0 = "wood_moss"
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+2:0/0/custom_data_0 = "wood_ice"
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+4:0/0/custom_data_0 = "lantern_moss"
+6:0/size_in_atlas = Vector2i(2, 2)
+6:0/0 = 0
+6:0/0/custom_data_0 = "lantern_ice"
+8:0/size_in_atlas = Vector2i(2, 3)
+8:0/0 = 0
+8:0/0/custom_data_0 = "moon_banner_moss"
+10:0/size_in_atlas = Vector2i(2, 3)
+10:0/0 = 0
+10:0/0/custom_data_0 = "moon_banner_ice"
+0:3/size_in_atlas = Vector2i(2, 2)
+0:3/0 = 0
+0:3/0/custom_data_0 = "window_moss"
+2:3/size_in_atlas = Vector2i(2, 2)
+2:3/0 = 0
+2:3/0/custom_data_0 = "moon_window_ice"
+4:3/size_in_atlas = Vector2i(2, 3)
+4:3/0 = 0
+4:3/0/custom_data_0 = "pillar_moss"
+6:3/size_in_atlas = Vector2i(2, 3)
+6:3/0 = 0
+6:3/0/custom_data_0 = "pillar_ice"
+8:3/size_in_atlas = Vector2i(3, 2)
+8:3/0 = 0
+8:3/0/custom_data_0 = "shrine_moss"
+0:6/size_in_atlas = Vector2i(2, 2)
+0:6/0 = 0
+0:6/0/custom_data_0 = "shrine_ice"
+2:6/0 = 0
+2:6/0/custom_data_0 = "moss_surface_overhang"
+3:6/0 = 0
+3:6/0/custom_data_0 = "ice_surface_overhang"
+4:6/0 = 0
+4:6/0/custom_data_0 = "hanging_vine"
+5:6/0 = 0
+5:6/0/custom_data_0 = "wall_chain"
+6:6/0 = 0
+6:6/0/custom_data_0 = "moss_arch_left"
+7:6/0 = 0
+7:6/0/custom_data_0 = "moss_arch_right"
+8:6/0 = 0
+8:6/0/custom_data_0 = "ice_arch_left"
+9:6/0 = 0
+9:6/0/custom_data_0 = "ice_arch_right"
+10:6/0 = 0
+10:6/0/custom_data_0 = "masonry_crack"
+
+[resource]
+tile_size = Vector2i(72, 72)
+custom_data_layer_0/name = "asset_name"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("DecorAtlas")
