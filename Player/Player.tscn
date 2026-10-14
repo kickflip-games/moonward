@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cvboky6pqlyk0"]
+[gd_scene load_steps=24 format=3 uid="uid://cvboky6pqlyk0"]
 
 [ext_resource type="Script" uid="uid://c4vv0byhh07an" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" uid="uid://bya3wd8hjk44s" path="res://Player/Sprite.gd" id="2"]
@@ -14,181 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bw53y4hirkx23" path="res://Player/FX/SpawnFx.tscn" id="12_7v5gs"]
 [ext_resource type="PackedScene" uid="uid://cy66qcw6cd2cu" path="res://Player/FX/WallslideFx.tscn" id="13_8sa4y"]
 
-[sub_resource type="Animation" id="Animation_vlldt"]
-resource_name = "Airborne"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array(-14, -20, -14, 16, 14, 16, 14, -20)]
-}
-
-[sub_resource type="Animation" id="Animation_tok1r"]
-resource_name = "Death"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-59.000004, 8, -75, 16, 75, 16, 62.999996, 10), PackedVector2Array(-59, 16, -75, 16, 75, 16, 63, 16)]
-}
-
-[sub_resource type="Animation" id="Animation_8g4oa"]
-resource_name = "Idle"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.19999999, 0.39999998),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-15, -15, -15, 16, 15, 16, 15, -15), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
-}
-
-[sub_resource type="Animation" id="3"]
-resource_name = "Jump"
-length = 0.3
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.10547121, 0.29559693),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-10, -23, -10, 23, 10, 23, 10, -23), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
-}
-
-[sub_resource type="Animation" id="4"]
-resource_name = "Land"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.099920094, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-28, -8, -28, 16, 28, 16, 28, -8), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
-}
-
-[sub_resource type="Animation" id="Animation_q3lat"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
-}
-
-[sub_resource type="Animation" id="Animation_6ysni"]
-resource_name = "Run"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.19999999, 0.39999998),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16), PackedVector2Array(-16, -20, -16, 16, 16, 16, 16, -20), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
-}
-
-[sub_resource type="Animation" id="Animation_ddoul"]
-resource_name = "Spawn"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.33333334, 0.6),
-"transitions": PackedFloat32Array(1.5157177, 1, 1),
-"update": 0,
-"values": [PackedVector2Array(-0.25, 13.88, -16, 16, 16, 16, 1.05, 13.88), PackedVector2Array(-0.25, -16, -16, 16, 16, 16, 1.05, -16), PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)]
-}
-
-[sub_resource type="Animation" id="Animation_p7tob"]
-resource_name = "WallJump"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.033333335),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [PackedVector2Array(-14, -20, -14, 16, 14, 16, 14, -20), PackedVector2Array(-14, -20, -14, 16, 14, 16, 14, -20)]
-}
-
-[sub_resource type="Animation" id="Animation_dm7nj"]
-resource_name = "WallSlide"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [PackedVector2Array(-14, -20, -14, 16, 14, 16, 14, -20)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1lb64"]
-_data = {
-&"Airborne": SubResource("Animation_vlldt"),
-&"FallDeath": SubResource("Animation_tok1r"),
-&"Idle": SubResource("Animation_8g4oa"),
-&"Jump": SubResource("3"),
-&"Land": SubResource("4"),
-&"RESET": SubResource("Animation_q3lat"),
-&"Run": SubResource("Animation_6ysni"),
-&"Spawn": SubResource("Animation_ddoul"),
-&"WallJump": SubResource("Animation_p7tob"),
-&"WallSlide": SubResource("Animation_dm7nj")
-}
+[ext_resource type="SpriteFrames" path="res://Art/Characters/N3Cloud/character_frames.tres" id="14_frames"]
+[ext_resource type="AudioStream" path="res://Player/SFX/death.ogg" id="15_death"]
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(26, 24)
@@ -227,12 +54,6 @@ platform_wall_layers = 2
 platform_on_leave = 1
 script = ExtResource("1")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Sprite")
-libraries = {
-&"": SubResource("AnimationLibrary_1lb64")
-}
-
 [node name="SquareCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
 shape = SubResource("2")
@@ -255,13 +76,25 @@ disabled = true
 
 [node name="Sprite" type="Node2D" parent="."]
 position = Vector2(0, 8)
-scale = Vector2(0.804912, 1.1950881)
+process_physics_priority = 100
 script = ExtResource("2")
 player_path = NodePath("..")
 
-[node name="Polygon2D" type="Polygon2D" parent="Sprite"]
-position = Vector2(0, -9)
-polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+[node name="FacingRoot" type="Node2D" parent="Sprite"]
+
+[node name="SquashRoot" type="Node2D" parent="Sprite/FacingRoot"]
+
+[node name="Character" type="AnimatedSprite2D" parent="Sprite/FacingRoot/SquashRoot"]
+texture_filter = 1
+scale = Vector2(0.75, 0.75)
+sprite_frames = ExtResource("14_frames")
+animation = &"idle"
+centered = false
+offset = Vector2(-64, -64)
+
+[node name="CubeFallback" type="Polygon2D" parent="Sprite/FacingRoot/SquashRoot"]
+visible = false
+polygon = PackedVector2Array(-13, -24, 13, -24, 13, 0, -13, 0)
 
 [node name="WallRayRight" type="RayCast2D" parent="."]
 target_position = Vector2(15, 0)
@@ -291,6 +124,7 @@ stream = ExtResource("5_j23h2")
 stream = ExtResource("6_0j2ni")
 
 [node name="DeathSFX" type="AudioStreamPlayer2D" parent="Sfx"]
+stream = ExtResource("15_death")
 
 [node name="SpawnSFX" type="AudioStreamPlayer2D" parent="Sfx"]
 stream = ExtResource("7_v0k0e")

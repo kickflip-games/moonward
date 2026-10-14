@@ -1,573 +1,266 @@
 extends Node2D
+## One visual owner. This script reads physics state and never writes the body.
+@export var player_path:NodePath
+@export var visual_scale:float=0.75
+@export var debug_cube:bool=false
+@export var show_visual_debug:bool=false
+@export_group("Procedural presentation")
+@export var run_lean_degrees:float=4.0
+@export var jump_stretch:=Vector2(.90,1.10)
+@export var land_squash:=Vector2(1.12,.86)
+@export var wall_contact_offset:float=4.0
+@export_group("Airborne flourish")
+@export var somersault_min_speed:float=500.0
+@export var somersault_air_delay:float=.18
+@export var somersault_wall_clearance:float=64.0
+@export var somersault_cooldown:float=1.4
+@export var allow_somersaults:bool=true
 
-@export var player_path: NodePath
-@onready var player: CharacterBody2D = get_node(player_path)
-@onready var animator: AnimationPlayer = $"../AnimationPlayer"
-@onready var polygon: Polygon2D = $Polygon2D  
+@onready var player:Player=get_node(player_path)
+@onready var facing_root:Node2D=$FacingRoot
+@onready var squash_root:Node2D=$FacingRoot/SquashRoot
+@onready var sprite:AnimatedSprite2D=$FacingRoot/SquashRoot/Character
+@onready var cube:Polygon2D=$FacingRoot/SquashRoot/CubeFallback
+@onready var jump_sfx:AudioStreamPlayer2D=$"../Sfx/JumpSFX"
+@onready var land_sfx:AudioStreamPlayer2D=$"../Sfx/LandSFX"
+@onready var footstep_sfx:AudioStreamPlayer2D=$"../Sfx/FootstepSFX"
+@onready var wall_slide_sfx:AudioStreamPlayer2D=$"../Sfx/WallslideSFX"
+@onready var death_sfx:AudioStreamPlayer2D=$"../Sfx/DeathSFX"
+@onready var spawn_sfx:AudioStreamPlayer2D=$"../Sfx/SpawnSFX"
+@onready var jump_particles:CPUParticles2D=$"../ParticleFx/JumpFx"
+@onready var land_particles:CPUParticles2D=$"../ParticleFx/LandFx"
+@onready var run_particles:CPUParticles2D=$"../ParticleFx/RunFx"
+@onready var wall_particles:CPUParticles2D=$"../ParticleFx/WallslideFx"
+@onready var death_particles:CPUParticles2D=$"../ParticleFx/DeathFx"
+@onready var spawn_particles:CPUParticles2D=$"../ParticleFx/SpawnFx"
+@onready var roll_trail:Line2D=$"../Trails/SomersaultTrail"
+@onready var speed_trail:Line2D=$"../Trails/SpeedTrail"
 
-# Audio references
-@onready var jump_sfx: AudioStreamPlayer2D = $"../Sfx/JumpSFX"
-@onready var land_sfx: AudioStreamPlayer2D = $"../Sfx/LandSFX"
-@onready var footstep_sfx: AudioStreamPlayer2D = $"../Sfx/FootstepSFX"
-@onready var wall_slide_sfx: AudioStreamPlayer2D = $"../Sfx/WallslideSFX"
-@onready var death_sfx: AudioStreamPlayer2D = $"../Sfx/DeathSFX"
-@onready var spawn_sfx: AudioStreamPlayer2D = $"../Sfx/SpawnSFX"
+var visual_state:String="respawn"
+var current_animation:String=""
+var previous_velocity:=Vector2.ZERO
+var previous_grounded:bool=false
+var air_time:float=0
+var takeoff_speed:float=0
+var takeoff_kind:String="jump"
+var lock_state:String=""
+var lock_time:float=0
+var spawn_time:float=0
+var death_time:float=0
+var somersault_active:bool=false
+var somersault_used:bool=false
+var flourish_wait:float=0
+var flourish_eligible:bool=false
+var somersault_count:int=0
+var jump_fx_count:int=0
+var landing_fx_count:int=0
+var facing:int=1
+var wall_jump_facing:int=1
+var squash_tween:Tween
+var footstep_cooldown:float=0
+var trail_clock:float=0
+var debug_label:Label
 
-# Particle references - using CPUParticles2D for web compatibility
-@onready var jump_particles: CPUParticles2D = $"../ParticleFx/JumpFx"
-@onready var land_particles: CPUParticles2D = $"../ParticleFx/LandFx"
-@onready var run_particles: CPUParticles2D = $"../ParticleFx/RunFx"
-@onready var wall_slide_particles: CPUParticles2D = $"../ParticleFx/WallslideFx"
-@onready var death_particles: CPUParticles2D = $"../ParticleFx/DeathFx"
-@onready var spawn_particles: CPUParticles2D = $"../ParticleFx/SpawnFx"
-
-# Trail references
-@onready var somersault_trail: Line2D = $"../Trails/SomersaultTrail"
-@onready var speed_trail: Line2D = $"../Trails/SpeedTrail"
-
-
-# Animation constants
-const IDLE_ANIM = "Idle"
-const RUN_ANIM = "Run"
-const JUMP_ANIM = "Jump"
-const FALL_ANIM = "Airborne"
-const LAND_ANIM = "Land"
-const WALL_SLIDE_ANIM = "WallSlide"
-const WALL_JUMP_ANIM = "WallJump"
-const SPAWN_ANIM = "Spawn"
-const FALL_DEATH_ANIM = "FallDeath"
-
-# State tracking
-var previous_velocity := Vector2.ZERO
-var previous_grounded := false
-var previous_wall_sliding := false
-var current_animation := ""
-var animation_locked := false
-var lock_timer := 0.0
-var is_dead := false
-
-# Rotation and lean system
-var target_rotation_degrees := 0.0
-var somersault_speed_degrees := 0.0
-
-# FX state tracking
-var footstep_timer := 0.0
-var footstep_interval := 0.3  # Time between footstep sounds
-var trail_points: Array[Vector2] = []
-var max_trail_points := 20
-
-# Animation priorities (higher = more important)
-var animation_priorities = {
-	SPAWN_ANIM: 100,
-	FALL_DEATH_ANIM: 90,
-	WALL_JUMP_ANIM: 80,
-	LAND_ANIM: 70,
-	JUMP_ANIM: 60,
-	WALL_SLIDE_ANIM: 50,
-	FALL_ANIM: 40,
-	RUN_ANIM: 30,
-	IDLE_ANIM: 10
-}
-
-# Default lock durations for specific animations
-var default_lock_durations = {
-	LAND_ANIM: 0.3,
-	JUMP_ANIM: 0.2,
-	WALL_JUMP_ANIM: 0.12,
-	SPAWN_ANIM: 0.12,
-	FALL_DEATH_ANIM: 0.35
-}
-
-func _ready() -> void:
-	if player == null:
-		push_error("PlayerSpriteAnimator: player_path is not set or invalid!")
-		set_process(false)
-		return
-	
-	_setup_animation_connections()
-	_setup_fx_systems()
-	
-	if player.has_signal("died"):
-		player.died.connect(_on_player_died)
-	if player.has_signal("respawned"):
-		player.respawned.connect(_on_player_respawned)
-	
+func _ready()->void:
+	sprite.scale=Vector2.ONE*visual_scale
+	for fx in [jump_particles,land_particles,run_particles,wall_particles,death_particles,spawn_particles]:
+		fx.emitting=false;fx.rotation=0;fx.position=Vector2(0,8)
+		fx.scale_amount_min=.10;fx.scale_amount_max=.22
+		fx.color=Color(.72,.84,1,.7);fx.gravity=Vector2(0,120)
+		fx.lifetime=.24;fx.emission_sphere_radius=4
+		fx.initial_velocity_min=20;fx.initial_velocity_max=70
+	jump_particles.amount=8;land_particles.amount=8;run_particles.amount=5
+	wall_particles.amount=5;death_particles.amount=14;spawn_particles.amount=8
+	death_particles.lifetime=.3;spawn_particles.lifetime=.18
+	death_particles.position=Vector2(0,-5);spawn_particles.position=Vector2(0,-5)
+	for trail in [roll_trail,speed_trail]:
+		trail.width=3;trail.gradient=null
+		trail.default_color=Color(.55,.73,1,.22);trail.clear_points();trail.hide()
 	player.jumped.connect(_on_player_jumped)
-	play_animation(SPAWN_ANIM)
+	player.died.connect(_on_player_died)
+	player.respawned.connect(_on_player_respawned)
+	sprite.animation_finished.connect(_on_animation_finished)
+	sprite.frame_changed.connect(_on_frame_changed)
+	debug_label=Label.new();debug_label.position=Vector2(-95,-100)
+	debug_label.add_theme_font_size_override("font_size",11);debug_label.z_index=20
+	debug_label.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(debug_label)
+	_apply_visual_mode();_select("respawn")
 
-func _setup_fx_systems() -> void:
-	# Setup CPU particles with web-friendly settings
-	_setup_jump_particles()
-	_setup_land_particles()
-	_setup_run_particles()
-	_setup_wall_slide_particles()
-	_setup_death_particles()
-	_setup_spawn_particles()
-	
-	# Setup trails
-	if somersault_trail:
-		somersault_trail.width = 12.0
-		somersault_trail.default_color = Color.WHITE
-		somersault_trail.default_color.a = 0.6
-		
-	
-	if speed_trail:
-		speed_trail.width = 12.0
-		speed_trail.default_color = Color.WHITE
-		speed_trail.default_color.a = 0.3
-
-func _setup_jump_particles() -> void:
-	if not jump_particles:
-		return
-	jump_particles.emitting = false
-	jump_particles.amount = 15
-	jump_particles.lifetime = 0.6
-	jump_particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_SPHERE
-	jump_particles.emission_sphere_radius = 8.0
-	jump_particles.direction = Vector2(-1, 0)
-	jump_particles.initial_velocity_min = 50.0
-	jump_particles.initial_velocity_max = 100.0
-	jump_particles.angular_velocity_min = -180.0
-	jump_particles.angular_velocity_max = 180.0
-	jump_particles.scale_amount_min = 0.5
-	jump_particles.scale_amount_max = 1.0
-
-func _setup_land_particles() -> void:
-	if not land_particles:
-		return
-	land_particles.emitting = false
-	land_particles.amount = 20
-	land_particles.lifetime = 0.8
-	land_particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_SPHERE
-	land_particles.emission_sphere_radius = 12.0
-	land_particles.direction = Vector2( -1, 0)
-	land_particles.spread = 45.0
-	land_particles.initial_velocity_min = 30.0
-	land_particles.initial_velocity_max = 80.0
-	land_particles.gravity = Vector2( 98, 0)
-
-func _setup_run_particles() -> void:
-	if not run_particles:
-		return
-	run_particles.emitting = false
-	run_particles.amount = 8
-	run_particles.lifetime = 0.4
-	run_particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_SPHERE
-	run_particles.emission_sphere_radius = 4.0
-	run_particles.direction = Vector2( -1, 0)
-	run_particles.spread = 30.0
-	run_particles.initial_velocity_min = 20.0
-	run_particles.initial_velocity_max = 40.0
-	run_particles.scale_amount_min = 0.3
-	run_particles.scale_amount_max = 0.6
-
-func _setup_wall_slide_particles() -> void:
-	if not wall_slide_particles:
-		return
-	wall_slide_particles.emitting = false
-	wall_slide_particles.amount = 12
-	wall_slide_particles.lifetime = 0.5
-	wall_slide_particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_POINT
-	wall_slide_particles.direction = Vector2(0, 0)  # Will be flipped based on wall side
-	wall_slide_particles.spread = 20.0
-	wall_slide_particles.initial_velocity_min = 25.0
-	wall_slide_particles.initial_velocity_max = 50.0
-	wall_slide_particles.gravity = Vector2(49, 0)
-
-func _setup_death_particles() -> void:
-	if not death_particles:
-		return
-	death_particles.emitting = false
-	death_particles.amount = 30
-	death_particles.lifetime = 1.5
-	death_particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_SPHERE
-	death_particles.emission_sphere_radius = 16.0
-	death_particles.direction = Vector2( -1, 0)
-	death_particles.spread = 180.0
-	death_particles.initial_velocity_min = 50.0
-	death_particles.initial_velocity_max = 150.0
-	death_particles.gravity = Vector2(98, 0)
-	death_particles.scale_amount_min = 0.5
-	death_particles.scale_amount_max = 1.5
-
-func _setup_spawn_particles() -> void:
-	if not spawn_particles:
-		return
-	spawn_particles.emitting = false
-	spawn_particles.amount = 25
-	spawn_particles.lifetime = 1.0
-	spawn_particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_SPHERE
-	spawn_particles.emission_sphere_radius = 20.0
-	spawn_particles.direction = Vector2( 0, 0)
-	spawn_particles.spread = 180.0
-	spawn_particles.initial_velocity_min = 30.0
-	spawn_particles.initial_velocity_max = 80.0
-	spawn_particles.gravity = Vector2(-49, 0)  # Negative gravity for upward float
-	spawn_particles.scale_amount_min = 0.8
-	spawn_particles.scale_amount_max = 1.2
-
-func _process(delta: float) -> void:
-	if player == null:
-		return
-		
-	# Update lock timer
-	if animation_locked:
-		lock_timer -= delta
-		if lock_timer <= 0:
-			animation_locked = false
-	
-	# Update sprite direction
-	if player.face_direction != 0:
-		var target_scale = player.face_direction
-		if scale.x != target_scale:
-			scale.x = target_scale
-	
-	# Update animations and FX
-	_update_animation()
-	_apply_animation_lean()
-	_update_sprite_rotation(delta)
-	_update_fx_systems(delta)
-	
-	# Ensure polygon stays hidden while dead
-	if is_dead and polygon.visible:
-		polygon.hide()
-	
-	# Store previous frame data
-	previous_velocity = player.velocity
-	previous_grounded = player.is_on_floor()
-	previous_wall_sliding = player.is_sliding
-
-func _update_fx_systems(delta: float) -> void:
-	_update_footsteps(delta)
-	_update_wall_slide_fx()
-	_update_trails(delta)
-	_update_run_particles()
-
-func _update_footsteps(delta: float) -> void:
-	if current_animation == RUN_ANIM and player.is_on_floor():
-		footstep_timer -= delta
-		if footstep_timer <= 0:
-			_play_footstep_fx()
-			# Adjust footstep interval based on speed
-			var speed_factor = abs(player.velocity.x) / 400.0
-			footstep_interval = lerp(0.4, 0.2, speed_factor)
-			footstep_timer = footstep_interval
+func _physics_process(delta:float)->void:
+	lock_time=maxf(0,lock_time-delta);spawn_time=maxf(0,spawn_time-delta)
+	footstep_cooldown=maxf(0,footstep_cooldown-delta)
+	flourish_wait=maxf(0,flourish_wait-delta)
+	var grounded:bool=player.is_on_floor() and player.velocity.y>=0
+	if player.is_dead:
+		death_time+=delta;somersault_active=false
+		modulate.a=clampf(1-(death_time-.06)/.10,0,1)
+		_select("death");_stop_continuous_fx();_clear_trails()
 	else:
-		footstep_timer = 0.0
+		modulate.a=clampf(1-spawn_time/.12*.7,.3,1)
+		if grounded:
+			if not previous_grounded and previous_velocity.y>120 and spawn_time<=0:
+				_land(previous_velocity.y)
+			air_time=0;somersault_used=false;somersault_active=false
+		else:air_time+=delta
+		if player._wall_contact_side!=0 or player.is_sliding or player.is_wall_jumping:
+			somersault_active=false
+		if _can_somersault(grounded):
+			somersault_active=true;somersault_used=true;somersault_count+=1
+			flourish_wait=somersault_cooldown
+		_select(_choose_state(grounded))
+		_update_facing()
+		var lean:float=deg_to_rad(run_lean_degrees*facing) if visual_state in ["run","sprint"] else 0
+		# The source roll already rotates. No additional procedural spin.
+		rotation=lerp_angle(rotation,lean,minf(1,delta*18)) if visual_state in ["run","sprint","idle"] else 0
+		_update_continuous_fx(delta,grounded)
+	previous_grounded=grounded;previous_velocity=player.velocity
+	_apply_visual_mode();_update_debug()
 
-func _update_wall_slide_fx() -> void:
-	if current_animation == WALL_SLIDE_ANIM:
-		if not wall_slide_sfx.playing:
-			wall_slide_sfx.play()
-		if wall_slide_particles:
-			wall_slide_particles.emitting = true
-			# Position based on which wall we're on
-			if player._wall_contact_side < 0:
-				wall_slide_particles.position.x = -16  # Left wall
-				wall_slide_particles.direction = Vector2(1, 0)  # Particles go right
-			else:  # Right wall
-				wall_slide_particles.position.x = 16  # Right wall
-				wall_slide_particles.direction = Vector2(-1, 0)  # Particles go left
-	else:
-		if wall_slide_sfx.playing:
-			wall_slide_sfx.stop()
-		if wall_slide_particles:
-			wall_slide_particles.emitting = false
+func _choose_state(grounded:bool)->String:
+	if spawn_time>0:return "respawn"
+	if player.is_wall_jumping:return "wall_jump"
+	if player.is_sliding:return "wall_slide"
+	if somersault_active:return "somersault"
+	if not grounded:
+		if lock_time>0 and lock_state in ["takeoff","wall_jump","spring_launch"]:return lock_state
+		if player.velocity.y < -120:return "rise"
+		if player.velocity.y > 120:return "fall"
+		return "apex"
+	if lock_time>0 and lock_state=="land":return "land"
+	if absf(player.velocity.x)>player.max_speed*.85:return "sprint"
+	if absf(player.velocity.x)>35:return "run"
+	return "idle"
 
-func _update_trails(delta: float) -> void:
-	# Somersault trail during airborne rotation
-	if somersault_speed_degrees != 0.0:
-		_add_trail_point(somersault_trail)
-		if somersault_trail:
-			somersault_trail.visible = true
-	else:
-		if somersault_trail:
-			_fade_trail(somersault_trail, delta)
-	
-	# Speed trail during fast running
-	if current_animation == RUN_ANIM and abs(player.velocity.x) > 300:
-		_add_trail_point(speed_trail)
-		if speed_trail:
-			speed_trail.visible = true
-	else:
-		if speed_trail:
-			_fade_trail(speed_trail, delta)
+func _select(state:String)->void:
+	visual_state=state
+	var animation:String="air_roll" if state=="somersault" else state
+	var speed:float=1
+	if state in ["run","sprint"]:speed=clampf(.65+absf(player.velocity.x)/player.max_speed*.55,.65,1.3)
+	if current_animation!=animation:
+		current_animation=animation;sprite.speed_scale=speed;sprite.play(animation)
+	else:sprite.speed_scale=speed
 
-func _add_trail_point(trail: Line2D) -> void:
-	if not trail:
-		return
-		
-	var current_pos = global_position
-	trail.add_point(current_pos)
-	
-	# Limit trail length
-	if trail.get_point_count() > max_trail_points:
-		trail.remove_point(0)
+func _update_facing()->void:
+	if visual_state=="wall_slide":facing=-player._wall_contact_side
+	elif visual_state=="wall_jump":facing=wall_jump_facing
+	elif absf(player.velocity.x)>35:facing=int(signf(player.velocity.x))
+	elif visual_state not in ["somersault","land"]:facing=player.face_direction
+	if facing==0:facing=1
+	facing_root.scale=Vector2(facing,1)
+	# The template's unflipped contact hand reaches left. This offsets only art.
+	facing_root.position.x=player._wall_contact_side*wall_contact_offset if visual_state=="wall_slide" else 0
 
-func _fade_trail(trail: Line2D, delta: float) -> void:
-	if not trail:
-		return
+func _can_somersault(grounded:bool)->bool:
+	if not allow_somersaults or not flourish_eligible or somersault_used or somersault_active or grounded or player.is_dead:return false
+	if spawn_time>0 or air_time<somersault_air_delay or player.is_sliding or player.is_wall_jumping:return false
+	if player._wall_contact_side!=0 or player.velocity.y>650:return false
+	if takeoff_speed<somersault_min_speed and takeoff_kind!="spring":return false
+	var space:=player.get_world_2d().direct_space_state
+	for side in [-1,1]:
+		var from:=player.global_position+Vector2(0,-4)
+		var query:=PhysicsRayQueryParameters2D.create(from,from+Vector2(side*somersault_wall_clearance,0),2,[player.get_rid()])
+		if not space.intersect_ray(query).is_empty():return false
+	return true
 
-	# Faster fade by removing multiple points
-	var points_to_remove = clampi(int(delta * 30), 1, trail.get_point_count())
+func _pulse(value:Vector2,recovery:float)->void:
+	if squash_tween and squash_tween.is_valid():squash_tween.kill()
+	squash_root.scale=value
+	squash_tween=create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+	squash_tween.tween_property(squash_root,"scale",Vector2.ONE,recovery).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 
-	for i in range(points_to_remove):
-		if trail.get_point_count() == 0:
-			break
-		trail.remove_point(0)
+func _reset_transforms()->void:
+	if squash_tween and squash_tween.is_valid():squash_tween.kill()
+	squash_root.scale=Vector2.ONE;rotation=0
+	facing_root.position=Vector2.ZERO;facing_root.scale=Vector2.ONE
+	modulate=Color.WHITE
 
-	if trail.get_point_count() == 0:
-		trail.visible = false
+func _on_player_jumped(from_wall:bool)->void:
+	if player.is_dead:return
+	takeoff_speed=absf(player.velocity.x)
+	# Decide at takeoff; a cooldown expiring mid-jump cannot cause a late spin.
+	flourish_eligible=flourish_wait<=0
+	if from_wall:wall_jump_facing=int(signf(player.velocity.x))
+	takeoff_kind="wall" if from_wall else "spring" if player._spring_launch else "jump"
+	lock_state="wall_jump" if from_wall else "spring_launch" if player._spring_launch else "takeoff"
+	lock_time=.10 if from_wall else .12 if player._spring_launch else .075
+	somersault_active=false;_select(lock_state);_update_facing()
+	_pulse(jump_stretch,.085)
+	jump_fx_count+=1
+	jump_sfx.pitch_scale=1.2 if from_wall else .95 if player._spring_launch else 1.0
+	jump_sfx.play()
+	jump_particles.position=Vector2(-signf(player.velocity.x)*13,-4) if from_wall else Vector2(0,8)
+	jump_particles.amount=12 if player._spring_launch else 8;jump_particles.restart()
 
-func _update_run_particles() -> void:
-	if current_animation == RUN_ANIM and player.is_on_floor():
-		if run_particles and not run_particles.emitting:
-			run_particles.emitting = true
-			run_particles.position.y = 16  # At feet level
-	else:
-		if run_particles:
-			run_particles.emitting = false
+func _land(speed:float)->void:
+	landing_fx_count+=1;lock_state="land";lock_time=.11
+	_pulse(Vector2(1.16,.82) if speed>800 else land_squash,.13)
+	land_sfx.pitch_scale=clampf(.9+speed/2500,.9,1.2);land_sfx.play()
+	land_particles.amount=12 if speed>800 else 8;land_particles.restart()
 
-# Rest of your animation system...
-func _update_animation() -> void:
-	var desired_animation = _get_desired_animation()
-	
-	if desired_animation != current_animation and not animation_locked:
-		_on_state_change(current_animation, desired_animation)
-		play_animation(desired_animation)
+func _on_player_died()->void:
+	_reset_transforms();somersault_active=false;lock_time=0;spawn_time=0;death_time=0
+	_select("death");_stop_continuous_fx();_clear_trails()
+	death_sfx.play();death_particles.restart()
 
-func _on_state_change(old_anim: String, new_anim: String) -> void:
-	# Handle FX for state transitions
-	_handle_fx_transition(old_anim, new_anim)
-	
-	# Existing rotation logic...
-	if _was_grounded_now_airborne(old_anim, new_anim):
-		var horizontal_speed = abs(player.velocity.x)
-		var somersault_threshold = 150.0
-		
-		if horizontal_speed > somersault_threshold:
-			var base_somersault_rate = 360.0
-			var speed_factor = horizontal_speed / 400.0
-			somersault_speed_degrees = base_somersault_rate * speed_factor * sign(player.velocity.x)
-		else:
-			somersault_speed_degrees = 0.0
-			rotation_degrees = 0.0
+func _on_player_respawned()->void:
+	_reset_transforms();show();sprite.show()
+	lock_time=0;lock_state="";death_time=0;spawn_time=.12;facing=1;wall_jump_facing=1
+	somersault_active=false;somersault_used=false;air_time=0;takeoff_speed=0
+	flourish_wait=0;flourish_eligible=false
+	previous_velocity=Vector2.ZERO;previous_grounded=false;footstep_cooldown=0
+	_stop_continuous_fx();_clear_trails();_select("respawn")
+	_pulse(Vector2(.94,1.06),.10)
+	spawn_sfx.play();spawn_particles.restart()
 
-	if _is_grounded_state(new_anim):
-		somersault_speed_degrees = 0.0
-		rotation_degrees = 0.0
-		target_rotation_degrees = 0.0
+func _on_animation_finished()->void:
+	if sprite.animation==&"air_roll" and visual_state=="somersault":somersault_active=false
 
-func _handle_fx_transition(old_anim: String, new_anim: String) -> void:
-	match new_anim:
-		LAND_ANIM:
-			_play_land_fx()
-		FALL_DEATH_ANIM:
-			_play_death_fx()
-		SPAWN_ANIM:
-			_play_spawn_fx()
+func _on_frame_changed()->void:
+	if visual_state in ["run","sprint"] and sprite.frame in [0,3] and player.is_on_floor() and not player.is_dead and footstep_cooldown<=0:
+		footstep_sfx.pitch_scale=1.0 if visual_state=="run" else 1.08
+		footstep_sfx.play();footstep_cooldown=.09
 
-func _play_jump_fx() -> void:
-	if jump_sfx:
-		jump_sfx.pitch_scale = 1.0
-		jump_sfx.play()
-	if jump_particles:
-		jump_particles.position.y = 16  # At feet level
-		jump_particles.restart()
-
-func _play_land_fx() -> void:
-	if land_sfx:
-		# Vary pitch based on fall speed
-		var fall_speed = abs(previous_velocity.y)
-		land_sfx.pitch_scale = clamp(0.8 + (fall_speed / 500.0), 0.8, 1.3)
-		land_sfx.play()
-	if land_particles:
-		land_particles.position.y = 16
-		land_particles.restart()
-
-func _play_wall_jump_fx() -> void:
-	if jump_sfx:
-		jump_sfx.pitch_scale = 1.2  # Higher pitch for wall jump
-		jump_sfx.play()
-	if jump_particles:
-		jump_particles.position.x = 16 * sign(player.face_direction)
-		jump_particles.position.y = 0
-		jump_particles.restart()
-
-func _play_footstep_fx() -> void:
-	if footstep_sfx:
-		footstep_sfx.pitch_scale = randf_range(0.9, 1.1)  # Vary pitch
-		footstep_sfx.play()
-	# Small particle burst for footstep
-	if run_particles:
-		run_particles.restart()
-
-func _play_death_fx() -> void:
-	if death_sfx:
-		death_sfx.play()
-	if death_particles:
-		death_particles.restart()
-
-func _play_spawn_fx() -> void:
-	if spawn_sfx:
-		spawn_sfx.play()
-	if spawn_particles:
-		spawn_particles.restart()
-
-# [Rest of your existing animation code remains the same...]
-func _was_grounded_now_airborne(old_anim: String, new_anim: String) -> bool:
-	var grounded_states = [RUN_ANIM, IDLE_ANIM, LAND_ANIM]
-	var airborne_states = [JUMP_ANIM, FALL_ANIM]
-	return old_anim in grounded_states and new_anim in airborne_states
-
-func _is_grounded_state(anim: String) -> bool:
-	return anim in [LAND_ANIM, IDLE_ANIM, RUN_ANIM, FALL_DEATH_ANIM]
-
-func _get_desired_animation() -> String:
-	if _should_play_death_animation():
-		return FALL_DEATH_ANIM
-	
-	if _just_landed():
-		return LAND_ANIM
-	
-	if player.is_wall_jumping:
-		return WALL_JUMP_ANIM
-	
-	if player.is_sliding:
-		return WALL_SLIDE_ANIM
-	
-	if not player.is_on_floor():
-		if player.velocity.y > 50:
-			return FALL_ANIM
-		elif player.velocity.y < -50:
-			return JUMP_ANIM
-		else:
-			return current_animation if current_animation == JUMP_ANIM or current_animation == FALL_ANIM else JUMP_ANIM
-	
-	if player.is_on_floor():
-		if abs(player.velocity.x) > 50:
-			return RUN_ANIM
-		else:
-			return IDLE_ANIM
-	
-	return IDLE_ANIM
-
-func _just_landed() -> bool:
-	return not previous_grounded and player.is_on_floor() and previous_velocity.y > 100
-
-func _should_play_death_animation() -> bool:
-	return false
-
-func _apply_animation_lean():
-	if current_animation == FALL_DEATH_ANIM or current_animation == SPAWN_ANIM:
-		target_rotation_degrees = 0.0
-		somersault_speed_degrees = 0.0
-		return
-		
-	if somersault_speed_degrees == 0.0:
-		match current_animation:
-			RUN_ANIM:
-				var lean_angle = -80.0
-				var movement_direction = sign(player.velocity.x)
-				if movement_direction != 0:
-					target_rotation_degrees = lean_angle * movement_direction
-				else:
-					target_rotation_degrees = 0.0
-			JUMP_ANIM:
-				var movement_direction = sign(player.velocity.x)
-				target_rotation_degrees = -5.0 * movement_direction if movement_direction != 0 else 0.0
-			FALL_ANIM:
-				var movement_direction = sign(player.velocity.x)
-				target_rotation_degrees = 5.0 * movement_direction if movement_direction != 0 else 0.0
-			WALL_SLIDE_ANIM:
-				target_rotation_degrees = -5.0 * sign(player.face_direction)
-			_:
-				target_rotation_degrees = 0.0
-
-func _update_sprite_rotation(delta: float):
-	if current_animation == FALL_DEATH_ANIM or current_animation == SPAWN_ANIM or current_animation == WALL_SLIDE_ANIM:
-		rotation_degrees = 0.0
-		somersault_speed_degrees = 0.0
-		target_rotation_degrees = 0.0
-		return
-	
-	if somersault_speed_degrees != 0.0:
-		rotation_degrees += somersault_speed_degrees * delta
-	else:
-		rotation_degrees = lerp_angle(rotation_degrees, target_rotation_degrees, 10.0 * delta)
-
-func play_animation(anim_name: String, lock_duration: float = -1.0) -> void:
-	#print("ANIM : ", anim_name, ' [frame: ', Engine.get_frames_drawn(), "] pos: ", player.position)
-	if not animator.has_animation(anim_name):
-		push_warning("Animation '%s' not found!" % anim_name)
-		return
-	
-	if animation_locked and current_animation in animation_priorities and anim_name in animation_priorities:
-		if animation_priorities[current_animation] > animation_priorities[anim_name]:
-			return
-	
-	if anim_name != SPAWN_ANIM:
-		animator.speed_scale = 1.0
-	current_animation = anim_name
-	animator.play(anim_name)
-	
-	var actual_lock_duration = lock_duration
-	if lock_duration < 0 and anim_name in default_lock_durations:
-		actual_lock_duration = default_lock_durations[anim_name]
-	elif lock_duration < 0:
-		actual_lock_duration = 0.0
-	
-	if actual_lock_duration > 0:
-		animation_locked = true
-		lock_timer = actual_lock_duration
-
-func _on_player_jumped(from_wall: bool) -> void:
-	animation_locked = false
-	play_animation(WALL_JUMP_ANIM if from_wall else JUMP_ANIM)
-	if from_wall:
-		_play_wall_jump_fx()
-	else:
-		_play_jump_fx()
-
-func _on_player_died() -> void:
-	is_dead = true
-	animation_locked = false
-	animator.stop()
-	animator.speed_scale = 1.0
-	play_animation(FALL_DEATH_ANIM)
-	_play_death_fx()
-	polygon.hide()
-	run_particles.emitting = false
-	wall_slide_particles.emitting = false
+func _stop_continuous_fx()->void:
+	run_particles.emitting=false;wall_particles.emitting=false
 	wall_slide_sfx.stop()
 
-func _on_player_respawned() -> void:
-	# No animation coroutines survive a retry and hide the new player.
-	is_dead = false
-	animation_locked = false
-	lock_timer = 0.0
-	animator.stop()
-	animator.speed_scale = 3.0
-	polygon.show()
-	rotation_degrees = 0.0
-	somersault_speed_degrees = 0.0
-	target_rotation_degrees = 0.0
-	previous_velocity = Vector2.ZERO
-	previous_grounded = false
-	previous_wall_sliding = false
-	somersault_trail.clear_points()
-	speed_trail.clear_points()
-	play_animation(SPAWN_ANIM)
-	_play_spawn_fx()
+func _update_continuous_fx(delta:float,grounded:bool)->void:
+	run_particles.emitting=grounded and visual_state in ["run","sprint"]
+	run_particles.direction=Vector2(-signf(player.velocity.x),0)
+	wall_particles.emitting=visual_state=="wall_slide"
+	if wall_particles.emitting:
+		wall_particles.position=Vector2(player._wall_contact_side*13,-10)
+		wall_particles.direction=Vector2(-player._wall_contact_side,1)
+		if not wall_slide_sfx.playing:wall_slide_sfx.play()
+	elif wall_slide_sfx.playing:wall_slide_sfx.stop()
+	trail_clock+=delta
+	if trail_clock>=.025:
+		trail_clock=0
+		_update_trail(roll_trail,somersault_active)
+		_update_trail(speed_trail,absf(player.velocity.x)>480 and visual_state in ["run","sprint","spring_launch"])
 
-func _on_animation_finished(anim_name: String) -> void:
-	if anim_name == SPAWN_ANIM:
-		animator.speed_scale = 1.0
-	# Only unlock if the finished animation is the current one
-	if anim_name == current_animation:
-		animation_locked = false
-		lock_timer = 0.0
+func _update_trail(trail:Line2D,active:bool)->void:
+	if active:
+		trail.add_point(player.global_position+Vector2(0,-6))
+		while trail.get_point_count()>7:trail.remove_point(0)
+	elif trail.get_point_count()>0:trail.remove_point(0)
+	trail.visible=trail.get_point_count()>1
 
-func _setup_animation_connections() -> void:
-	if animator and animator.has_signal("animation_finished"):
-		animator.animation_finished.connect(_on_animation_finished)
+func _clear_trails()->void:
+	for trail in [roll_trail,speed_trail]:trail.clear_points();trail.hide()
+
+func set_cube_fallback(value:bool)->void:
+	debug_cube=value;_apply_visual_mode()
+
+func _apply_visual_mode()->void:
+	sprite.visible=not debug_cube;cube.visible=debug_cube
+
+func _update_debug()->void:
+	debug_label.visible=show_visual_debug
+	if not show_visual_debug:return
+	debug_label.text="%s / %s [%d]\nvx %.0f  vy %.0f\nsquash %s  roll %s"%[visual_state,current_animation,sprite.frame,player.velocity.x,player.velocity.y,str(not squash_root.scale.is_equal_approx(Vector2.ONE)),str(somersault_active)]
+
+func _unhandled_key_input(event:InputEvent)->void:
+	if OS.is_debug_build() and event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode==KEY_F7:show_visual_debug=not show_visual_debug
+		if event.keycode==KEY_F8:set_cube_fallback(not debug_cube)
