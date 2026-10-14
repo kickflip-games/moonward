@@ -31,6 +31,7 @@ func activate_flag():
 	
 	_fire_fx.emitting = true
 	$Flag.color.a = 1
+	$Shrine.modulate = Color(1.25, 1.25, 1.25, 1)
 
 	
 	_sfx.play()

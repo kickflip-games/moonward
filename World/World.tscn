@@ -16,9 +16,9 @@
 
 [sub_resource type="Environment" id="Environment_c4j8x"]
 background_mode = 3
-glow_enabled = true
-glow_intensity = 2.27
-glow_bloom = 0.26
+glow_enabled = false
+glow_intensity = 0.25
+glow_bloom = 0.0
 
 [sub_resource type="Resource" id="Resource_21v8o"]
 script = ExtResource("16_hev0n")

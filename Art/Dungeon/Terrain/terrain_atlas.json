@@ -1,0 +1,3267 @@
+{
+  "source": "Art/StoneSheet/stone_sheet.png",
+  "source_sha256": "582f7d7c201dc8d1164e114c71f3a90ab266ec9eae0e54f6df1684474edb0b8a",
+  "tile_size": 72,
+  "body_y": 36,
+  "texture_region_size": [
+    72,
+    72
+  ],
+  "neighbor_order": [
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ],
+  "styles": [
+    {
+      "name": "moss",
+      "source_id": 0,
+      "terrain_set": 0,
+      "terrain_id": 0,
+      "atlas_size": [
+        576,
+        1152
+      ],
+      "tiles": [
+        {
+          "name": "mask_00",
+          "mask": 0,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_01",
+          "mask": 1,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_04",
+          "mask": 4,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_05",
+          "mask": 5,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_07",
+          "mask": 7,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_10",
+          "mask": 16,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_11",
+          "mask": 17,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_14",
+          "mask": 20,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_15",
+          "mask": 21,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_17",
+          "mask": 23,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_1c",
+          "mask": 28,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_1d",
+          "mask": 29,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_1f",
+          "mask": 31,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_40",
+          "mask": 64,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_41",
+          "mask": 65,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_44",
+          "mask": 68,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_45",
+          "mask": 69,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_47",
+          "mask": 71,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_50",
+          "mask": 80,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_51",
+          "mask": 81,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_54",
+          "mask": 84,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_55",
+          "mask": 85,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_57",
+          "mask": 87,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_5c",
+          "mask": 92,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_5d",
+          "mask": 93,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_5f",
+          "mask": 95,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_70",
+          "mask": 112,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_71",
+          "mask": 113,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_74",
+          "mask": 116,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_75",
+          "mask": 117,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_77",
+          "mask": 119,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_7c",
+          "mask": 124,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_7d",
+          "mask": 125,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_7f",
+          "mask": 127,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_c1",
+          "mask": 193,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_c5",
+          "mask": 197,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_c7",
+          "mask": 199,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_d1",
+          "mask": 209,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_d5",
+          "mask": 213,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_d7",
+          "mask": 215,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_dd",
+          "mask": 221,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_df",
+          "mask": 223,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_f1",
+          "mask": 241,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_f5",
+          "mask": 245,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_f7",
+          "mask": 247,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_fd",
+          "mask": 253,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_ff",
+          "mask": 255,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "interior_1",
+          "mask": 255,
+          "kind": "interior_variant",
+          "atlas_coords": [
+            7,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "interior_2",
+          "mask": 255,
+          "kind": "interior_variant",
+          "atlas_coords": [
+            0,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "up_45",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              36.0
+            ],
+            [
+              36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            72,
+            0
+          ],
+          "atlas_coords": [
+            1,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "down_45",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            0,
+            72
+          ],
+          "atlas_coords": [
+            2,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "up_gentle_low",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              36.0
+            ],
+            [
+              36.0,
+              0.0
+            ],
+            [
+              36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            72,
+            36
+          ],
+          "atlas_coords": [
+            3,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "up_gentle_high",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              0.0
+            ],
+            [
+              36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            36,
+            0
+          ],
+          "atlas_coords": [
+            4,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "down_gentle_high",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              0.0
+            ],
+            [
+              36.0,
+              36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            0,
+            36
+          ],
+          "atlas_coords": [
+            5,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "down_gentle_low",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              0.0
+            ],
+            [
+              36.0,
+              36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            36,
+            72
+          ],
+          "atlas_coords": [
+            6,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "ceiling_up_45",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              -36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            72,
+            0
+          ],
+          "atlas_coords": [
+            7,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "ceiling_down_45",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            0,
+            72
+          ],
+          "atlas_coords": [
+            0,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            1008,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "flat_transition",
+          "kind": "manual_transition",
+          "collision": [
+            [
+              -36,
+              -36
+            ],
+            [
+              36,
+              -36
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              -36,
+              36
+            ]
+          ],
+          "atlas_coords": [
+            1,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            1008,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "wall_transition_left",
+          "kind": "manual_transition",
+          "collision": [
+            [
+              -36,
+              -36
+            ],
+            [
+              36,
+              -36
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              -36,
+              36
+            ]
+          ],
+          "atlas_coords": [
+            2,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            1008,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "wall_transition_right",
+          "kind": "manual_transition",
+          "collision": [
+            [
+              -36,
+              -36
+            ],
+            [
+              36,
+              -36
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              -36,
+              36
+            ]
+          ],
+          "atlas_coords": [
+            3,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            1008,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "bare_top",
+          "kind": "manual_transition",
+          "collision": [
+            [
+              -36,
+              -36
+            ],
+            [
+              36,
+              -36
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              -36,
+              36
+            ]
+          ],
+          "atlas_coords": [
+            4,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            1008,
+            72,
+            144
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ice",
+      "source_id": 1,
+      "terrain_set": 1,
+      "terrain_id": 0,
+      "atlas_size": [
+        576,
+        1152
+      ],
+      "tiles": [
+        {
+          "name": "mask_00",
+          "mask": 0,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_01",
+          "mask": 1,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_04",
+          "mask": 4,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_05",
+          "mask": 5,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_07",
+          "mask": 7,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_10",
+          "mask": 16,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_11",
+          "mask": 17,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_14",
+          "mask": 20,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            0
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            0,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_15",
+          "mask": 21,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_17",
+          "mask": 23,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_1c",
+          "mask": 28,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_1d",
+          "mask": 29,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_1f",
+          "mask": 31,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_40",
+          "mask": 64,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_41",
+          "mask": 65,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_44",
+          "mask": 68,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            2
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            144,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_45",
+          "mask": 69,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_47",
+          "mask": 71,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_50",
+          "mask": 80,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_51",
+          "mask": 81,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_54",
+          "mask": 84,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_55",
+          "mask": 85,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_57",
+          "mask": 87,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_5c",
+          "mask": 92,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            4
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            288,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_5d",
+          "mask": 93,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_5f",
+          "mask": 95,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_70",
+          "mask": 112,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_71",
+          "mask": 113,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_74",
+          "mask": 116,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_75",
+          "mask": 117,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_77",
+          "mask": 119,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_7c",
+          "mask": 124,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            6
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            432,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_7d",
+          "mask": 125,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_7f",
+          "mask": 127,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_c1",
+          "mask": 193,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_c5",
+          "mask": 197,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_c7",
+          "mask": 199,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_d1",
+          "mask": 209,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_d5",
+          "mask": 213,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_d7",
+          "mask": 215,
+          "kind": "terrain",
+          "atlas_coords": [
+            7,
+            8
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            576,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_dd",
+          "mask": 221,
+          "kind": "terrain",
+          "atlas_coords": [
+            0,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_df",
+          "mask": 223,
+          "kind": "terrain",
+          "atlas_coords": [
+            1,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_f1",
+          "mask": 241,
+          "kind": "terrain",
+          "atlas_coords": [
+            2,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_f5",
+          "mask": 245,
+          "kind": "terrain",
+          "atlas_coords": [
+            3,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_f7",
+          "mask": 247,
+          "kind": "terrain",
+          "atlas_coords": [
+            4,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_fd",
+          "mask": 253,
+          "kind": "terrain",
+          "atlas_coords": [
+            5,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "mask_ff",
+          "mask": 255,
+          "kind": "terrain",
+          "atlas_coords": [
+            6,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "interior_1",
+          "mask": 255,
+          "kind": "interior_variant",
+          "atlas_coords": [
+            7,
+            10
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            720,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "interior_2",
+          "mask": 255,
+          "kind": "interior_variant",
+          "atlas_coords": [
+            0,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "up_45",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              36.0
+            ],
+            [
+              36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            72,
+            0
+          ],
+          "atlas_coords": [
+            1,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "down_45",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            0,
+            72
+          ],
+          "atlas_coords": [
+            2,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "up_gentle_low",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              36.0
+            ],
+            [
+              36.0,
+              0.0
+            ],
+            [
+              36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            72,
+            36
+          ],
+          "atlas_coords": [
+            3,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "up_gentle_high",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              0.0
+            ],
+            [
+              36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            36,
+            0
+          ],
+          "atlas_coords": [
+            4,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "down_gentle_high",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              0.0
+            ],
+            [
+              36.0,
+              36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            0,
+            36
+          ],
+          "atlas_coords": [
+            5,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            360,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "down_gentle_low",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              0.0
+            ],
+            [
+              36.0,
+              36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            36,
+            72
+          ],
+          "atlas_coords": [
+            6,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            432,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "ceiling_up_45",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              -36.0
+            ],
+            [
+              -36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            72,
+            0
+          ],
+          "atlas_coords": [
+            7,
+            12
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            504,
+            864,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "ceiling_down_45",
+          "kind": "slope",
+          "collision": [
+            [
+              -36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              -36.0
+            ],
+            [
+              36.0,
+              36.0
+            ]
+          ],
+          "endpoints": [
+            0,
+            72
+          ],
+          "atlas_coords": [
+            0,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            0,
+            1008,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "flat_transition",
+          "kind": "manual_transition",
+          "collision": [
+            [
+              -36,
+              -36
+            ],
+            [
+              36,
+              -36
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              -36,
+              36
+            ]
+          ],
+          "atlas_coords": [
+            1,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            72,
+            1008,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "wall_transition_left",
+          "kind": "manual_transition",
+          "collision": [
+            [
+              -36,
+              -36
+            ],
+            [
+              36,
+              -36
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              -36,
+              36
+            ]
+          ],
+          "atlas_coords": [
+            2,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            144,
+            1008,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "wall_transition_right",
+          "kind": "manual_transition",
+          "collision": [
+            [
+              -36,
+              -36
+            ],
+            [
+              36,
+              -36
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              -36,
+              36
+            ]
+          ],
+          "atlas_coords": [
+            3,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            216,
+            1008,
+            72,
+            144
+          ]
+        },
+        {
+          "name": "bare_top",
+          "kind": "manual_transition",
+          "collision": [
+            [
+              -36,
+              -36
+            ],
+            [
+              36,
+              -36
+            ],
+            [
+              36,
+              36
+            ],
+            [
+              -36,
+              36
+            ]
+          ],
+          "atlas_coords": [
+            4,
+            14
+          ],
+          "size_in_atlas": [
+            1,
+            2
+          ],
+          "pixel_rect": [
+            288,
+            1008,
+            72,
+            144
+          ]
+        }
+      ]
+    }
+  ],
+  "decorations": [
+    {
+      "name": "wood_moss",
+      "source_rect": [
+        25,
+        370,
+        80,
+        80
+      ],
+      "atlas_coords": [
+        0,
+        0
+      ],
+      "size_in_atlas": [
+        2,
+        2
+      ],
+      "pixel_rect": [
+        0,
+        0,
+        144,
+        144
+      ]
+    },
+    {
+      "name": "wood_ice",
+      "source_rect": [
+        787,
+        370,
+        80,
+        80
+      ],
+      "atlas_coords": [
+        2,
+        0
+      ],
+      "size_in_atlas": [
+        2,
+        2
+      ],
+      "pixel_rect": [
+        144,
+        0,
+        144,
+        144
+      ]
+    },
+    {
+      "name": "lantern_moss",
+      "source_rect": [
+        367,
+        452,
+        80,
+        80
+      ],
+      "atlas_coords": [
+        4,
+        0
+      ],
+      "size_in_atlas": [
+        2,
+        2
+      ],
+      "pixel_rect": [
+        288,
+        0,
+        144,
+        144
+      ]
+    },
+    {
+      "name": "lantern_ice",
+      "source_rect": [
+        1132,
+        452,
+        80,
+        80
+      ],
+      "atlas_coords": [
+        6,
+        0
+      ],
+      "size_in_atlas": [
+        2,
+        2
+      ],
+      "pixel_rect": [
+        432,
+        0,
+        144,
+        144
+      ]
+    },
+    {
+      "name": "moon_banner_moss",
+      "source_rect": [
+        197,
+        536,
+        80,
+        160
+      ],
+      "atlas_coords": [
+        8,
+        0
+      ],
+      "size_in_atlas": [
+        2,
+        3
+      ],
+      "pixel_rect": [
+        576,
+        0,
+        144,
+        216
+      ]
+    },
+    {
+      "name": "moon_banner_ice",
+      "source_rect": [
+        960,
+        536,
+        80,
+        160
+      ],
+      "atlas_coords": [
+        10,
+        0
+      ],
+      "size_in_atlas": [
+        2,
+        3
+      ],
+      "pixel_rect": [
+        720,
+        0,
+        144,
+        216
+      ]
+    },
+    {
+      "name": "window_moss",
+      "source_rect": [
+        25,
+        704,
+        80,
+        114
+      ],
+      "atlas_coords": [
+        0,
+        3
+      ],
+      "size_in_atlas": [
+        2,
+        2
+      ],
+      "pixel_rect": [
+        0,
+        216,
+        144,
+        144
+      ]
+    },
+    {
+      "name": "moon_window_ice",
+      "source_rect": [
+        873,
+        704,
+        80,
+        114
+      ],
+      "atlas_coords": [
+        2,
+        3
+      ],
+      "size_in_atlas": [
+        2,
+        2
+      ],
+      "pixel_rect": [
+        144,
+        216,
+        144,
+        144
+      ]
+    },
+    {
+      "name": "pillar_moss",
+      "source_rect": [
+        282,
+        704,
+        80,
+        156
+      ],
+      "atlas_coords": [
+        4,
+        3
+      ],
+      "size_in_atlas": [
+        2,
+        3
+      ],
+      "pixel_rect": [
+        288,
+        216,
+        144,
+        216
+      ]
+    },
+    {
+      "name": "pillar_ice",
+      "source_rect": [
+        1047,
+        704,
+        80,
+        156
+      ],
+      "atlas_coords": [
+        6,
+        3
+      ],
+      "size_in_atlas": [
+        2,
+        3
+      ],
+      "pixel_rect": [
+        432,
+        216,
+        144,
+        216
+      ]
+    },
+    {
+      "name": "shrine_moss",
+      "source_rect": [
+        620,
+        750,
+        165,
+        112
+      ],
+      "atlas_coords": [
+        8,
+        3
+      ],
+      "size_in_atlas": [
+        3,
+        2
+      ],
+      "pixel_rect": [
+        576,
+        216,
+        216,
+        144
+      ]
+    },
+    {
+      "name": "shrine_ice",
+      "source_rect": [
+        1290,
+        750,
+        144,
+        112
+      ],
+      "atlas_coords": [
+        0,
+        6
+      ],
+      "size_in_atlas": [
+        2,
+        2
+      ],
+      "pixel_rect": [
+        0,
+        432,
+        144,
+        144
+      ]
+    },
+    {
+      "name": "moss_surface_overhang",
+      "source_rect": null,
+      "atlas_coords": [
+        2,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        144,
+        432,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "ice_surface_overhang",
+      "source_rect": null,
+      "atlas_coords": [
+        3,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        216,
+        432,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "hanging_vine",
+      "source_rect": [
+        205,
+        49,
+        20,
+        58
+      ],
+      "atlas_coords": [
+        4,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        288,
+        432,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "wall_chain",
+      "source_rect": [
+        201,
+        456,
+        72,
+        68
+      ],
+      "atlas_coords": [
+        5,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        360,
+        432,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "moss_arch_left",
+      "source_rect": [
+        29,
+        118,
+        72,
+        72
+      ],
+      "atlas_coords": [
+        6,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        432,
+        432,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "moss_arch_right",
+      "source_rect": [
+        115,
+        118,
+        72,
+        72
+      ],
+      "atlas_coords": [
+        7,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        504,
+        432,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "ice_arch_left",
+      "source_rect": [
+        791,
+        118,
+        72,
+        72
+      ],
+      "atlas_coords": [
+        8,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        576,
+        432,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "ice_arch_right",
+      "source_rect": [
+        877,
+        118,
+        72,
+        72
+      ],
+      "atlas_coords": [
+        9,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        648,
+        432,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "masonry_crack",
+      "source_rect": [
+        310,
+        309,
+        18,
+        22
+      ],
+      "atlas_coords": [
+        10,
+        6
+      ],
+      "size_in_atlas": [
+        1,
+        1
+      ],
+      "pixel_rect": [
+        720,
+        432,
+        72,
+        72
+      ]
+    }
+  ],
+  "decoration_atlas_size": [
+    864,
+    576
+  ]
+}

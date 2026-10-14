@@ -35,7 +35,20 @@ func run() -> void:
 		["09_tower_moving_shaft", Vector2(-1790, -2720), Vector2(-1745, -2700)],
 		["10_tower_moving_hazards", Vector2(-1060, -7820), Vector2(-1500, -7753)],
 		["11_tower_turrets", Vector2(-1120, -7240), Vector2(-1300, -7180)]]
+	if args.has("--art-details"):
+		var platform_origin: Vector2 = world.get_node("Map/Platforms").global_position
+		shots.append_array([
+			["12_tower_platforms", platform_origin + Vector2(700, 380), platform_origin + Vector2(890, 545)],
+			["13_tower_springboard", platform_origin + Vector2(1770, -5480), platform_origin + Vector2(1670, -5450)]])
+	if args.has("--blackspire-review"):
+		var rotor:Node2D=world.get_node("Map/Platforms/CirclePlatform")
+		var fragile:Node2D=world.get_node("Map/Platforms/BreakablePlatform6")
+		shots.append_array([
+			["14_rotating_mechanism",rotor.global_position+Vector2(0,-90),rotor.global_position+Vector2(180,-110)],
+			["15_breakable_section",fragile.global_position+Vector2(-70,-120),fragile.global_position+Vector2(0,-80)],
+			["16_summit",Vector2(-1032,-10480),Vector2(-1032,-10042),Vector2(.71,.71)]])
 	for shot in shots:
+		camera.zoom=shot[3] if shot.size()>3 else Vector2.ONE
 		camera.position = shot[1]
 		player.position = shot[2]
 		camera.reset_physics_interpolation()

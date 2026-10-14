@@ -1,0 +1,1822 @@
+[
+  {
+    "name": "moss_centre",
+    "source_rect": [
+      197,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_detail",
+    "source_rect": [
+      282,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_top_left",
+    "source_rect": [
+      25,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_top",
+    "source_rect": [
+      197,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_top_right",
+    "source_rect": [
+      367,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_left",
+    "source_rect": [
+      25,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_right",
+    "source_rect": [
+      367,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_bottom_left",
+    "source_rect": [
+      25,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_bottom",
+    "source_rect": [
+      282,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_bottom_right",
+    "source_rect": [
+      367,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "moss_slope_up_right",
+    "source_rect": [
+      535,
+      30,
+      80,
+      80
+    ],
+    "classification": "slope"
+  },
+  {
+    "name": "moss_slope_down_right",
+    "source_rect": [
+      451,
+      30,
+      80,
+      80
+    ],
+    "classification": "slope"
+  },
+  {
+    "name": "moss_ceiling_right",
+    "source_rect": [
+      620,
+      198,
+      80,
+      80
+    ],
+    "classification": "slope"
+  },
+  {
+    "name": "moss_ceiling_left",
+    "source_rect": [
+      535,
+      198,
+      80,
+      80
+    ],
+    "classification": "slope"
+  },
+  {
+    "name": "ice_centre",
+    "source_rect": [
+      1132,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_detail",
+    "source_rect": [
+      1132,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_top_left",
+    "source_rect": [
+      787,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_top",
+    "source_rect": [
+      960,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_top_right",
+    "source_rect": [
+      1132,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_left",
+    "source_rect": [
+      960,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_right",
+    "source_rect": [
+      1216,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_bottom_left",
+    "source_rect": [
+      1132,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_bottom",
+    "source_rect": [
+      787,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_bottom_right",
+    "source_rect": [
+      1047,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate"
+  },
+  {
+    "name": "ice_slope_up_right",
+    "source_rect": [
+      1290,
+      30,
+      80,
+      80
+    ],
+    "classification": "slope"
+  },
+  {
+    "name": "ice_slope_down_right",
+    "source_rect": [
+      1216,
+      30,
+      80,
+      80
+    ],
+    "classification": "slope"
+  },
+  {
+    "name": "ice_ceiling_left",
+    "source_rect": [
+      1290,
+      198,
+      80,
+      80
+    ],
+    "classification": "slope"
+  },
+  {
+    "name": "wood_moss",
+    "source_rect": [
+      25,
+      370,
+      80,
+      80
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "wood_ice",
+    "source_rect": [
+      787,
+      370,
+      80,
+      80
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "lantern_moss",
+    "source_rect": [
+      367,
+      452,
+      80,
+      80
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "lantern_ice",
+    "source_rect": [
+      1132,
+      452,
+      80,
+      80
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "moon_banner_moss",
+    "source_rect": [
+      197,
+      536,
+      80,
+      160
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "moon_banner_ice",
+    "source_rect": [
+      960,
+      536,
+      80,
+      160
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "window_moss",
+    "source_rect": [
+      25,
+      704,
+      80,
+      114
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "moon_window_ice",
+    "source_rect": [
+      873,
+      704,
+      80,
+      114
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "pillar_moss",
+    "source_rect": [
+      282,
+      704,
+      80,
+      156
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "pillar_ice",
+    "source_rect": [
+      1047,
+      704,
+      80,
+      156
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "shrine_moss",
+    "source_rect": [
+      620,
+      750,
+      165,
+      112
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "shrine_ice",
+    "source_rect": [
+      1290,
+      750,
+      144,
+      112
+    ],
+    "classification": "decoration"
+  },
+  {
+    "name": "spikes_moss",
+    "source_rect": [
+      25,
+      872,
+      80,
+      80
+    ],
+    "classification": "hazard_art_no_damage_behaviour"
+  },
+  {
+    "name": "spikes_ice",
+    "source_rect": [
+      787,
+      872,
+      80,
+      80
+    ],
+    "classification": "hazard_art_no_damage_behaviour"
+  },
+  {
+    "name": "raw_00_01",
+    "source_rect": [
+      111,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_00_03",
+    "source_rect": [
+      282,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_00_07",
+    "source_rect": [
+      620,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_00_08",
+    "source_rect": [
+      705,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_00_10",
+    "source_rect": [
+      873,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_00_12",
+    "source_rect": [
+      1047,
+      30,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_00_16",
+    "source_rect": [
+      1376,
+      30,
+      72,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_00",
+    "source_rect": [
+      25,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_01",
+    "source_rect": [
+      111,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_02",
+    "source_rect": [
+      197,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_03",
+    "source_rect": [
+      282,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_04",
+    "source_rect": [
+      367,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_05",
+    "source_rect": [
+      451,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_06",
+    "source_rect": [
+      535,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_07",
+    "source_rect": [
+      620,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_08",
+    "source_rect": [
+      705,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_09",
+    "source_rect": [
+      787,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_10",
+    "source_rect": [
+      873,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_11",
+    "source_rect": [
+      960,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_12",
+    "source_rect": [
+      1047,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_14",
+    "source_rect": [
+      1216,
+      114,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_01_16",
+    "source_rect": [
+      1376,
+      114,
+      72,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_02_01",
+    "source_rect": [
+      111,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_02_05",
+    "source_rect": [
+      451,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_02_08",
+    "source_rect": [
+      705,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_02_09",
+    "source_rect": [
+      787,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_02_10",
+    "source_rect": [
+      873,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_02_12",
+    "source_rect": [
+      1047,
+      198,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_02_16",
+    "source_rect": [
+      1376,
+      198,
+      72,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_01",
+    "source_rect": [
+      111,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_02",
+    "source_rect": [
+      197,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_05",
+    "source_rect": [
+      451,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_06",
+    "source_rect": [
+      535,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_07",
+    "source_rect": [
+      620,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_08",
+    "source_rect": [
+      705,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_10",
+    "source_rect": [
+      873,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_11",
+    "source_rect": [
+      960,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_14",
+    "source_rect": [
+      1216,
+      282,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_03_16",
+    "source_rect": [
+      1376,
+      282,
+      72,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_04_01",
+    "source_rect": [
+      111,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_02",
+    "source_rect": [
+      197,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_03",
+    "source_rect": [
+      282,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_04",
+    "source_rect": [
+      367,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_05",
+    "source_rect": [
+      451,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_06",
+    "source_rect": [
+      535,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_07",
+    "source_rect": [
+      620,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_08",
+    "source_rect": [
+      705,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_10",
+    "source_rect": [
+      873,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_11",
+    "source_rect": [
+      960,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_12",
+    "source_rect": [
+      1047,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_13",
+    "source_rect": [
+      1132,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_14",
+    "source_rect": [
+      1216,
+      370,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_04_16",
+    "source_rect": [
+      1376,
+      370,
+      72,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_00",
+    "source_rect": [
+      25,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_01",
+    "source_rect": [
+      111,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_02",
+    "source_rect": [
+      197,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_03",
+    "source_rect": [
+      282,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_05",
+    "source_rect": [
+      451,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_06",
+    "source_rect": [
+      535,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_07",
+    "source_rect": [
+      620,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_08",
+    "source_rect": [
+      705,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_09",
+    "source_rect": [
+      787,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_10",
+    "source_rect": [
+      873,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_11",
+    "source_rect": [
+      960,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_12",
+    "source_rect": [
+      1047,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_14",
+    "source_rect": [
+      1216,
+      452,
+      80,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_05_16",
+    "source_rect": [
+      1376,
+      452,
+      72,
+      80
+    ],
+    "classification": "architectural_trim_non_colliding"
+  },
+  {
+    "name": "raw_06_00",
+    "source_rect": [
+      25,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_01",
+    "source_rect": [
+      111,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_03",
+    "source_rect": [
+      282,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_04",
+    "source_rect": [
+      367,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_05",
+    "source_rect": [
+      451,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_06",
+    "source_rect": [
+      535,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_07",
+    "source_rect": [
+      620,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_08",
+    "source_rect": [
+      705,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_09",
+    "source_rect": [
+      787,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_10",
+    "source_rect": [
+      873,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_12",
+    "source_rect": [
+      1047,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_13",
+    "source_rect": [
+      1132,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_14",
+    "source_rect": [
+      1216,
+      536,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_06_16",
+    "source_rect": [
+      1376,
+      536,
+      72,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_00",
+    "source_rect": [
+      25,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_01",
+    "source_rect": [
+      111,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_03",
+    "source_rect": [
+      282,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_04",
+    "source_rect": [
+      367,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_05",
+    "source_rect": [
+      451,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_06",
+    "source_rect": [
+      535,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_07",
+    "source_rect": [
+      620,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_08",
+    "source_rect": [
+      705,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_09",
+    "source_rect": [
+      787,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_10",
+    "source_rect": [
+      873,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_12",
+    "source_rect": [
+      1047,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_13",
+    "source_rect": [
+      1132,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_14",
+    "source_rect": [
+      1216,
+      620,
+      80,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_07_16",
+    "source_rect": [
+      1376,
+      620,
+      72,
+      80
+    ],
+    "classification": "wall_or_banner_fragment_review_manually"
+  },
+  {
+    "name": "raw_08_01",
+    "source_rect": [
+      111,
+      704,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_08_02",
+    "source_rect": [
+      197,
+      704,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_08_04",
+    "source_rect": [
+      367,
+      704,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_08_05",
+    "source_rect": [
+      451,
+      704,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_08_06",
+    "source_rect": [
+      535,
+      704,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_08_09",
+    "source_rect": [
+      787,
+      704,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_08_11",
+    "source_rect": [
+      960,
+      704,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_08_13",
+    "source_rect": [
+      1132,
+      704,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_09_01",
+    "source_rect": [
+      111,
+      788,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_09_02",
+    "source_rect": [
+      197,
+      788,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_09_04",
+    "source_rect": [
+      367,
+      788,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_09_05",
+    "source_rect": [
+      451,
+      788,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_09_06",
+    "source_rect": [
+      535,
+      788,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_09_09",
+    "source_rect": [
+      787,
+      788,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_09_11",
+    "source_rect": [
+      960,
+      788,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_09_13",
+    "source_rect": [
+      1132,
+      788,
+      80,
+      80
+    ],
+    "classification": "architecture_decoration_non_colliding"
+  },
+  {
+    "name": "raw_10_01",
+    "source_rect": [
+      111,
+      872,
+      80,
+      80
+    ],
+    "classification": "hazard_art_no_damage_behaviour"
+  },
+  {
+    "name": "raw_10_02",
+    "source_rect": [
+      197,
+      872,
+      80,
+      80
+    ],
+    "classification": "chains_decoration_non_colliding"
+  },
+  {
+    "name": "raw_10_03",
+    "source_rect": [
+      282,
+      872,
+      80,
+      80
+    ],
+    "classification": "chains_decoration_non_colliding"
+  },
+  {
+    "name": "raw_10_04",
+    "source_rect": [
+      367,
+      872,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_10_05",
+    "source_rect": [
+      451,
+      872,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_10_06",
+    "source_rect": [
+      535,
+      872,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_10_07",
+    "source_rect": [
+      620,
+      872,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_10_08",
+    "source_rect": [
+      705,
+      872,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_10_10",
+    "source_rect": [
+      873,
+      872,
+      80,
+      80
+    ],
+    "classification": "hazard_art_no_damage_behaviour"
+  },
+  {
+    "name": "raw_10_11",
+    "source_rect": [
+      960,
+      872,
+      80,
+      80
+    ],
+    "classification": "chains_decoration_non_colliding"
+  },
+  {
+    "name": "raw_10_12",
+    "source_rect": [
+      1047,
+      872,
+      80,
+      80
+    ],
+    "classification": "chains_decoration_non_colliding"
+  },
+  {
+    "name": "raw_10_13",
+    "source_rect": [
+      1132,
+      872,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_10_14",
+    "source_rect": [
+      1216,
+      872,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_10_16",
+    "source_rect": [
+      1376,
+      872,
+      72,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_00",
+    "source_rect": [
+      25,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_01",
+    "source_rect": [
+      111,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_02",
+    "source_rect": [
+      197,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_03",
+    "source_rect": [
+      282,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_04",
+    "source_rect": [
+      367,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_05",
+    "source_rect": [
+      451,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_06",
+    "source_rect": [
+      535,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_07",
+    "source_rect": [
+      620,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_08",
+    "source_rect": [
+      705,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_09",
+    "source_rect": [
+      787,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_10",
+    "source_rect": [
+      873,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_11",
+    "source_rect": [
+      960,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_12",
+    "source_rect": [
+      1047,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_13",
+    "source_rect": [
+      1132,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_14",
+    "source_rect": [
+      1216,
+      952,
+      80,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  },
+  {
+    "name": "raw_11_16",
+    "source_rect": [
+      1376,
+      952,
+      72,
+      80
+    ],
+    "classification": "terrain_candidate_requires_boundary_review"
+  }
+]

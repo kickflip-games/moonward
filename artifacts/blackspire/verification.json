@@ -1,0 +1,50 @@
+{
+  "baseline_commit": "e11efb8",
+  "branch": "blackspire-visual-overhaul",
+  "date": "2026-10-15",
+  "godot_checks": {
+    "4.5.stable": {
+      "checks": 2533,
+      "failures": 0
+    },
+    "4.8.dev6": {
+      "checks": 2533,
+      "failures": 0
+    }
+  },
+  "blackspire_checks_included": 113,
+  "python_asset_test_cases": 4,
+  "protected_git_blob_hashes": {
+    "Player/Player.gd": "85c2a5eb387503e21bcda733e8deb4b892281df6",
+    "Platforms/MovingPlatform.gd": "23df552dab07b532dfbb76aacb2a9228e4dabc3d",
+    "Platforms/breakable/breakable_platform.gd": "c808dbc1041eb39a214dd6eb87eff943e8e07eac",
+    "Platforms/bouncy/bouncy_platform.gd": "5e04ef3be2aba9febb11ccd6549936db06b908c6",
+    "Globals/CheckpointManager.gd": "94e3fe2c9a3f5ad781d1cb905f20778414a5f54c",
+    "Globals/HeightTracker.gd": "3c71c21434cf3782bc49494a5e517d9da3d2b703",
+    "World/Map/map.tscn": "45400b93c808f143aa0cec56835b6bef253df116",
+    "Checkpoint/checkpoint.gd": "32263049a9e5d6953988c78654c6dc39fe7d1877",
+    "Platforms/CirclePlatform.gd": "3505707093fbcd37eddaded67861ca5fe2f89b18",
+    "Enemies/Turret/turret.gd": "d05b5c08f04a17756e9989de188851c65a58bd31"
+  },
+  "main_map_byte_identical": true,
+  "source_originals_unchanged": true,
+  "visual_evidence": {
+    "paired_tower_views": 9,
+    "test_section_views": 3,
+    "scripted_movement_clips": 3
+  },
+  "web": {
+    "export_engine": "4.8.dev6",
+    "browser": "desktop in-app browser",
+    "render_and_run_jump_smoke_passed": true,
+    "console_warnings_errors_during_smoke": 0
+  },
+  "limitations": [
+    "No unassisted full-tower completion",
+    "No human feel playtest",
+    "No interactive editor terrain painting test",
+    "No physical mobile device test",
+    "No Godot 4.5 web export templates available",
+    "Headless certificate/interpolation/teardown diagnostics remain"
+  ]
+}

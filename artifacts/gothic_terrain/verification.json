@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-14",
+  "branch": "gothic-terrain-production",
+  "base_commit": "8b961fa",
+  "tests": {
+    "godot_4_8_total": 2420,
+    "godot_4_6_gothic": 1798,
+    "failures": 0
+  },
+  "source_sha256": "582f7d7c201dc8d1164e114c71f3a90ab266ec9eae0e54f6df1684474edb0b8a",
+  "protected_files_unchanged": {
+    "World/Map/map.tscn": "45400b93c808f143aa0cec56835b6bef253df116",
+    "World/World.tscn": "5334859f7e2e0047136c43936fbeaa4dea7e8a36",
+    "Player/Player.gd": "85c2a5eb387503e21bcda733e8deb4b892281df6",
+    "project.godot": "9087a4d8db962c4c1eec38bfbde5ae958011d89a"
+  },
+  "visual_test": "Godot-rendered screenshots inspected",
+  "manual_editor_painting": "not completed",
+  "human_route_playthrough": "not completed",
+  "godot_4_5": "not installed",
+  "known_engine_diagnostics": [
+    "macOS certificate access",
+    "headless resource and ObjectDB teardown"
+  ]
+}

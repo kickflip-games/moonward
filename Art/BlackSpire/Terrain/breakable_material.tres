@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+[ext_resource type="Shader" path="res://Art/BlackSpire/surface.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://Art/BlackSpire/Source/Medieval_tiles_free_2.0.png" id="2"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/sheet = ExtResource("2")
+shader_parameter/region = Vector4(736, 304, 48, 10)
+shader_parameter/bounds = Vector4(-75.62, -9.885, 151.24, 19.77)

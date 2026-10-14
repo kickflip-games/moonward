@@ -1,0 +1,74 @@
+[
+  {
+    "location": "08_tower_start",
+    "comparison": "08_tower_start_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  },
+  {
+    "location": "09_tower_moving_shaft",
+    "comparison": "09_tower_moving_shaft_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  },
+  {
+    "location": "10_tower_moving_hazards",
+    "comparison": "10_tower_moving_hazards_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  },
+  {
+    "location": "11_tower_turrets",
+    "comparison": "11_tower_turrets_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  },
+  {
+    "location": "12_tower_platforms",
+    "comparison": "12_tower_platforms_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  },
+  {
+    "location": "13_tower_springboard",
+    "comparison": "13_tower_springboard_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  },
+  {
+    "location": "14_rotating_mechanism",
+    "comparison": "14_rotating_mechanism_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  },
+  {
+    "location": "15_breakable_section",
+    "comparison": "15_breakable_section_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  },
+  {
+    "location": "16_summit",
+    "comparison": "16_summit_comparison.png",
+    "matching_size": [
+      1152,
+      648
+    ]
+  }
+]

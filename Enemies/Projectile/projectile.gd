@@ -9,9 +9,14 @@ extends CharacterBody2D
 @export var lifetime: float = 4.0
 @onready var shatter_particles: CPUParticles2D = $ShatterParticles
 @onready var sprite: Node2D = $Triangle
+const SURFACE = preload("res://Art/BlackSpire/surface_material.gd")
+
 var target: Node2D
 var age := 0.0
 var shattered := false
+
+func _ready() -> void:
+	SURFACE.skin(sprite, SURFACE.SPIKE, true)
 
 func reset(homing: bool, strength: float, speed: float, new_target: Node2D) -> void:
 	_homing_strength = strength
