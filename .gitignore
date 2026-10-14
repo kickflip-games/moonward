@@ -73,3 +73,6 @@ artifacts/stone_sheet/output/
 
 # Gothic terrain logs, builds and raw development captures
 artifacts/gothic_terrain/output/
+
+# BlackSpire raw captures, recordings, engine logs and temporary web builds
+artifacts/blackspire/output/
