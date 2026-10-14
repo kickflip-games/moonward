@@ -96,6 +96,28 @@ func run()->void:
 			expected+=1
 			alignment=alignment and geometry.to_global(geometry.map_to_local(cell)).distance_to(visual.to_global(visual.map_to_local(cell)))<.01
 	check(alignment and visual.get_used_cells().size()==expected,"Every main solid cell remains aligned")
+	for at in RENDERER.SLOPES:
+		var raw:PackedVector2Array=geometry.tile_set.get_source(0).get_tile_data(at,0).get_collision_polygon_points(0,0)
+		var points:=RENDERER.visual_polygon(raw);var area:=0.0
+		for i in points.size():area+=points[i].cross(points[(i+1)%points.size()])
+		check(area>0 and raw.size()==points.size(),"Outline faces into solid on slope %s"%str(at))
+	var sheet:Image=RENDERER.EDGES.SHEET.get_image()
+	for shape in [1,2,3,4]:
+		var crop:=Vector2i(688,48) if shape in [1,4] else Vector2i(736,16)
+		var form:=RENDERER.EDGES.slope_draw_transform(Rect2(0,0,32,32),shape)
+		var a:=Vector2(0,32) if shape in [1,4] else Vector2.ZERO
+		var b:=Vector2(32,0) if shape in [1,4] else Vector2(32,32)
+		var valid:=true;var pixels:=0;var minimum_distance:=INF
+		for y in 16:
+			for x in 16:
+				var color:=sheet.get_pixelv(crop+Vector2i(x,y))
+				if color.a>.5 and color.r>color.g*1.4:
+					pixels+=1
+					var point:Vector2=form*(Vector2(x+.5,y+.5)*2)
+					var inward:float=[point.x+point.y-32,point.y-point.x,point.x-point.y,32-point.x-point.y][shape-1]
+					valid=valid and inward>=-1
+					minimum_distance=minf(minimum_distance,Geometry2D.get_closest_point_to_segment(point,a,b).distance_to(point))
+		check(valid and pixels>0 and minimum_distance<4,"Source cap pixels follow actual floor/ceiling diagonal %d"%shape)
 	RENDERER.apply(geometry)
 	check(signature(geometry)==before,"Style application preserves every original collision and hazard cell")
 	check(world.get_node_or_null("Map/CavernTerrain")==null,"Old Gothic renderer is inactive")

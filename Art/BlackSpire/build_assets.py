@@ -33,7 +33,7 @@ for mask in range(16):
  if not mask&1:im.alpha_composite(crop(tiles,CAP_RIGHT),(18,0))
  images.append((im,dict(name=f"sides_{mask:02x}",mask=mask,kind="terrain",collision=[[-12,-12],[12,-12],[12,12],[-12,12]])))
 # Exact 45-degree and original 1:3 roof grades. Original slope strokes are crops.
-slopes=[("up_45",24,0,(688,40,24,24)),("down_45",0,24,(738,16,24,24)),
+slopes=[("up_45",24,0,(688,40,24,24)),("down_45",0,24,(736,16,24,24)),
  ("up_gentle_low",24,16,(208,80,24,24)),("up_gentle_middle",16,8,(232,80,24,24)),
  ("up_gentle_high",8,0,(256,80,24,24)),
  ("down_gentle_high",0,8,(400,56,24,24)),("down_gentle_middle",8,16,(424,56,24,24)),

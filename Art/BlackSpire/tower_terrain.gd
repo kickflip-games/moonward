@@ -8,6 +8,11 @@ static func key(a:Vector2,b:Vector2)->String:
 	if x.x>y.x or (x.x==y.x and x.y>y.y):
 		var swap:=x;x=y;y=swap
 	return "%d,%d/%d,%d"%[x.x,x.y,y.x,y.y]
+static func visual_polygon(points:PackedVector2Array)->PackedVector2Array:
+	var copy:=points.duplicate();var area:=0.0
+	for i in copy.size():area+=copy[i].cross(copy[(i+1)%copy.size()])
+	if area<0:copy.reverse()
+	return copy
 static func apply(original:TileMapLayer)->Node2D:
 	var parent:=original.get_parent()
 	var previous:=parent.get_node_or_null("BlackSpireTerrain")
@@ -44,7 +49,7 @@ static func apply(original:TileMapLayer)->Node2D:
 		if data.get_collision_polygons_count(0)>0:
 			var shape:int=SLOPES.get(atlas,0)
 			layer.set_cell(cell,0,Vector2i(shape,0))
-			var polygon:=data.get_collision_polygon_points(0,0)
+			var polygon:=visual_polygon(data.get_collision_polygon_points(0,0))
 			for i in polygon.size():
 				var a:=original.transform*(centre+polygon[i])
 				var b:=original.transform*(centre+polygon[(i+1)%polygon.size()])
