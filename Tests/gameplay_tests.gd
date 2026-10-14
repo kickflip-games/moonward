@@ -212,7 +212,7 @@ func run() -> void:
 	check(not player._is_jump_cut and player.last_on_wall_time == 0.0 and player.last_pressed_jump_time == 0.0,
 		"Respawn clears jump-cut, wall coyote and buffered input")
 	await tick(90)
-	check(player.get_node("Sprite/Polygon2D").visible, "Old death animation cannot hide a respawned player")
+	check(player.get_node("Sprite/FacingRoot/SquashRoot/Character").visible, "Death animation cannot hide a respawned character")
 	# Safe long falls no longer cause uncommunicated deaths.
 	await place(Vector2(0, -800))
 	old_deaths = death_count
