@@ -79,7 +79,7 @@ func run() -> void:
 	await get_tree().process_frame
 	var original: TileMapLayer = world.get_node("Map/GameLayer")
 	var before := signature(original)
-	var visuals: TileMapLayer = world.get_node("Map/CavernTerrain")
+	var visuals: TileMapLayer = RENDERER.apply(original) # Legacy kit is no longer the active main style.
 	check(not visuals.collision_enabled and not visuals.navigation_enabled, "Tower visual terrain adds no colliders or navigation")
 	var same_centres := true
 	var hazards_untouched := true
