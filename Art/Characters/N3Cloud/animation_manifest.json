@@ -1,0 +1,3626 @@
+{
+  "source": "Full-Sheet.png",
+  "source_dimensions": [
+    1792,
+    3280
+  ],
+  "source_sha256": "a6931e72d797dd10e0383cd98e783984f2b152c5d22351fdac2b567e9e0eee69",
+  "cell_size": [
+    128,
+    80
+  ],
+  "columns": 14,
+  "rows": 41,
+  "padding_required": false,
+  "fixed_anchor": [
+    64,
+    64
+  ],
+  "author": "Josee / N3Cloud",
+  "source_url": "https://n3cloud.itch.io/2d-pixel-art-character-template-platformer-metroidvania",
+  "animations": [
+    {
+      "name": "attacks__punch_1",
+      "source_strip": "attacks/punch_1.png",
+      "coordinates": [
+        [
+          0,
+          35
+        ],
+        [
+          1,
+          35
+        ],
+        [
+          2,
+          35
+        ],
+        [
+          3,
+          35
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          35
+        ]
+      ],
+      "frame_count": 4,
+      "source_rectangles": [
+        [
+          0,
+          2800,
+          128,
+          80
+        ],
+        [
+          128,
+          2800,
+          128,
+          80
+        ],
+        [
+          256,
+          2800,
+          128,
+          80
+        ],
+        [
+          384,
+          2800,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "attacks__punch_2",
+      "source_strip": "attacks/punch_2.png",
+      "coordinates": [
+        [
+          0,
+          36
+        ],
+        [
+          1,
+          36
+        ],
+        [
+          2,
+          36
+        ],
+        [
+          3,
+          36
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          36
+        ]
+      ],
+      "frame_count": 4,
+      "source_rectangles": [
+        [
+          0,
+          2880,
+          128,
+          80
+        ],
+        [
+          128,
+          2880,
+          128,
+          80
+        ],
+        [
+          256,
+          2880,
+          128,
+          80
+        ],
+        [
+          384,
+          2880,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "attacks__punch_3",
+      "source_strip": "attacks/punch_3.png",
+      "coordinates": [
+        [
+          0,
+          37
+        ],
+        [
+          1,
+          37
+        ],
+        [
+          2,
+          37
+        ],
+        [
+          3,
+          37
+        ],
+        [
+          4,
+          37
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          37
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          2960,
+          128,
+          80
+        ],
+        [
+          128,
+          2960,
+          128,
+          80
+        ],
+        [
+          256,
+          2960,
+          128,
+          80
+        ],
+        [
+          384,
+          2960,
+          128,
+          80
+        ],
+        [
+          512,
+          2960,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "attacks__sword_attack_1",
+      "source_strip": "attacks/sword_attack_1.png",
+      "coordinates": [
+        [
+          0,
+          38
+        ],
+        [
+          1,
+          38
+        ],
+        [
+          2,
+          38
+        ],
+        [
+          3,
+          38
+        ],
+        [
+          4,
+          38
+        ],
+        [
+          5,
+          38
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          38
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          3040,
+          128,
+          80
+        ],
+        [
+          128,
+          3040,
+          128,
+          80
+        ],
+        [
+          256,
+          3040,
+          128,
+          80
+        ],
+        [
+          384,
+          3040,
+          128,
+          80
+        ],
+        [
+          512,
+          3040,
+          128,
+          80
+        ],
+        [
+          640,
+          3040,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "attacks__sword_attack_2",
+      "source_strip": "attacks/sword_attack_2.png",
+      "coordinates": [
+        [
+          0,
+          39
+        ],
+        [
+          1,
+          39
+        ],
+        [
+          2,
+          39
+        ],
+        [
+          3,
+          39
+        ],
+        [
+          4,
+          39
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          39
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          3120,
+          128,
+          80
+        ],
+        [
+          128,
+          3120,
+          128,
+          80
+        ],
+        [
+          256,
+          3120,
+          128,
+          80
+        ],
+        [
+          384,
+          3120,
+          128,
+          80
+        ],
+        [
+          512,
+          3120,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "attacks__sword_attack_3",
+      "source_strip": "attacks/sword_attack_3.png",
+      "coordinates": [
+        [
+          0,
+          40
+        ],
+        [
+          1,
+          40
+        ],
+        [
+          2,
+          40
+        ],
+        [
+          3,
+          40
+        ],
+        [
+          4,
+          40
+        ],
+        [
+          5,
+          40
+        ],
+        [
+          6,
+          40
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          40
+        ]
+      ],
+      "frame_count": 7,
+      "source_rectangles": [
+        [
+          0,
+          3200,
+          128,
+          80
+        ],
+        [
+          128,
+          3200,
+          128,
+          80
+        ],
+        [
+          256,
+          3200,
+          128,
+          80
+        ],
+        [
+          384,
+          3200,
+          128,
+          80
+        ],
+        [
+          512,
+          3200,
+          128,
+          80
+        ],
+        [
+          640,
+          3200,
+          128,
+          80
+        ],
+        [
+          768,
+          3200,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "crouch__crouch",
+      "source_strip": "crouch/crouch.png",
+      "coordinates": [
+        [
+          0,
+          15
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          4,
+          15
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          15
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          1200,
+          128,
+          80
+        ],
+        [
+          128,
+          1200,
+          128,
+          80
+        ],
+        [
+          256,
+          1200,
+          128,
+          80
+        ],
+        [
+          384,
+          1200,
+          128,
+          80
+        ],
+        [
+          512,
+          1200,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "crouch__crouch_gun",
+      "source_strip": "crouch/crouch_gun.png",
+      "coordinates": [
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          3,
+          17
+        ],
+        [
+          4,
+          17
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          17
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          1360,
+          128,
+          80
+        ],
+        [
+          128,
+          1360,
+          128,
+          80
+        ],
+        [
+          256,
+          1360,
+          128,
+          80
+        ],
+        [
+          384,
+          1360,
+          128,
+          80
+        ],
+        [
+          512,
+          1360,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "crouch__crouch_gun_shoot",
+      "source_strip": "crouch/crouch_gun_shoot.png",
+      "coordinates": [
+        [
+          0,
+          18
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          3,
+          18
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          18
+        ]
+      ],
+      "frame_count": 4,
+      "source_rectangles": [
+        [
+          0,
+          1440,
+          128,
+          80
+        ],
+        [
+          128,
+          1440,
+          128,
+          80
+        ],
+        [
+          256,
+          1440,
+          128,
+          80
+        ],
+        [
+          384,
+          1440,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "crouch__crouch_sword",
+      "source_strip": "crouch/crouch_sword.png",
+      "coordinates": [
+        [
+          0,
+          16
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          16
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          1280,
+          128,
+          80
+        ],
+        [
+          128,
+          1280,
+          128,
+          80
+        ],
+        [
+          256,
+          1280,
+          128,
+          80
+        ],
+        [
+          384,
+          1280,
+          128,
+          80
+        ],
+        [
+          512,
+          1280,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "crouch__crouch_walk",
+      "source_strip": "crouch/crouch_walk.png",
+      "coordinates": [
+        [
+          0,
+          19
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          2,
+          19
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          5,
+          19
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          19
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          1520,
+          128,
+          80
+        ],
+        [
+          128,
+          1520,
+          128,
+          80
+        ],
+        [
+          256,
+          1520,
+          128,
+          80
+        ],
+        [
+          384,
+          1520,
+          128,
+          80
+        ],
+        [
+          512,
+          1520,
+          128,
+          80
+        ],
+        [
+          640,
+          1520,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "crouch__crouch_walk_gun",
+      "source_strip": "crouch/crouch_walk_gun.png",
+      "coordinates": [
+        [
+          0,
+          21
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          2,
+          21
+        ],
+        [
+          3,
+          21
+        ],
+        [
+          4,
+          21
+        ],
+        [
+          5,
+          21
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          21
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          1680,
+          128,
+          80
+        ],
+        [
+          128,
+          1680,
+          128,
+          80
+        ],
+        [
+          256,
+          1680,
+          128,
+          80
+        ],
+        [
+          384,
+          1680,
+          128,
+          80
+        ],
+        [
+          512,
+          1680,
+          128,
+          80
+        ],
+        [
+          640,
+          1680,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "crouch__crouch_walk_sword",
+      "source_strip": "crouch/crouch_walk_sword.png",
+      "coordinates": [
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          20
+        ],
+        [
+          2,
+          20
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          4,
+          20
+        ],
+        [
+          5,
+          20
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          20
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          1600,
+          128,
+          80
+        ],
+        [
+          128,
+          1600,
+          128,
+          80
+        ],
+        [
+          256,
+          1600,
+          128,
+          80
+        ],
+        [
+          384,
+          1600,
+          128,
+          80
+        ],
+        [
+          512,
+          1600,
+          128,
+          80
+        ],
+        [
+          640,
+          1600,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "dash__dash",
+      "source_strip": "dash/dash.png",
+      "coordinates": [
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          8,
+          12
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      "frame_count": 9,
+      "source_rectangles": [
+        [
+          0,
+          960,
+          128,
+          80
+        ],
+        [
+          128,
+          960,
+          128,
+          80
+        ],
+        [
+          256,
+          960,
+          128,
+          80
+        ],
+        [
+          384,
+          960,
+          128,
+          80
+        ],
+        [
+          512,
+          960,
+          128,
+          80
+        ],
+        [
+          640,
+          960,
+          128,
+          80
+        ],
+        [
+          768,
+          960,
+          128,
+          80
+        ],
+        [
+          896,
+          960,
+          128,
+          80
+        ],
+        [
+          1024,
+          960,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "dash__dash_loop",
+      "source_strip": "dash/dash_loop.png",
+      "coordinates": [
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          7,
+          12
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          2,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          2,
+          14
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          256,
+          960,
+          128,
+          80
+        ],
+        [
+          384,
+          960,
+          128,
+          80
+        ],
+        [
+          512,
+          960,
+          128,
+          80
+        ],
+        [
+          640,
+          960,
+          128,
+          80
+        ],
+        [
+          768,
+          960,
+          128,
+          80
+        ],
+        [
+          896,
+          960,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "idle__idle",
+      "source_strip": "idle/idle.png",
+      "coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          0
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          0,
+          128,
+          80
+        ],
+        [
+          128,
+          0,
+          128,
+          80
+        ],
+        [
+          256,
+          0,
+          128,
+          80
+        ],
+        [
+          384,
+          0,
+          128,
+          80
+        ],
+        [
+          512,
+          0,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "idle__idle_gun",
+      "source_strip": "idle/idle_gun.png",
+      "coordinates": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          2
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          160,
+          128,
+          80
+        ],
+        [
+          128,
+          160,
+          128,
+          80
+        ],
+        [
+          256,
+          160,
+          128,
+          80
+        ],
+        [
+          384,
+          160,
+          128,
+          80
+        ],
+        [
+          512,
+          160,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "idle__idle_shoot_gun",
+      "source_strip": "idle/idle_shoot_gun.png",
+      "coordinates": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          3
+        ]
+      ],
+      "frame_count": 4,
+      "source_rectangles": [
+        [
+          0,
+          240,
+          128,
+          80
+        ],
+        [
+          128,
+          240,
+          128,
+          80
+        ],
+        [
+          256,
+          240,
+          128,
+          80
+        ],
+        [
+          384,
+          240,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "idle__idle_sword",
+      "source_strip": "idle/idle_sword.png",
+      "coordinates": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          1
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          80,
+          128,
+          80
+        ],
+        [
+          128,
+          80,
+          128,
+          80
+        ],
+        [
+          256,
+          80,
+          128,
+          80
+        ],
+        [
+          384,
+          80,
+          128,
+          80
+        ],
+        [
+          512,
+          80,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "jump__down",
+      "source_strip": "jump/down.png",
+      "coordinates": [
+        [
+          6,
+          22
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          8,
+          22
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          6,
+          22
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          6,
+          25
+        ]
+      ],
+      "frame_count": 3,
+      "source_rectangles": [
+        [
+          768,
+          1760,
+          128,
+          80
+        ],
+        [
+          896,
+          1760,
+          128,
+          80
+        ],
+        [
+          1024,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "jump__jump",
+      "source_strip": "jump/jump.png",
+      "coordinates": [
+        [
+          0,
+          22
+        ],
+        [
+          1,
+          22
+        ],
+        [
+          2,
+          22
+        ],
+        [
+          3,
+          22
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          5,
+          22
+        ],
+        [
+          6,
+          22
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          8,
+          22
+        ],
+        [
+          9,
+          22
+        ],
+        [
+          10,
+          22
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "frame_count": 11,
+      "source_rectangles": [
+        [
+          0,
+          1760,
+          128,
+          80
+        ],
+        [
+          128,
+          1760,
+          128,
+          80
+        ],
+        [
+          256,
+          1760,
+          128,
+          80
+        ],
+        [
+          384,
+          1760,
+          128,
+          80
+        ],
+        [
+          512,
+          1760,
+          128,
+          80
+        ],
+        [
+          640,
+          1760,
+          128,
+          80
+        ],
+        [
+          768,
+          1760,
+          128,
+          80
+        ],
+        [
+          896,
+          1760,
+          128,
+          80
+        ],
+        [
+          1024,
+          1760,
+          128,
+          80
+        ],
+        [
+          1152,
+          1760,
+          128,
+          80
+        ],
+        [
+          1280,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "jump__up",
+      "source_strip": "jump/up.png",
+      "coordinates": [
+        [
+          3,
+          22
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          5,
+          22
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          3,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          3,
+          25
+        ]
+      ],
+      "frame_count": 3,
+      "source_rectangles": [
+        [
+          384,
+          1760,
+          128,
+          80
+        ],
+        [
+          512,
+          1760,
+          128,
+          80
+        ],
+        [
+          640,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "ledge__idle",
+      "source_strip": "ledge/idle.png",
+      "coordinates": [
+        [
+          4,
+          28
+        ],
+        [
+          5,
+          28
+        ],
+        [
+          6,
+          28
+        ],
+        [
+          7,
+          28
+        ],
+        [
+          8,
+          28
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          4,
+          28
+        ],
+        [
+          0,
+          29
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          512,
+          2240,
+          128,
+          80
+        ],
+        [
+          640,
+          2240,
+          128,
+          80
+        ],
+        [
+          768,
+          2240,
+          128,
+          80
+        ],
+        [
+          896,
+          2240,
+          128,
+          80
+        ],
+        [
+          1024,
+          2240,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "ledge__ledge_climb",
+      "source_strip": "ledge/ledge_climb.png",
+      "coordinates": [
+        [
+          0,
+          28
+        ],
+        [
+          1,
+          28
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          3,
+          28
+        ],
+        [
+          4,
+          28
+        ],
+        [
+          5,
+          28
+        ],
+        [
+          6,
+          28
+        ],
+        [
+          7,
+          28
+        ],
+        [
+          8,
+          28
+        ],
+        [
+          9,
+          28
+        ],
+        [
+          10,
+          28
+        ],
+        [
+          11,
+          28
+        ],
+        [
+          12,
+          28
+        ],
+        [
+          13,
+          28
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          28
+        ]
+      ],
+      "frame_count": 14,
+      "source_rectangles": [
+        [
+          0,
+          2240,
+          128,
+          80
+        ],
+        [
+          128,
+          2240,
+          128,
+          80
+        ],
+        [
+          256,
+          2240,
+          128,
+          80
+        ],
+        [
+          384,
+          2240,
+          128,
+          80
+        ],
+        [
+          512,
+          2240,
+          128,
+          80
+        ],
+        [
+          640,
+          2240,
+          128,
+          80
+        ],
+        [
+          768,
+          2240,
+          128,
+          80
+        ],
+        [
+          896,
+          2240,
+          128,
+          80
+        ],
+        [
+          1024,
+          2240,
+          128,
+          80
+        ],
+        [
+          1152,
+          2240,
+          128,
+          80
+        ],
+        [
+          1280,
+          2240,
+          128,
+          80
+        ],
+        [
+          1408,
+          2240,
+          128,
+          80
+        ],
+        [
+          1536,
+          2240,
+          128,
+          80
+        ],
+        [
+          1664,
+          2240,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "push_pull__idle",
+      "source_strip": "push_pull/idle.png",
+      "coordinates": [
+        [
+          0,
+          31
+        ],
+        [
+          1,
+          31
+        ],
+        [
+          2,
+          31
+        ],
+        [
+          3,
+          31
+        ],
+        [
+          4,
+          31
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          31
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          2480,
+          128,
+          80
+        ],
+        [
+          128,
+          2480,
+          128,
+          80
+        ],
+        [
+          256,
+          2480,
+          128,
+          80
+        ],
+        [
+          384,
+          2480,
+          128,
+          80
+        ],
+        [
+          512,
+          2480,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "push_pull__pull",
+      "source_strip": "push_pull/pull.png",
+      "coordinates": [
+        [
+          0,
+          33
+        ],
+        [
+          1,
+          33
+        ],
+        [
+          2,
+          33
+        ],
+        [
+          3,
+          33
+        ],
+        [
+          4,
+          33
+        ],
+        [
+          5,
+          33
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          33
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          2640,
+          128,
+          80
+        ],
+        [
+          128,
+          2640,
+          128,
+          80
+        ],
+        [
+          256,
+          2640,
+          128,
+          80
+        ],
+        [
+          384,
+          2640,
+          128,
+          80
+        ],
+        [
+          512,
+          2640,
+          128,
+          80
+        ],
+        [
+          640,
+          2640,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "push_pull__push",
+      "source_strip": "push_pull/push.png",
+      "coordinates": [
+        [
+          0,
+          32
+        ],
+        [
+          1,
+          32
+        ],
+        [
+          2,
+          32
+        ],
+        [
+          3,
+          32
+        ],
+        [
+          4,
+          32
+        ],
+        [
+          5,
+          32
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          32
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          2560,
+          128,
+          80
+        ],
+        [
+          128,
+          2560,
+          128,
+          80
+        ],
+        [
+          256,
+          2560,
+          128,
+          80
+        ],
+        [
+          384,
+          2560,
+          128,
+          80
+        ],
+        [
+          512,
+          2560,
+          128,
+          80
+        ],
+        [
+          640,
+          2560,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "roll__roll",
+      "source_strip": "roll/roll.png",
+      "coordinates": [
+        [
+          0,
+          34
+        ],
+        [
+          1,
+          34
+        ],
+        [
+          2,
+          34
+        ],
+        [
+          3,
+          34
+        ],
+        [
+          4,
+          34
+        ],
+        [
+          5,
+          34
+        ],
+        [
+          6,
+          34
+        ],
+        [
+          7,
+          34
+        ],
+        [
+          8,
+          34
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          34
+        ]
+      ],
+      "frame_count": 9,
+      "source_rectangles": [
+        [
+          0,
+          2720,
+          128,
+          80
+        ],
+        [
+          128,
+          2720,
+          128,
+          80
+        ],
+        [
+          256,
+          2720,
+          128,
+          80
+        ],
+        [
+          384,
+          2720,
+          128,
+          80
+        ],
+        [
+          512,
+          2720,
+          128,
+          80
+        ],
+        [
+          640,
+          2720,
+          128,
+          80
+        ],
+        [
+          768,
+          2720,
+          128,
+          80
+        ],
+        [
+          896,
+          2720,
+          128,
+          80
+        ],
+        [
+          1024,
+          2720,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "running__running",
+      "source_strip": "running/running.png",
+      "coordinates": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          4
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          320,
+          128,
+          80
+        ],
+        [
+          128,
+          320,
+          128,
+          80
+        ],
+        [
+          256,
+          320,
+          128,
+          80
+        ],
+        [
+          384,
+          320,
+          128,
+          80
+        ],
+        [
+          512,
+          320,
+          128,
+          80
+        ],
+        [
+          640,
+          320,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "running__running_gun",
+      "source_strip": "running/running_gun.png",
+      "coordinates": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          6
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          480,
+          128,
+          80
+        ],
+        [
+          128,
+          480,
+          128,
+          80
+        ],
+        [
+          256,
+          480,
+          128,
+          80
+        ],
+        [
+          384,
+          480,
+          128,
+          80
+        ],
+        [
+          512,
+          480,
+          128,
+          80
+        ],
+        [
+          640,
+          480,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "running__running_shoot_gun",
+      "source_strip": "running/running_shoot_gun.png",
+      "coordinates": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          7
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          560,
+          128,
+          80
+        ],
+        [
+          128,
+          560,
+          128,
+          80
+        ],
+        [
+          256,
+          560,
+          128,
+          80
+        ],
+        [
+          384,
+          560,
+          128,
+          80
+        ],
+        [
+          512,
+          560,
+          128,
+          80
+        ],
+        [
+          640,
+          560,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "running__running_sword",
+      "source_strip": "running/running_sword.png",
+      "coordinates": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          5
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          400,
+          128,
+          80
+        ],
+        [
+          128,
+          400,
+          128,
+          80
+        ],
+        [
+          256,
+          400,
+          128,
+          80
+        ],
+        [
+          384,
+          400,
+          128,
+          80
+        ],
+        [
+          512,
+          400,
+          128,
+          80
+        ],
+        [
+          640,
+          400,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "slide__slide",
+      "source_strip": "slide/slide.png",
+      "coordinates": [
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          3,
+          11
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          11
+        ]
+      ],
+      "frame_count": 4,
+      "source_rectangles": [
+        [
+          0,
+          880,
+          128,
+          80
+        ],
+        [
+          128,
+          880,
+          128,
+          80
+        ],
+        [
+          256,
+          880,
+          128,
+          80
+        ],
+        [
+          384,
+          880,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "sprint__sprint",
+      "source_strip": "sprint/sprint.png",
+      "coordinates": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          8
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          640,
+          128,
+          80
+        ],
+        [
+          128,
+          640,
+          128,
+          80
+        ],
+        [
+          256,
+          640,
+          128,
+          80
+        ],
+        [
+          384,
+          640,
+          128,
+          80
+        ],
+        [
+          512,
+          640,
+          128,
+          80
+        ],
+        [
+          640,
+          640,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "sprint__sprint_gun",
+      "source_strip": "sprint/sprint_gun.png",
+      "coordinates": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          10
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          10
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          800,
+          128,
+          80
+        ],
+        [
+          128,
+          800,
+          128,
+          80
+        ],
+        [
+          256,
+          800,
+          128,
+          80
+        ],
+        [
+          384,
+          800,
+          128,
+          80
+        ],
+        [
+          512,
+          800,
+          128,
+          80
+        ],
+        [
+          640,
+          800,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "sprint__sprint_sword",
+      "source_strip": "sprint/sprint_sword.png",
+      "coordinates": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          9
+        ]
+      ],
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          720,
+          128,
+          80
+        ],
+        [
+          128,
+          720,
+          128,
+          80
+        ],
+        [
+          256,
+          720,
+          128,
+          80
+        ],
+        [
+          384,
+          720,
+          128,
+          80
+        ],
+        [
+          512,
+          720,
+          128,
+          80
+        ],
+        [
+          640,
+          720,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "wall_slide__slide_loop",
+      "source_strip": "wall_slide/slide_loop.png",
+      "coordinates": [
+        [
+          2,
+          26
+        ],
+        [
+          3,
+          26
+        ],
+        [
+          4,
+          26
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          2,
+          26
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "frame_count": 3,
+      "source_rectangles": [
+        [
+          256,
+          2080,
+          128,
+          80
+        ],
+        [
+          384,
+          2080,
+          128,
+          80
+        ],
+        [
+          512,
+          2080,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "wall_slide__wall_slide",
+      "source_strip": "wall_slide/wall_slide.png",
+      "coordinates": [
+        [
+          0,
+          26
+        ],
+        [
+          1,
+          26
+        ],
+        [
+          2,
+          26
+        ],
+        [
+          3,
+          26
+        ],
+        [
+          4,
+          26
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "preview only; no new ability",
+      "verification": "pixel-identical match to the named original strip",
+      "matching_starts": [
+        [
+          0,
+          26
+        ]
+      ],
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          2080,
+          128,
+          80
+        ],
+        [
+          128,
+          2080,
+          128,
+          80
+        ],
+        [
+          256,
+          2080,
+          128,
+          80
+        ],
+        [
+          384,
+          2080,
+          128,
+          80
+        ],
+        [
+          512,
+          2080,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "idle",
+      "source_strip": "idle/idle.png",
+      "coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "fps": 8,
+      "loop": true,
+      "gameplay_state": "standing",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 5,
+      "source_rectangles": [
+        [
+          0,
+          0,
+          128,
+          80
+        ],
+        [
+          128,
+          0,
+          128,
+          80
+        ],
+        [
+          256,
+          0,
+          128,
+          80
+        ],
+        [
+          384,
+          0,
+          128,
+          80
+        ],
+        [
+          512,
+          0,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "run",
+      "source_strip": "running/running.png",
+      "coordinates": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "fps": 12.5,
+      "loop": true,
+      "gameplay_state": "walking/running; speed-scaled",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          320,
+          128,
+          80
+        ],
+        [
+          128,
+          320,
+          128,
+          80
+        ],
+        [
+          256,
+          320,
+          128,
+          80
+        ],
+        [
+          384,
+          320,
+          128,
+          80
+        ],
+        [
+          512,
+          320,
+          128,
+          80
+        ],
+        [
+          640,
+          320,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "sprint",
+      "source_strip": "sprint/sprint.png",
+      "coordinates": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "fps": 14,
+      "loop": true,
+      "gameplay_state": "fast running",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          0,
+          640,
+          128,
+          80
+        ],
+        [
+          128,
+          640,
+          128,
+          80
+        ],
+        [
+          256,
+          640,
+          128,
+          80
+        ],
+        [
+          384,
+          640,
+          128,
+          80
+        ],
+        [
+          512,
+          640,
+          128,
+          80
+        ],
+        [
+          640,
+          640,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "takeoff",
+      "source_strip": "jump/jump.png",
+      "coordinates": [
+        [
+          1,
+          22
+        ],
+        [
+          2,
+          22
+        ]
+      ],
+      "fps": 24,
+      "loop": false,
+      "gameplay_state": "brief jump preparation in the air",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 2,
+      "source_rectangles": [
+        [
+          128,
+          1760,
+          128,
+          80
+        ],
+        [
+          256,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "rise",
+      "source_strip": "jump/up.png",
+      "coordinates": [
+        [
+          3,
+          22
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          5,
+          22
+        ]
+      ],
+      "fps": 10,
+      "loop": true,
+      "gameplay_state": "rising",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 3,
+      "source_rectangles": [
+        [
+          384,
+          1760,
+          128,
+          80
+        ],
+        [
+          512,
+          1760,
+          128,
+          80
+        ],
+        [
+          640,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "apex",
+      "source_strip": "jump/up.png",
+      "coordinates": [
+        [
+          4,
+          22
+        ]
+      ],
+      "fps": 10,
+      "loop": true,
+      "gameplay_state": "apex neutral pose",
+      "fallback": "rise",
+      "verification": "subset of verified official sequence",
+      "frame_count": 1,
+      "source_rectangles": [
+        [
+          512,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "fall",
+      "source_strip": "jump/down.png",
+      "coordinates": [
+        [
+          6,
+          22
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          8,
+          22
+        ]
+      ],
+      "fps": 10,
+      "loop": true,
+      "gameplay_state": "falling",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 3,
+      "source_rectangles": [
+        [
+          768,
+          1760,
+          128,
+          80
+        ],
+        [
+          896,
+          1760,
+          128,
+          80
+        ],
+        [
+          1024,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "land",
+      "source_strip": "jump/jump.png",
+      "coordinates": [
+        [
+          9,
+          22
+        ],
+        [
+          10,
+          22
+        ]
+      ],
+      "fps": 20,
+      "loop": false,
+      "gameplay_state": "landing recovery",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 2,
+      "source_rectangles": [
+        [
+          1152,
+          1760,
+          128,
+          80
+        ],
+        [
+          1280,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "wall_slide",
+      "source_strip": "wall_slide/slide_loop.png",
+      "coordinates": [
+        [
+          2,
+          26
+        ],
+        [
+          3,
+          26
+        ],
+        [
+          4,
+          26
+        ]
+      ],
+      "fps": 8,
+      "loop": true,
+      "gameplay_state": "wall contact; source contact hand on left",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 3,
+      "source_rectangles": [
+        [
+          256,
+          2080,
+          128,
+          80
+        ],
+        [
+          384,
+          2080,
+          128,
+          80
+        ],
+        [
+          512,
+          2080,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "wall_jump",
+      "source_strip": "jump/up.png",
+      "coordinates": [
+        [
+          3,
+          22
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          5,
+          22
+        ]
+      ],
+      "fps": 18,
+      "loop": false,
+      "gameplay_state": "push-off; no dedicated wall-jump strip",
+      "fallback": "rise",
+      "verification": "subset of verified official sequence",
+      "frame_count": 3,
+      "source_rectangles": [
+        [
+          384,
+          1760,
+          128,
+          80
+        ],
+        [
+          512,
+          1760,
+          128,
+          80
+        ],
+        [
+          640,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "spring_launch",
+      "source_strip": "jump/down.png",
+      "coordinates": [
+        [
+          6,
+          22
+        ],
+        [
+          7,
+          22
+        ]
+      ],
+      "fps": 18,
+      "loop": false,
+      "gameplay_state": "arms-up launch; no dedicated spring animation",
+      "fallback": "fall",
+      "verification": "subset of verified official sequence",
+      "frame_count": 2,
+      "source_rectangles": [
+        [
+          768,
+          1760,
+          128,
+          80
+        ],
+        [
+          896,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "air_roll",
+      "source_strip": "roll/roll.png",
+      "coordinates": [
+        [
+          2,
+          34
+        ],
+        [
+          3,
+          34
+        ],
+        [
+          4,
+          34
+        ],
+        [
+          5,
+          34
+        ],
+        [
+          6,
+          34
+        ],
+        [
+          7,
+          34
+        ]
+      ],
+      "fps": 16,
+      "loop": false,
+      "gameplay_state": "airborne flourish; in-frame rotation, no parent spin",
+      "fallback": null,
+      "verification": "subset of verified official sequence",
+      "frame_count": 6,
+      "source_rectangles": [
+        [
+          256,
+          2720,
+          128,
+          80
+        ],
+        [
+          384,
+          2720,
+          128,
+          80
+        ],
+        [
+          512,
+          2720,
+          128,
+          80
+        ],
+        [
+          640,
+          2720,
+          128,
+          80
+        ],
+        [
+          768,
+          2720,
+          128,
+          80
+        ],
+        [
+          896,
+          2720,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "death",
+      "source_strip": "jump/down.png",
+      "coordinates": [
+        [
+          6,
+          22
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          8,
+          22
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "fall pose and procedural fade; no death strip",
+      "fallback": "fall",
+      "verification": "subset of verified official sequence",
+      "frame_count": 3,
+      "source_rectangles": [
+        [
+          768,
+          1760,
+          128,
+          80
+        ],
+        [
+          896,
+          1760,
+          128,
+          80
+        ],
+        [
+          1024,
+          1760,
+          128,
+          80
+        ]
+      ]
+    },
+    {
+      "name": "respawn",
+      "source_strip": "idle/idle.png",
+      "coordinates": [
+        [
+          0,
+          0
+        ]
+      ],
+      "fps": 12.5,
+      "loop": false,
+      "gameplay_state": "standing pose with quick appearance",
+      "fallback": "idle",
+      "verification": "subset of verified official sequence",
+      "frame_count": 1,
+      "source_rectangles": [
+        [
+          0,
+          0,
+          128,
+          80
+        ]
+      ]
+    }
+  ],
+  "notes": [
+    "All 38 named strips matched the full sheet pixel-for-pixel. Duplicate rows and nested strip subsets are recorded.",
+    "Aseprite tags confirm roll timeline frames 158-166, and up/down/wall-loop subsets.",
+    "No frame is centred using its visible bounding box. The common foot baseline is y=64."
+  ]
+}
