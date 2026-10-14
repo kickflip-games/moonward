@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3]
+[ext_resource type="Shader" path="res://Art/BlackSpire/surface.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://Art/BlackSpire/Source/Medieval_props_free.png" id="2"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/sheet = ExtResource("2")
+shader_parameter/region = Vector4(414, 67, 26, 18)
+shader_parameter/bounds = Vector4(-80, -16, 160, 32)

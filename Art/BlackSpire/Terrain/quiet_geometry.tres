@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Texture2D" path="res://Art/BlackSpire/Terrain/quiet_geometry.png" id="1_d28ev"]
+
+[sub_resource type="TileSetAtlasSource" id="QuietAtlas"]
+texture = ExtResource("1_d28ev")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+
+[resource]
+sources/0 = SubResource("QuietAtlas")
