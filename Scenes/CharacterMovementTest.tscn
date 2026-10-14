@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="PackedScene" path="res://Scenes/VisualDirectionTest.tscn" id="1"]
+[ext_resource type="Script" path="res://Scenes/character_movement_test.gd" id="2"]
+[ext_resource type="PackedScene" path="res://Platforms/bouncy/bouncy_platform.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://Platforms/MovingPlatform.tscn" id="4"]
+[node name="CharacterMovementTest" instance=ExtResource("1")]
+script = ExtResource("2")
+[node name="Springboard" parent="." instance=ExtResource("3")]
+position = Vector2(648,424)
+[node name="HorizontalLift" parent="." instance=ExtResource("4")]
+position = Vector2(1300,370)
+move_to = Vector2(200,0)
+show_path = false

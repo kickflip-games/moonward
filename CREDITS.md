@@ -1,5 +1,12 @@
 # Moonward art credits
 
+**Josee / N3Cloud — 2D Pixel Art Character Template, Platformer & Metroidvania**
+
+- Source: https://n3cloud.itch.io/2d-pixel-art-character-template-platformer-metroidvania
+- Permission: the author permits personal/commercial game use, with optional credit. This custom permission is separate from the BlackSpire licence below.
+- Notice: [Art/Characters/N3Cloud/LICENSE-NOTICE.md](Art/Characters/N3Cloud/LICENSE-NOTICE.md).
+- Integration: unchanged original sheet, selected animation frames, a common foot anchor and procedural presentation. No new movement abilities were added.
+
 **BlackSpire Studio — Medieval pixel art asset FREE**
 
 - Source: https://blackspirestudio.itch.io/medieval-pixel-art-asset-free
