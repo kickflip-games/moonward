@@ -1,0 +1,42 @@
+{
+  "baseline": "56dc329",
+  "branch": "animated-character-integration",
+  "source_dimensions": [
+    1792,
+    3280
+  ],
+  "grid": [
+    128,
+    80
+  ],
+  "verified_author_sequences": 38,
+  "sprite_animations": 52,
+  "unique_frame_regions": 198,
+  "source_sha256": "a6931e72d797dd10e0383cd98e783984f2b152c5d22351fdac2b567e9e0eee69",
+  "godot_checks": {
+    "4.8.dev6": {
+      "checks": 2620,
+      "failures": 0
+    },
+    "4.5.stable": {
+      "checks": 2620,
+      "failures": 0
+    }
+  },
+  "character_specific_checks": 87,
+  "new_python_asset_test_cases": 4,
+  "blackspire_python_asset_test_cases": 4,
+  "physics_trace_segments": 9,
+  "physics_trace_samples": 299,
+  "before_after_physics_trace_byte_identical": true,
+  "matching_capture_positions_and_velocities": 12,
+  "player_physics_and_colliders_unchanged": true,
+  "web_export_engine": "4.8.dev6",
+  "browser_render_run_jump_smoke": "passed",
+  "limitations": [
+    "Scripted visual evidence, not human full-tower playtesting",
+    "Physical mobile testing not performed",
+    "No dedicated source wall-jump/death/spawn/spring poses; documented fallbacks",
+    "Headless macOS certificate and teardown diagnostics remain"
+  ]
+}

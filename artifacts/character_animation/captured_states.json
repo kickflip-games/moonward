@@ -1,0 +1,170 @@
+[
+	{
+		"animation": "idle",
+		"frame": 4,
+		"name": "01_idle",
+		"position": [
+			-1300.0,
+			472.0
+		],
+		"state": "idle",
+		"velocity": [
+			0.0,
+			0.0
+		]
+	},
+	{
+		"animation": "run",
+		"frame": 0,
+		"name": "02_running",
+		"position": [
+			-1283.20007324219,
+			472.0
+		],
+		"state": "run",
+		"velocity": [
+			336.0,
+			0.0
+		]
+	},
+	{
+		"animation": "sprint",
+		"frame": 1,
+		"name": "03_full_speed",
+		"position": [
+			-1203.67993164062,
+			472.0
+		],
+		"state": "sprint",
+		"velocity": [
+			560.0,
+			0.0
+		]
+	},
+	{
+		"animation": "takeoff",
+		"frame": 1,
+		"name": "04_jump",
+		"position": [
+			-1300.0,
+			418.325286865234
+		],
+		"state": "takeoff",
+		"velocity": [
+			0.0,
+			-1008.0
+		]
+	},
+	{
+		"animation": "rise",
+		"frame": 0,
+		"name": "05_long_jump",
+		"position": [
+			-1138.31677246094,
+			339.939910888672
+		],
+		"state": "rise",
+		"velocity": [
+			560.0,
+			-624.0
+		]
+	},
+	{
+		"animation": "air_roll",
+		"frame": 2,
+		"name": "06_somersault",
+		"position": [
+			-1054.31640625,
+			293.806549072266
+		],
+		"state": "somersault",
+		"velocity": [
+			560.0,
+			-80.0
+		]
+	},
+	{
+		"animation": "wall_slide",
+		"frame": 0,
+		"name": "07_wall_slide",
+		"position": [
+			1117.07470703125,
+			-122.733375549316
+		],
+		"state": "wall_slide",
+		"velocity": [
+			0.0,
+			100.0
+		]
+	},
+	{
+		"animation": "wall_jump",
+		"frame": 0,
+		"name": "08_wall_jump",
+		"position": [
+			1148.07507324219,
+			-171.333908081055
+		],
+		"state": "wall_jump",
+		"velocity": [
+			620.0,
+			-908.0
+		]
+	},
+	{
+		"animation": "spring_launch",
+		"frame": 0,
+		"name": "09_springboard",
+		"position": [
+			648.0,
+			318.791473388672
+		],
+		"state": "spring_launch",
+		"velocity": [
+			0.0,
+			-2372.0
+		]
+	},
+	{
+		"animation": "land",
+		"frame": 0,
+		"name": "10_landing",
+		"position": [
+			-1150.0,
+			471.960571289062
+		],
+		"state": "land",
+		"velocity": [
+			0.0,
+			0.0
+		]
+	},
+	{
+		"animation": "death",
+		"frame": 1,
+		"name": "11_death",
+		"position": [
+			-1150.0,
+			471.960571289062
+		],
+		"state": "death",
+		"velocity": [
+			0.0,
+			0.0
+		]
+	},
+	{
+		"animation": "respawn",
+		"frame": 0,
+		"name": "12_respawn",
+		"position": [
+			-1150.0,
+			103.413330078125
+		],
+		"state": "respawn",
+		"velocity": [
+			0.0,
+			140.800003051758
+		]
+	}
+]

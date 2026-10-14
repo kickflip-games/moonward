@@ -76,3 +76,6 @@ artifacts/gothic_terrain/output/
 
 # BlackSpire raw captures, recordings, engine logs and temporary web builds
 artifacts/blackspire/output/
+
+# Character animation raw frames, recordings, test logs and local web build
+artifacts/character_animation/output/
