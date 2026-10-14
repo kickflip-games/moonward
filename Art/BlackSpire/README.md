@@ -14,7 +14,7 @@ Moonward now uses **BlackSpire Studio's Medieval pixel art asset FREE** for its 
 
 The structural fill is the artist's quiet blue-violet patch at `(640,400,24,16)`. Exposed edges use shallow crops of the artist's dusty red caps. Original roof masonry marks form sparse, non-colliding overlays; they are not repeated in every interior tile. The slope strokes retain the source's 45° and **1:3** gradients.
 
-## Paint terrain in Godot 4.5
+## Paint terrain in Godot 4.8
 
 1. Add a `TileMapLayer`, assign [Terrain/medieval_terrain.tres](Terrain/medieval_terrain.tres), set **Texture Filter: Nearest**, and scale the layer uniformly to `(2,2)`.
 2. Choose the **Terrains** palette: set **0**, terrain **0 — BlackSpire stone**, **Connect** mode. Paint walls, floors, pillars and ledges; interior cells have no ornamental frame.
