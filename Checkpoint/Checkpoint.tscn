@@ -7,9 +7,9 @@
 [ext_resource type="AudioStream" uid="uid://dmfyuv85y135x" path="res://Checkpoint/checkpoint.ogg" id="5_6drmt"]
 [ext_resource type="PackedScene" uid="uid://b0lhp74iqfdkx" path="res://Checkpoint/fire_particles.tscn" id="6_f5af3"]
 
-[ext_resource type="Texture2D" path="res://Art/Dungeon/regions/moon_shrine.tres" id="7_shrine"]
+[ext_resource type="Texture2D" path="res://Art/BlackSpire/Props/regions/window.tres" id="7_shrine"]
 
-[ext_resource type="Texture2D" path="res://Art/Dungeon/regions/moon_banner.tres" id="8_banner"]
+[ext_resource type="Texture2D" path="res://Art/BlackSpire/Props/regions/torch.tres" id="8_banner"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qj0kh"]
 size = Vector2(87, 114)
@@ -53,17 +53,18 @@ height = 46.99
 metadata/_custom_type_script = "uid://bp35nydfqhkvr"
 
 [node name="Shrine" type="Sprite2D" parent="."]
+z_index = -2
 texture_filter = 1
-position = Vector2(-7, -28)
-scale = Vector2(0.48, 0.48)
+position = Vector2(-7, -56)
+scale = Vector2(2, 2)
 modulate = Color(0.65, 0.7, 0.8, 1)
 texture = ExtResource("7_shrine")
 
 [node name="MoonBanner" type="Sprite2D" parent="."]
 z_index = -2
 texture_filter = 1
-position = Vector2(52, -66)
-scale = Vector2(0.50, 0.50)
+position = Vector2(52, -31)
+scale = Vector2(2, 2)
 texture = ExtResource("8_banner")
 
 [node name="FlagMarker" type="Marker2D" parent="."]

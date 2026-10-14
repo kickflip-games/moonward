@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var lifetime: float = 4.0
 @onready var shatter_particles: CPUParticles2D = $ShatterParticles
 @onready var sprite: Node2D = $Triangle
-const SURFACE = preload("res://Art/Dungeon/surface_material.gd")
+const SURFACE = preload("res://Art/BlackSpire/surface_material.gd")
 
 var target: Node2D
 var age := 0.0
