@@ -1,0 +1,1736 @@
+{
+  "width": 1280,
+  "order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "checkpoints": 53,
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Switchback Ascent",
+      "path": "res://World/Tower/Rooms/01_switchback_ascent.tscn",
+      "rise": 960,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          272,
+          -120
+        ],
+        [
+          416,
+          -248
+        ],
+        [
+          288,
+          -376
+        ],
+        [
+          448,
+          -472
+        ],
+        [
+          608,
+          -568
+        ],
+        [
+          800,
+          -472
+        ],
+        [
+          976,
+          -504
+        ],
+        [
+          1152,
+          -600
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14",
+        "Geometry/Stone15"
+      ],
+      "checkpoint_steps": [
+        0
+      ],
+      "origin": [
+        -1504,
+        768
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Double Chimney",
+      "path": "res://World/Tower/Rooms/02_double_chimney.tscn",
+      "rise": 1024,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          1056,
+          -152
+        ],
+        [
+          928,
+          -280
+        ],
+        [
+          1056,
+          -408
+        ],
+        [
+          928,
+          -536
+        ],
+        [
+          736,
+          -536
+        ],
+        [
+          608,
+          -376
+        ],
+        [
+          448,
+          -376
+        ],
+        [
+          336,
+          -472
+        ],
+        [
+          224,
+          -568
+        ],
+        [
+          128,
+          -664
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14",
+        "Geometry/Stone15",
+        "Geometry/Stone16",
+        "Geometry/Stone17"
+      ],
+      "checkpoint_steps": [
+        0,
+        5
+      ],
+      "origin": [
+        -1504,
+        -192
+      ]
+    },
+    {
+      "id": 3,
+      "name": "The Crossing",
+      "path": "res://World/Tower/Rooms/03_the_crossing.tscn",
+      "rise": 928,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          272,
+          -152
+        ],
+        [
+          448,
+          -152
+        ],
+        [
+          640,
+          -248
+        ],
+        [
+          832,
+          -344
+        ],
+        [
+          1008,
+          -440
+        ],
+        [
+          1152,
+          -568
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone05",
+        "Geometry/Stone06",
+        "Mechanisms/Lift02/ActualPlatform",
+        "Mechanisms/Lift03/ActualPlatform",
+        "Mechanisms/Lift04/ActualPlatform",
+        "Geometry/Stone07",
+        "Geometry/Stone08"
+      ],
+      "checkpoint_steps": [
+        0
+      ],
+      "origin": [
+        -1504,
+        -1216
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Spiral Exterior",
+      "path": "res://World/Tower/Rooms/04_spiral_exterior.tscn",
+      "rise": 992,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          960,
+          -152
+        ],
+        [
+          832,
+          -248
+        ],
+        [
+          960,
+          -376
+        ],
+        [
+          784,
+          -504
+        ],
+        [
+          640,
+          -600
+        ],
+        [
+          464,
+          -504
+        ],
+        [
+          272,
+          -504
+        ],
+        [
+          128,
+          -632
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14"
+      ],
+      "checkpoint_steps": [
+        0
+      ],
+      "origin": [
+        -1504,
+        -2144
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Broken Bridge",
+      "path": "res://World/Tower/Rooms/05_broken_bridge.tscn",
+      "rise": 768,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          304,
+          -88
+        ],
+        [
+          480,
+          -120
+        ],
+        [
+          656,
+          -152
+        ],
+        [
+          832,
+          -184
+        ],
+        [
+          1008,
+          -280
+        ],
+        [
+          1152,
+          -408
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone11",
+        "Mechanisms/Fragile01",
+        "Geometry/Stone12",
+        "Mechanisms/Fragile03",
+        "Geometry/Stone13",
+        "Mechanisms/Fragile05",
+        "Geometry/Stone14"
+      ],
+      "checkpoint_steps": [
+        0,
+        2
+      ],
+      "origin": [
+        -1504,
+        -3136
+      ]
+    },
+    {
+      "id": 6,
+      "name": "S-Curve Gauntlet",
+      "path": "res://World/Tower/Rooms/06_s_curve_gauntlet.tscn",
+      "rise": 960,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          976,
+          -152
+        ],
+        [
+          768,
+          -248
+        ],
+        [
+          976,
+          -376
+        ],
+        [
+          768,
+          -472
+        ],
+        [
+          560,
+          -568
+        ],
+        [
+          352,
+          -472
+        ],
+        [
+          128,
+          -600
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14"
+      ],
+      "checkpoint_steps": [
+        0
+      ],
+      "origin": [
+        -1504,
+        -3904
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Counterweight Lift",
+      "path": "res://World/Tower/Rooms/07_counterweight_lift.tscn",
+      "rise": 1024,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          304,
+          -120
+        ],
+        [
+          496,
+          -216
+        ],
+        [
+          688,
+          -312
+        ],
+        [
+          496,
+          -440
+        ],
+        [
+          688,
+          -536
+        ],
+        [
+          896,
+          -536
+        ],
+        [
+          1152,
+          -664
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Mechanisms/Lift02/ActualPlatform",
+        "Geometry/Stone08",
+        "Mechanisms/Lift04/ActualPlatform",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -4864
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Collapsing Stair",
+      "path": "res://World/Tower/Rooms/08_collapsing_stair.tscn",
+      "rise": 960,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          992,
+          -120
+        ],
+        [
+          832,
+          -216
+        ],
+        [
+          672,
+          -312
+        ],
+        [
+          512,
+          -408
+        ],
+        [
+          320,
+          -504
+        ],
+        [
+          128,
+          -600
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone12",
+        "Mechanisms/Fragile01",
+        "Geometry/Stone13",
+        "Mechanisms/Fragile03",
+        "Mechanisms/Fragile04",
+        "Mechanisms/Fragile05",
+        "Geometry/Stone14"
+      ],
+      "checkpoint_steps": [
+        0
+      ],
+      "origin": [
+        -1504,
+        -5888
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Crank Yard",
+      "path": "res://World/Tower/Rooms/09_crank_yard.tscn",
+      "rise": 928,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          304,
+          -152
+        ],
+        [
+          512,
+          -248
+        ],
+        [
+          720,
+          -344
+        ],
+        [
+          912,
+          -440
+        ],
+        [
+          1152,
+          -568
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone05",
+        "Mechanisms/Lift01/ActualPlatform",
+        "Mechanisms/Lift02/ActualPlatform",
+        "Mechanisms/Lift03/ActualPlatform",
+        "Mechanisms/Lift04/ActualPlatform",
+        "Geometry/Stone06"
+      ],
+      "checkpoint_steps": [
+        0
+      ],
+      "origin": [
+        -1504,
+        -6848
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Outer Face Traverse",
+      "path": "res://World/Tower/Rooms/10_outer_face_traverse.tscn",
+      "rise": 896,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          960,
+          -120
+        ],
+        [
+          784,
+          -88
+        ],
+        [
+          592,
+          -184
+        ],
+        [
+          416,
+          -280
+        ],
+        [
+          272,
+          -408
+        ],
+        [
+          128,
+          -536
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14",
+        "Geometry/Stone15",
+        "Geometry/Stone16",
+        "Geometry/Stone17",
+        "Geometry/Stone18"
+      ],
+      "checkpoint_steps": [
+        0
+      ],
+      "origin": [
+        -1504,
+        -7776
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Hanging Garden",
+      "path": "res://World/Tower/Rooms/11_hanging_garden.tscn",
+      "rise": 960,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          256,
+          -152
+        ],
+        [
+          448,
+          -248
+        ],
+        [
+          320,
+          -376
+        ],
+        [
+          512,
+          -472
+        ],
+        [
+          704,
+          -568
+        ],
+        [
+          896,
+          -472
+        ],
+        [
+          1152,
+          -600
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Mechanisms/Lift02/ActualPlatform",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12"
+      ],
+      "checkpoint_steps": [
+        0,
+        4
+      ],
+      "origin": [
+        -1504,
+        -8672
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Split Wall",
+      "path": "res://World/Tower/Rooms/12_split_wall.tscn",
+      "rise": 1024,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          1024,
+          -152
+        ],
+        [
+          896,
+          -280
+        ],
+        [
+          1024,
+          -408
+        ],
+        [
+          832,
+          -536
+        ],
+        [
+          640,
+          -536
+        ],
+        [
+          448,
+          -536
+        ],
+        [
+          256,
+          -536
+        ],
+        [
+          128,
+          -664
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14",
+        "Geometry/Stone15",
+        "Geometry/Stone16"
+      ],
+      "checkpoint_steps": [
+        0,
+        4
+      ],
+      "origin": [
+        -1504,
+        -9632
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Broken Aqueduct",
+      "path": "res://World/Tower/Rooms/13_broken_aqueduct.tscn",
+      "rise": 864,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          304,
+          -88
+        ],
+        [
+          480,
+          -120
+        ],
+        [
+          656,
+          -216
+        ],
+        [
+          832,
+          -280
+        ],
+        [
+          1008,
+          -376
+        ],
+        [
+          1152,
+          -504
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone11",
+        "Mechanisms/Fragile01",
+        "Geometry/Stone12",
+        "Mechanisms/Fragile03",
+        "Geometry/Stone13",
+        "Mechanisms/Fragile05",
+        "Geometry/Stone14"
+      ],
+      "checkpoint_steps": [
+        0,
+        2
+      ],
+      "origin": [
+        -1504,
+        -10656
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Needle Threader",
+      "path": "res://World/Tower/Rooms/14_needle_threader.tscn",
+      "rise": 896,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          1008,
+          -152
+        ],
+        [
+          848,
+          -248
+        ],
+        [
+          688,
+          -376
+        ],
+        [
+          496,
+          -472
+        ],
+        [
+          320,
+          -408
+        ],
+        [
+          128,
+          -536
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -11520
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Relay Lifts",
+      "path": "res://World/Tower/Rooms/15_relay_lifts.tscn",
+      "rise": 992,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          304,
+          -152
+        ],
+        [
+          496,
+          -216
+        ],
+        [
+          672,
+          -312
+        ],
+        [
+          864,
+          -408
+        ],
+        [
+          1008,
+          -504
+        ],
+        [
+          1152,
+          -632
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone04",
+        "Mechanisms/Lift01/ActualPlatform",
+        "Geometry/Stone05",
+        "Mechanisms/Lift03/ActualPlatform",
+        "Geometry/Stone06",
+        "Mechanisms/Lift05/ActualPlatform",
+        "Geometry/Stone07"
+      ],
+      "checkpoint_steps": [
+        0,
+        2
+      ],
+      "origin": [
+        -1504,
+        -12416
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Crusher Ladder",
+      "path": "res://World/Tower/Rooms/21_crusher_ladder.tscn",
+      "rise": 1024,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          1008,
+          -152
+        ],
+        [
+          848,
+          -248
+        ],
+        [
+          656,
+          -376
+        ],
+        [
+          480,
+          -472
+        ],
+        [
+          304,
+          -568
+        ],
+        [
+          128,
+          -664
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -13408
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Dart Gallery",
+      "path": "res://World/Tower/Rooms/22_dart_gallery.tscn",
+      "rise": 896,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          288,
+          -152
+        ],
+        [
+          464,
+          -248
+        ],
+        [
+          640,
+          -152
+        ],
+        [
+          816,
+          -280
+        ],
+        [
+          992,
+          -408
+        ],
+        [
+          1152,
+          -536
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14",
+        "Geometry/Stone15",
+        "Geometry/Stone16",
+        "Geometry/Stone17"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -14432
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Flame Pipe",
+      "path": "res://World/Tower/Rooms/23_flame_pipe.tscn",
+      "rise": 896,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          992,
+          -152
+        ],
+        [
+          816,
+          -216
+        ],
+        [
+          640,
+          -152
+        ],
+        [
+          464,
+          -280
+        ],
+        [
+          288,
+          -408
+        ],
+        [
+          128,
+          -536
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -15328
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Pendulum Court",
+      "path": "res://World/Tower/Rooms/24_pendulum_court.tscn",
+      "rise": 896,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          288,
+          -152
+        ],
+        [
+          464,
+          -248
+        ],
+        [
+          640,
+          -152
+        ],
+        [
+          816,
+          -280
+        ],
+        [
+          992,
+          -408
+        ],
+        [
+          1152,
+          -536
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone05",
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -16224
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Twin Press",
+      "path": "res://World/Tower/Rooms/25_twin_press.tscn",
+      "rise": 864,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          992,
+          -120
+        ],
+        [
+          816,
+          -152
+        ],
+        [
+          640,
+          -120
+        ],
+        [
+          464,
+          -248
+        ],
+        [
+          288,
+          -376
+        ],
+        [
+          128,
+          -504
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -17120
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Sawblade Chimney",
+      "path": "res://World/Tower/Rooms/26_sawblade_chimney.tscn",
+      "rise": 1024,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          256,
+          -152
+        ],
+        [
+          384,
+          -280
+        ],
+        [
+          256,
+          -408
+        ],
+        [
+          448,
+          -536
+        ],
+        [
+          640,
+          -536
+        ],
+        [
+          832,
+          -536
+        ],
+        [
+          1024,
+          -536
+        ],
+        [
+          1152,
+          -664
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14",
+        "Geometry/Stone15"
+      ],
+      "checkpoint_steps": [
+        0,
+        4
+      ],
+      "origin": [
+        -1504,
+        -17984
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Switchback Killbox",
+      "path": "res://World/Tower/Rooms/27_switchback_killbox.tscn",
+      "rise": 960,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          992,
+          -152
+        ],
+        [
+          784,
+          -248
+        ],
+        [
+          960,
+          -376
+        ],
+        [
+          752,
+          -472
+        ],
+        [
+          560,
+          -568
+        ],
+        [
+          352,
+          -472
+        ],
+        [
+          128,
+          -600
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone05",
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12"
+      ],
+      "checkpoint_steps": [
+        0,
+        4
+      ],
+      "origin": [
+        -1504,
+        -19008
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Gale Pass",
+      "path": "res://World/Tower/Rooms/28_gale_pass.tscn",
+      "rise": 864,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          304,
+          -120
+        ],
+        [
+          480,
+          -216
+        ],
+        [
+          656,
+          -152
+        ],
+        [
+          832,
+          -280
+        ],
+        [
+          1008,
+          -376
+        ],
+        [
+          1152,
+          -504
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone10",
+        "Mechanisms/Fragile01",
+        "Geometry/Stone11",
+        "Mechanisms/Fragile03",
+        "Geometry/Stone12",
+        "Mechanisms/Fragile05",
+        "Geometry/Stone13"
+      ],
+      "checkpoint_steps": [
+        0,
+        2
+      ],
+      "origin": [
+        -1504,
+        -19968
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Trap Weave",
+      "path": "res://World/Tower/Rooms/29_trap_weave.tscn",
+      "rise": 896,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          976,
+          -152
+        ],
+        [
+          800,
+          -248
+        ],
+        [
+          624,
+          -152
+        ],
+        [
+          448,
+          -280
+        ],
+        [
+          272,
+          -408
+        ],
+        [
+          128,
+          -536
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Mechanisms/Lift05/ActualPlatform",
+        "Geometry/Stone11"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -20832
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Ascent of Bells",
+      "path": "res://World/Tower/Rooms/30_ascent_of_bells.tscn",
+      "rise": 896,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          288,
+          -152
+        ],
+        [
+          464,
+          -248
+        ],
+        [
+          640,
+          -152
+        ],
+        [
+          816,
+          -280
+        ],
+        [
+          992,
+          -408
+        ],
+        [
+          1152,
+          -536
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone05",
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -21728
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Echo Chamber",
+      "path": "res://World/Tower/Rooms/16_echo_chamber.tscn",
+      "rise": 1024,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          1024,
+          -152
+        ],
+        [
+          896,
+          -280
+        ],
+        [
+          1008,
+          -408
+        ],
+        [
+          832,
+          -536
+        ],
+        [
+          640,
+          -632
+        ],
+        [
+          448,
+          -536
+        ],
+        [
+          320,
+          -408
+        ],
+        [
+          176,
+          -536
+        ],
+        [
+          128,
+          -664
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13",
+        "Geometry/Stone14",
+        "Geometry/Stone15",
+        "Geometry/Stone16",
+        "Geometry/Stone17",
+        "Geometry/Stone18"
+      ],
+      "checkpoint_steps": [
+        0,
+        5
+      ],
+      "origin": [
+        -1504,
+        -22624
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Frost Shelf",
+      "path": "res://World/Tower/Rooms/17_frost_shelf.tscn",
+      "rise": 928,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          288,
+          -152
+        ],
+        [
+          464,
+          -120
+        ],
+        [
+          640,
+          -248
+        ],
+        [
+          832,
+          -376
+        ],
+        [
+          1008,
+          -440
+        ],
+        [
+          1152,
+          -568
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone05",
+        "Geometry/Stone06",
+        "Mechanisms/Lift02/ActualPlatform",
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -23648
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Crown Approach",
+      "path": "res://World/Tower/Rooms/18_crown_approach.tscn",
+      "rise": 1024,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          992,
+          -152
+        ],
+        [
+          832,
+          -248
+        ],
+        [
+          672,
+          -376
+        ],
+        [
+          496,
+          -472
+        ],
+        [
+          320,
+          -568
+        ],
+        [
+          128,
+          -664
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -24576
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Moon Gate",
+      "path": "res://World/Tower/Rooms/19_moon_gate.tscn",
+      "rise": 864,
+      "mirror": false,
+      "route": [
+        [
+          128,
+          -24
+        ],
+        [
+          288,
+          -152
+        ],
+        [
+          464,
+          -248
+        ],
+        [
+          640,
+          -376
+        ],
+        [
+          800,
+          -472
+        ],
+        [
+          992,
+          -376
+        ],
+        [
+          1152,
+          -504
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09",
+        "Geometry/Stone10",
+        "Geometry/Stone11",
+        "Geometry/Stone12",
+        "Geometry/Stone13"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -25600
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Summit Walk",
+      "path": "res://World/Tower/Rooms/20_summit_walk.tscn",
+      "rise": 512,
+      "mirror": true,
+      "route": [
+        [
+          1152,
+          -24
+        ],
+        [
+          976,
+          -88
+        ],
+        [
+          768,
+          -152
+        ],
+        [
+          560,
+          -216
+        ],
+        [
+          352,
+          -312
+        ],
+        [
+          128,
+          -408
+        ]
+      ],
+      "surfaces": [
+        "Geometry/Stone04",
+        "Geometry/Stone05",
+        "Geometry/Stone06",
+        "Geometry/Stone07",
+        "Geometry/Stone08",
+        "Geometry/Stone09"
+      ],
+      "checkpoint_steps": [
+        0,
+        3
+      ],
+      "origin": [
+        -1504,
+        -26464
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" uid="uid://cg74vksm1s6sy" path="res://World/World.gd" id="1_jacc8"]
+[ext_resource type="PackedScene" uid="uid://bhmx1qcv8gytd" path="res://World/Map/map.tscn" id="2_21v8o"]
+[ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cy0jjebk8joq" path="res://World/game_hud.tscn" id="4_4sj48"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="7_lcvgy"]
+[ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="15_jacc8"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="16_hev0n"]
+[ext_resource type="AudioStream" uid="uid://3jmdg88lu2vs" path="res://sfx/intropartOGG.ogg" id="22_c4j8x"]
+[ext_resource type="AudioStream" uid="uid://rdlo0kuiop3y" path="res://sfx/mainpartOGG.ogg" id="23_2neov"]
+
+[ext_resource type="Script" path="res://World/CameraLookahead.gd" id="24_lookahead"]
+
+[ext_resource type="Script" path="res://World/CameraFramingZone.gd" id="25_frame"]
+
+[sub_resource type="Environment" id="Environment_c4j8x"]
+background_mode = 3
+glow_enabled = false
+glow_intensity = 0.25
+glow_bloom = 0.0
+
+[sub_resource type="Resource" id="Resource_21v8o"]
+script = ExtResource("16_hev0n")
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_jacc8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c4j8x")
+
+[node name="Map" parent="." instance=ExtResource("2_21v8o")]
+
+[node name="BreakablePlatform6" parent="Map/Platforms" index="46"]
+position = Vector2(864, -8081)
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint1" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint2" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint3" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint4" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint5" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint6" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="FIRE" parent="Map/Checkpoints/Checkpoint7" index="6"]
+amount = 70
+spread = 30.0
+
+[node name="Checkpoint8" parent="Map/Checkpoints" index="8"]
+position = Vector2(-892, -8295)
+
+[node name="HazardRoomFrame" type="Node2D" parent="."]
+position = Vector2(-1050, -7830)
+script = ExtResource("25_frame")
+
+[node name="Player" parent="." instance=ExtResource("4")]
+position = Vector2(-1269, 744)
+platform_wall_layers = 2
+
+[node name="GameHud" parent="." instance=ExtResource("4_4sj48")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(-1269, 676)
+process_callback = 0
+limit_left = -2000
+limit_right = 100
+limit_bottom = 1000
+editor_draw_screen = false
+editor_draw_limits = true
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("7_lcvgy")
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+top_level = true
+position = Vector2(-1269, 676)
+script = ExtResource("15_jacc8")
+priority = 1
+follow_mode = 2
+follow_target = NodePath("../Player")
+frame_preview = false
+tween_resource = SubResource("Resource_21v8o")
+follow_damping = true
+follow_damping_value = Vector2(0.09, 0.06)
+dead_zone_width = 0.278
+dead_zone_height = 0.227
+draw_limits = true
+limit_left = -2000
+limit_right = 100
+limit_bottom = 1000
+
+[node name="Lookahead" type="Node" parent="PhantomCamera2D"]
+script = ExtResource("24_lookahead")
+
+[node name="introplayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_c4j8x")
+autoplay = true
+
+[node name="loopplayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_2neov")
+parameters/looping = true
+
+[editable path="Map"]
+[editable path="Map/Platforms/Platform"]
+[editable path="Map/Platforms/Platform8"]
+[editable path="Map/Platforms/Platform3"]
+[editable path="Map/Platforms/Platform2"]
+[editable path="Map/Platforms/Platform4"]
+[editable path="Map/Platforms/Platform5"]
+[editable path="Map/Platforms/Platform6"]
+[editable path="Map/Platforms/Platform7"]
+[editable path="Map/Platforms/CirclePlatform"]
+[editable path="Map/Checkpoints/Checkpoint"]
+[editable path="Map/Checkpoints/Checkpoint1"]
+[editable path="Map/Checkpoints/Checkpoint2"]
+[editable path="Map/Checkpoints/Checkpoint3"]
+[editable path="Map/Checkpoints/Checkpoint4"]
+[editable path="Map/Checkpoints/Checkpoint5"]
+[editable path="Map/Checkpoints/Checkpoint6"]
+[editable path="Map/Checkpoints/Checkpoint7"]
+[editable path="Map/Spikes/MovingSpikes"]
+[editable path="Map/Spikes/MovingSpikes2"]
+[editable path="Map/Spikes/MovingSpikes3"]
+[editable path="Map/Spikes/MovingSpikes4"]
+[editable path="Map/Spikes/MovingSpikes5"]
+[editable path="Map/Spikes/MovingSpikes6"]
+[editable path="Map/WinZone"]

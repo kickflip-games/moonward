@@ -79,3 +79,9 @@ artifacts/blackspire/output/
 
 # Character animation raw frames, recordings, test logs and local web build
 artifacts/character_animation/output/
+
+# Local reference-room test reports, captures and Web builds
+artifacts/reference_tower/output/
+
+# Local integrated-tower captures and validation logs
+artifacts/integrated_tower/output/

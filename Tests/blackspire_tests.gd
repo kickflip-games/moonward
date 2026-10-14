@@ -84,7 +84,7 @@ func run()->void:
 		for side in 4:peers_ok=peers_ok and data.get_terrain_peering_bit(SIDES[side])==(0 if mask&(1<<side) else -1)
 		check(peers_ok and layer.get_used_cells().size()==cells.size(),"Native painting side mask %d"%mask)
 	layer.queue_free();await tick(2)
-	var world=load("res://World/World.tscn").instantiate();add_child(world);await tick(6)
+	var world=load("res://World/LegacyWorld.tscn").instantiate();add_child(world);await tick(6)
 	var geometry:TileMapLayer=world.get_node("Map/GameLayer");var before:=signature(geometry)
 	var root:Node2D=world.get_node("Map/BlackSpireTerrain")
 	var visual:TileMapLayer=root.get_node("QuietStructure")

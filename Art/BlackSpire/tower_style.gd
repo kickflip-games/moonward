@@ -41,7 +41,7 @@ func apply_visuals()->void:
 				if visual is Polygon2D:SURFACE.skin(visual,SURFACE.PLANKS)
 			if not Engine.is_editor_hint():
 				var support:=Node2D.new();support.set_script(SUPPORT);support.body=platform.get_node("ActualPlatform")
-				support.position=platform.position;support.anchor=Vector2(platform.move_to.x,minf(platform.move_to.y,-platform.move_to.y)-55)
+				support.position=platform.position+$Platforms.position;support.anchor=Vector2(platform.move_to.x,minf(platform.move_to.y,-platform.move_to.y)-55)
 				support.z_index=-1;decor.add_child(support)
 		elif platform.has_node("DetectionArea"):
 			SURFACE.skin(platform.get_node("Sprite2D"),SURFACE.FRAGILE_PLANKS)

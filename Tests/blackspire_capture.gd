@@ -4,7 +4,7 @@ func run()->void:
 	var args:=OS.get_cmdline_user_args()
 	var output:String=args[args.find("--output")+1]
 	var demo:bool=args.has("--demo")
-	var world=load("res://Scenes/VisualDirectionTest.tscn" if demo else "res://World/World.tscn").instantiate()
+	var world=load("res://Scenes/VisualDirectionTest.tscn" if demo else "res://World/LegacyWorld.tscn").instantiate()
 	add_child(world)
 	var player:Player=world.get_node("Player")
 	await ticks(45)

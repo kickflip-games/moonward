@@ -1,0 +1,351 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="Script" path="res://World/Tower/room.gd" id="1"]
+
+[ext_resource type="Script" path="res://World/Tower/stone_block.gd" id="2"]
+
+[ext_resource type="Script" path="res://World/Tower/trap.gd" id="3"]
+
+[ext_resource type="Script" path="res://World/Tower/trap_mount.gd" id="4"]
+
+[ext_resource type="Script" path="res://World/Tower/wind.gd" id="5"]
+
+[ext_resource type="PackedScene" path="res://Platforms/MovingPlatform.tscn" id="6"]
+
+[ext_resource type="PackedScene" path="res://Platforms/breakable/BreakablePlatform.tscn" id="7"]
+
+[ext_resource type="PackedScene" path="res://Platforms/bouncy/bouncy_platform.tscn" id="8"]
+
+[ext_resource type="PackedScene" path="res://Checkpoint/Checkpoint.tscn" id="9"]
+
+[sub_resource type="RectangleShape2D" id="Shape0"]
+size = Vector2(32, 1088)
+
+[sub_resource type="RectangleShape2D" id="Shape1"]
+size = Vector2(32, 1088)
+
+[sub_resource type="RectangleShape2D" id="Shape2"]
+size = Vector2(1216, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape3"]
+size = Vector2(160, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape4"]
+size = Vector2(224, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape5"]
+size = Vector2(144, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape6"]
+size = Vector2(192, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape7"]
+size = Vector2(144, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape8"]
+size = Vector2(144, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape9"]
+size = Vector2(224, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape10"]
+size = Vector2(160, 32)
+
+[sub_resource type="RectangleShape2D" id="Shape11"]
+size = Vector2(160, 32)
+
+[node name="Room17" type="Node2D"]
+script = ExtResource("1")
+room_id = 17
+room_name = "Frost Shelf"
+rise = 928
+metadata/reference_sheet = "rooms-16-20.png"
+
+[node name="Geometry" type="Node2D" parent="."]
+
+
+[node name="Mechanisms" type="Node2D" parent="."]
+
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+
+[node name="Route" type="Node2D" parent="."]
+
+
+[node name="Decorations" type="Node2D" parent="."]
+
+
+[node name="Stone01" type="StaticBody2D" parent="Geometry"]
+position = Vector2(0, -896)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(32, 1088)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone01"]
+position = Vector2(16, 544)
+shape = SubResource("Shape0")
+one_way_collision = false
+one_way_collision_margin = 8.0
+
+[node name="Stone02" type="StaticBody2D" parent="Geometry"]
+position = Vector2(1248, -896)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(32, 1088)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone02"]
+position = Vector2(16, 544)
+shape = SubResource("Shape1")
+one_way_collision = false
+one_way_collision_margin = 8.0
+
+[node name="Stone03" type="StaticBody2D" parent="Geometry"]
+position = Vector2(32, 128)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(1216, 32)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone03"]
+position = Vector2(608, 16)
+shape = SubResource("Shape2")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Stone04" type="StaticBody2D" parent="Geometry"]
+position = Vector2(704, -64)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(160, 32)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone04"]
+position = Vector2(80, 16)
+shape = SubResource("Shape3")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Stone05" type="StaticBody2D" parent="Geometry"]
+position = Vector2(16, 0)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(224, 32)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone05"]
+position = Vector2(112, 16)
+shape = SubResource("Shape4")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Step00" type="Marker2D" parent="Route"]
+position = Vector2(128, -24)
+metadata/surface = "Geometry/Stone05"
+metadata/width = 224
+
+[node name="Stone06" type="StaticBody2D" parent="Geometry"]
+position = Vector2(216, -128)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(144, 32)
+frost = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone06"]
+position = Vector2(72, 16)
+shape = SubResource("Shape5")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Step01" type="Marker2D" parent="Route"]
+position = Vector2(288, -152)
+metadata/surface = "Geometry/Stone06"
+metadata/width = 144
+
+[node name="Lift02" parent="Mechanisms" instance=ExtResource("6")]
+position = Vector2(464, -80)
+move_to = Vector2(32, 0)
+speed = 55.0
+delay = 0.7
+show_path = false
+
+[node name="Track02" type="Line2D" parent="Decorations"]
+points = PackedVector2Array(432, -176, 496, -80)
+width = 2.0
+default_color = Color(0.38, 0.35, 0.48, 0.6)
+
+[node name="Step02" type="Marker2D" parent="Route"]
+position = Vector2(464, -120)
+metadata/surface = "Mechanisms/Lift02/ActualPlatform"
+metadata/width = 144
+
+[node name="Stone07" type="StaticBody2D" parent="Geometry"]
+position = Vector2(544, -224)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(192, 32)
+frost = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone07"]
+position = Vector2(96, 16)
+shape = SubResource("Shape6")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Step03" type="Marker2D" parent="Route"]
+position = Vector2(640, -248)
+metadata/surface = "Geometry/Stone07"
+metadata/width = 192
+
+[node name="Stone08" type="StaticBody2D" parent="Geometry"]
+position = Vector2(760, -352)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(144, 32)
+frost = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone08"]
+position = Vector2(72, 16)
+shape = SubResource("Shape7")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Step04" type="Marker2D" parent="Route"]
+position = Vector2(832, -376)
+metadata/surface = "Geometry/Stone08"
+metadata/width = 144
+
+[node name="Stone09" type="StaticBody2D" parent="Geometry"]
+position = Vector2(936, -416)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(144, 32)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone09"]
+position = Vector2(72, 16)
+shape = SubResource("Shape8")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Step05" type="Marker2D" parent="Route"]
+position = Vector2(1008, -440)
+metadata/surface = "Geometry/Stone09"
+metadata/width = 144
+
+[node name="Stone10" type="StaticBody2D" parent="Geometry"]
+position = Vector2(1040, -544)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(224, 32)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone10"]
+position = Vector2(112, 16)
+shape = SubResource("Shape9")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Step06" type="Marker2D" parent="Route"]
+position = Vector2(1152, -568)
+metadata/surface = "Geometry/Stone10"
+metadata/width = 224
+
+[node name="Stone11" type="StaticBody2D" parent="Geometry"]
+position = Vector2(1008, -672)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(160, 32)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone11"]
+position = Vector2(80, 16)
+shape = SubResource("Shape10")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Step07" type="Marker2D" parent="Route"]
+position = Vector2(1088, -696)
+metadata/surface = "Geometry/Stone11"
+metadata/width = 160
+
+[node name="Stone12" type="StaticBody2D" parent="Geometry"]
+position = Vector2(1072, -800)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2")
+size = Vector2(160, 32)
+frost = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Geometry/Stone12"]
+position = Vector2(80, 16)
+shape = SubResource("Shape11")
+one_way_collision = true
+one_way_collision_margin = 8.0
+
+[node name="Step08" type="Marker2D" parent="Route"]
+position = Vector2(1152, -824)
+metadata/surface = "Geometry/Stone12"
+metadata/width = 160
+
+[node name="Shrine0" parent="Checkpoints" instance=ExtResource("9")]
+position = Vector2(128, -24)
+progression_index = 45
+
+[node name="Shrine1" parent="Checkpoints" instance=ExtResource("9")]
+position = Vector2(640, -248)
+progression_index = 46
+
+[node name="Spikes00" type="Area2D" parent="Mechanisms"]
+position = Vector2(512, 20)
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("3")
+kind = "spikes"
+size = Vector2(144, 24)
+travel = Vector2(0, 0)
+phase = 0
+period = 4.8
+
+[node name="Tooth0" type="CollisionPolygon2D" parent="Mechanisms/Spikes00"]
+polygon = PackedVector2Array(-70.0, 12.0, -60.0, -10.0, -50.0, 12.0)
+
+[node name="Tooth1" type="CollisionPolygon2D" parent="Mechanisms/Spikes00"]
+polygon = PackedVector2Array(-46.0, 12.0, -36.0, -10.0, -26.0, 12.0)
+
+[node name="Tooth2" type="CollisionPolygon2D" parent="Mechanisms/Spikes00"]
+polygon = PackedVector2Array(-22.0, 12.0, -12.0, -10.0, -2.0, 12.0)
+
+[node name="Tooth3" type="CollisionPolygon2D" parent="Mechanisms/Spikes00"]
+polygon = PackedVector2Array(2.0, 12.0, 12.0, -10.0, 22.0, 12.0)
+
+[node name="Tooth4" type="CollisionPolygon2D" parent="Mechanisms/Spikes00"]
+polygon = PackedVector2Array(26.0, 12.0, 36.0, -10.0, 46.0, 12.0)
+
+[node name="Tooth5" type="CollisionPolygon2D" parent="Mechanisms/Spikes00"]
+polygon = PackedVector2Array(50.0, 12.0, 60.0, -10.0, 70.0, 12.0)
+
+[node name="Name" type="Label" parent="Decorations"]
+position = Vector2(48, -880)
+text = "Frost Shelf"
+modulate = Color(0.58, 0.63, 0.77, 0.8)
+theme_override_font_sizes/font_size = 20
+
+[node name="Hint" type="Label" parent="Decorations"]
+position = Vector2(48, -848)
+text = "Carry momentum across the frost shelves"
+modulate = Color(0.46, 0.52, 0.65, 0.8)
+theme_override_font_sizes/font_size = 14

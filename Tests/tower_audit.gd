@@ -21,7 +21,7 @@ func ticks(n: int) -> void:
 
 func run() -> void:
 	for cycle in 2:
-		var world = load("res://World/World.tscn").instantiate()
+		var world = load("res://World/LegacyWorld.tscn").instantiate()
 		add_child(world)
 		await ticks(5)
 		CheckpointManager._on_scene_changed()

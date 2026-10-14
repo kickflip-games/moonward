@@ -74,7 +74,7 @@ func run() -> void:
 		"Preview right-clicks erase the intended cell")
 	preview.queue_free()
 	await get_tree().process_frame
-	var world = load("res://World/World.tscn").instantiate()
+	var world = load("res://World/LegacyWorld.tscn").instantiate()
 	add_child(world)
 	await get_tree().process_frame
 	var original: TileMapLayer = world.get_node("Map/GameLayer")

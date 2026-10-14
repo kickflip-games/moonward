@@ -2,6 +2,8 @@
 
 These sketches are **design references, not validated playable Godot maps**. Test collision/jump distances and fair hazard timing before using them.
 
+Selected concepts are integrated into the original tower. The full set also has experimental room prototypes, which are no longer the main course. See the [tower editing guide](../../World/Tower/README.md) for the current integration and validation scope.
+
 | Room | Name | Sheet |
 |---:|---|---|
 | 01 | Switchback Ascent | [Rooms 01–05](greybox/rooms-01-05.png) |

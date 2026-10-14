@@ -8,7 +8,7 @@ func _ready() -> void:
 func run() -> void:
 	var args = OS.get_cmdline_user_args()
 	var output = args[args.find("--output") + 1]
-	var world = load("res://World/World.tscn").instantiate()
+	var world = load("res://World/LegacyWorld.tscn").instantiate()
 	add_child(world)
 	var player: Player = world.get_node("Player")
 	player.set_physics_process(false)
